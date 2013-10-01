@@ -1,0 +1,13 @@
+{
+    "name": "CustomNeutral",
+    "type": "theme",
+    "creator": "Lee Boonstra",
+    "summary": "Custom Neutral Theme",
+    "detailedDescription": "You can extend from this theme to create a fully customized theme.",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "local": true,
+    "requires": [],
+    "extend": "ext-theme-neutral"
+}

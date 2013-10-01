@@ -1,0 +1,5 @@
+@include extjs-toolbar-ui(
+    'gray',
+    $background-color: lighten($gray, 10%),
+    $border-width: 0
+);

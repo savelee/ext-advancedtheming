@@ -1,0 +1,461 @@
+=== FormPanel
+
+==== What it is
+A panel that is required to hold form fields. Under the covers it has
+several mechanisms for sending and validating forms.
+
+==== Specs
+
+===== CSS Class: +.x-panel+
+
+===== +Ext.form.Panel+
+Extends from +Ext.panel.Panel+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+[[components_formpanels]]
+.Ext.form.Panel
+image::images/panels.png[]
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+Ext.create('Ext.form.Panel', {
+    title: 'Simple Form',
+    bodyPadding: 5,
+    width: 350,
+
+    // The form will submit an AJAX request to this URL when submitted
+    url: 'save-form.php',
+
+    // Fields will be arranged vertically, stretched to full width
+    layout: 'anchor',
+    defaults: {
+        anchor: '100%'
+    },
+
+    // The fields
+    defaultType: 'textfield',
+    items: [{
+        fieldLabel: 'First Name',
+        name: 'first',
+        allowBlank: false
+    },{
+        fieldLabel: 'Last Name',
+        name: 'last',
+        allowBlank: false
+    }],
+
+    // Reset and Submit buttons
+    buttons: [{
+        text: 'Reset',
+        handler: function() {
+            this.up('form').getForm().reset();
+        }
+    }, {
+        text: 'Submit',
+        formBind: true, //only enabled once the form is valid
+        disabled: true,
+        handler: function() {
+            var form = this.up('form').getForm();
+            if (form.isValid()) {
+                form.submit({
+                    success: function(form, action) {
+                       Ext.Msg.alert('Success', action.result.msg);
+                    },
+                    failure: function(form, action) {
+                        Ext.Msg.alert('Failed', action.result.msg);
+                    }
+                });
+            }
+        }
+    }],
+    renderTo: Ext.getBody()
+});
+----
+====
+
+
+=== Textfield
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== +Ext.form.field.Text+
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+[[components_formpanels]]
+.Ext.form.Panel
+image::images/panels.png[]
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+Ext.create('Ext.form.Panel', {
+    title: 'Contact Info',
+    width: 300,
+    bodyPadding: 10,
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'textfield',
+        name: 'name',
+        fieldLabel: 'Name',
+        allowBlank: false  // requires a non-empty value
+    }]
+});
+----
+====
+
+=== Textarea
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Combobox
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Checkbox
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Radio
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Datefield
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Displayfield
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Fileupload
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Numberfield
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Spinnerfield
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Timefield
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Slider
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== Multi Slider
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====
+
+=== HTML Editor
+
+==== What it is
+TODO
+
+==== Specs
+
+===== CSS Class: TODO
+
+===== TODO
+Extends from +Ext.form.field.Base+
+
+TODO
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+
+==== Example
+[[panels]]
+.Example
+====
+[source, javascript]
+----
+TODO
+----
+====

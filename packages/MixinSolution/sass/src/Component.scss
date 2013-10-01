@@ -1,0 +1,78 @@
+ @include extjs-button-small-ui(
+	  $ui: 'blue',
+	  $background-color: lighten($blue, 20%),
+	  $background-color-over: darken($blue, 10%),
+	  $background-color-disabled: lighten($blue, 40%),
+	  $border-radius: 4px,
+	  $color: #fff,
+	  $glyph-color: #fff,
+	  $padding: 4px
+);
+
+@include extjs-button-medium-ui(
+	  $ui: 'blue',
+	  $background-color: lighten($blue, 20%),
+	  $background-color-over: darken($blue, 10%),
+	  $background-color-disabled: lighten($blue, 40%),
+	  $border-radius: 5px,
+	  $color: #fff,
+	  $glyph-color: #fff,
+	  $padding: 6px
+);
+
+@include extjs-button-large-ui(
+	  $ui: 'blue',
+	  $background-color: lighten($blue, 20%),
+	  $background-color-over: darken($blue, 10%),
+	  $border-radius: 6px,
+	  $color: #fff,
+	  $glyph-color: #fff,
+	  $padding: 8px
+);
+
+@include extjs-button-toolbar-medium-ui(
+	  $ui: 'blue',
+	  $background-color: lighten($blue, 20%),
+	  $background-color-over: darken($blue, 10%),
+	  $background-color-disabled: lighten($blue, 40%),
+	  $border-radius: 5px,
+	  $color: #fff,
+	  $glyph-color: #fff,
+	  $padding: 6px
+);
+
+@include extjs-panel-ui(
+    'light',
+    $ui-header-color: lighten(#15c, 20%),
+    $ui-header-background-color: #fff,
+
+    $ui-header-line-height: 14px,
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff,
+    $ui-body-font-size: 14px,
+
+    $ui-padding: 10px
+);
+
+@include extjs-toolbar-ui(
+    'gray',
+    $background-color: lighten($gray, 10%),
+    $border-width: 0
+);
+
+@include extjs-window-ui(
+    'blue',
+ 
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+    $ui-header-color: #fff,
+    $ui-header-background-color: lighten(#15c, 20%),
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff
+);

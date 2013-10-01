@@ -1,0 +1,142 @@
+=== Implementing Images
+.There are a couple of ways of implementing images in Ext JS
+
+* Implementing an image by using the +html+ tag.
+Easy but dirty. 
+* Implementing an image by using +Ext.Img+ class.
+Very powerful.
+* Implementing a background image in the CSS
+Structured.
+
+==== Folder structure
+Where to save the images?
+
+When app specific:
+_[workspace]/resources/_ folder.
+
+When global theme:
+_[workspace]/packages/[theme]/resources/_ folder.
+
+==== Image HTML tag
+
+[source, javascript]
+----
+items: [{
+    xtype: 'container',
+    html: '<img src="resources/logo.png" height="25" alt="ExtReader"/>'
+}]
+----
+
+==== Image Ext.Img class
+
+[source, javascript]
+----
+items:[{
+	xtype: 'image',
+    src: 'resources/logo.png',
+    alt: 'ExtReader',
+    height: 25
+}]
+----
+
+==== Background image in CSS
+
+.In Ext JS view:
+[source, javascript]
+----
+items: [{
+    xtype: 'container',
+    cls: 'mybackground'
+}]
+----
+
+.In Sass:
+[source, javascript]
+----
+.mybackground {
+	background: #fff url('background.png') repeat-x;
+}
+----
+
+==== Paths to resources
+
+You don't need to worry about paths to images in Ext JS since it's part of the application build process.
+
+When building the app, the global theme images and the app specific images will be automatically copied over to the resources build folder. _(build/[appname]/resources)_
+
+Note: subfolders will be copied too!
+
+==== Paths global
+
+[source, javascript]
+----
+/* red image: resources/backgrounds/red.png */
+.bgred {
+	background: url('backgrounds/red.png') repeat-x;
+}
+----
+
+[source, javascript]
+----
+/* yellow image: resources/yellow.png */
+.footer {
+	background: url('yellow.png');
+}
+----
+
+[[assets_1]]
+.Paths to global resources
+image::images/assets_appresources.png[]
+
+==== Paths app specific
+
+[source, javascript]
+----
+/* blue image: packages/[mytheme]/resources/backgrounds/blue.png */
+.bgblue {
+	background: url('backgrounds/blue.png') repeat-x;
+}
+----
+
+[[assets_2]]
+.Paths to app specific resources
+image::images/assets_globalresources.png[]
+
+==== Paths in build
+
+Images saved in _packages/[mytheme]/resources_
+and images saved in _[myapp]/resources/_.
+will be copied to the _build/[appname]/resources_ folder.
+
+[[assets_3]]
+.Paths to all resources after build.
+image::images/assets_buildfolder.png[]
+
+==== Paths to resources
+
+Under the roots, this happens also with paths in +Ext.Img+ classes and image tags and other resources such as fonts.
+
+However, while developing you would point images to the _/resources/_ folder, since you don't want to build every time while developing.
+Once you build, Sencha Cmd will take care.
+
+==== Base64 encode instead
+Images can be saved to Base64 strings. (Binary to ASCII Text). 
+It's a technique what's been used for years for sending email 
+image attachments. When you are not familiair with Base64 strings, they look like these:
+
+[source, javascript]
+----
+data:image/png;base64,<LONG BASE64 STRING WITH ENCODED DATA>"
+----
+
+An advantage of a string like this, is that you can cache it,
+maybe you want to save it in a database.
+Instead of an URL to a path you pass in the Base-64 string.
+
+==== Overriding images
+When you are extending from other themes, some components contain images that are
+inherited from a parent theme.
+
+In some cases you may need to override an image. This can be easily done by placing the desired image in _packages/[mytheme]/resources/images/_ and giving it the *same name* as the image it is intended to override. 
+
+For example, let's change the info icon of the MessageBox component. Save the following image as _packages/[mytheme]/resources/images/shared/icon-info.png_

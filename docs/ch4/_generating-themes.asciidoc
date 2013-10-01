@@ -1,0 +1,101 @@
+Generating custom themes
+-------------------------
+
+=== Objectives
+* Learn how to generate themes
+* Understand the package folder structure
+* Learn how to extend from Sencha themes
+
+=== Generating themes
+When you want to create a new custom theme, you can
+generate a starting point with Sencha Cmd.
+
+==== About the Command Line
+Sencha Cmd is a tool on the command line (CLI).
+You will use your Windows Console or Mac Terminal for this.
+
+.Windows
+* *Start* > *Run* 
+* Type: +cmd+ and press _ok_ 
+
+.Mac OSX
+* *Applications* > *Utils* > *Terminal*
+
+==== About Sencha Cmd
+.Sencha Cmd is a command-line tool that makes it quick and easy to do several application-development tasks.
+* Generate commands
+** Generate workspaces
+** Generate apps
+** Generate themes
+** and more...
+* Build-in webserver
+* Build tools
+
+==== Generate a theme
+
+[source, javascript]
+----
+sencha generate theme MyTheme
+----
+
+This will generate a theme for the package folder structure.
+
+==== Package folder structure
+The folder structure of a theme looks like this:
+
+.[workspace/root folder]/packages/mytheme/
+* package.json
+This is the package properties file. It tells Sencha Cmd certain things about the package like its name, version, and dependencies (other packages that it requires).
+* build
+The build of the theme
+* overrides
+This directory contains any JavaScript overrides to Ext JS Component classes that may be required for theming those Components.
+* resources
+This directory contains images and other static resources that your theme requires.
+* sass
+** etc +
+	contains additional utility functions or mixins
+** src +
+	contains Sass rules and UI mixins
+** var +
+	contains Sass variables
+
+=== Extending themes
+A new generated theme always extends from the *Classic* theme.
+
+When you want to inherit from the *Neptune* theme instead
+you will need to change the +extend+.
+
+[[styles_createfontpack1]]
+.Inheritance tree
+image::images/overviewthemes_inheritance3.png[]
+
+==== Change the extend
+To change the inheritance of the custom theme. Open
+_/packages/MyTheme/package.json_
+
+[source, javascript]
+----
+{
+    "name": "MyTheme",
+    "type": "theme",
+    "creator": "Lee Boonstra",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "local": true,
+    "requires": [],
+    "extend": "ext-theme-neptune" //ext-theme-classic
+}
+----
+
+==== Refresh the app
+You now need to refresh your application.
+
+This ensures that the correct theme JavaScript files are included in the application's "bootstrap.js" file so that the application can be run in development mode. 
+
+Run from the app directory the following command:
+
+[source, javascript]
+----
+sencha app refresh
+----

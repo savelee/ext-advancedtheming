@@ -1,0 +1,71 @@
+/* my variables */
+$red: #d14836;
+$gray: #f5f5f5;
+$yellow: #ffff00;
+$white: #fff;
+
+/* default styles */
+$base-color: $gray;
+$neutral-color: $gray;
+$color: darken($gray, 60%);
+
+$font-family: Arial, sans-serif;
+$font-size: 13px;
+
+/* toolbars */
+$toolbar-background-color: $gray;
+
+/* buttons */
+$button-toolbar-background-color: $gray;
+$button-toolbar-border-color: darken($gray, 10%);
+$button-toolbar-background-gradient: 'none';
+
+$button-small-padding: 8px;
+$button-default-background-gradient: 'none';
+$button-default-background-color: $red;
+$button-default-background-color-disabled: lighten($red, 10%);
+$button-default-background-color-over: darken($red, 10%);
+$button-default-background-color-pressed: darken($red, 10%);
+$button-default-background-color-focus: darken($red, 10%);
+
+/* panel headers */
+$panel-header-padding: 10px 5px;
+$panel-header-background-color: darken($red, 8%);
+$panel-frame-border-width: 0;
+$panel-body-border-width: 0;
+
+/* windows */
+$window-header-padding: 10px 5px;
+$window-header-background-color: darken($red, 8%);
+
+/* grids */
+$grid-header-border-color: $white;
+$grid-header-padding: 12px 8px;
+$grid-header-color: darken($gray, 10%);
+$grid-row-cell-alt-background-color: darken($gray, 3%);
+$grid-row-cell-background-color: darken($gray, 3%);
+$grid-row-cell-over-background-color: darken($gray, 5%);
+$grid-row-cell-border-color: darken($gray, 10%);
+$grid-row-cell-selected-background-color: lighten($yellow, 40%);
+$grid-cell-inner-padding: 8px;
+
+/*trees*/
+.x-tree-panel {
+	.x-tree-icon,
+	.x-tree-elbow-img {
+		display: none;
+	}
+	.x-grid-cell {
+		background: $white;
+	}
+	.x-grid-row-selected {
+		.x-grid-td {
+			background: $white;
+		}
+		.x-tree-node-text {
+			font-weight: bold;
+		}
+		
+		color: $red;
+	}
+}

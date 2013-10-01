@@ -1,0 +1,190 @@
+/* font */
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('../resources/fonts/DroidSans-webfont.eot');
+    src: url('../resources/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot');
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* icon font */
+@font-face {
+	font-family: 'ExtReader';
+	src:url('resources/fonts/ExtReader.eot');
+}
+@font-face {
+	font-family: 'ExtReader';
+	src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('woff'),
+		 url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAANAIAAAwBQRkZUTWgOfIgAAAh4AAAAHEdERUYAOAAGAAAIWAAAACBPUy8yUCHcHwAAAVgAAABWY21hcOUU3ygAAAHQAAABdmdhc3D//wADAAAIUAAAAAhnbHlmoMKXYQAAA2AAAAL4aGVhZPzwGnQAAADcAAAANmhoZWEEEP/lAAABFAAAACRobXR4BKoAAAAAAbAAAAAgbG9jYQKuA5oAAANIAAAAGG1heHAAUQAzAAABOAAAACBuYW1lZJLgUAAABlgAAAGecG9zdDZHfRYAAAf4AAAAWAABAAAAAQAA7SLMpl8PPPUACwIAAAAAAM3obNwAAAAAzehs3AAA/98CAAHgAAAACAACAAAAAAAAAAEAAAHg/98ALgIAAAD+AAIAAAEAAAAAAAAAAAAAAAAAAAAFAAEAAAALADAABAAAAAAAAgAAAAEAAQAAAEAAAAAAAAAAAQIAAZAABQAIAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAIABQMAAAAAAAAAAAABEAAAAAAAAAAAAAAAUGZFZABAAGXwAAHg/+AALgHgACGAAAABAAAAAAAAAgAAAAAAAAAAqgAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAADAAAAAwAAABwAAQAAAAAAcAADAAEAAAAcAAQAVAAAABAAEAADAAAAAABlAGgAc+AC4ATwAP//AAAAAABlAGgAcuAB4ATwAP//AAD/pP+iAAAgBCAEEAMAAQAAAAAAAAAKAAAAAAAAAAAABAAHAAABBgAAAQAAAAAAAAABAgAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAKAAAAAAAAAAAABAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgBOAIAArADWASQBSgF8AAEAAP/gAgAB4AACAAARASECAP4AAeD+AAAAAAAEAAD/3wIAAeAADwAXAB8AKAAAASEiBhURFBYzITI2NRE0JgAiJjQ2MhYUFzQmIzUyFhUzNCYjNTIeARUBq/6qIzIyIwFWIzIy/tAlGRokGUJaP1l/MJttWZZYAeAyI/6qIzIyIwFWIzL+YBokGRkkGkBZP39ZbZs/WJZZAAAAAAQAAP/gAgAB4AAHAA8AFwAfAAAAIgYUFjI2NAQiJjQ2MhYUFzQmIzUyFhUzNCYjNTIWFQFq1JaW1Jb+rRoTExoTOEYyRWMwf1ltmwHgltSWltTqExoTExoTMkYwY0VZfzCbbQADAAD/4AIAAeAABwAQABsAADYiBhQWMjY0JxUyFhUzNC4BJxUyHgEVMzQuAmA4KCg4KIhjjGNbm1xwv29iUYm+aSg5Jyc58WKMZFybW65ib79waL6JUQAAAwAAAAACAAHAAAsAEgAWAAABIQcRFBYzITI2NREBJzM1MxUzJTchFwGg/sBgCQcB4AcJ/wCgYIBg/q0gASYgAcBg/rAHCQkHAVD+4IBgYMAgIAAAAgAA/+ACAAHgACcALwAAJTUnJic3JwcmLwEjBwYHJwcXBg8BFRcWFwcXNxYfATM3NjcXNyc2NwYiJjQ2MhYUAgBJBQYrRDwNDgxgDA4NPEQrBgVJSgQGK0Q9DA4MYAwODD1EKwYEmzYlJTYlsGAMDg08RCsGBUlJBQYrRDwNDgxgDA4MPUQrBgRKSgQGK0Q9DA4EJTYlJTYAAAAAAgAA/+ACAAHgAAQAEwAAPwInDwEuASc/AiMHAyU3NQ8BwEDgIOBPDB4ZMkDAYMBgAUDAwCegIOAg4LIZHgyIJ8DA/sBgwGDAQAAAAAQAAP/gAgAB4AADAA8AFwAfAAA3MxUjEzIWHQEHIzU3NSM1NiIGFBYyNjQkMhYUBiImNOBAQIANE2BAYKC2rHp6rHr+xtSWltSWgEABIBMNYEAgQCBAUHqsenqsqpbUlpbUAAAAAAwAlgABAAAAAAABAAkAFAABAAAAAAACAAcALgABAAAAAAADACUAggABAAAAAAAEAAkAvAABAAAAAAAFAAsA3gABAAAAAAAGAAkA/gADAAEECQABABIAAAADAAEECQACAA4AHgADAAEECQADAEoANgADAAEECQAEABIAqAADAAEECQAFABYAxgADAAEECQAGABIA6gBFAHgAdABSAGUAYQBkAGUAcgAARXh0UmVhZGVyAABSAGUAZwB1AGwAYQByAABSZWd1bGFyAABGAG8AbgB0AEYAbwByAGcAZQAgADIALgAwACAAOgAgAEUAeAB0AFIAZQBhAGQAZQByACAAOgAgADIAMAAtADYALQAyADAAMQAzAABGb250Rm9yZ2UgMi4wIDogRXh0UmVhZGVyIDogMjAtNi0yMDEzAABFAHgAdABSAGUAYQBkAGUAcgAARXh0UmVhZGVyAABWAGUAcgBzAGkAbwBuACAAMQAuADAAAFZlcnNpb24gMS4wAABFAHgAdABSAGUAYQBkAGUAcgAARXh0UmVhZGVyAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAEAAgECAFUBAwEEAFYBBQBIAEsHdW5pRjAwMAd1bmlFMDAxB3VuaUUwMDIHdW5pRTAwNAAAAAH//wACAAEAAAAOAAAAGAAAAAAAAgABAAMACgABAAQAAAACAAAAAAABAAAAAMw9os8AAAAAzehs3AAAAADN6Gzc) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'ExtReader';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-feed, .icon-feed-2, .icon-feed-3, .icon-box-add, .icon-cog, .icon-pencil, .icon-question {
+	font-family: 'ExtReader';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-feed:before {
+	content: "\72";
+}
+.icon-feed-2:before {
+	content: "\e001";
+}
+.icon-feed-3:before {
+	content: "\e002";
+}
+.icon-box-add:before {
+	content: "\73";
+}
+.icon-cog:before {
+	content: "\e004";
+}
+.icon-pencil:before {
+	content: "\65";
+}
+.icon-pencil {
+	content: "e";
+}
+.icon-question:before {
+	content: "\68";
+}
+
+.x-tree-node-text:before {
+	content: "r";
+	margin-right: 5px;
+	font-family: 'ExtReader';
+}
+
+/* my variables */
+$red: #d14836;
+$gray: #f5f5f5;
+$yellow: #ffff00;
+$white: #fff;
+$blue: #15c;
+
+/* default styles */
+$base-color: $gray;
+$neutral-color: $gray;
+$color: darken($gray, 60%);
+
+$font-family: Arial, sans-serif;
+$font-size: 13px;
+
+/* toolbars */
+$toolbar-background-color: $gray;
+
+/* buttons */
+$button-toolbar-background-color: $gray;
+$button-toolbar-border-color: darken($gray, 10%);
+$button-toolbar-background-gradient: 'none';
+
+$button-small-padding: 8px;
+$button-default-background-gradient: 'none';
+$button-default-background-color: $red;
+$button-default-background-color-disabled: lighten($red, 10%);
+$button-default-background-color-over: darken($red, 10%);
+$button-default-background-color-pressed: darken($red, 10%);
+$button-default-background-color-focus: darken($red, 10%);
+
+/* panel headers */
+$panel-header-padding: 10px 5px;
+$panel-header-background-color: darken($red, 8%);
+$panel-frame-border-width: 0;
+$panel-body-border-width: 0;
+
+/* windows */
+$window-header-padding: 10px 5px;
+$window-header-background-color: darken($red, 8%);
+
+/* grids */
+$grid-header-border-color: $white;
+$grid-header-padding: 12px 8px;
+$grid-header-color: darken($gray, 10%);
+$grid-row-cell-alt-background-color: darken($gray, 3%);
+$grid-row-cell-background-color: darken($gray, 3%);
+$grid-row-cell-over-background-color: darken($gray, 5%);
+$grid-row-cell-border-color: darken($gray, 10%);
+$grid-row-cell-selected-background-color: lighten($yellow, 40%);
+$grid-cell-inner-padding: 8px;
+
+/*trees */
+.x-tree-panel {
+	.x-tree-icon,
+	.x-tree-elbow-img {
+		display: none;
+	}
+	.x-grid-cell {
+		background: $white;
+	}
+	.x-grid-row-selected {
+		.x-grid-td {
+			background: $white;
+		}
+		.x-tree-node-text {
+			font-weight: bold;
+		}
+		
+		color: $red;
+	}
+}
+
+/* main feeds */
+.main {
+	font-family: 'DroidSansRegular';
+	line-height: 1.6em;
+
+	h1 {
+		color: $blue;
+		font-family: Arial, sans-serif;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	
+	a {
+		color: $blue;
+	}
+
+	bold {
+		font-family: 'DroidSansBold'	
+	}
+}

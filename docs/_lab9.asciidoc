@@ -1,0 +1,31 @@
+Lab: Extending from the base theme (TODO)
+------------------------------------------
+
+.Objectives
+* Extending from the base theme
+
+.Steps
+
+. *Open the todoos app in your browser*
++
+Notice the classic theme. http://localhost/advancedtheming/todoos
+
+. *Generate a theme and give it the name _CustomTheme*
++
+(TIP see lab 2.)
+
+. *Build the theme*
++
+(TIP see lab 2.)
+
+. *Extend from the base theme*
++
+Open _packages/CustomTheme/package.json_ and change the extend to +ext-theme-base+.
+
+. *Open with your editor the sencha config file /todoos/.sencha/app/sencha.cfg*
+
+. *Switch the app.theme to the out of the new CustomTheme*
+
+. *Open packages/CustomTheme/sass/etc/all.scss*
+
+. *TODO*

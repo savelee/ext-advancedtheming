@@ -1,0 +1,11 @@
+{
+  "name": "GenerateSolution",
+  "format": "1",
+  "version": "1.0.0",
+  "creator": "Lee Boonstra",
+  "summary": "This is the Goggles theme",
+  "detailedDescription": "Long description of package",
+  "type": "theme",
+  "extend": "ext-theme-neptune",
+  "local": true
+}

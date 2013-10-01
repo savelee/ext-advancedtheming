@@ -1,0 +1,1983 @@
+/* including package ext-theme-base */
+/**
+ * Creates a background gradient.
+ *
+ * Example usage:
+ *     .foo {
+ *          @include background-gradient(#808080, matte, left);
+ *     }
+ *
+ * @param {Color} $bg-color The background color of the gradient
+ * @param {String/List} [$type=$base-gradient] The type of gradient to be used. Can either
+ * be a String which is a predefined gradient name, or it can can be a list of color stops.
+ * If null is passed, this mixin will still set the `background-color` to $bg-color.
+ * The available predefined gradient names are:
+ *
+ * * bevel
+ * * glossy
+ * * recessed
+ * * matte
+ * * matte-reverse
+ * * panel-header
+ * * tabbar
+ * * tab
+ * * tab-active
+ * * tab-over
+ * * tab-disabled
+ * * grid-header
+ * * grid-header-over
+ * * grid-row-over
+ * * grid-cell-special
+ * * glossy-button
+ * * glossy-button-over
+ * * glossy-button-pressed
+ *
+ * Each of these gradient names corresponds to a function named linear-gradient[name].
+ * Themes can override these functions to customize the color stops that they return.
+ * For example, to override the glossy-button gradient function add a function named
+ * "linear-gradient-glossy-button" to a file named "sass/etc/mixins/background-gradient.scss"
+ * in your theme.  The function should return the result of calling the Compass linear-gradient
+ * function with the desired direction and color-stop information for the gradient.  For example:
+ *
+ *     @function linear-gradient-glossy-button($direction, $bg-color) {
+ *         @return linear-gradient($direction, color_stops(
+ *             mix(#fff, $bg-color, 10%),
+ *             $bg-color 50%,
+ *             mix(#000, $bg-color, 5%) 51%,
+ *             $bg-color
+ *         ));
+ *     }
+ *
+ * @param {String} [$direction=top] The direction of the gradient. Can either be
+ * `top` or `left`.
+ *
+ * @member Global_CSS
+ */
+/*
+ * Method which inserts a full background-image property for a theme image.
+ * It checks if the file exists and if it doesn't, it'll throw an error.
+ * By default it will not include the background-image property if it is not found,
+ * but this can be changed by changing the default value of $include-missing-images to
+ * be true.
+ */
+/* including package CustomTheme */
+/* including package CustomTheme */
+/* including package ext-theme-base */
+/**
+ * @class Global_CSS
+ */
+/**
+ * @var {string} $prefix
+ * The prefix to be applied to all CSS selectors. If this is changed, it must also be changed in your
+ * JavaScript application.
+ */
+/**
+ * @var {boolean/string} $relative-image-path-for-uis
+ * True to use a relative image path for all new UIs. If true, the path will be "../images/".
+ * It can also be a string of the path value.
+ * It defaults to false, which means it will look for the images in the ExtJS SDK folder.
+ */
+/**
+ * @var {boolean} $include-not-found-images
+ * True to include files which are not found when compiling your SASS
+ */
+/**
+ * @var {boolean} $include-ie
+ * True to include Internet Explorer specific rules
+ */
+/**
+ * @var {boolean} $include-content-box
+ * True to include rules for browsers that do not support the border-box model
+ * (IE6 strict and IE7 strict)
+ */
+/**
+ * @var {boolean} $include-ff
+ * True to include Firefox specific rules
+ */
+/**
+ * @var {boolean} $include-chrome
+ * True to include Chrome specific rules
+ */
+/**
+ * @var {boolean} $include-safari
+ * True to include Safari specific rules
+ */
+/**
+ * @var {boolean} $include-opera
+ * True to include Opera specific rules
+ */
+/**
+ * @var {boolean} $include-webkit
+ * True to include Webkit specific rules
+ */
+/**
+ * @var {measurement} $css-shadow-border-radius
+ * The border radius for CSS shadows
+ */
+/**
+ * @var {color} $include-shadow-images
+ * True to include all shadow images.
+ */
+/**
+ * @var {string} $image-extension
+ * default file extension to use for images (defaults to 'png').
+ */
+/**
+ * @var {string} $slicer-image-extension
+ * default file extension to use for slicer images (defaults to 'gif').
+ */
+/**
+ * Default search path for images
+ */
+/**
+ * @var {boolean}
+ * True to include the default UI for each component.
+ */
+/**
+ * @var {string}
+ * The base path relative to the CSS output directory to use for theme resources.  For example
+ * if the theme's images live one directory up from the generated CSS output in a directory
+ * named 'foo/images/', you would need to set this variable to '../foo/' in order for the image
+ * paths in the CSS output to be generated correctly. By default this is the same as the
+ * CSS output directory.
+ */
+/* including package ext-theme-base */
+/*
+ * Although this file only contains a variable, all vars are included by default
+ * in application sass builds, so this needs to be in the rule file section
+ * to allow javascript inclusion filtering to disable it.
+ */
+/**
+ * @var {boolean} $include-rtl
+ * True to include right-to-left style rules.  This variable gets set to true automatically
+ * for rtl builds. You should not need to ever assign a value to this variable, however
+ * it can be used to suppress rtl-specific rules when they are not needed.  For example:
+ *     @if $include-rtl {
+ *         .x-rtl.foo {
+ *             margin-left: $margin-right;
+ *             margin-right: $margin-left;
+ *         }
+ *     }
+ * @member Global_CSS
+ */
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-body {
+  margin: 0;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+img {
+  border: 0;
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-border-box,
+.x-border-box * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 17, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-rtl {
+  direction: rtl;
+}
+
+/* line 21, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-ltr {
+  direction: ltr;
+}
+
+/* line 25, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-clear {
+  overflow: hidden;
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+  display: table;
+}
+
+/* line 33, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-strict .x-ie7 .x-clear {
+  height: 0;
+  width: 0;
+}
+
+/* line 41, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-layer {
+  position: absolute !important;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 49, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-fixed-layer {
+  position: fixed !important;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 55, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-shim {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 63, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-hide-display {
+  display: none !important;
+}
+
+/* line 67, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-hide-visibility {
+  visibility: hidden !important;
+}
+
+/* line 72, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-ie6 .x-item-disabled {
+  filter: none;
+}
+
+/* line 78, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-hidden,
+.x-hide-offsets {
+  display: block !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  top: -10000px !important;
+}
+
+/* line 88, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-hide-nosize {
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* line 94, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-hide-clip {
+  position: absolute!important;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
+}
+
+/* line 102, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-masked-relative {
+  position: relative;
+}
+
+/* line 108, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-ie-shadow {
+  background-color: #777;
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 117, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-unselectable {
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/* line 121, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-selectable {
+  cursor: auto;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -o-user-select: text;
+}
+
+/* line 136, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-list-plain {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 143, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-table-plain {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+}
+
+/* line 156, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-frame-tl,
+.x-frame-tr,
+.x-frame-tc,
+.x-frame-bl,
+.x-frame-br,
+.x-frame-bc {
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+/* line 162, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-frame-tc,
+.x-frame-bc {
+  background-repeat: repeat-x;
+}
+
+/* line 166, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-frame-mc {
+  background-repeat: repeat-x;
+  overflow: hidden;
+}
+
+/* line 171, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-proxy-el {
+  position: absolute;
+  background: #b4b4b4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 178, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-css-shadow {
+  position: absolute;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 184, ../../../../ext/packages/ext-theme-base/sass/src/Component.scss */
+.x-item-disabled,
+.x-item-disabled * {
+  cursor: default;
+}
+
+/* line 3, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Container.scss */
+.x-box-item {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Container.scss */
+.x-rtl > .x-box-item {
+  right: 0;
+  left: auto;
+}
+
+/* line 20, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Container.scss */
+.x-ie6 .x-rtl .x-box-item,
+.x-quirks .x-ie .x-rtl .x-box-item {
+  right: 0;
+  left: auto;
+}
+
+/* line 4, ../../../../ext/packages/ext-theme-base/sass/src/Editor.scss */
+div.x-editor {
+  overflow: visible;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/LoadMask.scss */
+.x-mask {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  zoom: 1;
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/LoadMask.scss */
+.x-mask-shim {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 20, ../../../../ext/packages/ext-theme-base/sass/src/LoadMask.scss */
+.x-mask-msg {
+  z-index: 20001;
+  position: absolute;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/ProgressBar.scss */
+.x-progress {
+  position: relative;
+  border-style: solid;
+  overflow: hidden;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/ProgressBar.scss */
+.x-progress-bar {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 100%;
+}
+
+/* line 14, ../../../../ext/packages/ext-theme-base/sass/src/ProgressBar.scss */
+.x-progress-text {
+  overflow: hidden;
+  position: absolute;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn {
+  display: inline-block;
+  position: relative;
+  zoom: 1;
+  *display: inline;
+  outline: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+/* line 15, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-wrap {
+  position: relative;
+  display: block;
+}
+
+/* line 20, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-button {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 28, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 35, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-icon-el {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* line 45, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner-center {
+  text-align: center;
+}
+
+/* line 49, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner-left {
+  text-align: left;
+}
+
+/* line 54, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-rtl.x-btn-inner-left {
+  text-align: right;
+}
+
+/* line 59, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-btn-inner-right {
+  text-align: right;
+}
+
+/* line 64, ../../../../ext/packages/ext-theme-base/sass/src/button/Button.scss */
+.x-rtl.x-btn-inner-right {
+  text-align: left;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-box-layout-ct {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-box-target {
+  position: absolute;
+  width: 20000px;
+  top: 0;
+  left: 0;
+  height: 1px;
+}
+
+/* line 25, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-rtl.x-box-target {
+  left: auto;
+  right: 0;
+}
+
+/* line 31, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-box-inner {
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+/* line 41, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-horizontal-box-overflow-body {
+  float: left;
+}
+
+/* line 45, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-box-scroller {
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+/* line 51, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-box-scroller-left,
+.x-box-scroller-right {
+  float: left;
+  height: 100%;
+  z-index: 5;
+}
+
+/* line 59, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-box-scroller-top .x-box-scroller,
+.x-box-scroller-bottom .x-box-scroller {
+  line-height: 0;
+  font-size: 0;
+  background-position: center 0;
+}
+
+/* line 66, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-box-menu-after {
+  float: right;
+}
+
+/* line 71, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Box.scss */
+.x-rtl.x-box-menu-after {
+  float: left;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/toolbar/Toolbar.scss */
+.x-toolbar-text {
+  white-space: nowrap;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/toolbar/Toolbar.scss */
+.x-toolbar-separator {
+  display: block;
+  font-size: 1px;
+  overflow: hidden;
+  cursor: default;
+  border: 0;
+  width: 0;
+  height: 0;
+  line-height: 0px;
+}
+
+/* line 17, ../../../../ext/packages/ext-theme-base/sass/src/toolbar/Toolbar.scss */
+.x-quirks .x-ie .x-toolbar .x-toolbar-separator-horizontal {
+  width: 2px;
+}
+
+/* line 22, ../../../../ext/packages/ext-theme-base/sass/src/toolbar/Toolbar.scss */
+.x-toolbar-scroller {
+  padding-left: 0;
+}
+
+/* line 29, ../../../../ext/packages/ext-theme-base/sass/src/toolbar/Toolbar.scss */
+.x-toolbar-plain {
+  border: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked {
+  position: absolute !important;
+  z-index: 1;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-vertical {
+  position: static;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-top {
+  border-bottom-width: 0 !important;
+}
+
+/* line 15, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-bottom {
+  border-top-width: 0 !important;
+}
+
+/* line 19, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-left {
+  border-right-width: 0 !important;
+}
+
+/* line 23, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-right {
+  border-left-width: 0 !important;
+}
+
+/* line 27, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-noborder-top {
+  border-top-width: 0 !important;
+}
+
+/* line 31, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-noborder-right {
+  border-right-width: 0 !important;
+}
+
+/* line 35, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-noborder-bottom {
+  border-bottom-width: 0 !important;
+}
+
+/* line 39, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-docked-noborder-left {
+  border-left-width: 0 !important;
+}
+
+/* line 45, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-l {
+  border-left-width: 0 !important;
+}
+
+/* line 48, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-b {
+  border-bottom-width: 0 !important;
+}
+
+/* line 51, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-bl {
+  border-bottom-width: 0 !important;
+  border-left-width: 0 !important;
+}
+
+/* line 55, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-r {
+  border-right-width: 0 !important;
+}
+
+/* line 58, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-rl {
+  border-right-width: 0 !important;
+  border-left-width: 0 !important;
+}
+
+/* line 62, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-rb {
+  border-right-width: 0 !important;
+  border-bottom-width: 0 !important;
+}
+
+/* line 66, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-rbl {
+  border-right-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-left-width: 0 !important;
+}
+
+/* line 71, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-t {
+  border-top-width: 0 !important;
+}
+
+/* line 74, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-tl {
+  border-top-width: 0 !important;
+  border-left-width: 0 !important;
+}
+
+/* line 78, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-tb {
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+}
+
+/* line 82, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-tbl {
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-left-width: 0 !important;
+}
+
+/* line 87, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-tr {
+  border-top-width: 0 !important;
+  border-right-width: 0 !important;
+}
+
+/* line 91, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-trl {
+  border-top-width: 0 !important;
+  border-right-width: 0 !important;
+  border-left-width: 0 !important;
+}
+
+/* line 96, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-trb {
+  border-top-width: 0 !important;
+  border-right-width: 0 !important;
+  border-bottom-width: 0 !important;
+}
+
+/* line 101, ../../../../ext/packages/ext-theme-base/sass/src/layout/component/Dock.scss */
+.x-noborder-trbl {
+  border-width: 0 !important;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/panel/Header.scss */
+.x-header-icon {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 8, ../../../../ext/packages/ext-theme-base/sass/src/panel/Header.scss */
+.x-header-text-container {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 15, ../../../../ext/packages/ext-theme-base/sass/src/panel/Header.scss */
+.x-rtl.x-header-text-container {
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}
+
+/* line 4, ../../../../ext/packages/ext-theme-base/sass/src/dd/DD.scss */
+.x-dd-drag-proxy,
+.x-dd-drag-current {
+  z-index: 1000000!important;
+  pointer-events: none;
+}
+
+/* line 2, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-dd-drag-repair .x-dd-drag-ghost {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+}
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-dd-drag-repair .x-dd-drop-icon {
+  display: none;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-dd-drag-ghost {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
+  padding: 5px;
+  padding-left: 20px;
+  white-space: nowrap;
+  color: #000;
+  font: normal 12px helvetica, arial, verdana, sans-serif;
+  border: 1px solid;
+  border-color: #ddd #bbb #bbb #ddd;
+  background-color: #fff;
+}
+
+/* line 28, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-dd-drop-icon {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* line 51, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-rtl .x-dd-drag-ghost {
+  padding-left: 5px;
+  padding-right: 20px;
+}
+/* line 55, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-rtl .x-dd-drop-icon {
+  left: auto;
+  right: 3px;
+}
+
+/* line 66, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-dd-drop-ok .x-dd-drop-icon {
+  background-image: url(images/dd/drop-yes.png);
+}
+
+/* line 70, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-dd-drop-ok-add .x-dd-drop-icon {
+  background-image: url(images/dd/drop-add.png);
+}
+
+/* line 75, ../../../../ext/packages/ext-theme-base/sass/src/dd/StatusProxy.scss */
+.x-dd-drop-nodrop div.x-dd-drop-icon {
+  background-image: url(images/dd/drop-no.png);
+}
+
+/* line 2, ../../../../ext/packages/ext-theme-base/sass/src/panel/Panel.scss */
+.x-panel,
+.x-plain {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/panel/Panel.scss */
+.x-panel {
+  outline: none;
+}
+
+/* line 23, ../../../../ext/packages/ext-theme-base/sass/src/panel/Panel.scss */
+.x-ie .x-panel-header,
+.x-ie .x-panel-header-tl,
+.x-ie .x-panel-header-tc,
+.x-ie .x-panel-header-tr,
+.x-ie .x-panel-header-ml,
+.x-ie .x-panel-header-mc,
+.x-ie .x-panel-header-mr,
+.x-ie .x-panel-header-bl,
+.x-ie .x-panel-header-bc,
+.x-ie .x-panel-header-br {
+  zoom: 1;
+}
+
+/* line 29, ../../../../ext/packages/ext-theme-base/sass/src/panel/Panel.scss */
+.x-ie8 td.x-frame-mc {
+  vertical-align: top;
+}
+
+/* line 35, ../../../../ext/packages/ext-theme-base/sass/src/panel/Panel.scss */
+.x-panel-body {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 42, ../../../../ext/packages/ext-theme-base/sass/src/panel/Panel.scss */
+.x-nlg .x-panel-header-vertical .x-frame-mc {
+  background-repeat: repeat-y;
+}
+
+/* line 49, ../../../../ext/packages/ext-theme-base/sass/src/panel/Panel.scss */
+.x-panel-header-plain,
+.x-panel-body-plain {
+  border: 0;
+  padding: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/tip/Tip.scss */
+.x-tip {
+  position: absolute;
+  overflow: visible;
+  /*pointer needs to be able to stick out*/
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/tip/Tip.scss */
+.x-tip-body {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/tip/Tip.scss */
+.x-tip-anchor {
+  position: absolute;
+  overflow: hidden;
+  border-style: solid;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.x-surface {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  overflow: hidden;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.rvml {
+  behavior: url(#default#VML);
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.x-surface tspan {
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/* line 14, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.x-vml-sprite {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+}
+
+/* line 22, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.x-vml-group {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000px;
+  height: 1000px;
+}
+
+/* line 30, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.x-vml-measure-span {
+  position: absolute;
+  left: -9999em;
+  top: -9999em;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+/* line 39, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.x-vml-base {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 47, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+.x-vml-base {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 55, ../../../../ext/packages/ext-theme-base/sass/src/draw/Component.scss */
+svg, vml {
+  overflow: hidden;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Table.scss */
+.x-table-layout {
+  font-size: 1em;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/container/ButtonGroup.scss */
+.x-btn-group {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/container/ButtonGroup.scss */
+.x-btn-group-body {
+  position: relative;
+  zoom: 1;
+}
+/* line 9, ../../../../ext/packages/ext-theme-base/sass/src/container/ButtonGroup.scss */
+.x-btn-group-body .x-table-layout-cell {
+  vertical-align: top;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/container/Viewport.scss */
+.x-viewport, .x-viewport body {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  overflow: hidden;
+  height: 100%;
+  position: static;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/window/Window.scss */
+.x-window {
+  outline: none;
+  overflow: hidden;
+}
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/window/Window.scss */
+.x-window .x-window-wrap {
+  position: relative;
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/window/Window.scss */
+.x-window-body {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 15, ../../../../ext/packages/ext-theme-base/sass/src/window/Window.scss */
+.x-window-body-plain {
+  background: transparent;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/Labelable.scss */
+.x-form-item-label {
+  display: block;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/form/Labelable.scss */
+.x-form-item-label-right {
+  text-align: right;
+}
+
+/* line 9, ../../../../ext/packages/ext-theme-base/sass/src/form/Labelable.scss */
+.x-form-item-label-top {
+  display: block;
+  zoom: 1;
+}
+
+/* line 15, ../../../../ext/packages/ext-theme-base/sass/src/form/Labelable.scss */
+.x-form-invalid-icon {
+  overflow: hidden;
+}
+/* line 17, ../../../../ext/packages/ext-theme-base/sass/src/form/Labelable.scss */
+.x-form-invalid-icon ul {
+  display: none;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/field/TextArea.scss */
+.x-form-textarea {
+  overflow: auto;
+  resize: none;
+}
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/form/field/TextArea.scss */
+.x-safari.x-mac .x-form-textarea {
+  margin-bottom: -2px;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Display.scss */
+.x-form-display-field-body {
+  vertical-align: top;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Checkbox.scss */
+.x-form-cb-wrap {
+  vertical-align: top;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Checkbox.scss */
+.x-form-cb {
+  vertical-align: top;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Checkbox.scss */
+.x-form-cb::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 16, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Checkbox.scss */
+.x-form-cb-label {
+  display: inline-block;
+  zoom: 1;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/FieldSet.scss */
+.x-fieldset {
+  display: block;
+  /* preserve margins in IE */
+  position: relative;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/form/FieldSet.scss */
+.x-fieldset-header {
+  overflow: hidden;
+}
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/form/FieldSet.scss */
+.x-fieldset-header .x-form-item,
+.x-fieldset-header .x-tool {
+  float: left;
+}
+/* line 14, ../../../../ext/packages/ext-theme-base/sass/src/form/FieldSet.scss */
+.x-fieldset-header .x-form-cb-wrap {
+  font-size: 0;
+  line-height: 0;
+}
+/* line 19, ../../../../ext/packages/ext-theme-base/sass/src/form/FieldSet.scss */
+.x-fieldset-header .x-form-cb {
+  margin: 0;
+}
+
+/* line 27, ../../../../ext/packages/ext-theme-base/sass/src/form/FieldSet.scss */
+.x-rtl.x-fieldset-header .x-form-item,
+.x-rtl.x-fieldset-header .x-tool {
+  float: right;
+}
+
+/* line 33, ../../../../ext/packages/ext-theme-base/sass/src/form/FieldSet.scss */
+.x-fieldset-header-text {
+  float: left;
+}
+
+/*misc*/
+/* line 4, ../../../../ext/packages/ext-theme-base/sass/src/form/Panel.scss */
+.x-webkit *:focus {
+  outline: none !important;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/form/Panel.scss */
+.x-form-item {
+  vertical-align: top;
+  table-layout: fixed;
+}
+
+/* line 17, ../../../../ext/packages/ext-theme-base/sass/src/form/Panel.scss */
+.x-form-item-body {
+  position: relative;
+}
+
+/* line 26, ../../../../ext/packages/ext-theme-base/sass/src/form/Panel.scss */
+.x-rtl.x-form-item .x-form-item-input-row {
+  position: relative;
+  right: 0;
+}
+
+/* line 33, ../../../../ext/packages/ext-theme-base/sass/src/form/Panel.scss */
+.x-form-form-item td {
+  border-top: 1px solid transparent;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Trigger.scss */
+.x-form-trigger {
+  cursor: pointer;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Trigger.scss */
+.x-item-disabled .x-form-trigger {
+  cursor: default;
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Trigger.scss */
+.x-trigger-noedit {
+  cursor: default;
+}
+
+/* line 14, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Trigger.scss */
+.x-form-trigger-wrap {
+  vertical-align: top;
+  border-collapse: separate;
+}
+
+/* line 2, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Spinner.scss */
+.x-form-spinner-up,
+.x-form-spinner-down {
+  font-size: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-datepicker {
+  position: relative;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-datepicker-inner {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-datepicker-cell {
+  padding: 0;
+}
+
+/* line 15, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-datepicker-header {
+  position: relative;
+  zoom: 1;
+}
+
+/* line 20, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-datepicker-arrow {
+  position: absolute;
+  outline: none;
+  font-size: 0;
+}
+
+/* line 26, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-datepicker-column-header {
+  padding: 0;
+}
+
+/* line 30, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-datepicker-date {
+  display: block;
+  zoom: 1;
+  text-decoration: none;
+}
+
+/* line 36, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 42, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker-body {
+  height: 100%;
+}
+
+/* line 47, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker-months,
+.x-monthpicker-years {
+  float: left;
+  height: 100%;
+}
+
+/* line 52, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker-item {
+  float: left;
+}
+
+/* line 56, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker-item-inner {
+  display: block;
+  text-decoration: none;
+}
+
+/* line 61, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker-yearnav-button-ct {
+  float: left;
+  text-align: center;
+}
+
+/* line 66, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker-yearnav-button {
+  display: inline-block;
+  outline: none;
+  font-size: 0;
+}
+
+/* line 72, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-monthpicker-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 78, ../../../../ext/packages/ext-theme-base/sass/src/picker/Date.scss */
+.x-strict .x-ie6 .x-monthpicker-buttons {
+  bottom: -1px;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/field/File.scss */
+.x-form-file-btn {
+  overflow: hidden;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/form/field/File.scss */
+.x-form-file-input {
+  border: 0;
+  position: absolute;
+  cursor: pointer;
+  top: -2px;
+  right: -2px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  /* Yes, there's actually a good reason for this...
+   * If the configured buttonText is set to something longer than the default,
+   * then it will quickly exceed the width of the hidden file input's "Browse..."
+   * button, so part of the custom button's clickable area will be covered by
+   * the hidden file input's text box instead. This results in a text-selection
+   * mouse cursor over that part of the button, at least in Firefox, which is
+   * confusing to a user. Giving the hidden file input a huge font-size makes
+   * the native button part very large so it will cover the whole clickable area.
+   */
+  font-size: 1000px;
+}
+
+/* line 29, ../../../../ext/packages/ext-theme-base/sass/src/form/field/File.scss */
+.x-rtl.x-form-file-input {
+  right: auto;
+  left: -2px;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/field/Hidden.scss */
+.x-form-item-hidden {
+  margin: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/picker/Color.scss */
+.x-color-picker-item {
+  float: left;
+  text-decoration: none;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/picker/Color.scss */
+.x-color-picker-item-inner {
+  display: block;
+  font-size: 1px;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/form/field/HtmlEditor.scss */
+.x-html-editor-tb .x-toolbar {
+  position: static !important;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/form/field/HtmlEditor.scss */
+.x-htmleditor-iframe {
+  display: block;
+  overflow: auto;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Fit.scss */
+.x-fit-item {
+  position: relative;
+}
+
+/* line 2, ../../../../ext/packages/ext-theme-base/sass/src/panel/Table.scss */
+.x-grid-row,
+.x-grid-data-row {
+  outline: none;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/panel/Table.scss */
+.x-grid-view {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/panel/Table.scss */
+.x-grid-table {
+  table-layout: fixed;
+  border-collapse: separate;
+}
+
+/* line 16, ../../../../ext/packages/ext-theme-base/sass/src/panel/Table.scss */
+.x-grid-td {
+  overflow: hidden;
+  border-width: 0;
+  vertical-align: top;
+}
+
+/* line 22, ../../../../ext/packages/ext-theme-base/sass/src/panel/Table.scss */
+.x-grid-cell-inner {
+  overflow: hidden;
+  white-space: nowrap;
+  zoom: 1;
+}
+
+/* line 28, ../../../../ext/packages/ext-theme-base/sass/src/panel/Table.scss */
+.x-grid-resize-marker {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+}
+
+/* line 2, ../../../../ext/packages/ext-theme-base/sass/src/grid/header/DropZone.scss */
+.col-move-top,
+.col-move-bottom {
+  position: absolute;
+  top: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  z-index: 20000;
+  background: no-repeat center top transparent;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/header/Container.scss */
+.x-grid-header-ct {
+  cursor: default;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header {
+  position: absolute;
+  overflow: hidden;
+  background-repeat: repeat-x;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header-inner {
+  zoom: 1;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 14, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header-text {
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  zoom: 1;
+  display: inline-block;
+}
+
+/* line 25, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header-trigger {
+  display: none;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+/* line 36, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-rtl.x-column-header-trigger {
+  left: 0;
+  right: auto;
+}
+
+/* line 43, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header-over .x-column-header-trigger, .x-column-header-open .x-column-header-trigger {
+  display: block;
+}
+
+/* line 48, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header-align-right {
+  text-align: right;
+}
+
+/* line 53, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-rtl.x-column-header-align-right {
+  text-align: left;
+}
+
+/* line 58, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header-align-left {
+  text-align: left;
+}
+
+/* line 63, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-rtl.x-column-header-align-left {
+  text-align: right;
+}
+
+/* line 68, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Column.scss */
+.x-column-header-align-center {
+  text-align: center;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/Action.scss */
+.x-grid-cell-inner-action-col {
+  line-height: 0;
+  font-size: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/CheckColumn.scss */
+.x-grid-cell-inner-checkcolumn {
+  line-height: 0;
+  font-size: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/column/RowNumberer.scss */
+.x-row-numberer .x-column-header-inner {
+  text-overflow: clip;
+}
+
+/* line 3, ../../../../ext/packages/ext-theme-base/sass/src/grid/feature/Grouping.scss */
+.x-grid-group,
+.x-grid-group-body,
+.x-grid-group-hd {
+  zoom: 1;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/grid/feature/Grouping.scss */
+.x-grid-group-hd {
+  white-space: nowrap;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/grid/feature/Grouping.scss */
+.x-grid-row-body-hidden, .x-grid-group-collapsed {
+  display: none;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/feature/RowBody.scss */
+.x-grid-rowbody {
+  zoom: 1;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/grid/feature/RowBody.scss */
+.x-grid-row-body-hidden {
+  display: none;
+}
+
+/* line 3, ../../../../ext/packages/ext-theme-base/sass/src/grid/feature/RowWrap.scss */
+td.x-grid-rowwrap .x-grid-table {
+  border: 0;
+}
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/grid/feature/RowWrap.scss */
+td.x-grid-rowwrap .x-grid-cell {
+  border-bottom: 0;
+  background-color: transparent;
+}
+
+/* line 2, ../../../../ext/packages/ext-theme-base/sass/src/grid/plugin/Editing.scss */
+.x-grid-editor .x-form-cb-wrap {
+  text-align: center;
+}
+
+/* line 9, ../../../../ext/packages/ext-theme-base/sass/src/grid/plugin/Editing.scss */
+.x-grid-editor .x-form-display-field {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 17, ../../../../ext/packages/ext-theme-base/sass/src/grid/plugin/Editing.scss */
+.x-grid-editor div.x-form-action-col-field {
+  line-height: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/plugin/RowEditing.scss */
+.x-grid-row-editor {
+  position: absolute;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/grid/plugin/RowEditing.scss */
+.x-grid-row-editor-buttons {
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/grid/plugin/RowExpander.scss */
+.x-grid-row-expander {
+  font-size: 0;
+  line-height: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Absolute.scss */
+.x-abs-layout-ct {
+  position: relative;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Absolute.scss */
+.x-abs-layout-item {
+  position: absolute !important;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/resizer/Splitter.scss */
+.x-splitter {
+  font-size: 1px;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/resizer/Splitter.scss */
+.x-splitter-horizontal {
+  cursor: e-resize;
+  cursor: row-resize;
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/resizer/Splitter.scss */
+.x-splitter-vertical {
+  cursor: e-resize;
+  cursor: col-resize;
+}
+
+/* line 17, ../../../../ext/packages/ext-theme-base/sass/src/resizer/Splitter.scss */
+.x-splitter-collapsed,
+.x-splitter-horizontal-noresize,
+.x-splitter-vertical-noresize {
+  cursor: default;
+}
+
+/* line 21, ../../../../ext/packages/ext-theme-base/sass/src/resizer/Splitter.scss */
+.x-splitter-active {
+  z-index: 4;
+}
+
+/* line 25, ../../../../ext/packages/ext-theme-base/sass/src/resizer/Splitter.scss */
+.x-collapse-el {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Border.scss */
+.x-border-layout-ct {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Border.scss */
+.x-border-layout-ct {
+  position: relative;
+}
+
+/* line 10, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Border.scss */
+.x-border-region-slide-in {
+  z-index: 5;
+}
+
+/* line 14, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Border.scss */
+.x-region-collapsed-placeholder {
+  z-index: 4;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Column.scss */
+.x-column {
+  float: left;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Column.scss */
+.x-rtl > .x-column {
+  float: right;
+}
+
+/* line 13, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Column.scss */
+.x-ie6 .x-rtl .x-column, .x-quirks .x-ie .x-rtl .x-column {
+  float: right;
+}
+
+/* line 21, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Column.scss */
+.x-ie6 .x-column {
+  display: inline;
+  /*prevent IE6 double-margin bug*/
+}
+
+/* line 25, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Column.scss */
+.x-quirks .x-ie .x-form-layout-table, .x-quirks .x-ie .x-form-layout-table tbody tr.x-form-item {
+  position: relative;
+}
+
+/* line 2, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Form.scss */
+.x-form-layout-table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+}
+
+/* line 9, ../../../../ext/packages/ext-theme-base/sass/src/layout/container/Form.scss */
+.x-ie6 .x-form-layout-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu {
+  outline: none;
+}
+
+/* line 5, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-item {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-item-cmp {
+  margin: 10px;
+}
+/* line 14, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-item-cmp .x-field-label-cell {
+  vertical-align: middle;
+}
+
+/* line 22, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-icon-separator {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 28, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-plain .x-menu-icon-separator {
+  display: none;
+}
+
+/* line 33, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-item-link {
+  text-decoration: none;
+  outline: 0;
+  zoom: 1;
+}
+
+/* line 40, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-item-text {
+  zoom: 1;
+}
+
+/* line 47, ../../../../ext/packages/ext-theme-base/sass/src/menu/Menu.scss */
+.x-menu-item-icon,
+.x-menu-item-icon-right,
+.x-menu-item-arrow {
+  position: absolute;
+  text-align: center;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/resizer/SplitterTracker.scss */
+.x-resizable-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 200000;
+  background-color: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/slider/Multi.scss */
+.x-slider {
+  outline: none;
+  zoom: 1;
+  position: relative;
+}
+
+/* line 9, ../../../../ext/packages/ext-theme-base/sass/src/slider/Multi.scss */
+.x-slider-inner {
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  zoom: 1;
+}
+/* line 17, ../../../../ext/packages/ext-theme-base/sass/src/slider/Multi.scss */
+.x-slider-vert .x-slider-inner {
+  background: repeat-y 0 0;
+}
+
+/* line 23, ../../../../ext/packages/ext-theme-base/sass/src/slider/Multi.scss */
+.x-slider-end {
+  zoom: 1;
+}
+
+/* line 28, ../../../../ext/packages/ext-theme-base/sass/src/slider/Multi.scss */
+.x-slider-thumb {
+  position: absolute;
+  background: no-repeat 0 0;
+}
+/* line 31, ../../../../ext/packages/ext-theme-base/sass/src/slider/Multi.scss */
+.x-slider-horz .x-slider-thumb {
+  left: 0;
+}
+/* line 34, ../../../../ext/packages/ext-theme-base/sass/src/slider/Multi.scss */
+.x-slider-vert .x-slider-thumb {
+  bottom: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/tab/Tab.scss */
+a.x-tab {
+  text-decoration: none;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/tab/Bar.scss */
+.x-tab-bar {
+  position: relative;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/selection/CheckboxModel.scss */
+.x-column-header-checkbox .x-column-header-text {
+  display: block;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/selection/CheckboxModel.scss */
+.x-grid-cell-row-checker {
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab {
+  display: block;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* line 7, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-active {
+  z-index: 3;
+}
+
+/* line 11, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-wrap {
+  display: block;
+  position: relative;
+}
+
+/* line 16, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-button {
+  zoom: 1;
+  display: block;
+  outline: none;
+}
+
+/* line 22, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-inner {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 32, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-btn-icon-el {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* line 42, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar {
+  z-index: 1;
+}
+
+/* line 46, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-body {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 51, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-strip {
+  position: absolute;
+  line-height: 0;
+  font-size: 0;
+  z-index: 1;
+}
+
+/* line 58, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-horizontal .x-tab-bar-strip {
+  width: 100%;
+  left: 0;
+}
+
+/* line 63, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-vertical .x-tab-bar-strip {
+  height: 100%;
+  top: 0;
+}
+
+/* line 68, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-strip-top {
+  bottom: 0;
+}
+
+/* line 72, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-strip-bottom {
+  top: 0;
+}
+
+/* line 76, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-strip-left {
+  right: 0;
+}
+
+/* line 81, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-rtl.x-tab-bar .x-tab-bar-strip-left {
+  right: auto;
+  left: 0;
+}
+
+/* line 87, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-strip-right {
+  left: 0;
+}
+
+/* line 92, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-rtl.x-tab-bar .x-tab-bar-strip-right {
+  left: auto;
+  right: 0;
+}
+
+/* line 98, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-bar-plain {
+  background: transparent !important;
+}
+
+/* line 102, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-icon-el {
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+}
+
+/* line 112, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-rtl.x-tab-icon-el {
+  left: auto;
+  right: 0;
+}
+
+/* line 118, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-close-btn {
+  display: block;
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  background: no-repeat;
+}
+
+/* line 126, ../../../../ext/packages/ext-theme-base/sass/src/tab/Panel.scss */
+.x-tab-mc {
+  overflow: visible;
+}
+
+/* line 3, ../../../../ext/packages/ext-theme-base/sass/src/tree/Panel.scss */
+.x-autowidth-table .x-grid-table {
+  table-layout: auto;
+  width: auto !important;
+}
+
+/* line 8, ../../../../ext/packages/ext-theme-base/sass/src/tree/Panel.scss */
+.x-tree-view {
+  overflow: hidden;
+}
+
+/* line 13, ../../../../ext/packages/ext-theme-base/sass/src/tree/Panel.scss */
+.x-tree-elbow-img,
+.x-tree-icon {
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  vertical-align: top;
+}
+
+/* line 19, ../../../../ext/packages/ext-theme-base/sass/src/tree/Panel.scss */
+.x-tree-checkbox {
+  border: 0;
+  padding: 0;
+  vertical-align: top;
+  position: relative;
+  background-color: transparent;
+}
+
+/* line 27, ../../../../ext/packages/ext-theme-base/sass/src/tree/Panel.scss */
+.x-tree-animator-wrap {
+  overflow: hidden;
+}
+
+/* line 31, ../../../../ext/packages/ext-theme-base/sass/src/tree/Panel.scss */
+.x-tree-node-text {
+  zoom: 1;
+}

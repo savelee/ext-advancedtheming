@@ -1,0 +1,16 @@
+@include extjs-panel-ui(
+    'light',
+    $ui-header-color: lighten(#15c, 20%),
+    $ui-header-background-color: #fff,
+    $ui-header-background-gradient: null,
+    $ui-header-line-height: 14px,
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff,
+    $ui-body-font-size: 14px,
+
+    $ui-padding: 10px
+);

@@ -1,0 +1,11 @@
+{
+  "name": "CustomTheme",
+  "format": "1",
+  "version": "1.0.0",
+  "creator": "Lee Boonstra",
+  "summary": "Custom Theme",
+  "detailedDescription": "Long description of package",
+  "type": "theme",
+  "extend": "ext-theme-base",
+  "local": true
+}

@@ -1,0 +1,190 @@
+=== Implementing Glyps and Icons
+.The following steps are required to implement a custom icon font.
+
+1. Choose an icon font
+2. Create a font pack
+3. Download the icon font.
+3. Implement icon font in Sass
+4. Assign icon font
+5. Build
+
+==== About icon fonts
+Icons delivered as a font file and mapped to (HEX) character codes.
+Icon font can be embedded with CSS like any other custom font.
+
+==== Icon fonts why?
+.Why icon fonts?
+* Icon Fonts are vectors.
+Icons can easily change size and they are always best quality.
+Perfect on Retina displays.
+* No need for Photoshop
+Icon Fonts can change colors, shades, contrasts and have no background.
+Customizable with CSS
+* Screen reader compatible
+Font icons won't spam your screen reader.
+No additional markup is required. 
+
+==== Where to get icon fonts from?
+http://icomoon.io/app
+http://www.pictos.cc
+http://fontello.com/
+http://fortawesome.github.io/Font-Awesome/
+
+Convert text to unicodes:
+http://www.branah.com/unicode-converter
+
+==== Create a font
+
+.Download a ready-made icon font pack 
+
+.Create your own font by selecting icons.
+* Set character and unicode to the every icon.
+* Set default font metrics (for example 16px)
+* Give the font a name
+
+==== Example: IcoMoon
+
+[[styles_createfontpack1]]
+.Create your own custom font with IcoMoon.io
+image::images/assets_createfontpack.png[]
+
+[[styles_createfontpack2]]
+.Create your own custom font with IcoMoon.io
+image::images/assets_createfontpack2.png[]
+
+==== Example: Fontello
+
+[[styles_createfontpack3]]
+.Create your own custom font with Fontello.com
+image::images/assets_createfontpack3.png[]
+
+==== Implement icon font in Sass
+This works exact the same as implementing any other font.
+
+Sometimes the CSS file is included with the font kit download.
+
+[source, javascript]
+----
+@font-face {
+  font-family: 'MyFont';
+  src: url('font/myfont.eot?22334');
+  src: url('font/myfont.eot?22334#iefix') format('embedded-opentype'),
+       url('font/myfont.woff?22334') format('woff'),
+       url('font/myfont.ttf?22334') format('truetype'),
+       url('font/myfont.svg?22334#myfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+----
+
+Again don't worry about the paths, since it will be part of the build process.
+
+==== About Glyphs
+
+.To assign custom icons to Ext JS components you can use the +glyph+ config.
+* Specify the decimal code that maps to the unicode character
+you choose while you've created the font pack.
+You can convert the character to a decimal with converters:
+http://www.branah.com/unicode-converter
+* Specify the name of the font.
+
+[source, HTML]
+----
+glyph: '115@MyFont',
+----
+
+==== More about Glyphs
+
+When no font is specified, the Pictos icon font will be used.
+
+[source, HTML]
+----
+glyph: '71',
+----
+
+Use +Ext.setGlyphFontFamily();+ to set the icon font programmetically.
+
+==== Out of the box glyhs
+
+[source, javascript]
+----
+var buttons = [];
+
+for (var i = 33; i < 127; i++) {
+    buttons.push({
+        xtype: 'button',
+        text: i,
+        scale: 'medium', // Try 'small' and 'large'
+        glyph: i + '@Pictos'  // alternate config if Ext.setGlyphFontFamily() was not set
+    });
+}
+
+Ext.create('Ext.panel.Panel', {
+    renderTo: Ext.getBody(), 
+    title: 'Sample',
+    height: 500,
+    width: 620,
+    defaults: {
+        xtype: 'button',
+        margin: 2
+    },
+    autoScroll: true,
+    items: buttons
+});
+----
+
+==== Icon CSS Classes
+
+Some components have no +glyph+ property.
+It's still possible to create custom icons.
+
+This trick can be done with the CSS pseudo selectors:
++:before+ and +:after+ that implement content
+before or after the component in the DOM.
+
+[source, javascript]
+----
+.myclass:before {
+    content: "C"; //character mapped to an icon
+    font-family: 'MyIconFont'; //icon font
+
+    color: red; //set additional colors or dimensions...
+    margin-right: 10px;
+}
+----
+
+==== Image icons
+
+.It's also possible to use images as icons.
+* +icon+ - path to an image
+* +iconCls+ - a CSS class specifying a background image
+* +iconAlign+ - align icon to +'top'+, +'right'+, +'bottom'+ and +'left'+
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+    title : 'Panel',
+    renderTo : Ext.getBody(),
+    height : 200,
+    bodyPadding : 16,
+    defaults : {
+        margin: 8
+    }, 
+    layout : 'vbox',
+    items : [{
+        xtype : 'button',
+        text : 'Sunny',
+        icon : 'resources/images/weather_sun.png'
+    }, {
+        xtype : 'button',
+        text : 'Rainy',
+        icon : 'resources/images/weather_rain.png',
+        iconAlign : 'right'
+    }]
+});
+----
+
+==== Build
+A +build+ process is required in order to see the newly implemented fonts. This will copy and link the fonts to the build folder.
+
++sencha app build+

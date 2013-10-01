@@ -1,0 +1,746 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"empt",
+				"emptyStore"
+			],
+			[
+				"onSub",
+				"onSubmitForm"
+			],
+			[
+				"Rss",
+				"RssFeed"
+			],
+			[
+				"ext",
+				"extclass	Ext.define()"
+			],
+			[
+				"Settings",
+				"SettingsController"
+			],
+			[
+				"pl",
+				"placeholder"
+			],
+			[
+				"image",
+				"images"
+			],
+			[
+				"offline",
+				"offline_sql"
+			],
+			[
+				"Crime",
+				"CrimeReports"
+			],
+			[
+				"ex",
+				"extview	Ext.Component"
+			],
+			[
+				"st",
+				"stview	Ext.Container"
+			],
+			[
+				"on",
+				"onFbiPersonsTap"
+			],
+			[
+				"onFbiPersonsT",
+				"onFbiPersonsTap"
+			],
+			[
+				"s",
+				"slidenavigation"
+			],
+			[
+				"stc",
+				"stcontroller	Ext.app.Controller"
+			],
+			[
+				"e",
+				"extclass	Ext.define()"
+			],
+			[
+				"total",
+				"totalPerCat"
+			],
+			[
+				"Expen",
+				"ExpenseCategories"
+			],
+			[
+				"ExpenseCateg",
+				"ExpensesCategory"
+			],
+			[
+				"Expense",
+				"ExpensesCategories"
+			],
+			[
+				"extc",
+				"extcontroller	Ext.app.Controller"
+			],
+			[
+				"extch",
+				"extchart	Ext.charts.Chart"
+			],
+			[
+				"extcha",
+				"extchart-cartesian	Ext.charts.Chart (Cartesian)"
+			],
+			[
+				"et",
+				"extchart	Ext.charts.Chart"
+			],
+			[
+				"Cat",
+				"Categories"
+			],
+			[
+				"Ex",
+				"ExpenSys"
+			],
+			[
+				"store",
+				"ststore	Ext.data.Store"
+			],
+			[
+				"xt",
+				"xtype"
+			],
+			[
+				"form",
+				"form"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "docs/ch2/_anchor.asciidoc",
+			"settings":
+			{
+				"buffer_size": 1442,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/ch2/_column.asciidoc",
+			"settings":
+			{
+				"buffer_size": 1221,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "=== Hbox\n\n==== What's it?\nA light weight horizontal box layout.\nThis layout optionally divides available horizontal space between child items containing a numeric flex configuration.\n\n==== Specs\nClass: +Ext.layout.container.HBox+ (+layout:hbox+)\n\n[[layouts_hbox]]\n.Horizontal Box layout\nimage::images/hbox.png[]\n\nSee also\nhttp://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.HBox\n\n==== Example\n[[hbox_code]]\n.Example hbox layout\n====\n[source, javascript]\n----\nExt.create('Ext.panel.Panel', {\n\n    layout : {\n        type: 'hbox',\n        align: 'middle',\n        pack : 'end'\n    },\n\n    defaults: {\n        style: 'background: red',\n        margin: 5,\n        xtype: 'container',\n        width: 50,\n        height: 50\n    },\n    items : [ {\n        html : 'Panel One'\n    }, {\n        html : 'Panel Two'\n    }, {\n        html : 'Panel Three'\n    } ],\n\n    height : 300,\n    width : 500,\n    renderTo : Ext.getBody()\n});\n----\n====\n\n===== How it works\n\n. There are a couple of settings you can use in this layout:\n\n* +align+ (defaults to _top_)\nVertical alignment.\n+top+ : child items are aligned vertically at the top of the container.\n+middle+ : child items are aligned vertically in the middle of the container.\n+bottom+ : child items are aligned vertically at the bottom of the container.\n+stretch+ : child items are stretched vertically to fill the height of the container.\n+stretchmax+ : child items are stretched vertically to the height of the largest item.\n\n* +pack+ (defaults to _start_)\nHorizontal alignment\n+start+ : child items are packed together at the left side of container. \n+center+ : child items are packed together at mid-width of container.\n+end+ : child items are packed together at right side of container.\n\n* +flex+\nTo create dynamic (flexible) widths.\nFor example see <<hbox_flex>>.\nA layout that you want to split in 4ths, where the first item is 2/4,\nand the 2nd and 3rd item has a width of 1/4. Can be written down\nas flex: 2 + flex 1 + flex 1. (= 4 flexes).\n\n[[hbox_flex]]\n.Example flexible widths\n====\n[source, javascript]\n----\nExt.create('Ext.Panel', {\n    width: 500,\n    height: 300,\n    layout: {\n        type: 'hbox',\n        align: 'stretch'\n    },\n    renderTo: document.body,\n    defaults: {\n        style: 'background: red',\n        margin: 5\n    },\n    items: [{\n        xtype: 'container',\n        flex: 2\n    },{\n        xtype: 'container',\n        flex: 1\n    },{\n        xtype: 'container',\n        flex: 1\n    }]\n});\n----\n====\n",
+			"file": "docs/ch2/_hbox.asciidoc",
+			"file_size": 2468,
+			"file_write_time": 130219994710000000,
+			"settings":
+			{
+				"buffer_size": 2482,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/ch2/_vbox.asciidoc",
+			"settings":
+			{
+				"buffer_size": 2930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/ch2/_card.asciidoc",
+			"settings":
+			{
+				"buffer_size": 1493,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/ch2/_border.asciidoc",
+			"settings":
+			{
+				"buffer_size": 366,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/JSLint/JSLint.sublime-build",
+	"command_palette":
+	{
+		"height": 147.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"jslint"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/_fit.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/Documentation.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch1/_forms.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/_card.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/_border.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/_hbox.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/_vbox.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/bolgamer/app/view/GameDetail.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch1/_overview-components.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/_overview-layoutsystem.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch1/_grids.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/_column.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch2/vbox.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/.sencha/app/sencha.cfg",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch1/_containers.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch1/_panels.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/ch1/_toolbars.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/docs/_lab1.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader-solution/.sencha/app/sencha.cfg",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/.gitignore",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/packages/Goggles/package.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader-startpoint/app/view/Header.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/view/Header.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/sass/etc/all.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/packages/Goggles/sass/etc/all.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/packages/Lab5Solution/sass/etc/all.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader-startpoint/app/controller/Main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/controller/Main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/common/Functions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/store/MenuItems.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/view/Viewport.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/model/MenuItem.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/store/MenuTreeStore.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader start/app/view/Header.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/sass/src/style.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/.sencha/workspace/sencha.cfg",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/packages/YelpTheme/sass/etc/all.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/store/RssFeeds.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/view/Grid.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/nouveau/data/menu/data.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app/model/RssFeed.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/nouveau/app/store/Topics.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/extreader/app.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/nouveau/app/controller/Topics.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/advancedtheming/common/Snippets.js",
+		"/Users/leeboonstra/Projects/SenchaTraining/ExtTraining/LabSolutions/MVC/LoadDemoWithInit/app/controller/BeatlesController.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/models/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/stores/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/views/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/stores/filter/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/stores/group/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/stores/load/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/stores/sort/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/remoteproxy/jsonp/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/remoteproxy/ajax/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/sql/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/applicationcache/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/localstorage/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/04-MVC.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/toolbars-buttons/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/panels/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/maps/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/lists/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/models/validations/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/control/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/controllers/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/refs/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/setpath/app/model/Cab.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/sql/app/controller/CabController.js",
+		"/Users/leeboonstra/Projects/SenchaTraining/ExtTraining/LabSolutions/YelpExtplorer11/sass/src/view/View.scss",
+		"/Users/leeboonstra/Projects/SenchaTraining/ExtTraining/Labs/YelpExtplorer-Lee/sass/src/view/Viewport.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/dintu/utils/Functions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/maps/app/view/DetailCard.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/lists/app/controller/CabController.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/panels/app/controller/SettingsController.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/panels/app/view/SettingsView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/panels/app.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/07-Data-Stores.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/08-Data-Offline-Storage.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/09-Components.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/panels/app/view/DetailView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/06-Data-Remote-Proxy.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/05-Data-Models.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/02-Essentials.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/03-Layouts.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/panels/app/view/Main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/remoteproxy/jsonp/app/store/Cabs.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/control/app.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/mvc/refs/app/controller/CabController.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/maps/app.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/maps/app/view/DetailView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/lists/app/view/Overview.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/book.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/00-Preface.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/lists/app/view/DetailView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/toolbars-buttons/app/view/DetailView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/applicationcache/app.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/dintu/resources/sass/app.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/13-Deploy.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/components/app/view/Main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/components/app/view/DetailView.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/components/components/app/view/Overview.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/build/FindACab/production/cache.appcache",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/01-Sencha-Touch.asciidoc",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/ftst2.sublime-project",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/cache/app.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/cache/app.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/cache/resources/sass/config.rb",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/sql/app.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/oreilly/1234000001571/include/offlinestorage/sql/app/store/Cabs.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/spotifinder/common/scripts/Data.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-9/app/view/crimereport/List.js",
+		"/Users/leeboonstra/Documents/Conferences/blurb-ext-vs-jquery.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-7/app/view/crimereport/CrimeReport.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-7/app/controller/CrimeReports.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-5/app/controller/Main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-5/app/view/crimereport/CrimeReport.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-5/app/controller/CrimeReports.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-5/app.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-3/app/view/media/Audio.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-3/app/view/media/Video.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-3/app/view/Main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-3/app/view/media/Media.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-3/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-1/app/view/Main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-1/app.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab3-1/app/view/crimereport/CrimeReport.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ftst2/ftst2/lab/lab2-5/app/view/crimereport/List.js"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/leeboonstra/Projects/SenchaTraining/ExtTraining/Labs,/Applications/XAMPP/xamppfiles/htdocs/spotifinder,/Applications/XAMPP/xamppfiles/htdocs/isd",
+			"/Users/leeboonstra/Projects/SenchaTraining/ExtTraining/Labs,/Applications/XAMPP/xamppfiles/htdocs/spotifinder",
+			"/Users/leeboonstra/Projects/SenchaTraining/ExtTraining/Labs",
+			"/Users/leeboonstra/Projects/training2/working/NouveauTraining/Data/pages,/Users/leeboonstra/Projects/SenchaTraining/ExtTraining,/Users/leeboonstra/Projects/SenchaTraining/ExtTraining/Labs",
+			"/Users/leeboonstra/Projects/training2/working/NouveauTraining/Data/pages,/Users/leeboonstra/Projects/SenchaTraining/ExtTraining",
+			"/Users/leeboonstra/Projects/training2/working/NouveauTraining/Data/pages"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"build",
+			"listrefr",
+			"Uuid",
+			"uuid",
+			"Uuid",
+			"uuid",
+			"See also",
+			".app.js",
+			"app.js",
+			"events",
+			"See also",
+			"+",
+			"an ",
+			"an",
+			"an h",
+			"a h",
+			"tt",
+			"kbd",
+			"code",
+			"var",
+			"read",
+			"readonl",
+			"tab",
+			"add",
+			"getCurrentLocation",
+			"<exec executable=\"sencha\"",
+			"LocalSt",
+			"See",
+			"TIP:",
+			"Cautio",
+			"SenchaCmd",
+			"caution",
+			"view.",
+			"views",
+			"app.js",
+			"store",
+			"APP.js",
+			"app.js",
+			"appp.js",
+			"iI",
+			"node",
+			"{vers",
+			"fit",
+			"fix",
+			"'",
+			");\n",
+			"store",
+			"group",
+			"model",
+			"getModel",
+			"model",
+			"store",
+			"Model.js",
+			"store",
+			"getModel",
+			"model",
+			"CurrentDeck",
+			"current",
+			"2-2",
+			"Constants",
+			"AJAX",
+			"Data",
+			"AJAX_URL",
+			"echo",
+			"’",
+			"Webki",
+			"Webkiy",
+			"SVG",
+			"Webkit",
+			"Webki",
+			"/Cookbook/images",
+			"images/",
+			"/images/",
+			"images/",
+			"/images/",
+			"resource",
+			"/ext/",
+			"../../../ext/",
+			"performance",
+			"VJET project",
+			"course files",
+			"chmod - R"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"Cookbook/images",
+			"/SenchaTraining/ExtTraining/ext/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "docs/ch2/_anchor.asciidoc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1442,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1075,
+								1057
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "docs/ch2/_column.asciidoc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								12
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "docs/ch2/_hbox.asciidoc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2481,
+								1741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1450.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "docs/ch2/_vbox.asciidoc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								10
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "docs/ch2/_card.asciidoc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1493,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								10
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "docs/ch2/_border.asciidoc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"project": "rssfeeder.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"model"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 315.0,
+		"selected_items":
+		[
+		],
+		"width": 467.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 228.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

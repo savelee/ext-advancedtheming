@@ -1,0 +1,11 @@
+{
+  "name": "VarsSolution",
+  "format": "1",
+  "version": "1.0.0",
+  "creator": "Lee Boonstra",
+  "summary": "This is the Goggles theme",
+  "detailedDescription": "This is the solution for Lab 4.",
+  "type": "theme",
+  "extend": "ext-theme-neptune",
+  "local": true
+}

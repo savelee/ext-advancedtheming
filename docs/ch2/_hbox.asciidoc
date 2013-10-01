@@ -1,0 +1,108 @@
+=== Hbox
+
+==== What's it?
+A light weight horizontal box layout.
+This layout optionally divides available horizontal space between child items containing a numeric flex configuration.
+
+==== Specs
+Class: +Ext.layout.container.HBox+ (+layout:hbox+)
+
+[[layouts_hbox]]
+.Horizontal Box layout
+image::images/hbox.png[]
+
+See also
+http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.HBox
+
+==== Example
+[[panels]]
+
+.Example
+====
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+
+    layout : {
+        type: 'hbox',
+        align: 'middle',
+        pack : 'end'
+    },
+
+    defaults: {
+        style: 'background: red',
+        margin: 5,
+        xtype: 'container',
+        width: 50,
+        height: 50
+    },
+    items : [ {
+        html : 'Panel One'
+    }, {
+        html : 'Panel Two'
+    }, {
+        html : 'Panel Three'
+    } ],
+
+    height : 300,
+    width : 500,
+    renderTo : Ext.getBody()
+});
+----
+====
+
+===== How it works
+
+. There are a couple of settings you can use in this layout:
+
+* +align+ (defaults to _top_)
+Vertical alignment.
++top+ : child items are aligned vertically at the top of the container.
++middle+ : child items are aligned vertically in the middle of the container.
++bottom+ : child items are aligned vertically at the bottom of the container.
++stretch+ : child items are stretched vertically to fill the height of the container.
++stretchmax+ : child items are stretched vertically to the height of the largest item.
+
+* +pack+ (defaults to _start_)
+Horizontal alignment
++start+ : child items are packed together at the left side of container. 
++center+ : child items are packed together at mid-width of container.
++end+ : child items are packed together at right side of container.
+
+* +flex+
+To create dynamic (flexible) widths.
+For example see <<hbox_flex>>.
+A layout that you want to split in 4ths, where the first item is 2/4,
+and the 2nd and 3rd item has a width of 1/4. Can be written down
+as flex: 2 + flex 1 + flex 1. (= 4 flexes).
+
+[[hbox_flex]]
+.Example flexible widths
+====
+[source, javascript]
+----
+Ext.create('Ext.Panel', {
+    width: 500,
+    height: 300,
+    layout: {
+        type: 'hbox',
+        align: 'stretch'
+    },
+    renderTo: document.body,
+    defaults: {
+        style: 'background: red',
+        margin: 5
+    },
+    items: [{
+        xtype: 'container',
+        flex: 2
+    },{
+        xtype: 'container',
+        flex: 1
+    },{
+        xtype: 'container',
+        flex: 1
+    }]
+});
+----
+====

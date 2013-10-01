@@ -1,0 +1,41 @@
+.What you will learn in this course
+* Overview of all Ext Components //TODO finalize SLIDES
+* Understand the Sencha layout system
+* Theming inheritance
+* Overview of the out of the box themes
+* Switching themes
+* Generating new themes
+* Understanding the package folder structure
+* Extending from Sencha themes
+
+* Working with Sass & Compass 
+* Understanding Sencha variables
+* Creating custom UIs
+
+* Implementing images
+* Implementing fonts
+* Implementing icons
+
+* Learn how to create global themes
+* Learn how to create app specific themes
+* Build & optimize themes 
+* Theming with Sencha Architect //TODO SLIDES (lab is finished) / wait till Architect 3 is released
+
+//BONUS
+* Extending from the Base theme //TODO SLIDES
+* //TODO SLIDES image slicer (maybe bonus material)
+* TODO bonus lab / hackathon lab
+
+//TODO CLEANUP: EXT JS THEMING COURSE
+- renew objectives slide
+  * introduction Sass & Compass
+  * theming with Sencha variables
+  * sencha app watch
+- remove all slides about creating a theme (including the lab)
+- Power of Sass > No compass watch - > should be a slide about sencha app watch (note also the installation steps needs to be maintained to install Java 7 SDK)
+- Yelp Theming Lab needs to be modified.
+   * create the theme directly in the app/sass/etc/all.scss file 
+   * no organization of scss files
+   * new (corporate) design for Yelp explorer, by just setting a bunch of variables
+   * run sencha app watch
+- Promo slide about the new theming course

@@ -1,0 +1,36 @@
+.x-btn {
+	font-family: 'Marker';
+    .x-btn-button {
+        background-position: 0 100%;
+    }
+}
+.x-btn-over {
+    .x-btn-button {
+        background-position: 0 2px;
+    }
+}
+
+.x-btn-default-large {
+    .x-btn-button {
+	   background-image: url(../resources/images/button-large.png);
+       height: 38px;
+       line-height: 38px;
+       width: 174px;
+    }
+}
+.x-btn-default-medium {
+    .x-btn-button {
+	   background-image: url(../resources/images/button-medium.png);
+       height: 24px;
+       line-height: 24px;
+       width: 115px;
+    }
+}
+.x-btn-default-small {
+    .x-btn-button {
+	   background-image: url(../resources/images/button-small.png);
+       height: 17px;
+       line-height: 17px;
+       width: 79px;
+    }
+}

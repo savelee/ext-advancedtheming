@@ -1,0 +1,73 @@
+=== Grids
+
+==== What it is
+For displaying a lot of (sortable) data.
+Like Microsoft Excel sheets, but all cells have the width of the column.
+This is because a grid in the DOM is in fact an HTML table.
+
+==== Specs
+
+===== CSS Class: +.x-grid+
+
+===== +Ext.grid.Panel+
+Extends from +Ext.panel.Panel+
+
+* Grid Header (+.x-grid-header+)
+* Grid Body (+.x-grid-body+)
+** +rowLines+ (true / false)
+* Grid Column
+** +editor+
+** +emptyCellText+
+** +lockable+
+** +tooltip+
+** +text+
+** +tdCls+
+* Grouping
+* Summary
+* Paging
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.grid.Panel
+
+[[components_grids]]
+.Ext.grid.Panel
+image::images/grids.png[]
+
+==== Example
+[[grids]]
+.Example
+====
+[source, javascript]
+----
+var store = Ext.create('Ext.data.Store', {
+   fields:[ 
+     {name: 'framework', type: 'string'}, 
+     {name: 'rocks', type: 'boolean'} 
+   ],
+   data: [ 
+     { 'framework': "Ext JS 4", 'rocks': true  }, 
+     { 'framework': "Sencha Touch", 'rocks': true  }, 
+     { 'framework': "Ext GXT", 'rocks': true  }, 
+     { 'framework': "Other Guys", 'rocks': false } 
+   ]
+});
+
+Ext.create('Ext.grid.Panel', {
+    store: store,
+    columns: [
+        { text: 'Framework',  dataIndex: 'framework', flex: 1 },
+        {
+
+            xtype: 'booleancolumn', 
+            trueText: 'Yes',
+            falseText: 'No', 
+            text: 'Rocks',
+            dataIndex: 'rocks'
+        }
+    ],
+    title: 'Frameworks',
+    height: 200,
+    width: 400,
+    renderTo: Ext.getBody()
+});
+----
+====

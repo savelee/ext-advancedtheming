@@ -1,0 +1,56 @@
+Sencha Advanced Theming for Ext JS Course
+==========================================
+Lee Boonstra <lee.boonstra@sencha.com>
+v0.1, 2013-07-29
+:cmd-vers: 4.0.x
+:vers: 4.2.1
+
+include::_intro.txt[]
+
+:numbered:
+
+include::ch1/_overview-components.asciidoc[]
+
+include::ch2/_overview-layoutsystem.asciidoc[]
+
+include::ch3/_overview-themes.asciidoc[]
+
+include::_lab1.asciidoc[]
+
+include::ch4/_generating-themes.asciidoc[]
+
+include::_lab2.asciidoc[]
+
+include::_lab3.asciidoc[]
+
+include::ch5/_about-sass.asciidoc[]
+
+include::ch6/_sencha-vars.asciidoc[]
+
+include::_lab4.asciidoc[]
+
+include::ch7/_sencha-mixins.asciidoc[]
+
+include::_lab5.asciidoc[] 
+
+include::ch8/_implementing_assets.asciidoc[]
+
+include::_lab6.asciidoc[]
+
+include::ch9/_sharing_themes.asciidoc[]
+
+include::_lab7.asciidoc[]
+
+include::ch10/_optimize.asciidoc[]
+
+include::ch11/_architect.asciidoc[]
+
+include::_lab8.asciidoc[]
+
+//////BONUS extending from Base theme
+////include::_lab9.asciidoc[]
+
+:numbered!:
+
+[appendix]
+include::_setup.txt[]

@@ -1,0 +1,81 @@
+Lab: Optimize theme
+----------------------
+
+.Objectives
+* Change the CSS compress output
+* TODO
+
+=== Set compress level
+
+.Steps
+
+. Make sure you are not watching the application
+. Note the file size of _build/ExtReader/production/resources/ExtReader-all.css_ file (about 1 MB).
+. Change the compress level to +:compressed+ in _extreader/sass/config.rb_. 
+. Change the compress level to +:compressed+ in _packages/sass/config.rb_.
+. Build the application from the command line +sencha app build+
+
+(ExtReader-all_01.css / ExtReader-all_02.scss)
+
+=== Disable not supported browsers
+
+The ExtReader application has no support for Opera.
+Since it's an app specific setting, we will set a Sass variable in the ExtReader app.
+
+.Steps
+
+. Open _extreader/sass/var/Viewport.scss_
+. Add the variables +$include-opera: false+ and +$include-ie: false_;
+. Build the application from the command line +sencha app build+
+
+
+
+
+QUESTIONS TO PHIL
+I've some questions related to theming performance.
+(Cmd 4.0.0.160 beta and Ext 4.2.2 btw)
+
+I know that Sencha Cmd maintains the CSS output to improve performance.
+It automatically sets the compression to +:compressed+ in production
+and it removes CSS rules for unused components.
+Are there any additional steps I can take to make the Stylesheet smaller?
+
+For example I did the following extra steps:
+
+When I set in my Sass Stylesheet on app level, the vars to disable ie, ff and opera browsers:
+$include-opera: false, $include-ff: false and $include-ie: false_, i don't see that the Stylessheet becomes smaller.
+(build/production/resources/MyApp-all.css is the one I am looking at)
+Did it work or do I need to set an extra step?
+
+Same as with the variables: $include-shadow-images: false; $include-not-found-images: false; and $include-default-uis: false;
+I would expect that it would change my file size of the generated CSS file, but I don't see anything.
+
+Can you tell me if this is the right behaviour, and can I conclude from this, that the developer
+doesn't need to take care of CSS performance anymore?
+
+Thanks!
+Lee
+
+----
+
+
+1. When I set the config.rb file (in my Global theme and in my app sass folder) to :compressed and I build my app.
+The nested Stylesheet is still linked in index.html. I do see 2 new (smaller) Stylesheets:
+MyApp-all_01.css and MyApp-all_02. Is this correct?
+To change to a smaller Stylesheet do I need to modify the index.html manually everytime after my build?
+(note see build/production/ folder)
+you don't need to set it
+
+2. When I build my application in:
+build/MyApp/production/MyApp-all.scss I see every component variable is set to true.
+For example, I don't use charts in my app but $include-ext-chart-label is set to true.
+I thought that I have seen it before that Sencha Cmd automatically disables features that I don't use,
+but I can see this back anymore? Do I need to set something?
+(note see build/production/ folder)
+you don't need to set it
+
+
+
+
+
+

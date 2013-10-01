@@ -1,0 +1,14 @@
+.x-toolbar{
+    border-width: 8px 3px;
+    -o-border-image: url(../resources/images/toolbar.png) 30 10 20 30 stretch stretch;
+    -icab-border-image: url(../resources/images/toolbar.png) 30 10 20 30 stretch stretch;
+    -khtml-border-image: url(../resources/images/toolbar.png) 30 10 20 30 stretch stretch;
+    -moz-border-image: url(../resources/images/toolbar.png) 30 10 20 30 stretch stretch;
+    -web-kit-border-image: url(../resources/images/toolbar.png) 30 10 20 30 stretch stretch;
+    border-image: url(../resources/images/toolbar.png) 30 10 20 30 stretch stretch;
+}
+
+.x-toolbar-docked-bottom {
+    border-left: 0;
+    border-right: 0;
+}

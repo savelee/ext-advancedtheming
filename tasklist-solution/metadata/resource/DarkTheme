@@ -1,0 +1,356 @@
+{
+    "type": "neptunethemeresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DarkTheme"
+    },
+    "designerId": "f877b786-39f1-4518-b21c-56164dce3803",
+    "storage": {
+        "varData": {
+            "Ext.form.field.Checkbox": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.form.field.HtmlEditor": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.toolbar.Paging": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.LoadMask": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.form.field.Base": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.tree.Panel": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.view.BoundList": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.ProgressBar": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.form.field.Radio": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.feature.RowWrap": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.tab.Panel": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.window.Window": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.button.Button": {
+                "globalVars": [
+                    {
+                        "name": "button-default-base-color",
+                        "enabled": true,
+                        "value": "rgba(255,255,255,0)",
+                        "invalid": false
+                    },
+                    {
+                        "name": "button-default-color",
+                        "enabled": true,
+                        "value": "rgba(96,165,0,1)",
+                        "invalid": false
+                    },
+                    {
+                        "name": "button-default-background-color",
+                        "enabled": true,
+                        "value": "rgba(148,253,138,1)",
+                        "invalid": false
+                    }
+                ],
+                "uis": [
+                    {
+                        "name": "custom-ui-1",
+                        "displayName": "Green Button",
+                        "variables": [
+                            {
+                                "name": "background-color",
+                                "enabled": true,
+                                "value": "rgba(96,165,0,1)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "Ext.grid.plugin.RowExpander": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.plugin.Editing": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.tip.Tip": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.toolbar.Toolbar": {
+                "globalVars": [
+                    {
+                        "name": "toolbar-background-color",
+                        "enabled": true,
+                        "value": "rgba(71,71,71,1)",
+                        "invalid": false
+                    }
+                ],
+                "uis": [
+                    {
+                        "name": "custom-ui-3",
+                        "displayName": "DarkWithGreen",
+                        "variables": []
+                    }
+                ]
+            },
+            "Ext.form.field.Spinner": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.window.MessageBox": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.form.FieldSet": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.property.Grid": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.slider.Multi": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.picker.Date": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.panel.Header": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.plugin.RowEditing": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.panel.Panel": {
+                "globalVars": [
+                    {
+                        "name": "panel-body-background-color",
+                        "enabled": true,
+                        "value": "rgba(71,71,71,1)",
+                        "invalid": false
+                    },
+                    {
+                        "name": "panel-body-color",
+                        "enabled": true,
+                        "value": "rgba(221,221,221,1)",
+                        "invalid": false
+                    }
+                ],
+                "uis": []
+            },
+            "Ext.dd.StatusProxy": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.header.Container": {
+                "globalVars": [
+                    {
+                        "name": "grid-header-background-color",
+                        "enabled": true,
+                        "value": "rgba(221,221,221,1)",
+                        "invalid": false
+                    }
+                ],
+                "uis": []
+            },
+            "Ext.form.field.TextArea": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.panel.Table": {
+                "globalVars": [
+                    {
+                        "name": "grid-row-cell-background-color",
+                        "enabled": true,
+                        "value": "rgba(55,55,55,1)",
+                        "invalid": false
+                    },
+                    {
+                        "name": "grid-row-cell-border-color",
+                        "enabled": true,
+                        "value": "rgba(35,35,35,1)",
+                        "invalid": false
+                    },
+                    {
+                        "name": "grid-row-body-font",
+                        "enabled": true,
+                        "value": "9px",
+                        "invalid": false
+                    },
+                    {
+                        "name": "grid-row-height",
+                        "enabled": true,
+                        "value": "12px",
+                        "invalid": false
+                    },
+                    {
+                        "name": "grid-row-cell-over-background-color",
+                        "enabled": true,
+                        "value": "rgba(35,35,35,1)",
+                        "invalid": false
+                    },
+                    {
+                        "name": "grid-row-cell-selected-background-color",
+                        "enabled": true,
+                        "value": "rgba(35,35,35,1)",
+                        "invalid": false
+                    }
+                ],
+                "uis": []
+            },
+            "Ext.form.CheckboxGroup": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.Component": {
+                "globalVars": [
+                    {
+                        "name": "base-color",
+                        "enabled": true,
+                        "value": "rgba(49,49,49,1)",
+                        "invalid": false
+                    }
+                ],
+                "uis": []
+            },
+            "Ext.form.Labelable": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.column.Column": {
+                "globalVars": [
+                    {
+                        "name": "grid-column-header-font",
+                        "enabled": true,
+                        "value": "bold 11px helvetica",
+                        "invalid": false
+                    },
+                    {
+                        "name": "grid-column-header-color",
+                        "enabled": true,
+                        "value": "rgba(35,35,35,1)",
+                        "invalid": false
+                    },
+                    {
+                        "name": "grid-column-align-right-margin",
+                        "enabled": true,
+                        "value": "16px",
+                        "invalid": false
+                    }
+                ],
+                "uis": []
+            },
+            "Ext.container.ButtonGroup": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.menu.Menu": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.panel.Tool": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.resizer.Resizer": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.layout.container.Accordion": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.form.field.Trigger": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.layout.container.Border": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.feature.Grouping": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.FocusManager": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.resizer.Splitter": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.plugin.CellEditing": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.column.Action": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.picker.Color": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.form.field.Display": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.column.CheckColumn": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.grid.column.Template": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.XTemplate": {
+                "globalVars": [],
+                "uis": []
+            },
+            "Ext.form.Label": {
+                "globalVars": [],
+                "uis": []
+            },
+            "undefined": {
+                "globalVars": [],
+                "uis": []
+            }
+        },
+        "nameIndex": 4
+    }
+}

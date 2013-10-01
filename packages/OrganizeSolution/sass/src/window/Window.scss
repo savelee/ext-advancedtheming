@@ -1,0 +1,12 @@
+@include extjs-window-ui(
+    'blue',
+ 
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+    $ui-header-color: #fff,
+    $ui-header-background-color: lighten(#15c, 20%),
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff
+);

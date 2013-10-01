@@ -1,0 +1,46 @@
+=== Toolbars
+
+==== What it is
+Dockable bars, can contain things,
+buttons (default), form fields, text strings...
+
+==== Specs
+
+===== CSS Class: +x-toolbar+
+
+===== +Ext.toolbar.Toolbar+
+Extends from +Ext.container.Container+
+
+* Toolbar item (.x-toolbar-item / .x-toolbar-btn)
+* +dockedItems+ > +dock+ (‘top’,‘right’,‘bottom’,‘left’)
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.toolbar.Toolbar
+
+[[components_toolbars]]
+.Ext.toolbar.Toolbar
+///toolbars.png[]
+//TODO
+
+==== Example
+[[toolbars]]
+.Example
+====
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+    title : 'My Panel',
+
+    dockedItems : [ {
+        xtype : 'toolbar',
+        dock : 'bottom',
+        items : [ {
+            text : 'Toolbar Button'
+        }]
+    }],
+
+    html: 'Panel Body',
+    width : 300,
+    renderTo : Ext.getBody()
+});
+----
+====

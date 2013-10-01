@@ -1,0 +1,12 @@
+Implementing assets
+--------------------
+
+=== Objectives
+* Learn how to implement images
+* Lean about paths to resources
+* Learn how to implement custom fonts
+* Learn how to implement custom icons
+
+include::_images.asciidoc[]
+include::_fonts.asciidoc[]
+include::_icons.asciidoc[]

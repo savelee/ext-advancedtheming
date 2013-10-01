@@ -1,0 +1,20 @@
+/*trees */
+.x-tree-panel {
+	.x-tree-icon,
+	.x-tree-elbow-img {
+		display: none;
+	}
+	.x-grid-cell {
+		background: $white;
+	}
+	.x-grid-row-selected {
+		.x-grid-td {
+			background: $white;
+		}
+		.x-tree-node-text {
+			font-weight: bold;
+		}
+		
+		color: $red;
+	}
+}

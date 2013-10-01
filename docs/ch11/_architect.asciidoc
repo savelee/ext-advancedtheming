@@ -1,0 +1,28 @@
+Theming with Sencha Architect
+------------------------------
+=== Objectives
+* Learn about app templates
+* Learn how to create a theme with Sencha Architect
+* Learn how to use variables in Sencha Architect
+* Learn how to use skins (mixins) in Sencha Architect
+* Learn how to implement images in Sencha Architect
+* Learn how to implement custom CSS
+* Learn how to export a theme in Sencha Architect
+
+=== Introduction
+
+==== Open a Sencha Architect project
+
+==== Create a theme
+
+==== Theming
+
+===== Vars
+
+===== Skins
+
+===== Images
+
+==== How to create custom CSS
+
+==== Exporting
