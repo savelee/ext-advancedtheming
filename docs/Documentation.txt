@@ -3,7 +3,7 @@ Sencha Advanced Theming for Ext JS Course
 Lee Boonstra <lee.boonstra@sencha.com>
 v0.1, 2013-07-29
 :cmd-vers: 4.0.x
-:vers: 4.2.1
+:vers: 4.2.2
 
 include::_intro.txt[]
 

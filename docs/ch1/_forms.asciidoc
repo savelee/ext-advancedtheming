@@ -11,7 +11,19 @@ several mechanisms for sending and validating forms.
 ===== +Ext.form.Panel+
 Extends from +Ext.panel.Panel+
 
-TODO
+* Panel Header (+.x-panel-header+)
+** +title+
+** +glyph+
+** +tools+
+* Panel Body (+.x-panel-body+)
+* (optional) Docked Toolbar (+.x-toolbar+)
+** +waitTitle+
+** +buttons+
+** +height+
+** +width+
+** +margin+
+** +padding+
+** +bodyPadding+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
 
@@ -84,25 +96,35 @@ Ext.create('Ext.form.Panel', {
 === Textfield
 
 ==== What it is
-TODO
+A plain form field for entering text.
+But there is one important difference.
+A textfield in Ext JS is the input field plus the label all together.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-field-default+ or +.x-form-type-text+
 
 ===== +Ext.form.field.Text+
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-type-text+)
+* error (+.x-form-invalid+)
+** +size+
+** +grow+
+** +growMin+
+** +growMax+
+** +emptyText+
+** +minLength+
+** +maxLength+
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Text-cfg-blankText
 
-[[components_formpanels]]
-.Ext.form.Panel
-image::images/panels.png[]
+[[components_textfield]]
+.Ext.form.field.Text
+image::images/textfield.png[]
 
 ==== Example
-[[panels]]
+[[textfield]]
 .Example
 ====
 [source, javascript]
@@ -115,6 +137,7 @@ Ext.create('Ext.form.Panel', {
     items: [{
         xtype: 'textfield',
         name: 'name',
+        emptyText: "please enter name",
         fieldLabel: 'Name',
         allowBlank: false  // requires a non-empty value
     }]
@@ -125,18 +148,28 @@ Ext.create('Ext.form.Panel', {
 === Textarea
 
 ==== What it is
-TODO
+A text field for entering multiple rows of text.
+In addition, it supports automatically growing the height of the textarea to fit its content.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-field-default+ or +.x-form-type-text+
 
-===== TODO
+===== Ext.form.field.TextArea
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-type-text+)
+* error (+.x-form-invalid+)
+** +rows+
+** +cols+
+** +growMin+
+** +growMax+
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.TextArea
+
+[[components_textarea]]
+.Ext.form.field.TextArea
+image::images/textarea.png[]
 
 ==== Example
 [[panels]]
@@ -144,85 +177,222 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.FormPanel', {
+    title      : 'Sample TextArea',
+    width      : 400,
+    bodyPadding: 10,
+    renderTo   : Ext.getBody(),
+    items: [{
+        xtype     : 'textareafield',
+        grow      : true,
+        name      : 'message',
+        fieldLabel: 'Message',
+        anchor    : '100%'
+    }]
+});
 ----
 ====
 
 === Combobox
 
 ==== What it is
-TODO
+A ComboBox control (is like a select dropdown) with support for autocomplete, remote loading, and many other features.
+
+A ComboBox is like a combination of a traditional HTML text <input> field and a <select> field; the user is able to type freely into the field, and/or pick values from a dropdown selection list. The user can input any value by default, even if it does not appear in the selection list.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-table-plain+ or +.x-form-type-text+
 
-===== TODO
+===== Ext.form.field.ComboBox
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-type-text+)
+* error (+.x-form-invalid+)
+** +growToLongestValue+
+* boundlist (+.x-boundlist+)
+** +multiSelect+
+** +typeAhead+
+** +typeAheadDelay+
+* arrow trigger (+.x-form-arrow-trigger+)
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.ComboBox
+
+[[components_combobox]]
+.Ext.form.field.ComboBox
+image::images/combobox.png[]
 
 ==== Example
-[[panels]]
+[[combo]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+// The data store containing the list of states
+var states = Ext.create('Ext.data.Store', {
+    fields: ['abbr', 'name'],
+    data : [
+        {"abbr":"AL", "name":"Alabama"},
+        {"abbr":"AK", "name":"Alaska"},
+        {"abbr":"AZ", "name":"Arizona"}
+        //...
+    ]
+});
+
+// Create the combo box, attached to the states data store
+Ext.create('Ext.form.ComboBox', {
+    fieldLabel: 'Choose State',
+    store: states,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'abbr',
+    renderTo: Ext.getBody()
+});
 ----
 ====
 
 === Checkbox
 
 ==== What it is
-TODO
+Single checkbox. To check one or more option boxes.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-form-type-checkbox+
 
-===== TODO
+===== Ext.form.field.Checkbox
 Extends from +Ext.form.field.Base+
 
-TODO
+* checkbox (+.x-form-type-checkbox+)
+* checkbox wrapper (+.x-form-cb-wrap+)
+* checkbox (+.x-form-cb+)
+** checked
+** checkedCls
+** fieldCls
+* label (+.x-form-cb-label+)
+** afterBoxLabelTextTpl
+** beforeBoxLabelTextTpl
+** boxLabel
+** boxLabelAlign
+** boxLabelCls
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Checkbox
+
+[[components_checkbox]]
+.Ext.form.field.Checkbox
+image::images/checkbox.png[]
 
 ==== Example
-[[panels]]
+[[checkbox]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.Panel', {
+    items: [
+        {
+            xtype: 'fieldcontainer',
+            fieldLabel: 'Toppings',
+            defaultType: 'checkboxfield',
+            items: [
+                {
+                    boxLabel  : 'Anchovies',
+                    name      : 'topping',
+                    inputValue: '1',
+                    id        : 'checkbox1'
+                }, {
+                    boxLabel  : 'Artichoke Hearts',
+                    name      : 'topping',
+                    inputValue: '2',
+                    checked   : true,
+                    id        : 'checkbox2'
+                }, {
+                    boxLabel  : 'Bacon',
+                    name      : 'topping',
+                    inputValue: '3',
+                    id        : 'checkbox3'
+                }
+            ]
+        }
+    ],
+    renderTo: Ext.getBody()
+});
 ----
 ====
 
 === Radio
 
 ==== What it is
-TODO
+Single radio field. Similar to checkbox but pick only one option field.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-form-type-radio+
 
-===== TODO
-Extends from +Ext.form.field.Base+
+===== Ext.form.field.Radio
+Extends from +Ext.form.field.Base+ and +Ext.form.field.CheckBox+
 
-TODO
+* checkbox (+.x-form-type-radio+)
+* checkbox wrapper (+.x-form-cb-wrap+)
+* checkbox (+.x-form-cb+)
+** checked
+** checkedCls
+** fieldCls
+* label (+.x-form-cb-label+)
+** afterBoxLabelTextTpl
+** beforeBoxLabelTextTpl
+** boxLabel
+** boxLabelAlign
+** boxLabelCls
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Radio
+
+[[components_radio]]
+.Ext.form.field.Radio
+image::images/radio.png[]
 
 ==== Example
-[[panels]]
+[[radio]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.Panel', {
+    title      : 'Order Form',
+    width      : 300,
+    bodyPadding: 10,
+    renderTo   : Ext.getBody(),
+    items: [
+        {
+            xtype      : 'fieldcontainer',
+            fieldLabel : 'Size',
+            defaultType: 'radiofield',
+            defaults: {
+                flex: 1
+            },
+            layout: 'hbox',
+            items: [
+                {
+                    boxLabel  : 'M',
+                    name      : 'size',
+                    inputValue: 'm',
+                    id        : 'radio1'
+                }, {
+                    boxLabel  : 'L',
+                    name      : 'size',
+                    inputValue: 'l',
+                    id        : 'radio2'
+                }, {
+                    boxLabel  : 'XL',
+                    name      : 'size',
+                    inputValue: 'xl',
+                    id        : 'radio3'
+                }
+            ]
+        }
+  
+    ]
+});
 ----
 ====
 

@@ -12,13 +12,18 @@ can fold and unfold.
 ===== +Ext.tree.Panel+
 Extends from +Ext.panel.Panel+ & +Ext.panel.Table+
 
-TODO
+* Grid Header (+.x-grid-header+)
+* Tree View (+.x-tree-view+)
+** Grid Cell (+.x-grid.cell+) 
+** +lines+
+** +useArrows+
+** +animate+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.tree.Panel
 
 [[components_treepanels]]
 .Ext.tree.Panel
-TODO
+image::images/trees.png[]
 
 ==== Example
 [[panels]]

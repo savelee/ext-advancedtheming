@@ -10,7 +10,7 @@ The smaller your CSS Stylesheet, the better performance.
 We will talk about the following topics:
 
 * Change CSS output for used components
-* Remove CSS output for supported browsers (TODO)
+* Remove CSS output for supported browsers
 * Compress CSS Stylesheet
 
 === Sencha app build 
@@ -48,14 +48,14 @@ When using Sencha Cmd, it will automatically compress your generated CSS file. U
 [[compression]]
 .Compression levels
 [options="header,footer"]
-|=========================================================================================================================================
+|============================================================================================================
 |Setting|Description
 |+:nested+ |Nested style is the default Sass style, because it reflects the structure of the CSS styles and the HTML document they’re styling. Each property has its own line, but the indentation isn’t constant. Each rule is indented based on how deeply it’s nested.
 (This setting is used when you create a test build.)
 |+:expanded+ |Expanded is a more typical human-made CSS style, with each property and rule taking up one line. Properties are indented within the rules, but the rules aren’t indented in any special way.
-|+:compact: |Compact style takes up less space than Nested or Expanded. It also draws the focus more to the selectors than to their properties. Each CSS rule takes up only one line, with every property defined on that line. Nested rules are placed next to each other with no newline, while separate groups of rules have newlines between them.
+|+:compact:+ |Compact style takes up less space than Nested or Expanded. It also draws the focus more to the selectors than to their properties. Each CSS rule takes up only one line, with every property defined on that line. Nested rules are placed next to each other with no newline, while separate groups of rules have newlines between them.
 |+:compressed+ |Compressed style takes up the minimum amount of space possible, having no whitespace except that necessary to separate selectors and a newline at the end of the file. It also includes some other minor compressions, such as choosing the smallest representation for colors. It’s not meant to be human-readable. (This setting is used when you create a production build.)
-|=========================================================================================================================================
+|============================================================================================================
 
 === Performance Variables
 In general frameworks are made to support as much usecases and browsers.
@@ -68,8 +68,6 @@ that particular usecase or browser.
 
 ==== Disable browsers
 
-TODO (wait for answer Phil)
-
 By default Ext JS includes all browsers,
 these variables are set to +true+. However if you don't support
 a particular browser you can disable these so the file size
@@ -78,40 +76,38 @@ of your Stylesheet will become smaller.
 .Set these variables on app level
 * +$include-chrome+
 * +$include-ff+
-* +$include-ie+
+* +$include-ie+ (Old IE (< IE10))
 * +$include-opera+
 * +$include-safari+
 * +$include-webkit+
 
 http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS
 
-==== Disable not found images
+==== More information
 
-TODO (wait for answer Phil)
+The "good" browsers (chrome/ff/safari/opera) require very few browser-specific hacks and thus you will see little or no difference in CSS file size when turning these rules off.  
+
+The big one is $include-ie. 
+$include-ie will turn off all IE-specific rules for IE9 and below.  
+IE10 is considered a modern browser - the rules that work in the other modern browsers also work in IE10, so there are no IE10-specific hacks required.
+
+==== Disable not found images
 
 Enable the inclusion of files which are not found when compiling your Sass.
 This setting is enabled by default.
 
 +$include-not-found-images+
 
+You'll only see a decrease in file size if your stylesheet references images that do not exist on disc - most themes should not reference non-existent images.
+
 http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_var-S-include-not-found-images
 
 ==== Disable default uis
-
-TODO (wait for answer Phil)
 
 True to include the default UI for each component.
 
 +$include-default-uis+
 
+This controls the generation of the "default" ui for components.  If set to false, you wouldn't get the default styling for panels, buttons, etc.  So this should greatly reduce the stylesheet size, but you probably wouldn't want to do this, since it disables default styling.
+
 http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_var-S-include-default-uis
-
-==== Disable shadow images
-
-TODO (wait for answer Phil)
-
-True to include all shadow images.
-
-+$include-shadow-images+
-
-http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_var-S-include-shadow-images

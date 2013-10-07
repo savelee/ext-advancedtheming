@@ -9,7 +9,7 @@ Class: +Ext.layout.container.Card+ (+layout:card+)
 
 [[layouts_card]]
 .Card layout
-image::images/fit.png[]
+image::images/card.png[]
 
 See also
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Card

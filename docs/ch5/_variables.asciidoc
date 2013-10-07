@@ -21,11 +21,11 @@ $main-bg-color: red;
 ----
 
 ==== Interpolation
-Variables can be used for more than just property values. You can use #{} to insert them into property names or selectors.
+Variables can be used for more than just property values. You can use +#{}+ to insert them into property names or selectors.
 
 [source, javascript]
 ----
-$vertical: 'top;
+$vertical: 'top';
 $horizontal: 'right';
 
 .rounded {

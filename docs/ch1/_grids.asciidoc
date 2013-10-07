@@ -10,7 +10,7 @@ This is because a grid in the DOM is in fact an HTML table.
 ===== CSS Class: +.x-grid+
 
 ===== +Ext.grid.Panel+
-Extends from +Ext.panel.Panel+
+Extends from +Ext.panel.Panel+ & +Ext.panel.Table+
 
 * Grid Header (+.x-grid-header+)
 * Grid Body (+.x-grid-body+)
