@@ -97,8 +97,14 @@ Ext.create('Ext.form.Panel', {
 
 ==== What it is
 A plain form field for entering text.
+
 But there is one important difference.
-A textfield in Ext JS is the input field plus the label all together.
+A (text) field in Ext JS is the input field plus the label all together.
+
+Under the hood all fields are little html tables.
+Where the label is the left +<td>+.
+The field is the 2nd +<td>+.
+Optionally the 3rd +<td>+ contains a trigger button.
 
 ==== Specs
 
@@ -202,7 +208,7 @@ A ComboBox is like a combination of a traditional HTML text <input> field and a 
 
 ==== Specs
 
-===== CSS Class: +.x-table-plain+ or +.x-form-type-text+
+===== CSS Class: +.x-form-trigger-input-cell+ (field), +.x-trigger-cell+ (trigger) and +.x-boudlist+ (list)
 
 ===== Ext.form.field.ComboBox
 Extends from +Ext.form.field.Base+
@@ -399,96 +405,161 @@ Ext.create('Ext.form.Panel', {
 === Datefield
 
 ==== What it is
-TODO
+Provides a date input field with a date picker dropdown and automatic date validation.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-form-trigger-input-cell+ (field), +.x-trigger-cell+ (trigger) and +.x-datepicker+ (calendar)
 
-===== TODO
+===== Ext.form.field.Date
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-type-text+)
+* date trigger (+.x-form-date-trigger+)
+* calendar (+.x-datapicker+)
+** +showToday+
+** +startDay+
+** +matchFieldWidth+
+** +altFormats+
+** +disabledDates+
+** +disabledDays+
+** +format+
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Date
+
+[[components_date]]
+.Ext.form.field.Date
+image::images/date.png[]
 
 ==== Example
-[[panels]]
+[[datefield]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    width: 300,
+    bodyPadding: 10,
+    title: 'Dates',
+    items: [{
+        xtype: 'datefield',
+        anchor: '100%',
+        fieldLabel: 'To',
+        name: 'to_date',
+        value: new Date()  // defaults to today
+    }]
+});
 ----
 ====
 
 === Displayfield
 
 ==== What it is
-TODO
+A display-only text field which is not validated and not submitted. This is useful for when you want to display a value from a form's loaded data but do not want to allow the user to edit or submit that value. 
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-field-default+ or +.x-form-readonly+
 
-===== TODO
+===== Ext.form.field.Display
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-readonly+)
+** +htmlEncode+
+** +fieldCls++
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Display
+
+[[components_display]]
+.Ext.form.field.Display
+image::images/display.png[]
 
 ==== Example
-[[panels]]
+[[displayfield]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'displayfield',
+        fieldLabel: 'Home',
+        name: 'home_score',
+        value: '10'
+    }]
+});
 ----
 ====
 
 === Fileupload
 
 ==== What it is
-TODO
+A file upload field which has custom styling and allows control over the button text and other features of text fields like empty text. It uses a hidden file input element behind the scenes to allow user selection of a file and to perform the actual upload during form submit.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-field-default+ or +.x-form-readonly+
 
-===== TODO
+===== Ext.form.field.File
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-readonly+)
+* trigger button (+.x-form-trigger-input-cell+)
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.File
+
+[[components_file]]
+.Ext.form.field.File
+image::images/file.png[]
 
 ==== Example
-[[panels]]
+[[fileupload]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'filefield',
+        name: 'photo',
+        fieldLabel: 'Photo',
+        labelWidth: 50,
+        msgTarget: 'side',
+        allowBlank: false,
+        anchor: '100%',
+        buttonText: 'Select Photo...'
+    }]
+});
 ----
 ====
 
 === Numberfield
 
 ==== What it is
-TODO
+A numeric text field that provides automatic keystroke filtering to disallow non-numeric characters, and numeric validation to limit the value to a range of valid numbers. The range of acceptable number values can be controlled by setting the minValue and maxValue configs, and fractional decimals can be disallowed by setting allowDecimals to false.
 
 ==== Specs
 
 ===== CSS Class: TODO
 
-===== TODO
+===== Ext.form.field.Number
 Extends from +Ext.form.field.Base+
 
-TODO
+* +minValue+
+* +manValue+
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+** +hideTrigger+
+** +keyNavEnabled+
+** +mouseWheelEnabled+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Number
+
+[[components_todo]]
+TODO
+image::images/todo.png[]
 
 ==== Example
 [[panels]]
@@ -496,51 +567,104 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'numberfield',
+        anchor: '100%',
+        name: 'bottles',
+        fieldLabel: 'Bottles of Beer',
+        value: 99,
+        maxValue: 99,
+        minValue: 0
+    }]
+});
 ----
 ====
 
 === Spinnerfield
 
 ==== What it is
-TODO
+A field with a pair of up/down spinner buttons. This class is not normally instantiated directly, instead it is subclassed and the onSpinUp and onSpinDown methods are implemented to handle when the buttons are clicked. A good example of this is the Ext.form.field.Number field which uses the spinner to increment and decrement the field's value by its step config value.
 
 ==== Specs
 
 ===== CSS Class: TODO
 
-===== TODO
+===== Ext.form.field.Spinner
 Extends from +Ext.form.field.Base+
 
 TODO
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Spinner
+
+[[components_todo]]
+TODO
+image::images/todo.png[]
 
 ==== Example
-[[panels]]
+[[spinner]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.define('Ext.ux.CustomSpinner', {
+    extend: 'Ext.form.field.Spinner',
+    alias: 'widget.customspinner',
+
+    // override onSpinUp (using step isn't neccessary)
+    onSpinUp: function() {
+        var me = this;
+        if (!me.readOnly) {
+            var val = parseInt(me.getValue().split(' '), 10)||0; // gets rid of " Pack", defaults to zero on parse failure
+            me.setValue((val + me.step) + ' Pack');
+        }
+    },
+
+    // override onSpinDown
+    onSpinDown: function() {
+        var me = this;
+        if (!me.readOnly) {
+           var val = parseInt(me.getValue().split(' '), 10)||0; // gets rid of " Pack", defaults to zero on parse failure
+           if (val <= me.step) {
+               me.setValue('Dry!');
+           } else {
+               me.setValue((val - me.step) + ' Pack');
+           }
+        }
+    }
+});
+
+Ext.create('Ext.form.FormPanel', {
+    renderTo: Ext.getBody(),
+    items:[{
+        xtype: 'customspinner',
+        fieldLabel: 'How Much Beer?',
+        step: 6
+    }]
+});
 ----
 ====
 
 === Timefield
 
 ==== What it is
-TODO
+Provides a time input field with a time dropdown and automatic time validation.
 
 ==== Specs
 
 ===== CSS Class: TODO
 
-===== TODO
+===== Ext.form.field.Time
 Extends from +Ext.form.field.Base+
 
 TODO
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Time
+
+[[components_todo]]
+TODO
+image::images/todo.png[]
 
 ==== Example
 [[panels]]
@@ -548,77 +672,117 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'timefield',
+        name: 'in',
+        fieldLabel: 'Time In',
+        minValue: '6:00 AM',
+        maxValue: '8:00 PM',
+        increment: 30,
+        anchor: '100%'
+    }]
+});
 ----
 ====
 
 === Slider
 
 ==== What it is
-TODO
+Slider which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.
 
 ==== Specs
 
 ===== CSS Class: TODO
 
-===== TODO
+===== Ext.slider.Single
 Extends from +Ext.form.field.Base+
 
 TODO
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.slider.Single
+
+[[components_todo]]
+TODO
+image::images/todo.png[]
 
 ==== Example
-[[panels]]
+[[slider]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.slider.Single', {
+    width: 200,
+    value: 50,
+    increment: 10,
+    minValue: 0,
+    maxValue: 100,
+    renderTo: Ext.getBody()
+});
 ----
 ====
 
 === Multi Slider
 
 ==== What it is
-TODO
+Slider with multiple thumbs which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.
 
 ==== Specs
 
 ===== CSS Class: TODO
 
-===== TODO
+===== Ext.slider.Multi
 Extends from +Ext.form.field.Base+
 
 TODO
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.slider.Multi
+
+[[components_todo]]
+TODO
+image::images/todo.png[]
 
 ==== Example
-[[panels]]
+[[multislider]]
 .Example
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.slider.Multi', {
+    width: 200,
+    values: [25, 50, 75],
+    increment: 5,
+    minValue: 0,
+    maxValue: 100,
+
+    // this defaults to true, setting to false allows the thumbs to pass each other
+    constrainThumbs: false,
+    renderTo: Ext.getBody()
+});
 ----
 ====
 
 === HTML Editor
 
 ==== What it is
-TODO
+Provides a lightweight HTML Editor component. Some toolbar features are not supported by Safari and will be automatically hidden when needed. These are noted in the config options where appropriate.
 
 ==== Specs
 
 ===== CSS Class: TODO
 
-===== TODO
+===== Ext.form.field.HtmlEditor
 Extends from +Ext.form.field.Base+
 
 TODO
 
-http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.HtmlEditor
+
+[[components_todo]]
+TODO
+image::images/todo.png[]
 
 ==== Example
 [[panels]]
@@ -626,6 +790,10 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.form.HtmlEditor', {
+    width: 580,
+    height: 250,
+    renderTo: Ext.getBody()
+});
 ----
 ====
