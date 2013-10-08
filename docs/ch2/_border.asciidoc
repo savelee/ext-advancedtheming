@@ -1,7 +1,7 @@
 === Border
 
 ==== What's it?
-TODO
+This is a multi-pane, application-oriented UI layout style that supports multiple nested panels, automatic bars between regions and built-in expanding and collapsing of regions.
 
 ==== Specs
 Class: +Ext.layout.container.Border+ (+layout:border+)
@@ -19,14 +19,169 @@ http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Border
 ====
 [source, javascript]
 ----
-TODO
+Ext.create('Ext.panel.Panel', {
+    layout : 'border',
+    items : [ {
+        title : 'West',
+        region : 'west',
+        width : 60
+    }, {
+        title : 'East',
+        region : 'east', 
+        width : 60
+    }, {
+        title : 'South',
+        region : 'south',
+        height : 60
+    }, {
+        title : 'North',
+        region : 'north',
+        height : 60
+    }, {
+        title : 'Center',
+        region : 'center'
+    } ],
+
+    title : 'Border Layout Panel',
+    defaults : {margin : 4},
+    bodyPadding : 8,
+    height : 300, width : 600,
+    renderTo : Ext.getBody()
+});
 ----
 ====
 
-===== Collapisible
+===== How it works
+Border layouts are designed to layout child panels. There is a primary center child, and other children relative to the center.
 
-TODO
+Children may be at the +west+, +north+, +east+ or +south+, specified via +region+ on each child. A center child is required; the other positions are optional.
+
+===== Resizing Children
+
+Child panels may be resized by tagging them with +split : true+.
+
+When using the split option, the layout will automatically insert a +Ext.resizer.Splitter+ into the appropriate place. This will modify the underlying items collection in the container.
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+
+    layout : 'border',
+
+    items : [ {
+        title : 'West (resizable)',
+        region : 'west',
+        split : true,
+        width : 100
+    }, {
+        title : 'East',
+        region : 'east', 
+        width : 60
+    }, {
+        title : 'South (resizable)',
+        region : 'south',
+        split : true,
+        height : 60
+    }, {
+        title : 'North',
+        region : 'north',
+        height : 60
+    }, {
+        title : 'Center',
+        region : 'center'
+    } ],
+
+    title : 'Border Layout Panel',
+    bodyPadding : 8,
+    height : 340, width : 600,
+    renderTo : Ext.getBody()
+});
+----
+
+===== Collapsible childeren
+
+Adjacent panels resize properly when child panels are collapsed. Furthermore, you can specify +collapseMode : 'mini'+ to have the panel fully collapse and hide its header.
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+
+    layout : 'border',
+
+    items : [ {
+        title : 'North',
+        region : 'north',
+
+        collapsible : true,
+
+        height : 80
+    }, {
+        title : 'South (collapseMode : \'mini\')',
+        region : 'south',
+
+        collapsible : true,
+        collapseMode : 'mini',
+
+        height : 80
+    }, {
+        title : 'Center',
+        region : 'center'
+    } ],
+
+    title : 'Border Layout Panel',
+    bodyPadding : 8,
+    height : 340, width : 400,
+    renderTo : Ext.getBody()
+});
+----
+
 
 ===== Weights
+The region weight determine the priority / weight of each column.
+(You can compare this with HTML tables, where you could set rowspan and colspan, to stretch out columns or rows (although these layouts are of course no tables.)
 
-TODO
+It works a bit like in CSS where you have Z-index.  An element with a greater stack order is always in front of element with a lower stack order. Who is the boss of the spot.
+There is just one spot. – And you stack on top of each other.
+
+Now with a border layout, you have to check who is the boss over one of the 4 spots.
+The four spots are the corners.
+
+WN – N – NE
+ W - C - E
+WS - S - SE
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+    layout : 'border',
+    items : [ {
+        title : 'West',
+        region : 'west',
+        width : 60
+    }, {
+        title : 'East',
+        region : 'east', 
+        width : 60,
+        weight: 20
+    }, {
+        title : 'South',
+        region : 'south',
+        height : 60,
+        weight: 10
+    }, {
+        title : 'North',
+        region : 'north',
+        height : 60,
+        weight: 30
+    }, {
+        title : 'Center',
+        region : 'center',
+    } ],
+
+    title : 'Weight Test',
+    defaults : {margin : 4},
+    bodyPadding : 8,
+    height : 300, width : 600,
+    renderTo : Ext.getBody()
+});
+----

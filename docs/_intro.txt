@@ -1,5 +1,5 @@
 .What you will learn in this course
-* Overview of all Ext Components //TODO finalize SLIDES
+* Overview of all Ext Components
 * Understand the Sencha layout system
 * Theming inheritance
 * Overview of the out of the box themes
