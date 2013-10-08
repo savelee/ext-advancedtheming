@@ -543,23 +543,24 @@ A numeric text field that provides automatic keystroke filtering to disallow non
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-field-default+ or +.x-form-type-text+
 
 ===== Ext.form.field.Number
 Extends from +Ext.form.field.Base+
 
-* +minValue+
-* +manValue+
-
+* formfield (+.x-field-default+ or +.x-form-readonly+)
+** +minValue+
+** +maxValue+
+* trigger button (+.x-form-trigger+)
 ** +hideTrigger+
 ** +keyNavEnabled+
 ** +mouseWheelEnabled+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Number
 
-[[components_todo]]
-TODO
-image::images/todo.png[]
+[[components_number]]
+.Ext.form.field.Number
+image::images/number.png[]
 
 ==== Example
 [[panels]]
@@ -589,18 +590,24 @@ A field with a pair of up/down spinner buttons. This class is not normally insta
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-field-default+ or +.x-form-type-text+
 
 ===== Ext.form.field.Spinner
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-readonly+)
+** +spinDownEnabled+
+** +spinUpEnabled+
+* trigger button (+.x-form-trigger+)
+** +hideTrigger+
+** +keyNavEnabled+
+** +mouseWheelEnabled+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Spinner
 
-[[components_todo]]
-TODO
-image::images/todo.png[]
+[[components_spinner]]
+.Ext.form.field.Spinner
+image::images/spinner.png[]
 
 ==== Example
 [[spinner]]
@@ -653,18 +660,23 @@ Provides a time input field with a time dropdown and automatic time validation.
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-form-trigger-input-cell+ (field), +.x-trigger-cell+ (trigger) and +.x-boudlist+ (list)
 
 ===== Ext.form.field.Time
 Extends from +Ext.form.field.Base+
 
-TODO
+* formfield (+.x-field-default+ or +.x-form-type-text+)
+* boundlist (+.x-boundlist+)
+** +increment+
+** +format+
+** +pickerMaxHeight+
+* arrow trigger (+.x-form-arrow-trigger+)
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Time
 
-[[components_todo]]
-TODO
-image::images/todo.png[]
+[[components_combobox]]
+.Ext.form.field.ComboBox
+image::images/combobox.png[]
 
 ==== Example
 [[panels]]
@@ -694,18 +706,19 @@ Slider which supports vertical or horizontal orientation, keyboard adjustments, 
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-slider+
 
 ===== Ext.slider.Single
 Extends from +Ext.form.field.Base+
 
-TODO
+* slider (+.x-slider+)
+* slider thumb (+.x-slider-thumb+)
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.slider.Single
 
-[[components_todo]]
-TODO
-image::images/todo.png[]
+[[components_slider]]
+Ext.slider.Single
+image::images/slider.png[]
 
 ==== Example
 [[slider]]
@@ -731,18 +744,19 @@ Slider with multiple thumbs which supports vertical or horizontal orientation, k
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: Ext.slider.Multi
 
 ===== Ext.slider.Multi
 Extends from +Ext.form.field.Base+
 
-TODO
+* slider (+.x-slider+)
+* slider thumb (+.x-slider-thumb+)
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.slider.Multi
 
-[[components_todo]]
-TODO
-image::images/todo.png[]
+[[components_multi]]
+.Ext.slider.Multi
+image::images/multi.png[]
 
 ==== Example
 [[multislider]]
@@ -771,18 +785,23 @@ Provides a lightweight HTML Editor component. Some toolbar features are not supp
 
 ==== Specs
 
-===== CSS Class: TODO
+===== CSS Class: +.x-html-editor-container+
 
 ===== Ext.form.field.HtmlEditor
 Extends from +Ext.form.field.Base+
 
-TODO
+* editor (+x-html-editor-container+)
+** enableAlignments
+** enableColors
+** enableFont
+** enableFontSize
+** enableFormat
+** enableLinks
+** enableLists
+** enableSourceEdit
+** fontFamilies
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.HtmlEditor
-
-[[components_todo]]
-TODO
-image::images/todo.png[]
 
 ==== Example
 [[panels]]
