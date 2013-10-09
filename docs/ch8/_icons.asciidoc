@@ -44,19 +44,19 @@ http://www.branah.com/unicode-converter
 
 ==== Example: IcoMoon
 
-[[styles_createfontpack1]]
+[[styles_createfontpack0]]
 .Create your own custom font with IcoMoon.io
-image::images/assets_createfontpack.png[scale="75"]
+image::../../images/assets_createfontpack.png[scale="75"]
 
-[[styles_createfontpack2]]
+[[styles_createfontpack5]]
 .Create your own custom font with IcoMoon.io
-image::images/assets_createfontpack2.png[scale="75"]
+image::../../images/assets_createfontpack2.png[scale="75"]
 
 ==== Example: Fontello
 
 [[styles_createfontpack3]]
 .Create your own custom font with Fontello.com
-image::images/assets_createfontpack3.png[scale="75"]
+image::../../images/assets_createfontpack3.png[scale="75"]
 
 ==== Implement icon font in Sass
 This works exact the same as implementing any other font.

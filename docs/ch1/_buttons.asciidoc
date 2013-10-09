@@ -20,7 +20,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.button.Button
 
 [[components_buttons]]
 .Ext.button.Button
-image::images/buttons.png[scale="75"]
+image::../../images/buttons.png[scale="75"]
 
 ==== Example
 

@@ -9,13 +9,13 @@ Class: +Ext.layout.container.Card+ (+layout:card+)
 
 [[layouts_card]]
 .Card layout
-image::images/card.png[scale="75"]
+image::../../images/card.png[scale="75"]
 
 See also
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Card
 
 ==== Example
-[[panels]]
+[]
 .Example
 ====
 [source, javascript]

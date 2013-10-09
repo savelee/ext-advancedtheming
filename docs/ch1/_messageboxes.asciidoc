@@ -15,12 +15,11 @@ Extends from +Ext.window.Window+
 
 [[components_alert]]
 .Ext.window.MessageBox.alert()
-image::images/alert.png[scale="75"]
+image::../../images/alert.png[scale="75"]
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox
 
 ==== Example
-[[messagebox]]
 .Example
 ====
 [source, javascript]
@@ -39,12 +38,11 @@ Ext.Msg.alert('Widget Updated', 'The widget was updated successfully.');
 
 [[components_confirm]]
 .Ext.window.MessageBox.confirm()
-image::images/confirm.png[scale="75"]
+image::../../images/confirm.png[scale="75"]
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox
 
 ==== Example
-[[messagebox]]
 .Example
 ====
 [source, javascript]
@@ -70,12 +68,11 @@ Ext.Msg.confirm('Are you sure?',
 
 [[components_prompt]]
 .Ext.window.MessageBox.prompt()
-image::images/prompt.png[scale="75"]
+image::../../images/prompt.png[scale="75"]
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox
 
 ==== Example
-[[messagebox]]
 .Example
 ====
 [source, javascript]
@@ -94,14 +91,12 @@ Ext.Msg.prompt('Name', 'Please enter your name:', function(btn, text){
 ===== Ext.window.MessageBox.progress()
 * +icon+
 
-[[components_progess]]
 .Ext.window.MessageBox.progress()
-image::images/progress.png[scale="75"]
+image::../../images/progress.png[scale="75"]
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox
 
 ==== Example
-[[messagebox]]
 .Example
 ====
 [source, javascript]
@@ -128,12 +123,11 @@ Ext.defer(update, 4000, null, [1.00]);
 
 [[components_progess]]
 .Ext.window.MessageBox.progress()
-image::images/progress.png[scale="75"]
+image::../../images/progress.png[scale="75"]
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox
 
 ==== Example
-[[messagebox]]
 .Example
 ====
 [source, javascript]

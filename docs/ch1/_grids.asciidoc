@@ -30,7 +30,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.grid.Panel
 
 [[components_grids]]
 .Ext.grid.Panel
-image::images/grids.png[scale="75"]
+image::../../images/grids.png[scale="75"]
 
 ==== Example
 [[grids]]

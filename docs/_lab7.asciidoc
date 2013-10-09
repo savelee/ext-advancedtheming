@@ -112,4 +112,4 @@ Preview and test the template.
 +
 [[lab7_organize]]
 .Preview of the new Goggles theme
-image::images/extreader-organize.png[scale="75"]
+image::../../images/extreader-organize.png[scale="75"]

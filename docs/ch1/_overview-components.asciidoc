@@ -18,7 +18,3 @@ include::_messageboxes.asciidoc[]
 include::_grids.asciidoc[]
 include::_trees.asciidoc[]
 include::_forms.asciidoc[]
-
-include::_charts.asciidoc[]
-
-

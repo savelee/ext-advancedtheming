@@ -66,9 +66,9 @@ A new generated theme always extends from the *Classic* theme.
 When you want to inherit from the *Neptune* theme instead
 you will need to change the +extend+.
 
-[[styles_createfontpack1]]
+[[styles_createfontpack4]]
 .Inheritance tree
-image::images/overviewthemes_inheritance3.png[scale="75"]
+image::../../images/overviewthemes_inheritance3.png[scale="75"]
 
 ==== Change the extend
 To change the inheritance of the custom theme. Open

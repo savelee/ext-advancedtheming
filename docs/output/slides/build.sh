@@ -1,0 +1,1 @@
+asciidoc -b deckjs -f deckjs.conf Documentation.asciidoc

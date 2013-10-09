@@ -22,7 +22,7 @@ See <<lab8_start>>.
 
 [[lab8_start]]
 .Start Sencha Architect
-image::images/architect_start.png[scale="75"]
+image::../../images/architect_start.png[scale="75"]
 
 . *Choose: _starter apps > Task List_*
 +
@@ -41,7 +41,7 @@ See <<lab8_setup>>.
 
 [[lab8_setup]]
 .Save Sencha Architect Project
-image::images/architect_setup.png[scale="75"]
+image::../../images/architect_setup.png[scale="75"]
 
 === Creating and extending from a Sencha theme
 
@@ -140,11 +140,11 @@ See <<lab8_tpl1>> and <<lab8_tpl2>>.
 
 [[lab8_tpl1]]
 .Create custom styles for tpls
-image::images/architect_tpl1.png[scale="75"]
+image::../../images/architect_tpl1.png[scale="75"]
 
 [[lab8_tpl2]]
 .Create custom styles for tpls (part 2)
-image::images/architect_tpl2.png[scale="75"]
+image::../../images/architect_tpl2.png[scale="75"]
 
 . *Open the tpl code*
 +
@@ -175,7 +175,7 @@ See <<lab8_tpl3>>.
 
 [[lab8_tpl3]]
 .Create custom styles for tpls (part 3)
-image::images/architect_tpl3.png[scale="75"]
+image::../../images/architect_tpl3.png[scale="75"]
 +
 [NOTE]
 ------------------------------------------------------
@@ -213,4 +213,4 @@ background colors to buttons in toolbars.
 +
 [[lab8_end]]
 .Example of the custom DarkTheme in Sencha Architect
-image::images/architect_endresult.png[scale="75"]
+image::../../images/architect_endresult.png[scale="75"]

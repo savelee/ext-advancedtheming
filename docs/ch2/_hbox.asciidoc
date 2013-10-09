@@ -9,13 +9,13 @@ Class: +Ext.layout.container.HBox+ (+layout:hbox+)
 
 [[layouts_hbox]]
 .Horizontal Box layout
-image::images/hbox.png[scale="75"]
+image::../../images/hbox.png[scale="75"]
 
 See also
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.HBox
 
 ==== Example
-[[panels]]
+[]
 
 .Example
 ====

@@ -1,3 +1,4 @@
+
 === Lab: Switch from Classic to Neptune theme
 
 .Objectives
@@ -15,7 +16,7 @@
 +
 [[lab1_classic]]
 .ExtReader app with Classic theme
-image::images/extreader-classic.png[scale="75"]
+image::../../images/extreader-classic.png[scale="75"]
 
 . *Open with your editor the following file /extreader/.sencha/app/sencha.cfg*
 +
@@ -57,4 +58,4 @@ Your ExtReader application should look like <<lab1_neptune>>:
 +
 [[lab1_neptune]]
 .ExtReader app with Neptune theme
-image::images/extreader-neptune.png[scale="75"]
+image::../../images/extreader-neptune.png[scale="75"]

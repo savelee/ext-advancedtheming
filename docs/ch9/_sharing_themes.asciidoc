@@ -11,7 +11,7 @@ since themes are located in the *packages* folder.
 
 [[share_diagram2]]
 .Multiple apps can share the same global theme.
-image::images/sharediagram1.png
+image::../../images/sharediagram1.png
 
 === App specific
 Now in the previous example, it wouldn't make much sense that 
@@ -22,9 +22,9 @@ So there must be a way to also save CSS styles on app level.
 That's why each generated app has an own sass folder:
 *app/sass/*.
 
-[[share_diagram2]]
+[[share_diagram3]]
 .Some styles are specific for apps, those styles shouldn't be written in a global theme.
-image::images/sharediagram2.png
+image::../../images/sharediagram2.png
 
 === Global vs App specific
 Styling that is not shared between applications belongs in the application itself, not in the theme. Sencha Cmd provides an easy way to add application-level styling by following the same pattern as theme styling. The application acts as the final level in the theme hierarchy. Applications can change theme variables, and they can add their own custom variables and rules for styling the application's views.
@@ -137,7 +137,7 @@ $base-color: red;
 
 [[share_red]]
 .The app specific styles are winning. (The only available styles.)
-image::images/share_red.png
+image::../../images/share_red.png
 
 ==== Create a new theme 
 
@@ -153,7 +153,7 @@ $base-color: blue;
 
 [[share_blue]]
 .The global theme is winning. (In general global themes always win.)
-image::images/share_blue.png
+image::../../images/share_blue.png
 
 ==== Overwrite global vars
 
@@ -167,4 +167,4 @@ $base-color: blue !default;
 
 [[share_red2]]
 .The app specific styles are winning. (Global variable allows to be overwritten.)
-image::images/share_red.png
+image::../../images/share_red.png

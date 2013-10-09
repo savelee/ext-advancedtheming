@@ -58,7 +58,7 @@ in the Sass file will be automatically compiled to CSS files:
 +
 [[lab4_goggles]]
 .Preview of the Goggles theme
-image::images/extreader-goggles1.png[scale="75"]
+image::../../images/extreader-goggles1.png[scale="75"]
 
 . *Open the API Docs*
 +
@@ -188,4 +188,4 @@ When you want to test this solution theme, just switch themes in your _extreader
 
 [[lab4_goggles2]]
 .Preview of the Goggles theme
-image::images/extreader-goggles2.png[scale="75"]
+image::../../images/extreader-goggles2.png[scale="75"]

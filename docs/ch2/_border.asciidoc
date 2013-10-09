@@ -6,15 +6,15 @@ This is a multi-pane, application-oriented UI layout style that supports multipl
 ==== Specs
 Class: +Ext.layout.container.Border+ (+layout:border+)
 
-[[layouts_vbox]]
+[[layouts_border]]
 .Border layout
-image::images/border.png[scale="75"]
+image::../../images/border.png[scale="75"]
 
 See also
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Border
 
 ==== Example
-[[panels]]
+[]
 .Example
 ====
 [source, javascript]

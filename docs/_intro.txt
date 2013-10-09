@@ -1,3 +1,7 @@
+[preface]
+Preface
+=======
+
 .What you will learn in this course
 * Overview of all Ext Components
 * Understand the Sencha layout system

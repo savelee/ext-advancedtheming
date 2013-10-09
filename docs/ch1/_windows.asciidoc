@@ -30,7 +30,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.Window
 
 [[components_windows]]
 .Ext.window.Window
-image::images/windows.png[scale="75"]
+image::../../images/windows.png[scale="75"]
 
 ==== Example
 [[windows]]

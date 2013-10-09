@@ -26,7 +26,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.panel.Panel
 
 [[components_tabpanels]]
 .Ext.tab.Panel
-image::images/tabpanels.png[scale="75"]
+image::../../images/tabpanels.png[scale="75"]
 
 ==== Example
 

@@ -86,7 +86,7 @@ Note: subfolders will be copied too!
 
 [[assets_1]]
 .Paths to global resources
-image::images/assets_appresources.png[scale="75"]
+image::../../images/assets_appresources.png[scale="75"]
 
 ==== Paths app specific
 
@@ -100,7 +100,7 @@ image::images/assets_appresources.png[scale="75"]
 
 [[assets_2]]
 .Paths to app specific resources
-image::images/assets_globalresources.png[scale="75"]
+image::../../images/assets_globalresources.png[scale="75"]
 
 ==== Paths in build
 
@@ -110,7 +110,7 @@ will be copied to the _build/[appname]/resources_ folder.
 
 [[assets_3]]
 .Paths to all resources after build.
-image::images/assets_buildfolder.png[scale="75"]
+image::../../images/assets_buildfolder.png[scale="75"]
 
 ==== Paths to resources
 

@@ -37,7 +37,7 @@ designs.
 
 [[vars_inheritance]]
 .Inheritance tree
-image::images/overviewthemes_inheritance1.png[scale="75"]
+image::../../images/overviewthemes_inheritance1.png[scale="75"]
 
 === 2 types of variables
 .There are 2 types of variables set
@@ -59,7 +59,7 @@ http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS
 
 [[vars_docs]]
 .Global CSS vars in the API Docs
-image::images/vars_apidocs_global.png[scale="75"]
+image::../../images/vars_apidocs_global.png[scale="75"]
 
 ==== Where to implement
 .In the labs we saved all our styles and vars
@@ -90,7 +90,7 @@ $base-color: green;
 
 [[vars_globalcss1]]
 .Set the base color
-image::images/vars_globalcss.png[scale="75"]
+image::../../images/vars_globalcss.png[scale="75"]
 
 
 ==== Example: Neutral-color
@@ -104,9 +104,9 @@ Defaults to: +#dcdcdc+
 $neutral-color: #ccc
 ----
 
-[[vars_globalcss1]]
+[[vars_globalcss01]]
 .Set the base color
-image::images/vars_globalcss.png[scale="75"]
+image::../../images/vars_globalcss.png[scale="75"]
 
 ==== Overview vars
 
@@ -152,9 +152,9 @@ an exact overview.
 For example the CSS vars for buttons:
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button
 
-[[vars_docs]]
+[[vars_docs1]]
 .Component CSS vars in the API Docs
-image::images/vars_apidocs_components.png[scale="75"]
+image::../../images/vars_apidocs_components.png[scale="75"]
 
 ==== Where to implement
 .In the labs we saved all our styles and vars
@@ -190,7 +190,7 @@ $button-default-border-color: blue;
 
 [[vars_buttonexample]]
 .Button Example
-image::images/vars_buttonexample.png[scale="75"]
+image::../../images/vars_buttonexample.png[scale="75"]
 
 ==== Overview Components with vars
 Note that components that inherit from
