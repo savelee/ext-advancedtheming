@@ -26,4 +26,4 @@ Run the following command on the CLI, from the *extreader* folder:
 
 [[lab3_neptune]]
 .ExtReader app with Custom theme which extends from the Neptune theme
-image::images/extreader-neptune.png[]
+image::images/extreader-neptune.png[scale="75"]

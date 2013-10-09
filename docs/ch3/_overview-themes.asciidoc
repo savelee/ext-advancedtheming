@@ -16,7 +16,7 @@ A theme always extends from the base theme. The base theme defines basic things 
 
 [[styles_createfontpack1]]
 .Inheritance tree
-image::images/overviewthemes_inheritance1.png[]
+image::images/overviewthemes_inheritance1.png[scale="75"]
 
 === Overview Themes
 
@@ -45,7 +45,7 @@ The Neptune theme extends form the *Neutral* theme.
 
 [[overviewthemes_neptune]]
 .Neptune theme
-image::images/overviewthemes_neptune.png[]
+image::images/overviewthemes_neptune.png[scale="75"]
 
 ==== Neptune RTL Theme Example
 
@@ -53,7 +53,7 @@ Text from right to left, support.
 
 [[overviewthemes_neptune]]
 .Neptune RTL theme
-image::images/overviewthemes_neptune_rtl.png[]
+image::images/overviewthemes_neptune_rtl.png[scale="75"]
 
 ==== Classic Theme
 Classic theme, replica of the old Ext 3 theme.
@@ -62,14 +62,14 @@ The Classic theme also extends form the *Neutral* theme.
 
 [[overviewthemes_classic]]
 .Classic theme
-image::images/overviewthemes_classic.png[]
+image::images/overviewthemes_classic.png[scale="75"]
 
 ==== Classic Themes
 Two other themes, gray and accessibility, extend from the classic theme.
 
 [[styles_createfontpack2]]
 .Inheritance tree
-image::images/overviewthemes_inheritance2.png[]
+image::images/overviewthemes_inheritance2.png[scale="75"]
 
 ==== Gray Theme
 Classic theme with a gray base color.
@@ -78,7 +78,7 @@ The Gray theme extends from the *Classic* theme.
 
 [[overviewthemes_gray]
 .Gray theme
-image::images/overviewthemes_gray.png[]
+image::images/overviewthemes_gray.png[scale="75"]
 
 ==== Accessibility Theme
 Classic theme optimized for accessibility.
@@ -87,7 +87,7 @@ The Accessibility theme extends from the *Classic* theme.
 
 [[overviewthemes_acces]
 .Accessibility theme
-image::images/overviewthemes_access.png[]
+image::images/overviewthemes_access.png[scale="75"]
 
 ==== FUTURE: Neptune Touch Theme
 Comming soon.
@@ -97,7 +97,7 @@ Touch support.
 
 [[overviewthemes_acces]
 .Neptune Touch Theme
-image::images/overviewthemes_neptune_touch.png[]
+image::images/overviewthemes_neptune_touch.png[scale="75"]
 
 ==== FUTURE: Crisp Touch Theme
 Comming soon.
@@ -107,7 +107,7 @@ Touch support.
 
 [[overviewthemes_acces]
 .Crisp Touch Theme
-image::images/overviewthemes_crisp.png[]
+image::images/overviewthemes_crisp.png[scale="75"]
 
 === Switching themes
 When you generate an application with Sencha Cmd,
@@ -122,7 +122,7 @@ the +<style>+* in the _index.html_ file.
 
 [[overviewthemes_switch1]
 .Do not change Stylesheet in the index.html
-image::images/overviewthemes_switch1.png[]
+image::images/overviewthemes_switch1.png[scale="75"]
 
 
 ==== How to switch?
@@ -165,7 +165,7 @@ app.theme=ext-theme-classic
 
 [[overviewthemes_switch2]
 .Switch themes in the sencha.cfg file
-image::images/overviewthemes_switch2.png[]
+image::images/overviewthemes_switch2.png[scale="75"]
 
 ==== Enable hidden files
 Can't find the _.sencha_ hidden folder?

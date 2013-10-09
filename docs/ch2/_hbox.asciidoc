@@ -9,7 +9,7 @@ Class: +Ext.layout.container.HBox+ (+layout:hbox+)
 
 [[layouts_hbox]]
 .Horizontal Box layout
-image::images/hbox.png[]
+image::images/hbox.png[scale="75"]
 
 See also
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.HBox
@@ -59,7 +59,6 @@ Because of different screensizes, you rather have your layouts flexible.
 ==== Flex
 
 To create dynamic (flexible) widths.
-For example see <<hbox_flex>>.
 
 Let’s say, if you have a container.  And the left panel takes up 25% height. And the right panel takes up 75%. (that’s together 100%).
 In this case, we could say 25% is one 1/4 And 75% is 3/4.

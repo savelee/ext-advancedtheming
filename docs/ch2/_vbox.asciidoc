@@ -10,7 +10,7 @@ Class: +Ext.layout.container.VBox+ (+layout:vbox+)
 
 [[layouts_vbox]]
 .Vertical Box layout
-image::images/vbox.png[]
+image::images/vbox.png[scale="75"]
 
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.VBox
 

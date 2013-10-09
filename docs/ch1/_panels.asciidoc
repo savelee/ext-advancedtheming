@@ -28,7 +28,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.panel.Panel
 
 [[components_panels]]
 .Ext.panel.Panel
-image::images/panels.png[]
+image::images/panels.png[scale="75"]
 
 ==== Example
 [[panels]]

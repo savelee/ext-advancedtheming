@@ -22,7 +22,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.button.Split
 
 [[components_splitbuttons]]
 .Ext.button.Split
-image::images/buttonssplit.png[]
+image::images/buttonssplit.png[scale="75"]
 
 ==== Example
 

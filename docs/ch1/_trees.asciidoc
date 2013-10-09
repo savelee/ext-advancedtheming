@@ -23,7 +23,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.tree.Panel
 
 [[components_treepanels]]
 .Ext.tree.Panel
-image::images/trees.png[]
+image::images/trees.png[scale="75"]
 
 ==== Example
 [[panels]]

@@ -9,7 +9,7 @@ Class: +Ext.layout.container.Column+ (+layout:column+)
 
 [[layouts_column]]
 .Anchor column
-image::images/column.png[]
+image::images/column.png[scale="75"]
 
 See also
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Column

@@ -25,7 +25,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.Img
 
 [[components_images]]
 .Ext.Img
-image::images/images.png[]
+image::images/images.png[scale="75"]
 
 ==== Example
 [[images]]

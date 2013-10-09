@@ -150,4 +150,4 @@ Your ExtReader app should have the looks of <<lab6_uis>>.
 +
 [[lab6_uis]]
 .Preview of the Goggles with custom UIs
-image::images/extreader-uis.png[]
+image::images/extreader-uis.png[scale="75"]

@@ -47,7 +47,7 @@ and only some toolbars needs to be *green* instead of blue.
 
 [[mixins_kitchensink]]
 .Example of a Toolbar UI
-image::images/mixins_kitchensink.png[]
+image::images/mixins_kitchensink.png[scale="75"]
 
 === Mixin vs CSS overwrite
 .In the previous example you could choose to use the toolbar mixin (+extjs-toolbar-ui+).
@@ -127,7 +127,7 @@ But there is just one global mixin...
 
 [[mixins_globalcss]]
 .Global CSS Mixin
-image::images/mixin_globalcss.png[]
+image::images/mixin_globalcss.png[scale="75"]
 
 http://localhost/extjs4.2.2/docs/#!/api/Global_CSS
 
@@ -191,7 +191,7 @@ You can figure out how to configure the mixins by checking the API Docs.
 
 [[mixins_components]]
 .Component Mixins in API Docs
-image::images/mixin_component_apidocs.png[]
+image::images/mixin_component_apidocs.png[scale="75"]
 
 ==== Mixin: Panel UI
 

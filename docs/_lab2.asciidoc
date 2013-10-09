@@ -28,4 +28,4 @@ This will generate a custom theme, but it still has the looks of the Classic the
 
 [[lab2_classic]]
 .ExtReader app with Custom theme which extends from the Classic theme
-image::images/extreader-classic.png[]
+image::images/extreader-classic.png[scale="75"]

@@ -22,7 +22,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.container.Container
 
 [[components_containers]]
 .Ext.container.Container
-image::images/containers.png[]
+image::images/containers.png[scale="75"]
 
 ==== Example
 

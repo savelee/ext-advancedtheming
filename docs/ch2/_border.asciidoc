@@ -8,7 +8,7 @@ Class: +Ext.layout.container.Border+ (+layout:border+)
 
 [[layouts_vbox]]
 .Border layout
-image::images/border.png[]
+image::images/border.png[scale="75"]
 
 See also
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Border

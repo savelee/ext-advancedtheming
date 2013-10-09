@@ -68,7 +68,7 @@ you will need to change the +extend+.
 
 [[styles_createfontpack1]]
 .Inheritance tree
-image::images/overviewthemes_inheritance3.png[]
+image::images/overviewthemes_inheritance3.png[scale="75"]
 
 ==== Change the extend
 To change the inheritance of the custom theme. Open
