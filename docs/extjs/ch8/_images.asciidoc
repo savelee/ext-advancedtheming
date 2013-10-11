@@ -1,6 +1,6 @@
-=== Implementing Images
-.There are a couple of ways of implementing images in Ext JS
+==== Implementing Images
 
+.There are a couple of ways of implementing images in Ext JS
 * Implementing an image by using the +html+ tag.
 Easy but dirty. 
 * Implementing an image by using +Ext.Img+ class.

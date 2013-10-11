@@ -7,11 +7,11 @@ Generating custom themes
 * Understand the package folder structure
 * Learn how to extend from Sencha themes
 
-=== Generating themes
+==== Generating themes
 When you want to create a new custom theme, you can
 generate a starting point with Sencha Cmd.
 
-==== About the Command Line
+===== About the Command Line
 Sencha Cmd is a tool on the command line (CLI).
 You will use your Windows Console or Mac Terminal for this.
 
@@ -22,7 +22,7 @@ You will use your Windows Console or Mac Terminal for this.
 .Mac OSX
 * *Applications* > *Utils* > *Terminal*
 
-==== About Sencha Cmd
+===== About Sencha Cmd
 .Sencha Cmd is a command-line tool that makes it quick and easy to do several application-development tasks.
 * Generate commands
 ** Generate workspaces
@@ -32,7 +32,7 @@ You will use your Windows Console or Mac Terminal for this.
 * Build-in webserver
 * Build tools
 
-==== Generate a theme
+===== Generate a theme
 
 [source, javascript]
 ----
@@ -41,7 +41,7 @@ sencha generate theme MyTheme
 
 This will generate a theme for the package folder structure.
 
-==== Package folder structure
+===== Package folder structure
 The folder structure of a theme looks like this:
 
 .[workspace/root folder]/packages/mytheme/
@@ -61,7 +61,7 @@ This directory contains images and other static resources that your theme requir
 ** var +
 	contains Sass variables
 
-=== Extending themes
+==== Extending themes
 A new generated theme always extends from the *Classic* theme.
 
 When you want to inherit from the *Neptune* theme instead
@@ -71,7 +71,7 @@ you will need to change the +extend+.
 .Inheritance tree
 image::resources/images/overviewthemes_inheritance3.png[scale="75"]
 
-==== Change the extend
+===== Change the extend
 To change the inheritance of the custom theme. Open
 _/packages/MyTheme/package.json_
 
@@ -89,7 +89,7 @@ _/packages/MyTheme/package.json_
 }
 ----
 
-==== Refresh the app
+===== Refresh the app
 You now need to refresh your application.
 
 This ensures that the correct theme JavaScript files are included in the application's "bootstrap.js" file so that the application can be run in development mode. 

@@ -1,13 +1,15 @@
 Sencha Mixins
 --------------
+
 === Sencha Mixins
 ==== Objectives
+
 * Implementing Panel UIs
 * Implementing Toolbar UIs
 * Implementing Window UIs
 * Implementing Button UIs
 
-=== Introduction
+==== Introduction
 As we learned from the lecture, Sass mixins can be very handy:
 
 [[mixins_snippet]]
@@ -38,7 +40,7 @@ As we learned from the lecture, Sass mixins can be very handy:
 ----
 ====
 
-=== Sencha UIs
+==== Sencha UIs
 Sencha has their own Sass mixins set in the *Neutral* theme.
 Therefore we can use these mixins (sencha uis) to customize our own
 skins.
@@ -50,7 +52,7 @@ and only some toolbars needs to be *green* instead of blue.
 .Example of a Toolbar UI
 image::resources/images/mixins_kitchensink.png[scale="75"]
 
-=== Mixin vs CSS overwrite
+==== Mixin vs CSS overwrite
 .In the previous example you could choose to use the toolbar mixin (+extjs-toolbar-ui+).
 [source, javascript]
 ----
@@ -117,12 +119,12 @@ _For example: a blue theme, that has blue and red buttons._
 *CSS overwrites* are handy to make a certain component unique.
 _For example: on the start screen, the *new* button is bigger and has a different color._
 
-=== Mixins
+==== Mixins
 .Like variables, there are two types of mixins.
 * Global Mixins
 * Component Mixins
 
-=== Global Mixins
+===== Global Mixins
 
 But there is just one global mixin...
 
@@ -132,14 +134,14 @@ image::resources/images/mixin_globalcss.png[scale="75"]
 
 http://localhost/extjs4.2.2/docs/#!/api/Global_CSS
 
-==== Where to implement
+===== Where to implement
 
 [source, javascript]
 ----
 packages/<theme-name>/sass/etc/all.scss
 ----
 
-==== Mixin: Background-gradient
+===== Mixin: Background-gradient
 
 * bg-color: HEX color code
 * gradient: Choose gradient type from list (see docs)
@@ -155,7 +157,7 @@ packages/<theme-name>/sass/etc/all.scss
 http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_mixin-background-gradient
 
 
-=== Component mixins
+==== Component mixins
 
 .The following Ext components have their own mixins:
 * +Ext.button.Button+
@@ -169,7 +171,7 @@ http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_mixin-background-gradie
 * +Ext.window.Window+
 * +Ext.ProgressBar+
 
-==== Where to implement
+===== Where to implement
 
 .In the labs we saved all our styles and vars here: 
 
@@ -187,14 +189,14 @@ a better a location to save global vars would be:
 packages/<theme-name>/sass/src/Component.scss
 ----
 
-==== API Docs
+===== API Docs
 You can figure out how to configure the mixins by checking the API Docs.
 
 [[mixins_components]]
 .Component Mixins in API Docs
 image::resources/images/mixin_component_apidocs.png[scale="75"]
 
-==== Mixin: Panel UI
+===== Mixin: Panel UI
 
 packages/<theme-name>/sass/src/panel/Panel.scss
 
@@ -249,7 +251,7 @@ packages/<theme-name>/sass/src/panel/Panel.scss
 
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel-css_mixin-extjs-panel-ui
 
-==== Mixin: Window UI
+===== Mixin: Window UI
 
 packages/<theme-name>/sass/src/window/Window.scss
 
@@ -300,7 +302,7 @@ packages/<theme-name>/sass/src/window/Window.scss
 
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui
 
-==== Mixin: Toolbar UI
+===== Mixin: Toolbar UI
 
 packages/<theme-name>/sass/src/toolbar/Toolbar.scss
 
@@ -322,7 +324,7 @@ packages/<theme-name>/sass/src/toolbar/Toolbar.scss
 
 http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar-css_mixin-extjs-toolbar-ui
 
-==== Button UIs
+===== Button UIs
 
 .Different types of Button UIs
 * $extjs-button-large-ui
@@ -332,7 +334,7 @@ http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar-css_mixin-extjs-to
 * $extjs-button-toolbar-medium-ui
 * $extjs-button-toolbar-small-ui
 
-==== extjs-button-ui
+===== extjs-button-ui
 
 .Default Button UI
 * +$extjs-button-ui+ 

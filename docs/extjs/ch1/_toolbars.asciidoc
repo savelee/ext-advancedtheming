@@ -18,7 +18,7 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.toolbar.Toolbar
 
 [[components_toolbars]]
 .Ext.toolbar.Toolbar
-///images:toolbars.png[scale="75"]
+image::resources/images/toolbars.png[scale="75"]
 
 ==== Example
 [[toolbars]]

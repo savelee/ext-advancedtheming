@@ -8,21 +8,21 @@ Overview of all out of the box themes
 * Overview out of the box themes
 * How to switch themes
 
-=== Themes are packages
+==== Themes are packages
 In Ext JS 4.2, themes, plugins and locales are packages.
 
 Since themes are packages, you can share the themes with other applications.
 
-=== Theme Inheritance
+==== Theme Inheritance
 A theme always extends from the base theme. The base theme defines basic things like the layout.
 
 [[styles_createfontpack1]]
 .Inheritance tree
 image::resources/images/overviewthemes_inheritance1.png[scale="75"]
 
-=== Overview Themes
+==== Overview Themes
 
-==== Base Theme
+===== Base Theme
 When creating your own theme, you typically wouldn't extend
 from Base, although it is possible.
 
@@ -34,13 +34,13 @@ It contains the bare minimum set of CSS rules that are absolutely required for E
 
 The *Base* Theme is subclassed by all other themes.
 
-==== Neutral Theme
+===== Neutral Theme
 Contains all the Sencha variables and style rules
 used by the custom themes.
 
 The Neutral theme extends from the *Base* theme.
 
-==== Neptune Theme
+===== Neptune Theme
 Modern borderless theme.
 
 The Neptune theme extends form the *Neutral* theme.
@@ -49,7 +49,7 @@ The Neptune theme extends form the *Neutral* theme.
 .Neptune theme
 image::resources/images/overviewthemes_neptune.png[scale="75"]
 
-==== Neptune RTL Theme Example
+===== Neptune RTL Theme Example
 
 Text from right to left, support.
 
@@ -57,7 +57,7 @@ Text from right to left, support.
 .Neptune RTL theme
 image::resources/images/overviewthemes_neptune_rtl.png[scale="75"]
 
-==== Classic Theme
+===== Classic Theme
 Classic theme, replica of the old Ext 3 theme.
 
 The Classic theme also extends form the *Neutral* theme.
@@ -66,14 +66,14 @@ The Classic theme also extends form the *Neutral* theme.
 .Classic theme
 image::resources/images/overviewthemes_classic.png[scale="75"]
 
-==== Classic Themes
+===== Classic Themes
 Two other themes, gray and accessibility, extend from the classic theme.
 
 [[styles_createfontpack2]]
 .Inheritance tree
 image::resources/images/overviewthemes_inheritance2.png[scale="75"]
 
-==== Gray Theme
+===== Gray Theme
 Classic theme with a gray base color.
 
 The Gray theme extends from the *Classic* theme.
@@ -82,7 +82,7 @@ The Gray theme extends from the *Classic* theme.
 .Gray theme
 image::resources/images/overviewthemes_gray.png[scale="75"]
 
-==== Accessibility Theme
+===== Accessibility Theme
 Classic theme optimized for accessibility.
 
 The Accessibility theme extends from the *Classic* theme.
@@ -91,7 +91,7 @@ The Accessibility theme extends from the *Classic* theme.
 .Accessibility theme
 image::resources/images/overviewthemes_access.png[scale="75"]
 
-==== FUTURE: Neptune Touch Theme
+===== FUTURE: Neptune Touch Theme
 Comming soon.
 
 Touch support.
@@ -101,7 +101,7 @@ Touch support.
 .Neptune Touch Theme
 image::resources/images/overviewthemes_neptune_touch.png[scale="75"]
 
-==== FUTURE: Crisp Touch Theme
+===== FUTURE: Crisp Touch Theme
 Comming soon.
 
 Touch support.
@@ -111,13 +111,13 @@ Touch support.
 .Crisp Touch Theme
 image::resources/images/overviewthemes_crisp.png[scale="75"]
 
-=== Switching themes
+==== Switching themes
 When you generate an application with Sencha Cmd,
 by default the *Classic* theme is used.
 
 How can you switch themes?
 
-==== Don't touch the <style> tag
+===== Don't touch the <style> tag
 What's common in lots of web applications, is not so common in Ext JS.
 When you want to switch your theme, you *do not change
 the +<style>+* in the _index.html_ file.
@@ -126,8 +126,7 @@ the +<style>+* in the _index.html_ file.
 .Do not change Stylesheet in the index.html
 image::resources/images/overviewthemes_switch1.png[scale="75"]
 
-
-==== How to switch?
+===== How to switch?
 Since Ext 4.2.2. and Sencha Cmd 4,
 the easiest way to switch a theme in your application, is by adding the
 +"theme"+ property to _myapp/app.json_.
@@ -151,7 +150,7 @@ the easiest way to switch a theme in your application, is by adding the
 * [your own custom theme?]
 
 
-==== How to switch?
+===== How to switch?
 Before Ext 4.2.2. & Sencha Cmd 4; you had to switch an Ext 4.x theme by opening
 a hidden sencha config file.
 
@@ -163,13 +162,13 @@ change the following line in _[myapp]/.sencha/app/sencha.cfg_
 app.theme=ext-theme-classic
 ----
 
-==== Example
+===== Example
 
 [[overviewthemes_switch2]
 .Switch themes in the sencha.cfg file
 image::resources/images/overviewthemes_switch2.png[scale="75"]
 
-==== Enable hidden files
+===== Enable hidden files
 Can't find the _.sencha_ hidden folder?
 Try to enable hidden files in your OS.
 
@@ -190,7 +189,7 @@ Try to enable hidden files in your OS.
 .Show hidden files in Windows 7
 image::resources/images/appendix_win_showhidden.jpg[]
 
-==== Build Theme
+===== Build Theme
 When you have already run a build of the app using the classic theme, you should clean the build directory. 
 
 [source, javascript]

@@ -3,7 +3,7 @@ Implementing assets
 
 === Implementing assets
 ==== Objectives
-
+w
 * Learn how to implement images
 * Lean about paths to resources
 * Learn how to implement custom fonts

@@ -7,7 +7,7 @@ Sharing Themes
 * Learn about global themes
 * Learn about app specific themes
 
-=== Introduction
+==== Introduction
 
 Multiple apps can share the same theme,
 since themes are located in the *packages* folder.
@@ -16,7 +16,7 @@ since themes are located in the *packages* folder.
 .Multiple apps can share the same global theme.
 image::resources/images/sharediagram1.png
 
-=== App specific
+==== App specific
 Now in the previous example, it wouldn't make much sense that 
 the Audio app has a Stylesheet that contains styles for the video
 player.
@@ -29,17 +29,17 @@ That's why each generated app has an own sass folder:
 .Some styles are specific for apps, those styles shouldn't be written in a global theme.
 image::resources/images/sharediagram2.png
 
-=== Global vs App specific
+==== Global vs App specific
 Styling that is not shared between applications belongs in the application itself, not in the theme. Sencha Cmd provides an easy way to add application-level styling by following the same pattern as theme styling. The application acts as the final level in the theme hierarchy. Applications can change theme variables, and they can add their own custom variables and rules for styling the application's views.
 
 *Global themes* are saved in the _packages/sass_ folder. +
 *App specific styles* are saved in the _myapp/sass/_ folder.
 
-=== Order of Loading.
+==== Order of Loading.
 1. First the *Global Theme* is loaded.
 2. Then the *app specific styles*.
 
-=== Global theme folderstructure
+==== Global theme folderstructure
 As we have seen in lecture; a Global theme has the following folderstructure.
 
 * sass
@@ -60,12 +60,12 @@ As we have seen in lecture; a Global theme has the following folderstructure.
 The files in the _src_ and _var_ folders are organized according the folderstructure of the framework.
 For example to style a  +Ext.grid.Panel+ you should create a folder and Sass file: _grid/Panel.scss_.
 
-=== Is this structure for styles on app level the same?
+==== Is this structure for styles on app level the same?
 No. It is different. 
 Although you could change it; in the (hidden) sencha config file:
 _myapp/.sencha/sencha.cfg_
 
-=== sencha.cfg
+==== sencha.cfg
 By default when you generate an application with Sencha Cmd,
 it is configured that app specific styles map to the filestructure of your application.
 
@@ -77,7 +77,7 @@ myapp/.sencha/sencha.cfg
 app.sass.namespace=ExtReader
 ----
 
-=== App specific folderstructure
+==== App specific folderstructure
 To organize app specific Sass files, you should map your app file structure.
 For example:
 
@@ -102,20 +102,20 @@ _src/view/Viewport.scss_  because of +MyApp.view.Viewport+ +
 _src/view/Header.scss_ because of +MyApp.view.Header+ +
 _src/view/Grid.scss_ because of +MyApp.view.Grid.scss+ 
 
-=== Who is winning?
+==== Who is winning?
 Ok, you've created a global theme and some app specific styles.
 Let's say you set a +$base-color+ on both.
 A blue $base-color in the global theme and a red $base-color in the app specific styles.
 
 Who is winning?
 
-=== Answer
+==== Answer
 
 You would think the app specific variable would win...
 But this is not the case. The global theme will always win, unless you 
 allow variables to be overruled.
 
-=== !default
+==== !default
 The +!default+ setting, can set a default value for a variable.
 
 The +!default+ setting can allow a variable in your *global theme* to be overruled by a variable
@@ -124,10 +124,10 @@ in an app specific theme.
 _It's not the same as +!important+; that's the opposite (but on CSS rules, not on Sass variables); 
 When you set this, you can *not* override the CSS rule. Therefore +!important+ is a bad practice._
 
-=== Example
+==== Example
 See the next slides for an example of this works.
 
-==== Create app specific styles
+===== Create app specific styles
 
 This app has a +MyApp.view.Viewport+ class;
 so we will apply the +$base-color+ to this component on app level.
@@ -142,7 +142,7 @@ $base-color: red;
 .The app specific styles are winning. (The only available styles.)
 image::resources/images/share_red.png
 
-==== Create a new theme 
+===== Create a new theme 
 
 Assign a new theme to your app.
 Every Ext view component extends from +Ext.Component+,
@@ -158,7 +158,7 @@ $base-color: blue;
 .The global theme is winning. (In general global themes always win.)
 image::resources/images/share_blue.png
 
-==== Overwrite global vars
+===== Overwrite global vars
 
 Change the global theme to allow variable overwrites.
 
