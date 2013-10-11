@@ -146,9 +146,13 @@ There is just one spot. – And you stack on top of each other.
 Now with a border layout, you have to check who is the boss over one of the 4 spots.
 The four spots are the corners.
 
-WN – N – NE
- W - C - E
-WS - S - SE
+[options="header"]
+|=======
+|WN|N|NE
+|W|C|E
+|WS|S|SE
+|=======
+
 
 [source, javascript]
 ----

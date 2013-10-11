@@ -1,0 +1,46 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Mixins</h1>
+<!-- Chapter: Mixins -->
+<p>Mixins allow you to define and reuse blocks of CSS properties</p>
+<pre class="runnable preview">@mixin branded-block() {
+        background: #efefef;
+        border: 2px solid #000;
+        color: #000;
+}
+.panel {
+   @include branded-block();
+}</pre>
+<pre class="runnable preview">.panel {
+        background: #efefef;
+        border: 2px solid #000;
+        color: #000;
+}</pre>
+
+
+<h2>Mixins with arguments</h2>
+<p>Mixins also accept parameterized variables</p>
+<pre class="runnable preview">@mixin custom-button-ui($color) {
+        background-color: $color;
+        &amp;:hover {
+                background-color: lighten($color, 20%);
+        }
+}
+
+.x-btn.custom {
+        @include custom-button-ui(red)
+}</pre>
+<pre class="runnable preview">.x-btn.custom {
+        background-color: red;
+}
+.x-btn.custom:hover{
+        background-color: #ff6666;
+}</pre>
+
+<!-- END -->
+</body>
+</html>

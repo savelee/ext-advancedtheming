@@ -1,0 +1,52 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Extends</h1>
+<!-- Chapter: Extends -->
+<p>Use selector inheritance</p>
+<ul>
+<!----><li>
+<!--    --><p>
+You can extend / inherit from other CSS classes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Improves readability &amp; maintainability
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>Example</h1>
+<!-- Chapter: Example -->
+<pre class="runnable preview">.alert {
+    font-size: 0.9em;
+    background-color: yellow;
+}
+
+.alert .warning {
+    font-weight: bold;
+}
+
+.redalert {
+    @extend .alert;
+    background-color: red;
+}</pre>
+<pre class="runnable preview">.alert, .redalert {
+    font-size: 0.9em;
+    background-color: yellow;
+}
+
+.alert .warning, .redalert .warning {
+    font-weight: bold;
+}
+
+.redalert {
+    background-color: red;
+}</pre>
+
+<!-- END -->
+</body>
+</html>

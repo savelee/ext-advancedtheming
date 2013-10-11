@@ -1,0 +1,78 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Lab: Switch from Classic to Neptune theme</h1>
+<!-- Chapter: Lab: Switch from Classic to Neptune theme -->
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Verify Sencha Cmd version number
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Switch themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build application
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<!--    --></p>
+<p><code>sencha which</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Confirm your app looks like <a href="#lab1_classic">[lab1_classic]</a>. It has the Classic theme by default and no specific app styling.</strong>
+<!--    --></p>
+<img src="../../images/extreader-classic.png"  width="100%" >
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your editor the following file /extreader/.sencha/app/sencha.cfg</strong>
+<!--    --></p>
+<p>Please note, the <em>.sencha</em> folder is a hidden folder.
+You need to change the visibility of hidden folders for your OS.</p>
+<pre class="runnable preview">*Mac users*:
++
+Make hidden files visible.
+To achieve this, type the following command in your terminal: +
+`defaults write com.apple.finder AppleShowAllFiles TRUE` +
+`killall Finder` +
+(running these commands with FALSE will disable showing hidden files again)
+
+*Windows users*:
++
+TODO</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Switch the app.theme to the out of the box Neptune theme:</strong>
+<!--    --></p>
+<p><code># The name of the package containing the theme scss for the app</code></p>
+<p><code>app.theme=ext-theme-classic</code></p>
+<p>to</p>
+<p><code>app.theme=ext-theme-neptune</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the app, to see the changes:</strong>
+<!--    --></p>
+<p>Run the following command on the CLI, from the <em>extreader</em> folder:</p>
+<p><code>sencha app build</code></p>
+<p>Your ExtReader application should look like <a href="#lab1_neptune">[lab1_neptune]</a>:</p>
+<img src="../../images/extreader-neptune.png"  width="100%" >
+<!----></li>
+</ol>
+
+<!-- END -->
+</body>
+</html>

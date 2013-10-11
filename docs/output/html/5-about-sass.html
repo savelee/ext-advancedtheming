@@ -1,0 +1,562 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>About Sass &amp; Compass</h1>
+<h1>Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Working with Sass
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Comments
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+File structure
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Nesting
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Interpolation
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Math &amp; Colors
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Mixins
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Directives
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Extends
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<h1>The old way</h1>
+<!-- Chapter: The old way -->
+<p>CSS is crafted to be simple but scaling is just difficult.
+When you have a big Stylesheet, it is hard to maintain all the
+slight variantions of colors, fonts and dimensions.
+And it just easily becomes messy.</p>
+<p>Also the Stylesheet size may become unmaintainable. There is
+no easy way to divide Stylesheets in multiple Stylesheets without
+a performance hit.</p>
+<h1>About Sass</h1>
+<!-- Chapter: About Sass -->
+<p>Sass stands for: "Syntactically Awesome Stylesheets". It&#8217;s
+like CSS but adds a lot of features to its shortcomings.</p>
+<p>Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for “Sassy CSS”), and is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension .scss.</p>
+<p>The second, older syntax is known as the indented syntax (or just “.sass”). Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Files in the indented syntax use the extension .sass.</p>
+<p><a href="http://sass-lang.com/">http://sass-lang.com/</a>
+<a href="http://thesassway.com/">http://thesassway.com/</a></p>
+<h1>Preprocessor</h1>
+<!-- Chapter: Preprocessor -->
+<p>Like CoffeeScript or HAML.
+You will start developing a Sass File (Sassy CSS / .scss),
+compile it with a Sass compiler
+and then use the CSS file in your browser.</p>
+<h1>Watch for changes</h1>
+<!-- Chapter: Watch for changes -->
+<p>To compile from a Sassy CSS file to a normal CSS file, you can let Sass
+<strong>watch</strong> your .scss file for changes.</p>
+<p>Run this command from the CLI:</p>
+<pre class="runnable preview">sass --watch app.scss:style.css</pre>
+<p>Every time when you hit save in your editor, the file will be compiled.</p>
+<h1>About Compass</h1>
+<!-- Chapter: About Compass -->
+<p>CSS3 framework.
+Compass makes working with Sass even easier.</p>
+<p><a href="http://compass-style.org/reference/compass/css3/">http://compass-style.org/reference/compass/css3/</a></p>
+<h1>Install Sass &amp; Compass</h1>
+<!-- Chapter: Install Sass &amp; Compass -->
+<p>Sass and Compass run on top of Ruby.
+Windows developers will need to download Ruby 1.x
+When Ruby is installed you can install the Sass and Compass gems from the CLI:</p>
+<p><code>gem install Sass</code><br>
+<code>gem install Compass</code></p>
+<p>You will need to have administrative rights on the CLI.
+Mac OSX users, can prefix with <code>sudo</code></p>
+<h1>Sass basics</h1>
+<!-- Chapter: Sass basics -->
+
+
+<h2>First of all&#8230;</h2>
+<p>You can still use CSS code in your Sassy CSS files.</p>
+<p>Just take it over and slidly modify it to your needs.</p>
+
+
+<h2>Comments</h2>
+<p>With Sass it is possible to write single line comments.
+These files won&#8217;t be compiled in your CSS output.
+Though multiline comments will.</p>
+<pre class="runnable preview">//These lines of comments
+//won't be visibile in my CSS file
+
+/* but this line will.</pre>
+<pre class="runnable preview">/* but this line will. */</pre>
+
+
+<h2>File structure</h2>
+<p>To create structure in your Stylesheets, you can use the <code>@import</code> code.</p>
+<p>In CSS <code>@import</code> downloads the CSS files after each other (not in parrallel)
+that makes a performance hit.</p>
+<p>This is not the case with Sass. Since Sass compiles the Stylesheet
+on the clientside. Your output will be just one single CSS file.
+=== Nesting
+.A different way of identing
+* Nesting improves readability
+* Don&#8217;t code repetitive selectors</p>
+<pre class="runnable preview">.button {
+        background: red;
+
+        .inner {
+                padding: 2px;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.button .inner { padding: 2px; }</pre>
+
+
+<h2>Nesting namespaces</h2>
+<p>You can also nest namespaces:</p>
+<pre class="runnable preview">.button {
+        font: {
+                size: 12px;
+                family: 'Helvetica';
+        }
+}</pre>
+<pre class="runnable preview">.button { font-size: 12px; font-family: 'Helvetica'; }</pre>
+
+
+<h2>Parent selector</h2>
+<p>The <code>&amp;</code> stands for the (first) parent selector.
+You can point to the parent selector while nesting.</p>
+<pre class="runnable preview">.button {
+        background: red;
+
+        //when a red button is on a red background
+        //make the button orange.
+        .redbg &amp; {
+                background: orange;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.redbg .button { background: orange; }</pre>
+
+
+<h2>Parent selector</h2>
+<p>Here&#8217;s another example, while nesting deeper.</p>
+<pre class="runnable preview">.button {
+        background: red;
+
+        span {
+                .redbg &amp; {
+                        background: orange;
+                }
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.redbg .button span { background: orange; }</pre>
+
+
+<h2>Rule of thumb</h2>
+<p>Try not to nest deeper then 3 or 4 levels.
+It can become hard to understand and also
+when you use to many selectors, it will be hard
+to overrule the style.</p>
+
+
+<h2>Nesting selectors</h2>
+<p>Note <code>&amp;.round</code>. There is no space between the parent selector
+and the CSS class <code>.round</code>.</p>
+<p>Therefore this rule only applies on elements with a <code>button</code> CSS class
+that <strong>also</strong> have a <code>round</code> CSS class.</p>
+<pre class="runnable preview">.button {
+        background: red;
+        .inner {
+                //looks inside the scope of .button
+                //for a class .inner
+                text-transform: uppercase;
+        }
+        &amp;.round {
+                //has both classes on the same time
+                border-radius: 5px;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.button .inner { text-transform: uppercase; }
+.button.round { border-radius: 5px; }</pre>
+
+
+<h2>Nesting selectors with parent selectors</h2>
+<p>Makes totally sense for pseudo selectors
+such as <code>:hover</code> or <code>:after</code>.</p>
+<pre class="runnable preview">.button {
+        background: red;
+        &amp;:hover {
+                background: blue;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.button:hover { background: blue; }</pre>
+<h1>Variables</h1>
+<!-- Chapter: Variables -->
+<p>You can create variables with Sass. Prefix with a <code>$</code> sign.
+They can have any value for a CSS property,
+such as colors, numbers (with units), or text.</p>
+<p>Change the value on one place, i.s.o. maintaining the value
+in your whole project.</p>
+<pre class="runnable preview">$main-bg-color: red;
+
+.panel {
+        background: $main-bg-color;
+}</pre>
+<pre class="runnable preview">.panel { background: red; }</pre>
+
+
+<h2>Interpolation</h2>
+<p>Variables can be used for more than just property values. You can use <code>#{}</code> to insert them into property names or selectors.</p>
+<pre class="runnable preview">$vertical: 'top';
+$horizontal: 'right';
+
+.rounded {
+        border-#{$vertical}-#{$horizontal}-radius: 10px;
+}</pre>
+<pre class="runnable preview">.rounded { border-top-right-radius: 10px; }</pre>
+
+
+<h2>Calculations</h2>
+<p>Now, setting variables becomes super handy, when you
+want to make <strong>math</strong> or <strong>color</strong> calculations with it.</p>
+<pre class="runnable preview">$main-bg-color: red;
+
+.panel {
+        background: darken($main-bg-color, 20%);
+}</pre>
+<pre class="runnable preview">.panel { background: #990000; }</pre>
+
+
+<h2>Color opertations</h2>
+<h3>Darken</h3>
+<pre class="runnable preview">$main-bg-color: red;
+
+.panel {
+        background: darken($main-bg-color, 20%);
+}</pre>
+<pre class="runnable preview">.panel { background: #990000; }</pre>
+<h3>Lighten</h3>
+<pre class="runnable preview">$main-bg-color: red;
+
+.panel {
+        background: lighten($main-bg-color, 20%);
+}</pre>
+<pre class="runnable preview">.panel { background: #FF6666; }</pre>
+<h3>Color Mix</h3>
+<pre class="runnable preview">$main-bg-color: red;
+$main-alternative-color: blue;
+
+.panel {
+        background: $main-bg-color + $main-alternative-color;
+}</pre>
+<pre class="runnable preview">.panel { background:fuchsia; }</pre>
+<h3>Alpha</h3>
+<pre class="runnable preview">$main-bg-color: red;
+
+.panel {
+        background: transparentize($main-bg-color, 0.25);
+}</pre>
+<h3>And more</h3>
+<p>There are much more color operations.
+<code>hue</code>, <code>saturation</code>, <code>grayscale</code>, <code>invert</code> etc&#8230;</p>
+<p><a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html</a></p>
+<pre class="runnable preview">.panel { background: rgba(255, 0, 0, 0.75); }</pre>
+
+
+<h2>Math Functions</h2>
+<p>The standard math operations (+, -, *, /, and %) are supported for numbers.</p>
+<h3>Calculations</h3>
+<p>$container-width: 600px;
+$font-size: 12px;</p>
+<pre class="runnable preview">.panel {
+        width: $container-width / 3;
+        line-height: $font-size * 1.5;
+}</pre>
+<pre class="runnable preview">.panel { width: 200px; line-height: 18px; }</pre>
+<h3>Calculate units</h3>
+<pre class="runnable preview">.panel {
+        width: 1in + 8pt;
+}</pre>
+<pre class="runnable preview">.panel { width: 1.111 in; }</pre>
+<h1>Mixins</h1>
+<!-- Chapter: Mixins -->
+<p>Mixins allow you to define and reuse blocks of CSS properties</p>
+<pre class="runnable preview">@mixin branded-block() {
+        background: #efefef;
+        border: 2px solid #000;
+        color: #000;
+}
+.panel {
+   @include branded-block();
+}</pre>
+<pre class="runnable preview">.panel {
+        background: #efefef;
+        border: 2px solid #000;
+        color: #000;
+}</pre>
+
+
+<h2>Mixins with arguments</h2>
+<p>Mixins also accept parameterized variables</p>
+<pre class="runnable preview">@mixin custom-button-ui($color) {
+        background-color: $color;
+        &amp;:hover {
+                background-color: lighten($color, 20%);
+        }
+}
+
+.x-btn.custom {
+        @include custom-button-ui(red)
+}</pre>
+<pre class="runnable preview">.x-btn.custom {
+        background-color: red;
+}
+.x-btn.custom:hover{
+        background-color: #ff6666;
+}</pre>
+<h1>Control Directives</h1>
+<!-- Chapter: Control Directives -->
+<p>It&#8217;s is possible to write some Sass Scripting code
+in your mixins.</p>
+<p>For example if/else branching:</p>
+<pre class="runnable preview">@mixin sencha-button-ui($bgcolor) {
+        background-color: $bgcolor;
+
+        //if the background is black
+        //then the front color may not be black too
+        @if $bgcolor == #000 {
+                color: #fff;
+        } @else {
+                color: #000;
+        }
+}
+
+.x-btn.custom {
+        @include sencha-button-ui(#000)
+}</pre>
+<pre class="runnable preview">.x-btn.custom { background-color: #000; color: fff; }</pre>
+
+
+<h2>Each loops</h2>
+<p>Use the <code>@each</code> directive.</p>
+<pre class="runnable preview">@mixin author-images() {
+        $list: lee kevin max;
+        @each $name in $list {
+            .photo-#{$name} {
+              background: url("avatars/#{$name}.png") no-repeat;
+                }
+        }
+}
+
+.author {
+        @include author-images();
+}</pre>
+<pre class="runnable preview">.author .photo-lee {
+        background: url("avatar/lee.png") no-repeat;
+}
+
+.author .photo-kevin {
+        background: url("avatar/kevin.png") no-repeat;
+}
+
+.author .photo-max {
+        background: url("avatar/max.png") no-repeat;
+}</pre>
+
+
+<h2>For loops</h2>
+<p>Use the <code>@for</code> directive.</p>
+<pre class="runnable preview">@for $i from 1 through 4 {
+  .column-#{$i} { width: 10px * $i; }
+}</pre>
+<pre class="runnable preview">.column-1 {
+  width: 10px; }
+
+.column-2 {
+  width: 20px; }
+
+.column-3 {
+  width: 30px; }
+
+.column-4 {
+  width: 40px; }</pre>
+
+
+<h2>While loops</h2>
+<p>Use the <code>@while</code> directive.</p>
+<pre class="runnable preview">$i: 1;
+$width: 60px;
+
+@while $i &lt; 4 {
+  .grid-#{$i} { width: $width; }
+  $width: $width + 80px;
+  $i: $i + 1;
+}</pre>
+<pre class="runnable preview">.grid-1 {
+  width: 60px; }
+
+.grid-2 {
+  width: 140px; }
+
+.grid-3 {
+  width: 220px; }
+
+.grid-4 {
+  width: 300px; }</pre>
+<h1>Extends</h1>
+<!-- Chapter: Extends -->
+<p>Use selector inheritance</p>
+<ul>
+<!----><li>
+<!--    --><p>
+You can extend / inherit from other CSS classes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Improves readability &amp; maintainability
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>Example</h1>
+<!-- Chapter: Example -->
+<pre class="runnable preview">.alert {
+    font-size: 0.9em;
+    background-color: yellow;
+}
+
+.alert .warning {
+    font-weight: bold;
+}
+
+.redalert {
+    @extend .alert;
+    background-color: red;
+}</pre>
+<pre class="runnable preview">.alert, .redalert {
+    font-size: 0.9em;
+    background-color: yellow;
+}
+
+.alert .warning, .redalert .warning {
+    font-weight: bold;
+}
+
+.redalert {
+    background-color: red;
+}</pre>
+<h1>Compass</h1>
+<!-- Chapter: Compass -->
+
+
+<h2>Compass Border-radius</h2>
+<p>Border-radius mixin</p>
+<pre class="runnable preview">@import "compass/css3/border-radius"
+.radius   {
+        @include border-radius(4px, 4px);
+}</pre>
+<pre class="runnable preview">.radius   {
+        -webkit-border-radius: 4px 4px;
+        -moz-border-radius: 4px 4px;
+        -khtml-border-radius: 4px 4px;
+        border-radius: 4px 4px;
+}</pre>
+<p><a href="http://compass-style.org/reference/compass/css3/border_radius/">http://compass-style.org/reference/compass/css3/border_radius/</a></p>
+
+
+<h2>Compass Box-Shadow</h2>
+<p>Box-shadow mixin</p>
+<pre class="runnable preview">@import "compass/css3/box-shadow"
+
+.box-shadow-example div {
+  @include single-box-shadow;
+}</pre>
+<pre class="runnable preview">.box-shadow-example div {
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}</pre>
+
+
+<h2>Compass Font-face</h2>
+<p>Font-face mixin</p>
+<pre class="runnable preview">@import "compass/css3/font-face"
+
+@include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));</pre>
+<pre class="runnable preview">@font-face {
+  font-family: "Blooming Grove";
+  src:  url('/fonts/examples/bgrove.ttf') format('truetype'),
+                url('/fonts/examples/bgrove.otf') format('opentype');
+}</pre>
+<p><a href="http://compass-style.org/examples/compass/css3/font-face/">http://compass-style.org/examples/compass/css3/font-face/</a></p>
+
+
+<h2>Compass Text-shadow</h2>
+<p>Text-shadow mixin</p>
+<pre class="runnable preview">$default-text-shadow-color: rgba(red, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px
+
+@import "compass/css3/text-shadow"
+
+.has-single-shadow {
+  @include single-text-shadow;
+}</pre>
+<pre class="runnable preview">.has-single-shadow {
+  text-shadow: 0px 1px 3px rgba(255, 0, 0, 0.6);
+}</pre>
+<p><a href="http://compass-style.org/reference/compass/css3/text-shadow/">http://compass-style.org/reference/compass/css3/text-shadow/</a></p>
+
+
+<h2>More Compass</h2>
+<p>CSS3 mixins:
+<a href="http://compass-style.org/reference/compass/css3/">http://compass-style.org/reference/compass/css3/</a></p>
+<p>Sass helpers
+<a href="http://compass-style.org/reference/compass/helpers/">http://compass-style.org/reference/compass/helpers/</a></p>
+<p>Not common in Sencha projects, but also part of the Compass frameworks:</p>
+<p>Layout mixins:
+<a href="http://compass-style.org/reference/compass/layout/">http://compass-style.org/reference/compass/layout/</a></p>
+<p>Reset mixins:
+<a href="http://compass-style.org/reference/compass/reset/">http://compass-style.org/reference/compass/reset/</a></p>
+
+<!-- END -->
+</body>
+</html>

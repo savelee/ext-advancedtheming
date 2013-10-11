@@ -1,0 +1,83 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Compass</h1>
+<!-- Chapter: Compass -->
+
+
+<h2>Compass Border-radius</h2>
+<p>Border-radius mixin</p>
+<pre class="runnable preview">@import "compass/css3/border-radius"
+.radius   {
+        @include border-radius(4px, 4px);
+}</pre>
+<pre class="runnable preview">.radius   {
+        -webkit-border-radius: 4px 4px;
+        -moz-border-radius: 4px 4px;
+        -khtml-border-radius: 4px 4px;
+        border-radius: 4px 4px;
+}</pre>
+<p><a href="http://compass-style.org/reference/compass/css3/border_radius/">http://compass-style.org/reference/compass/css3/border_radius/</a></p>
+
+
+<h2>Compass Box-Shadow</h2>
+<p>Box-shadow mixin</p>
+<pre class="runnable preview">@import "compass/css3/box-shadow"
+
+.box-shadow-example div {
+  @include single-box-shadow;
+}</pre>
+<pre class="runnable preview">.box-shadow-example div {
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}</pre>
+
+
+<h2>Compass Font-face</h2>
+<p>Font-face mixin</p>
+<pre class="runnable preview">@import "compass/css3/font-face"
+
+@include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));</pre>
+<pre class="runnable preview">@font-face {
+  font-family: "Blooming Grove";
+  src:  url('/fonts/examples/bgrove.ttf') format('truetype'),
+                url('/fonts/examples/bgrove.otf') format('opentype');
+}</pre>
+<p><a href="http://compass-style.org/examples/compass/css3/font-face/">http://compass-style.org/examples/compass/css3/font-face/</a></p>
+
+
+<h2>Compass Text-shadow</h2>
+<p>Text-shadow mixin</p>
+<pre class="runnable preview">$default-text-shadow-color: rgba(red, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px
+
+@import "compass/css3/text-shadow"
+
+.has-single-shadow {
+  @include single-text-shadow;
+}</pre>
+<pre class="runnable preview">.has-single-shadow {
+  text-shadow: 0px 1px 3px rgba(255, 0, 0, 0.6);
+}</pre>
+<p><a href="http://compass-style.org/reference/compass/css3/text-shadow/">http://compass-style.org/reference/compass/css3/text-shadow/</a></p>
+
+
+<h2>More Compass</h2>
+<p>CSS3 mixins:
+<a href="http://compass-style.org/reference/compass/css3/">http://compass-style.org/reference/compass/css3/</a></p>
+<p>Sass helpers
+<a href="http://compass-style.org/reference/compass/helpers/">http://compass-style.org/reference/compass/helpers/</a></p>
+<p>Not common in Sencha projects, but also part of the Compass frameworks:</p>
+<p>Layout mixins:
+<a href="http://compass-style.org/reference/compass/layout/">http://compass-style.org/reference/compass/layout/</a></p>
+<p>Reset mixins:
+<a href="http://compass-style.org/reference/compass/reset/">http://compass-style.org/reference/compass/reset/</a></p>
+
+<!-- END -->
+</body>
+</html>

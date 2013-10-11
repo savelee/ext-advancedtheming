@@ -23,12 +23,31 @@ Preface
 * Learn how to create global themes
 * Learn how to create app specific themes
 * Build & optimize themes 
-* Theming with Sencha Architect //TODO SLIDES (lab is finished) / wait till Architect 3 is released
 
 //BONUS
+* Theming with Sencha Architect //TODO SLIDES (lab is finished) / wait till Architect 3 is released
 * Extending from the Base theme //TODO SLIDES
 * //TODO SLIDES image slicer (maybe bonus material)
 * TODO bonus lab / hackathon lab
+
+//TODO TOUCH THEMING
+--- Advanced theming for Touch plan:
+.What you will learn in this course
+* Overview of all Touch Components (TODO)
+* Understand the Sencha layout system (TODO)
+* Overview of the out of the box themes
+* Extending from Sencha themes (TODO)
+
+* Working with Sass & Compass 
+* Understanding Sencha variables
+* Creating custom UIs (TODO)
+
+* Implementing images
+* Implementing fonts
+* Implementing icons
+
+* Build & optimize themes (TODO)
+* BONUS: Theme from the base theme (TODO)
 
 //TODO CLEANUP: EXT JS THEMING COURSE
 - renew objectives slide

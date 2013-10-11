@@ -1,0 +1,117 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Nesting</h1>
+<!-- Chapter: Nesting -->
+<span class="title">A different way of identing</span><ul>
+<!----><li>
+<!--    --><p>
+Nesting improves readability
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Don&#8217;t code repetitive selectors
+<!--    --></p>
+<!----></li>
+</ul>
+<pre class="runnable preview">.button {
+        background: red;
+
+        .inner {
+                padding: 2px;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.button .inner { padding: 2px; }</pre>
+
+
+<h2>Nesting namespaces</h2>
+<p>You can also nest namespaces:</p>
+<pre class="runnable preview">.button {
+        font: {
+                size: 12px;
+                family: 'Helvetica';
+        }
+}</pre>
+<pre class="runnable preview">.button { font-size: 12px; font-family: 'Helvetica'; }</pre>
+
+
+<h2>Parent selector</h2>
+<p>The <code>&amp;</code> stands for the (first) parent selector.
+You can point to the parent selector while nesting.</p>
+<pre class="runnable preview">.button {
+        background: red;
+
+        //when a red button is on a red background
+        //make the button orange.
+        .redbg &amp; {
+                background: orange;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.redbg .button { background: orange; }</pre>
+
+
+<h2>Parent selector</h2>
+<p>Here&#8217;s another example, while nesting deeper.</p>
+<pre class="runnable preview">.button {
+        background: red;
+
+        span {
+                .redbg &amp; {
+                        background: orange;
+                }
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.redbg .button span { background: orange; }</pre>
+
+
+<h2>Rule of thumb</h2>
+<p>Try not to nest deeper then 3 or 4 levels.
+It can become hard to understand and also
+when you use to many selectors, it will be hard
+to overrule the style.</p>
+
+
+<h2>Nesting selectors</h2>
+<p>Note <code>&amp;.round</code>. There is no space between the parent selector
+and the CSS class <code>.round</code>.</p>
+<p>Therefore this rule only applies on elements with a <code>button</code> CSS class
+that <strong>also</strong> have a <code>round</code> CSS class.</p>
+<pre class="runnable preview">.button {
+        background: red;
+        .inner {
+                //looks inside the scope of .button
+                //for a class .inner
+                text-transform: uppercase;
+        }
+        &amp;.round {
+                //has both classes on the same time
+                border-radius: 5px;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.button .inner { text-transform: uppercase; }
+.button.round { border-radius: 5px; }</pre>
+
+
+<h2>Nesting selectors with parent selectors</h2>
+<p>Makes totally sense for pseudo selectors
+such as <code>:hover</code> or <code>:after</code>.</p>
+<pre class="runnable preview">.button {
+        background: red;
+        &amp;:hover {
+                background: blue;
+        }
+}</pre>
+<pre class="runnable preview">.button { background: red; }
+.button:hover { background: blue; }</pre>
+
+<!-- END -->
+</body>
+</html>
