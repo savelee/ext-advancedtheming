@@ -1,0 +1,1 @@
+asciidoc -b deckjs -f deckjs.conf --out-file extjs/index.html ../ext-slides.txt;

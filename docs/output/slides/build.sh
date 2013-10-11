@@ -1,1 +1,0 @@
-asciidoc -b deckjs -f deckjs.conf ../ext-slides.txt
