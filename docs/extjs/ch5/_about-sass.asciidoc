@@ -1,6 +1,9 @@
 About Sass & Compass
 ----------------------
-=== Objectives
+
+=== About Sass & Compass
+==== Objectives
+
 * Working with Sass
 ** Comments
 ** File structure

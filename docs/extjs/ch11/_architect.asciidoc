@@ -1,6 +1,9 @@
 Theming with Sencha Architect
 ------------------------------
-=== Objectives
+
+=== Theming with Sencha Architect
+==== Objectives
+
 * Learn about app templates
 * Learn how to create a theme with Sencha Architect
 * Learn how to use variables in Sencha Architect

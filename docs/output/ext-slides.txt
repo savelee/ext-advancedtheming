@@ -15,42 +15,36 @@ include::../extjs/ch2/_overview-layoutsystem.asciidoc[]
 
 include::../extjs/ch3/_overview-themes.asciidoc[]
 
-include::../extjs/_lab1.asciidoc[]
+=== Lab 1
 
 include::../extjs/ch4/_generating-themes.asciidoc[]
 
-include::../extjs/_lab2.asciidoc[]
-
-include::../extjs/_lab3.asciidoc[]
+=== Lab 2 & Lab 3
 
 include::../extjs/ch5/_about-sass.asciidoc[]
 
 include::../extjs/ch6/_sencha-vars.asciidoc[]
 
-include::../extjs/_lab4.asciidoc[]
+=== Lab 4
 
 include::../extjs/ch7/_sencha-mixins.asciidoc[]
 
-include::../extjs/_lab5.asciidoc[] 
+=== Lab 5
 
 include::../extjs/ch8/_implementing_assets.asciidoc[]
 
-include::../extjs/_lab6.asciidoc[]
+=== Lab 6
 
 include::../extjs/ch9/_sharing_themes.asciidoc[]
 
-include::../extjs/_lab7.asciidoc[]
+=== Lab 7
 
 include::../extjs/ch10/_optimize.asciidoc[]
 
 include::../extjs/ch11/_architect.asciidoc[]
 
-include::../extjs/_lab8.asciidoc[]
+=== Lab 8
 
-//////BONUS extending from Base theme
-////include::../extjs/_lab9.asciidoc[]
 
 :numbered!:
 
-//[appendix]
-//include::../extjs/_setup.txt[]

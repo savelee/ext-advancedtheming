@@ -1,7 +1,9 @@
 Overview of all out of the box themes
 --------------------------------------
 
-=== Objectives
+=== Overview of all out of the box themes
+==== Objectives
+
 * Learn theming inheritance
 * Overview out of the box themes
 * How to switch themes

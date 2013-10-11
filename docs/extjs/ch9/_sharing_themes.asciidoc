@@ -1,6 +1,9 @@
 Sharing Themes
 ---------------
-=== Objectives
+
+=== Sharing Themes
+==== Objectives
+
 * Learn about global themes
 * Learn about app specific themes
 

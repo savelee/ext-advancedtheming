@@ -1,6 +1,9 @@
 Performance
 ------------
-=== Objectives
+
+=== Performance
+==== Objectives
+
 * Learn how to optimize the Stylesheet
 
 === Introduction

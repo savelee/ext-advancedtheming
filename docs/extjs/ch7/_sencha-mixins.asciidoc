@@ -1,6 +1,7 @@
 Sencha Mixins
 --------------
-=== Objectives
+=== Sencha Mixins
+==== Objectives
 * Implementing Panel UIs
 * Implementing Toolbar UIs
 * Implementing Window UIs

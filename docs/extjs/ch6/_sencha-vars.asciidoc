@@ -1,6 +1,8 @@
 Sencha CSS Variables
 ---------------------
-=== Objectives
+=== Sencha CSS Variables
+==== Objectives
+
 * Understanding Sencha Global variables
 * Understanding Sencha Component variables
 * Implementing Sencha CSS variables

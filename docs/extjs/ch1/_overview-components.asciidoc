@@ -1,7 +1,9 @@
 Overview of all components
 ---------------------------
 
-=== Objectives
+=== Overview of all components
+==== Objectives
+
 * Get familiar with the Ext components
 * Review important component specs
 * Preview Ext components
