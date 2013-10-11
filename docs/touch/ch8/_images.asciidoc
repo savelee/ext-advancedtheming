@@ -1,0 +1,69 @@
+=== Implementing Images
+.There are a couple of ways of implementing images in Sencha Touch
+
+* Implementing an image by using the +html+ tag.
+Easy but dirty. 
+* Implementing an image by using +Ext.Img+ class.
+Very powerful.
+* Implementing a background image in the CSS
+Structured.
+* TODO
+
+==== Folder structure
+TODO
+
+==== Image HTML tag
+
+[source, javascript]
+----
+items: [{
+    xtype: 'container',
+    html: '<img src="resources/logo.png" height="25" alt="ExtReader"/>'
+}]
+----
+
+==== Image Ext.Img class
+
+[source, javascript]
+----
+items:[{
+	xtype: 'image',
+    src: 'resources/logo.png',
+    alt: 'ExtReader',
+    height: 25
+}]
+----
+
+==== Background image in CSS
+
+.In Ext JS view:
+[source, javascript]
+----
+items: [{
+    xtype: 'container',
+    cls: 'mybackground'
+}]
+----
+
+.In Sass:
+[source, javascript]
+----
+.mybackground {
+	background: #fff url('background.png') repeat-x;
+}
+----
+
+
+==== Base64 encode instead
+Images can be saved to Base64 strings. (Binary to ASCII Text). 
+It's a technique what's been used for years for sending email 
+image attachments. When you are not familiair with Base64 strings, they look like these:
+
+[source, javascript]
+----
+data:image/png;base64,<LONG BASE64 STRING WITH ENCODED DATA>"
+----
+
+An advantage of a string like this, is that you can cache it,
+maybe you want to save it in a database.
+Instead of an URL to a path you pass in the Base-64 string.

@@ -1,0 +1,14 @@
+Overview layout system
+-----------------------
+
+=== Objectives
+* Get familiar with the ST layout system
+* Review important layout specs
+* Preview Sencha Touch layouts
+
+include::../../general/layouts/_hbox.asciidoc[]
+include::../../general/layouts/_vbox.asciidoc[]
+include::../../general/layouts/_fit.asciidoc[]
+include::../../general/layouts/_card.asciidoc[]
+
+//todo default

@@ -1,0 +1,40 @@
+=== Containers
+
+==== What it is
+Containers are just a plain set of divs, they can contain items.
+
+==== Specs
+
+===== CSS Class: +.x-container+
+
+===== +Ext.container.Container+
+Extends from +Ext.Component+
+
+* +height+
+* +width+
+* +margin+
+* +padding+
+* +border+
+* +style+
+* +hidden+ (true / false)
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.container.Container
+
+[[components_containers]]
+.Ext.container.Container
+image::resources/images/containers.png[scale="75"]
+
+==== Example
+
+[[container]]
+====
+.Example
+[source, javascript]
+----
+Ext.create('Ext.container.Container', {
+    html: 'Hello World',
+    width: 400,
+    renderTo: Ext.getBody(),
+});
+----
+====

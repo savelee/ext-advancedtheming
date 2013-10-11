@@ -1,0 +1,60 @@
+Overview of all out of the box themes
+--------------------------------------
+
+=== Objectives
+* Learn theming inheritance
+* Overview out of the box themes
+* How to switch themes
+
+=== Theme Inheritance
+TODO
+
+=== Overview Themes
+
+==== Base Theme
+When creating your own theme, you typically wouldn't extend
+from Base, although it is possible.
+
+When you extend from Base, you have to style every Sencha Touch
+component yourself. It will cost you more time but the
+result is that you have a fully custom theme.
+
+It contains the bare minimum set of CSS rules that are absolutely required for Ext JS Components and Layouts to work correctly.
+
+The *Base* Theme is subclassed by all other themes.
+
+==== Default Theme
+TODO
+
+==== Cupertino Theme
+TODO
+
+==== Cupertino Classic Theme
+TODO
+
+==== Mountainview Theme
+TODO
+
+==== BB10 Theme
+TODO
+
+==== Windows Theme
+TODO
+
+==== Theme Switcher
+TODO
+
+==== Build Theme
+When you have already run a build of the app using the classic theme, you should clean the build directory. 
+
+[source, javascript]
+----
+sencha ant clean
+----
+
+Then build the app:
+
+[source, javascript]
+----
+sencha app build
+----

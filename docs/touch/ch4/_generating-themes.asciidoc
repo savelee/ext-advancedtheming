@@ -1,0 +1,47 @@
+Creating custom themes
+-------------------------
+
+=== Objectives
+* Learn how to create themes
+* Learn how to extend from Sencha themes
+
+=== Generating themes
+TODO generate application
+
+==== About the Command Line
+Sencha Cmd is a tool on the command line (CLI).
+You will use your Windows Console or Mac Terminal for this.
+
+.Windows
+* *Start* > *Run* 
+* Type: +cmd+ and press _ok_ 
+
+.Mac OSX
+* *Applications* > *Utils* > *Terminal*
+
+==== About Sencha Cmd
+.Sencha Cmd is a command-line tool that makes it quick and easy to do several application-development tasks.
+* Generate commands
+** Generate workspaces
+** Generate apps
+** and more...
+* Build-in webserver
+* Build tools
+
+=== Extending themes
+TODO
+
+==== Compass Watch
+TODO
+
+==== Refresh the app
+You now need to refresh your application.
+
+This ensures that the correct theme JavaScript files are included in the application's "bootstrap.js" file so that the application can be run in development mode. 
+
+Run from the app directory the following command:
+
+[source, javascript]
+----
+sencha app refresh
+----

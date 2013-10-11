@@ -1,0 +1,40 @@
+=== Extends
+Use selector inheritance
+
+* You can extend / inherit from other CSS classes
+* Improves readability & maintainability
+
+=== Example
+
+[source, javascript]
+----
+.alert {
+    font-size: 0.9em;
+    background-color: yellow;
+}
+
+.alert .warning {
+    font-weight: bold;
+}
+
+.redalert {
+    @extend .alert;
+    background-color: red;
+}
+----
+
+[source, javascript]
+----
+.alert, .redalert {
+    font-size: 0.9em;
+    background-color: yellow; 
+}
+
+.alert .warning, .redalert .warning {
+    font-weight: bold;
+}
+
+.redalert {
+    background-color: red;
+}
+----

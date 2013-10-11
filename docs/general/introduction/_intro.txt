@@ -1,0 +1,22 @@
+[preface]
+Preface
+=======
+
+.What you will learn in this course
+* Overview of all Touch Components (TODO)
+* Understand the Sencha layout system (TODO)
+* Overview of the out of the box themes (TODO)
+* Extending from Sencha themes (TODO)
+
+* Working with Sass & Compass 
+* Understanding Sencha variables (TODO)
+* Creating custom UIs (TODO)
+
+* Implementing images (TODO)
+* Implementing fonts
+* Implementing icons
+
+* Build & optimize themes (TODO)
+* BONUS: Theme from the base theme (TODO)
+
+TODO labs

@@ -1,0 +1,153 @@
+Lab: Creating Custom UIs
+-------------------------
+
+.Objectives
+* Implement Button UIs
+* Implement Panel UIs
+* Implement Toolbar UIs
+* Implement Window UIs
+
+=== Button UI's
+
+See API Docs: http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button
+
+.Steps
+
+. *Create a new file Component.scss*
++
+Create this file in _packages/Goggles/sass/src_
+
+. *Create the button mixin extjs-button-small-ui*
+* Give this mixin the name: _blue_ (+$ui+)
+* Give this mixin the following background +$background-color: lighten($blue, 20%)+
+* Give this mixin a background over color, a 10% darker +$blue+
+* Give this mixin the background disabled color, a 40% lighter +$blue+
+* Set the +border-radius+ to 4px
+* Set the +color+ to white
+* Set the +glyph-color+ to white
+* Set the +padding+ to 4px
+
+. *Copy and paste the previous mixin and change the mixin to ext-button-medium-ui* 
++
+The difference is the +border-radius+, which should be set to 5px and the +padding+ which should be set to 6px.
+
+. *Copy and paste the previous mixin and change the mixin to ext-button-toolbar-medium-ui* 
+
+. *Copy and paste the previous mixin and change the mixin to ext-button-large-ui*
+The difference is the +border-radius+, which should be set to 6px and the +padding+ which should be set to 8px.
+
+. *Assign the +blue+ button mixin to the previous and next buttons*
++
+Open _app/view/Viewport_, on the place indicated by the comment (the previous and next buttons), add the +ui: 'blue'+.
+
+. *Assign the +blue+ button mixin to the OK button*
+Open _app/view/Header.js_, on the place indicated by the comment (the OK button of the messagebox), add the +ui: 'blue'+.
+
+. *Navigate on the CLI to the project folder*
+
+. *Build the application*
++ 
+Make sure your app is automatically compiling to CSS by running the following command on the CLI +sencha app watch+
+
+. *Preview your application*
++
+You should see blue previous and next buttons in the bottom toolbar. You should also see a blue _OK_ button, when pressing the _Help > About_ button.
+ 
+=== Panel UIs
+
+See API DOCS: http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel
+
+.Steps
+
+. *Create the following mixin for Panels, see <<code6_panelui>>*
++
+[[code6_panelui]]
+.Create a new UI for panels
+====
+[source, HTML]
+----
+@include extjs-panel-ui(
+    'light',
+    $ui-header-color: lighten(#15c, 20%),
+    $ui-header-background-color: #fff,
+    $ui-header-line-height: 14px,
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff,
+    $ui-body-font-size: 14px,
+
+    $ui-padding: 10px
+);
+----
+====
+
+. *Assign the +light+ panel mixin to the feed panel*
++
+Open _app/view/Viewport.js_, on the place indicated by the comment (the feed panel), add the +ui: 'light'+.
+
+=== Toolbar UIs
+
+See API DOCS: http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar
+
+.Steps
+
+. *Create the following mixin for Toolbars, see <<code6_toolbarui>>*
++
+[[code6_toolbarui]]
+.Create a new UI for toolbars
+====
+[source, HTML]
+----
+@include extjs-toolbar-ui(
+    'gray',
+    $background-color: lighten($gray, 10%),
+    $border-width: 0
+);
+----
+====
+
+. *Assign the +gray+ toolbar mixin to the toolbar*
++
+Open _app/view/Viewport.js_, on the place indicated by the comment (the toolbar), add the +ui: 'gray'+.
+
+=== Window UIs
+
+See API DOCS: http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui
+
+.Steps
+
+. *Create the following mixin for Windows, see <<code6_windowui>>*
++
+[[code6_windowui]]
+.Create a new UI for toolbars
+====
+[source, HTML]
+----
+@include extjs-window-ui(
+    'blue',
+ 
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+    $ui-header-color: #fff,
+    $ui-header-background-color: lighten(#15c, 20%),
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff
+);
+----
+====
+
+. *Assign the +blue+ window mixin to the messagebox*
++
+Open _app/view/Header.js_, on the place indicated by the comment (the messagebox), add the +ui: 'blue'+.
+
+. *Preview the application*
+Your ExtReader app should have the looks of <<lab6_uis>>.
++
+[[lab6_uis]]
+.Preview of the Goggles with custom UIs
+image::resources/images/extreader-uis.png[scale="50"]

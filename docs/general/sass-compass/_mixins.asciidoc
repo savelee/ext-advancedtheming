@@ -1,0 +1,48 @@
+=== Mixins
+Mixins allow you to define and reuse blocks of CSS properties
+[source, javascript]
+----
+@mixin branded-block() {
+	background: #efefef;
+	border: 2px solid #000;
+	color: #000;
+}
+.panel {  
+   @include branded-block();
+} 
+----
+
+[source, javascript]
+----
+.panel {
+	background: #efefef;
+	border: 2px solid #000;
+	color: #000;
+}
+----
+
+==== Mixins with arguments
+Mixins also accept parameterized variables
+[source, javascript]
+----
+@mixin custom-button-ui($color) {
+	background-color: $color;
+	&:hover {
+		background-color: lighten($color, 20%);
+	}
+}
+
+.x-btn.custom {
+	@include custom-button-ui(red)
+}
+----
+
+[source, javascript]
+----
+.x-btn.custom {
+	background-color: red;
+}
+.x-btn.custom:hover{
+	background-color: #ff6666;
+}
+----

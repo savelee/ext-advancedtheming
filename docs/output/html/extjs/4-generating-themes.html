@@ -1,0 +1,188 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Generating custom themes</h1>
+<h1>Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Learn how to generate themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Understand the package folder structure
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to extend from Sencha themes
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>Generating themes</h1>
+<!-- Chapter: Generating themes -->
+<p>When you want to create a new custom theme, you can
+generate a starting point with Sencha Cmd.</p>
+
+
+<h2>About the Command Line</h2>
+<p>Sencha Cmd is a tool on the command line (CLI).
+You will use your Windows Console or Mac Terminal for this.</p>
+<span class="title">Windows</span><ul>
+<!----><li>
+<!--    --><p>
+<strong>Start</strong> &gt; <strong>Run</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Type: <code>cmd</code> and press <em>ok</em>
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Mac OSX</span><ul>
+<!----><li>
+<!--    --><p>
+<strong>Applications</strong> &gt; <strong>Utils</strong> &gt; <strong>Terminal</strong>
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>About Sencha Cmd</h2>
+<span class="title">Sencha Cmd is a command-line tool that makes it quick and easy to do several application-development tasks.</span><ul>
+<!----><li>
+<!--    --><p>
+Generate commands
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Generate workspaces
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Generate apps
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Generate themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+and more&#8230;
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build-in webserver
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build tools
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>Generate a theme</h2>
+<pre class="runnable preview">sencha generate theme MyTheme</pre>
+<p>This will generate a theme for the package folder structure.</p>
+
+
+<h2>Package folder structure</h2>
+<p>The folder structure of a theme looks like this:</p>
+<span class="title">[workspace/root folder]/packages/mytheme/</span><ul>
+<!----><li>
+<!--    --><p>
+package.json
+This is the package properties file. It tells Sencha Cmd certain things about the package like its name, version, and dependencies (other packages that it requires).
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+build
+The build of the theme
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+overrides
+This directory contains any JavaScript overrides to Ext JS Component classes that may be required for theming those Components.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+resources
+This directory contains images and other static resources that your theme requires.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+sass
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+etc<br>
+        contains additional utility functions or mixins
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+src<br>
+        contains Sass rules and UI mixins
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+var<br>
+        contains Sass variables
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<h1>Extending themes</h1>
+<!-- Chapter: Extending themes -->
+<p>A new generated theme always extends from the <strong>Classic</strong> theme.</p>
+<p>When you want to inherit from the <strong>Neptune</strong> theme instead
+you will need to change the <code>extend</code>.</p>
+<img src="resources/images/overviewthemes_inheritance3.png"  width="100%" >
+
+
+<h2>Change the extend</h2>
+<p>To change the inheritance of the custom theme. Open
+<em>/packages/MyTheme/package.json</em></p>
+<pre class="runnable preview">{
+    "name": "MyTheme",
+    "type": "theme",
+    "creator": "Lee Boonstra",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "local": true,
+    "requires": [],
+    "extend": "ext-theme-neptune" //ext-theme-classic
+}</pre>
+
+
+<h2>Refresh the app</h2>
+<p>You now need to refresh your application.</p>
+<p>This ensures that the correct theme JavaScript files are included in the application&#8217;s "bootstrap.js" file so that the application can be run in development mode.</p>
+<p>Run from the app directory the following command:</p>
+<pre class="runnable preview">sencha app refresh</pre>
+
+<!-- END -->
+</body>
+</html>

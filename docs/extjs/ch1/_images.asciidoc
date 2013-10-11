@@ -1,0 +1,41 @@
+=== Images
+
+==== What it is
+An HTML image tag (optionally wrapped in div elements)
+to display images.
+
+==== Specs
+
+===== CSS Class: +.x-img+
+
+===== +Ext.Img+
+Extends from +Ext.Component+
+
+* +src+
+* +alt+
+* +autoEl+
+* +height+
+* +width+
+* +margin+
+* +padding+
+* +baseCls+
+* +imgCls+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.Img
+
+[[components_images]]
+.Ext.Img
+image::resources/images/images.png[scale="75"]
+
+==== Example
+[[images]]
+.Example
+====
+[source, javascript]
+----
+Ext.create('Ext.Img', {
+    src: 'http://www.sencha.com/img/20110215-feat-html5.png',
+    renderTo: Ext.getBody()
+});
+----
+====

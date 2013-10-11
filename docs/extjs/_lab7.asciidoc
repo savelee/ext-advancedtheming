@@ -1,0 +1,115 @@
+Lab: Organizing theme
+----------------------
+
+.Objectives
+* Organize global variables
+* Organize global styles
+
+=== Organizing global variables
+
+.Steps
+
+. Start with watching the application, so the application will build automatically every time you hit save.
++
+[source, javascript]
+----
+sencha app watch
+-----
+
+. *Create var/Component.scss*
++
+* Open _packages/Goggles/etc/all.scss_
+* Create a new file _Component.scss_ in _packages/Goggles/var/_
+* Copy and paste:
+** my custom variables
+** all default styles (+base-color+, +neutral-color+, +color+, +font-family+ and +font-size+)
+* Add suffix +!default+ on the end of the variable of +$base-color+
+to specify; this variable can be changed by a theme on app level.
+
+. *Create var/toolbar/Toolbar.scss*
++
+* Create a new file/folder _toolbar/Toolbar.scss_ in _packages/Goggles/var/_
+* Copy and paste the toolbar variables
+
+. *Create var/button/Button.scss*
++
+* Create a new file/folder _button/Button.scss_ in _packages/Goggles/var/_
+* Copy and paste the button variables
+
+. * Create var/panel/Panel.scss*
++
+* Create a new file/folder _panel/Panel.scss_ in _packages/Goggles/var/_
+* Copy and paste the panel variables
+* Add suffix +!default+ on the end of the variable of +$panel-header-background-color+
+to specify; this variable can be changed by a theme on app level.
+
+. *Create var/window/Window.scss*
++
+* Create a new file/folder _window/Window.scss_ in _packages/Goggles/var/_
+* Copy and paste the window variables
+
+. *Create var/grid/Panel.scss*
++
+* Create a new file/folder _grid/Panel.scss_ in _packages/Goggles/var/_
+* Copy and paste the grid variables
+
+=== Organizing global styles & mixins
+
+.Steps
+
+. *Create src/Component.scss*
++
+* Create the file _Component.scss_ in _packages/Goggles/src_
+* Copy and paste all the default styles & font-face lines
+
+. *Create src/tree/Panel.scss*
++
+* Create a new file/folder _tree/Panel.scss_ in _packages/Goggles/src/_
+* Copy and paste the styles for trees.
+* Copy and paste the panel ui mixin (from _packages/Goggles/src/Component.scss_) over to this file.
+
+. *Create a new file & folder button/Button.scss*
++
+* Create this folder and file in _packages/Goggles/sass/src_
+* Copy and paste all the button ui mixins (from _packages/Goggles/src/Component.scss_) over to this file.
+
+. *Create a new file & folder toolbar/Toolbar.scss*
++
+* Create this folder and file in _packages/Goggles/sass/src_
+* Copy and paste the toolbar ui mixin (from _packages/Goggles/src/Component.scss_) over to this file.
+
+. *Create a new file & folder window/Window.scss*
++
+* Create this folder and file in _packages/Goggles/sass/src_
+* Copy and paste the window ui mixin (from _packages/Goggles/src/Component.scss_) over to this file.
+
+=== Organizing app specific variables
+. *Create vars/view/Viewport.scss in your app.* 
++
+* Create a new file/folder _view/Viewport.scss_ in _extreader/sass/var/_
+* Overwrite the global theme CSS rules.
++ 
+The panel header background, will become blue.
+The base-color will be a lighter gray.
++
+[source, javascript]
+----
+$base-color: #f2f2f2;
+$panel-header-background-color: #528cf1;
+----
+
+=== Organizing app specific styles
+. *Create src/view/Viewport.scss in your app.* 
++
+* Create a new file/folder _view/Viewport.scss_ in _extreader/sass/src/_
+* Copy and paste the icon font and the icon CSS classes over to the _src/view/Viewport.scss_ file on app level.
++
+Now these icons are only available for the Ext Reader app.
+
+. *Build the application*
++ 
+Preview and test the template.
++
+[[lab7_organize]]
+.Preview of the new Goggles theme
+image::resources/images/extreader-organize.png[scale="50"]

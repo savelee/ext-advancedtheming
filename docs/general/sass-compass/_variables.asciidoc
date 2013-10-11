@@ -1,0 +1,159 @@
+=== Variables
+You can create variables with Sass. Prefix with a +$+ sign.
+They can have any value for a CSS property, 
+such as colors, numbers (with units), or text.
+
+Change the value on one place, i.s.o. maintaining the value
+in your whole project.
+
+[source, javascript]
+----
+$main-bg-color: red;
+
+.panel {
+	background: $main-bg-color;
+}
+----
+
+[source, javascript]
+----
+.panel { background: red; }
+----
+
+==== Interpolation
+Variables can be used for more than just property values. You can use +#{}+ to insert them into property names or selectors.
+
+[source, javascript]
+----
+$vertical: 'top';
+$horizontal: 'right';
+
+.rounded {
+ 	border-#{$vertical}-#{$horizontal}-radius: 10px;
+}
+----
+
+[source, javascript]
+----
+.rounded { border-top-right-radius: 10px; }
+----
+
+==== Calculations
+Now, setting variables becomes super handy, when you 
+want to make *math* or *color* calculations with it.
+
+[source, javascript]
+----
+$main-bg-color: red;
+
+.panel {
+	background: darken($main-bg-color, 20%);
+}
+----
+
+[source, javascript]
+----
+.panel { background: #990000; }
+----
+
+==== Color opertations
+
+===== Darken
+[source, javascript]
+----
+$main-bg-color: red;
+
+.panel {
+	background: darken($main-bg-color, 20%);
+}
+----
+
+[source, javascript]
+----
+.panel { background: #990000; }
+----
+
+===== Lighten
+[source, javascript]
+----
+$main-bg-color: red;
+
+.panel {
+	background: lighten($main-bg-color, 20%);
+}
+----
+
+[source, javascript]
+----
+.panel { background: #FF6666; }
+----
+
+===== Color Mix
+[source, javascript]
+----
+$main-bg-color: red;
+$main-alternative-color: blue;
+
+.panel {
+	background: $main-bg-color + $main-alternative-color;
+}
+----
+
+[source, javascript]
+----
+.panel { background:fuchsia; }
+----
+
+===== Alpha
+[source, javascript]
+----
+$main-bg-color: red;
+
+.panel {
+	background: transparentize($main-bg-color, 0.25);
+}
+----
+
+===== And more
+There are much more color operations.
++hue+, +saturation+, +grayscale+, +invert+ etc...
+
+http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+
+[source, javascript]
+----
+.panel { background: rgba(255, 0, 0, 0.75); }
+----
+
+==== Math Functions
+The standard math operations (+, -, *, /, and %) are supported for numbers.
+
+===== Calculations
+$container-width: 600px;
+$font-size: 12px;
+
+[source, javascript]
+----
+.panel {
+	width: $container-width / 3;
+	line-height: $font-size * 1.5;
+}
+----
+
+[source, javascript]
+----
+.panel { width: 200px; line-height: 18px; }
+----
+
+===== Calculate units
+[source, javascript]
+----
+.panel {
+	width: 1in + 8pt;
+}
+----
+
+[source, javascript]
+----
+.panel { width: 1.111 in; }
+----

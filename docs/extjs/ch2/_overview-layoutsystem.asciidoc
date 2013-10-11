@@ -1,0 +1,15 @@
+Overview layout system
+-----------------------
+
+=== Objectives
+* Get familiar with the Ext layout system
+* Review important layout specs
+* Preview Ext layouts
+
+include::../../general/layouts/_hbox.asciidoc[]
+include::../../general/layouts/_vbox.asciidoc[]
+include::../../general/layouts/_border.asciidoc[]
+include::../../general/layouts/_fit.asciidoc[]
+include::../../general/layouts/_card.asciidoc[]
+include::../../general/layouts/_anchor.asciidoc[]
+include::../../general/layouts/_column.asciidoc[]

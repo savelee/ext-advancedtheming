@@ -1,0 +1,224 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Lab: Creating Custom UIs</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Implement Button UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement Panel UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement Toolbar UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement Window UIs
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>Button UI&#8217;s</h1>
+<!-- Chapter: Button UI&#8217;s -->
+<p>See API Docs: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create a new file Component.scss</strong>
+<!--    --></p>
+<p>Create this file in <em>packages/Goggles/sass/src</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the button mixin extjs-button-small-ui</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Give this mixin the name: <em>blue</em> (<code>$ui</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Give this mixin the following background <code>$background-color: lighten($blue, 20%)</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Give this mixin a background over color, a 10% darker <code>$blue</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Give this mixin the background disabled color, a 40% lighter <code>$blue</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>border-radius</code> to 4px
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>color</code> to white
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>glyph-color</code> to white
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>padding</code> to 4px
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy and paste the previous mixin and change the mixin to ext-button-medium-ui</strong>
+<!--    --></p>
+<p>The difference is the <code>border-radius</code>, which should be set to 5px and the <code>padding</code> which should be set to 6px.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy and paste the previous mixin and change the mixin to ext-button-toolbar-medium-ui</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy and paste the previous mixin and change the mixin to ext-button-large-ui</strong>
+The difference is the <code>border-radius</code>, which should be set to 6px and the <code>padding</code> which should be set to 8px.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>blue</code> button mixin to the previous and next buttons</strong>
+<!--    --></p>
+<p>Open <em>app/view/Viewport</em>, on the place indicated by the comment (the previous and next buttons), add the <code>ui: <em>blue</em></code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>blue</code> button mixin to the OK button</strong>
+Open <em>app/view/Header.js</em>, on the place indicated by the comment (the OK button of the messagebox), add the <code>ui: <em>blue</em></code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Navigate on the CLI to the project folder</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the application</strong>
+<!--    --></p>
+<p>Make sure your app is automatically compiling to CSS by running the following command on the CLI <code>sencha app watch</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Preview your application</strong>
+<!--    --></p>
+<p>You should see blue previous and next buttons in the bottom toolbar. You should also see a blue <em>OK</em> button, when pressing the <em>Help &gt; About</em> button.</p>
+<!----></li>
+</ol>
+<h1>Panel UIs</h1>
+<!-- Chapter: Panel UIs -->
+<p>See API DOCS: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create the following mixin for Panels, see <a href="#code6_panelui">[code6_panelui]</a></strong>
+<!--    --></p>
+<pre class="runnable preview">@include extjs-panel-ui(
+    'light',
+    $ui-header-color: lighten(#15c, 20%),
+    $ui-header-background-color: #fff,
+    $ui-header-line-height: 14px,
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff,
+    $ui-body-font-size: 14px,
+
+    $ui-padding: 10px
+);</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>light</code> panel mixin to the feed panel</strong>
+<!--    --></p>
+<p>Open <em>app/view/Viewport.js</em>, on the place indicated by the comment (the feed panel), add the <code>ui: <em>light</em></code>.</p>
+<!----></li>
+</ol>
+<h1>Toolbar UIs</h1>
+<!-- Chapter: Toolbar UIs -->
+<p>See API DOCS: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create the following mixin for Toolbars, see <a href="#code6_toolbarui">[code6_toolbarui]</a></strong>
+<!--    --></p>
+<pre class="runnable preview">@include extjs-toolbar-ui(
+    'gray',
+    $background-color: lighten($gray, 10%),
+    $border-width: 0
+);</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>gray</code> toolbar mixin to the toolbar</strong>
+<!--    --></p>
+<p>Open <em>app/view/Viewport.js</em>, on the place indicated by the comment (the toolbar), add the <code>ui: <em>gray</em></code>.</p>
+<!----></li>
+</ol>
+<h1>Window UIs</h1>
+<!-- Chapter: Window UIs -->
+<p>See API DOCS: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create the following mixin for Windows, see <a href="#code6_windowui">[code6_windowui]</a></strong>
+<!--    --></p>
+<pre class="runnable preview">@include extjs-window-ui(
+    'blue',
+
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+    $ui-header-color: #fff,
+    $ui-header-background-color: lighten(#15c, 20%),
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff
+);</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>blue</code> window mixin to the messagebox</strong>
+<!--    --></p>
+<p>Open <em>app/view/Header.js</em>, on the place indicated by the comment (the messagebox), add the <code>ui: <em>blue</em></code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Preview the application</strong>
+Your ExtReader app should have the looks of <a href="#lab6_uis">[lab6_uis]</a>.
+<!--    --></p>
+<img src="resources/images/extreader-uis.png"  width="100%" >
+<!----></li>
+</ol>
+
+<!-- END -->
+</body>
+</html>

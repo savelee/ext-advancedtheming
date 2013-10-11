@@ -1,0 +1,93 @@
+=== The old way
+
+CSS is crafted to be simple but scaling is just difficult.
+When you have a big Stylesheet, it is hard to maintain all the
+slight variantions of colors, fonts and dimensions.
+And it just easily becomes messy.
+
+Also the Stylesheet size may become unmaintainable. There is
+no easy way to divide Stylesheets in multiple Stylesheets without
+a performance hit.
+
+=== About Sass
+Sass stands for: "Syntactically Awesome Stylesheets". It's
+like CSS but adds a lot of features to its shortcomings.
+
+Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for “Sassy CSS”), and is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension .scss.
+
+The second, older syntax is known as the indented syntax (or just “.sass”). Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Files in the indented syntax use the extension .sass.
+
+http://sass-lang.com/
+http://thesassway.com/
+
+=== Preprocessor
+Like CoffeeScript or HAML.
+You will start developing a Sass File (Sassy CSS / .scss), 
+compile it with a Sass compiler
+and then use the CSS file in your browser.
+
+=== Watch for changes
+To compile from a Sassy CSS file to a normal CSS file, you can let Sass
+*watch* your .scss file for changes.
+
+Run this command from the CLI:
+[source, javascript]
+----
+sass --watch app.scss:style.css
+----
+
+Every time when you hit save in your editor, the file will be compiled.
+
+=== About Compass
+CSS3 framework.
+Compass makes working with Sass even easier.
+
+http://compass-style.org/reference/compass/css3/
+
+=== Install Sass & Compass
+
+Sass and Compass run on top of Ruby.
+Windows developers will need to download Ruby 1.x
+When Ruby is installed you can install the Sass and Compass gems from the CLI:
+
++gem install Sass+ +
++gem install Compass+
+
+You will need to have administrative rights on the CLI.
+Mac OSX users, can prefix with +sudo+
+
+=== Sass basics
+
+==== First of all...
+You can still use CSS code in your Sassy CSS files.
+
+Just take it over and slidly modify it to your needs.
+
+==== Comments
+With Sass it is possible to write single line comments.
+These files won't be compiled in your CSS output.
+Though multiline comments will.
+
+.app.scss
+[source, javascript]
+----
+//These lines of comments
+//won't be visibile in my CSS file
+
+/* but this line will.
+----
+
+.app.css
+[source, javascript]
+----
+/* but this line will. */
+----
+
+==== File structure
+To create structure in your Stylesheets, you can use the +@import+ code.
+
+In CSS +@import+ downloads the CSS files after each other (not in parrallel)
+that makes a performance hit.
+
+This is not the case with Sass. Since Sass compiles the Stylesheet
+on the clientside. Your output will be just one single CSS file.

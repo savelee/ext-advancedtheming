@@ -1,0 +1,122 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Implementing Images</h1>
+<!-- Chapter: Implementing Images -->
+<span class="title">There are a couple of ways of implementing images in Ext JS</span><ul>
+<!----><li>
+<!--    --><p>
+Implementing an image by using the <code>html</code> tag.
+Easy but dirty.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing an image by using <code>Ext.Img</code> class.
+Very powerful.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing a background image in the CSS
+Structured.
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>Folder structure</h2>
+<p>Where to save the images?</p>
+<p>When app specific:
+<em>[workspace]/resources/</em> folder.</p>
+<p>When global theme:
+<em>[workspace]/packages/[theme]/resources/</em> folder.</p>
+
+
+<h2>Image HTML tag</h2>
+<pre class="runnable preview">items: [{
+    xtype: 'container',
+    html: '&lt;img src="resources/logo.png" height="25" alt="ExtReader"/&gt;'
+}]</pre>
+
+
+<h2>Image Ext.Img class</h2>
+<pre class="runnable preview">items:[{
+        xtype: 'image',
+    src: 'resources/logo.png',
+    alt: 'ExtReader',
+    height: 25
+}]</pre>
+
+
+<h2>Background image in CSS</h2>
+<pre class="runnable preview">items: [{
+    xtype: 'container',
+    cls: 'mybackground'
+}]</pre>
+<pre class="runnable preview">.mybackground {
+        background: #fff url('background.png') repeat-x;
+}</pre>
+
+
+<h2>Paths to resources</h2>
+<p>You don&#8217;t need to worry about paths to images in Ext JS since it&#8217;s part of the application build process.</p>
+<p>When building the app, the global theme images and the app specific images will be automatically copied over to the resources build folder. <em>(build/[appname]/resources)</em></p>
+<p>Note: subfolders will be copied too!</p>
+
+
+<h2>Paths global</h2>
+<pre class="runnable preview">/* red image: resources/backgrounds/red.png */
+.bgred {
+        background: url('backgrounds/red.png') repeat-x;
+}</pre>
+<pre class="runnable preview">/* yellow image: resources/yellow.png */
+.footer {
+        background: url('yellow.png');
+}</pre>
+<img src="resources/images/assets_appresources.png"  width="100%" >
+
+
+<h2>Paths app specific</h2>
+<pre class="runnable preview">/* blue image: packages/[mytheme]/resources/backgrounds/blue.png */
+.bgblue {
+        background: url('backgrounds/blue.png') repeat-x;
+}</pre>
+<img src="resources/images/assets_globalresources.png"  width="100%" >
+
+
+<h2>Paths in build</h2>
+<p>Images saved in <em>packages/[mytheme]/resources</em>
+and images saved in <em>[myapp]/resources/</em>.
+will be copied to the <em>build/[appname]/resources</em> folder.</p>
+<img src="resources/images/assets_buildfolder.png"  width="100%" >
+
+
+<h2>Paths to resources</h2>
+<p>Under the roots, this happens also with paths in <code>Ext.Img</code> classes and image tags and other resources such as fonts.</p>
+<p>However, while developing you would point images to the <em>/resources/</em> folder, since you don&#8217;t want to build every time while developing.
+Once you build, Sencha Cmd will take care.</p>
+
+
+<h2>Base64 encode instead</h2>
+<p>Images can be saved to Base64 strings. (Binary to ASCII Text).
+It&#8217;s a technique what&#8217;s been used for years for sending email
+image attachments. When you are not familiair with Base64 strings, they look like these:</p>
+<pre class="runnable preview">data:image/png;base64,&lt;LONG BASE64 STRING WITH ENCODED DATA&gt;"</pre>
+<p>An advantage of a string like this, is that you can cache it,
+maybe you want to save it in a database.
+Instead of an URL to a path you pass in the Base-64 string.</p>
+
+
+<h2>Overriding images</h2>
+<p>When you are extending from other themes, some components contain images that are
+inherited from a parent theme.</p>
+<p>In some cases you may need to override an image. This can be easily done by placing the desired image in <em>packages/[mytheme]/resources/images/</em> and giving it the <strong>same name</strong> as the image it is intended to override.</p>
+<p>For example, let&#8217;s change the info icon of the MessageBox component. Save the following image as <em>packages/[mytheme]/resources/images/shared/icon-info.png</em></p>
+
+<!-- END -->
+</body>
+</html>

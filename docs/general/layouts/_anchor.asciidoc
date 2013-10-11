@@ -1,0 +1,63 @@
+=== Anchor
+
+==== What's it?
+A layout mostly used in forms. With the anchor layout
+you can specify the width and heights per field
+in percentages relative to the container's dimensions. 
+
+==== Specs
+Class: +Ext.layout.container.Anchor+ (+layout:anchor+)
+
+[[layouts_anchor]]
+.Anchor layout
+image::resources/images/anchor.png[scale="75"]
+
+See also:
+http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Anchor
+
+==== Example
+.Example anchor layout
+====
+[source, javascript]
+----
+Ext.create('Ext.form.Panel', {
+    title: 'Form Panel with anchor layout',
+    bodyPadding: 5,
+    width: 350,
+
+    layout: 'anchor',
+    defaults: {
+        anchor: '100%'
+    },
+
+    defaultType: 'textfield',
+    items: [{
+        fieldLabel: 'First Name',
+        name: 'first',
+        allowBlank: false,
+        anchor: '70%'
+    },{
+        fieldLabel: 'Last Name',
+        name: 'last',
+        allowBlank: false
+    },
+    {
+        fieldLabel: 'Age',
+        name: 'age',
+        allowBlank: false,
+        anchor: '40%'
+    }],
+    renderTo: Ext.getBody()
+});
+----
+====
+
+===== How it works
+Specify one String where the first percentage points to the width
+(relative to the container's dimensions) and the second percentage to
+the height.
+
+It is possible to enter pixels. A negative pixel value will deduct the
+amount of pixels from the 100% container height or width.
+A positive pixel value will add it on top of the 100% (which usually don't make sense).
+

@@ -1,0 +1,261 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Lab: Implementing assets</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Imlpement images
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement fonts
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement custom icons &amp; glyphs
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>Implement images</h1>
+<!-- Chapter: Implement images -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Open with your editor the following file:</strong>
+<!--    --></p>
+<p><em>extreader/app/view/Header.js</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Where indicated by the comment add an image tag that points to the following image</strong>
+<!--    --></p>
+<p><code>&lt;img src="resources/logo.png" height="25" alt="ExtReader"/&gt;</code></p>
+<!----></li>
+</ol>
+<h1>Implement custom fonts</h1>
+<!-- Chapter: Implement custom fonts -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Download a nice free font</strong>
+<!--    --></p>
+<p>For example: Droid Sans. Make sure you download the full webfont-kit
+<a href="http://www.fontsquirrel.com/fonts/Droid-Sans">http://www.fontsquirrel.com/fonts/Droid-Sans</a></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Unzip the package somewhere on your harddrive</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a new fonts folder</strong>
+<!--    --></p>
+<p>Create this folder in: <em>packages/resources</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy all the fonts into the new folder</strong>
+<!--    --></p>
+<p>The <em>packages/resources/fonts</em> folder.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open packages/Goggles/sass/etc/all.scss</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Setup fontface for DroidSansRegular and DroidSansBold</strong>
+<!--    --></p>
+<pre class="runnable preview">/* fonts */
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('../resources/fonts/DroidSans-webfont.eot');
+    src: url('../resources/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot');
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Now we will make sure that these fonts only apply for the main center panel</strong>
+<!--    --></p>
+<pre class="runnable preview">/* main feeds */
+.main {
+    font-family: 'DroidSansRegular';
+    line-height: 1.6em;
+
+    h1 {
+        color: $blue;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    a {
+        color: $blue;
+    }
+
+    bold {
+        font-family: 'DroidSansBold';
+    }
+}</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the app</strong>
+<!--    --></p>
+<p>So the theme knows the font locations and test your application. Your app should contain the new font, in the <em>main</em> center panel.</p>
+<!----></li>
+</ol>
+<h1>Implement custom icons</h1>
+<!-- Chapter: Implement custom icons -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Go to <a href="http://icomoon.io/app">http://icomoon.io/app</a></strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the icons below, and download a package</strong>.
+<!--    --></p>
+<span class="title">You will need the following icons:</span><ul>
+<!----><li>
+<!--    --><p>
+an icon for RSS feeds - you will map this icon to the <em>r</em> character
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+an icon for the help button -  you will map this icon to the <em>h</em> character
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+an icon for the subscribe button - you will map this icon to the <em>s</em> character
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+an icon for the form popup - you will map this icon to the <em>e</em> character
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Setup the font pack</strong>
+<!--    --></p>
+<p>In the <em>preferences</em> screen select <em>preferences</em>, and give your font the name: <em>ExtReader</em>. Also check <em>base64</em> encoding.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Unzip the icon font pack somewhere on your harddrive</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy the font folder over</strong>
+<!--    --></p>
+<p>Copy it to the fonts folder: <em>extreader/resources/fonts</em>
+. <strong>Copy the CSS rules of style.css</strong></p>
+<p>Copy it to: <em>packages/sass/etc/</em> and rename it to <em>all.scss</em>. Start with a comment: //font icons</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open packages/sass/etc/all.scss and fix the path to resources/fonts/ExtReader.eot</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the app</strong>
+<!--    --></p>
+<p>From now on the theme and the application know the icon font location.</p>
+<!----></li>
+</ol>
+
+
+<h2>Glyphs</h2>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Open extreader/app/view/Header.js</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Indicated by the comment, create a glyph attribute</strong>
+<!--    --></p>
+<span class="title">Point it to some decimal unicode and the Icon font:</span><ul>
+<!----><li>
+<!--    --><p>
+The glyph for the subscribe button will map to the <em>s</em> character. Therefore you will need the decimal unicode that maps to the <em>s</em> character.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Use a converter to generate this: <a href="http://www.branah.com/unicode-converter">http://www.branah.com/unicode-converter</a>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <em>s</em> character will become an icon, when you use the correct font. Therefore also set the name font that should be used:
+<!--    --></p>
+<pre class="runnable preview">glyph: ‘115@ExtReader’,</pre>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a glyph for the help button</strong>
+<!--    --></p>
+<p>Indicated by the comment; the help icon should map to the <em>h</em> character.
+ou may uncomment the line with: <code>text: ‘Help’</code>, in that case you will have a button with only an icon and no text.</p>
+<!----></li>
+</ol>
+<p>+
+Open <em>extreader/controller/Main.js</em>, where indicated by the comment, add a glyph that points to the <em>e</em> character of the iconfont.</p>
+
+
+<h2>Icon Classes</h2>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>On the bottom of the extreader/sass/etc/all.scss stylesheet add the styles of &lt;&lt;code5_iconclasses&gt;</strong>
+<!--    --></p>
+<pre class="runnable preview">.x-tree-node-text:before {
+    content: "r";
+    margin-right: 5px;
+    font-family: 'ExtReader';
+}</pre>
+<p>This will make sure that every tree node (with class <code>x-tree-node-text</code>), has a little icon before the text. We set the content to the <em>r</em> character to map to the rss feed icon.
+We do have to set a font that points to our icon font name, and we set a margin-right to align the icon nicely.</p>
+<!----></li>
+</ol>
+
+<!-- END -->
+</body>
+</html>

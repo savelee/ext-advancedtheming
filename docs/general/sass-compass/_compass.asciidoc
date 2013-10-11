@@ -1,0 +1,109 @@
+=== Compass
+
+==== Compass Border-radius
+Border-radius mixin
+
+[source, javascript]
+----
+@import "compass/css3/border-radius"
+.radius   { 
+	@include border-radius(4px, 4px); 
+}
+----
+
+[source, javascript]
+----
+.radius   { 
+	-webkit-border-radius: 4px 4px;
+	-moz-border-radius: 4px 4px;
+	-khtml-border-radius: 4px 4px;
+	border-radius: 4px 4px; 
+}
+----
+
+http://compass-style.org/reference/compass/css3/border_radius/
+
+==== Compass Box-Shadow
+Box-shadow mixin
+
+[source, javascript]
+----
+@import "compass/css3/box-shadow"
+
+.box-shadow-example div {
+  @include single-box-shadow; 
+}
+----
+
+[source, javascript]
+----
+.box-shadow-example div {
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+----
+
+==== Compass Font-face
+Font-face mixin
+
+[source, javascript]
+----
+@import "compass/css3/font-face"
+
+@include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));
+
+----
+
+[source, javascript]
+----
+@font-face {
+  font-family: "Blooming Grove";
+  src: 	url('/fonts/examples/bgrove.ttf') format('truetype'), 
+  		url('/fonts/examples/bgrove.otf') format('opentype');
+}
+----
+
+http://compass-style.org/examples/compass/css3/font-face/
+
+==== Compass Text-shadow
+Text-shadow mixin
+
+[source, javascript]
+----
+$default-text-shadow-color: rgba(red, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px
+
+@import "compass/css3/text-shadow"
+
+.has-single-shadow {
+  @include single-text-shadow; 
+}
+----
+
+[source, javascript]
+----
+.has-single-shadow {
+  text-shadow: 0px 1px 3px rgba(255, 0, 0, 0.6);
+}
+----
+
+http://compass-style.org/reference/compass/css3/text-shadow/
+
+==== More Compass
+
+CSS3 mixins:
+http://compass-style.org/reference/compass/css3/
+
+Sass helpers
+http://compass-style.org/reference/compass/helpers/
+
+Not common in Sencha projects, but also part of the Compass frameworks:
+
+Layout mixins:
+http://compass-style.org/reference/compass/layout/
+
+Reset mixins:
+http://compass-style.org/reference/compass/reset/
+

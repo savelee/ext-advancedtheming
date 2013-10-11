@@ -1,0 +1,56 @@
+Sencha Advanced Theming for Ext JS Course
+==========================================
+Lee Boonstra <lee.boonstra@sencha.com>
+v0.1, 2013-07-29
+:cmd-vers: 4.0.x
+:vers: 4.2.2
+
+include::../extjs/_intro.txt[]
+
+:numbered:
+
+include::../extjs/ch1/_overview-components.asciidoc[]
+
+include::../extjs/ch2/_overview-layoutsystem.asciidoc[]
+
+include::../extjs/ch3/_overview-themes.asciidoc[]
+
+include::../extjs/_lab1.asciidoc[]
+
+include::../extjs/ch4/_generating-themes.asciidoc[]
+
+include::../extjs/_lab2.asciidoc[]
+
+include::../extjs/_lab3.asciidoc[]
+
+include::../extjs/ch5/_about-sass.asciidoc[]
+
+include::../extjs/ch6/_sencha-vars.asciidoc[]
+
+include::../extjs/_lab4.asciidoc[]
+
+include::../extjs/ch7/_sencha-mixins.asciidoc[]
+
+include::../extjs/_lab5.asciidoc[] 
+
+include::../extjs/ch8/_implementing_assets.asciidoc[]
+
+include::../extjs/_lab6.asciidoc[]
+
+include::../extjs/ch9/_sharing_themes.asciidoc[]
+
+include::../extjs/_lab7.asciidoc[]
+
+include::../extjs/ch10/_optimize.asciidoc[]
+
+include::../extjs/ch11/_architect.asciidoc[]
+
+include::../extjs/_lab8.asciidoc[]
+
+//////BONUS extending from Base theme
+////include::../extjs/_lab9.asciidoc[]
+
+:numbered!:
+
+[appendix]
+include::../extjs/_setup.txt[]

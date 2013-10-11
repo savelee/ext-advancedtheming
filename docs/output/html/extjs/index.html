@@ -1,0 +1,6747 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Overview of all components</h1>
+<h1>1.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Get familiar with the Ext components
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Review important component specs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Preview Ext components
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>1.2. Containers</h1>
+<!-- Chapter: Containers -->
+
+
+<h2>1.2.1. What it is</h2>
+<p>Containers are just a plain set of divs, they can contain items.</p>
+
+
+<h2>1.2.2. Specs</h2>
+<h3>CSS Class: <code>.x-container</code></h3>
+<h3><code>Ext.container.Container</code></h3>
+<p>Extends from <code>Ext.Component</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>height</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>width</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>margin</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>padding</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>border</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>style</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>hidden</code> (true / false)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.container.Container">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.container.Container</a></p>
+<img src="resources/images/containers.png"  width="100%" >
+
+
+<h2>1.2.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.container.Container', {
+    html: 'Hello World',
+    width: 400,
+    renderTo: Ext.getBody(),
+});</pre>
+<h1>1.3. Panels</h1>
+<!-- Chapter: Panels -->
+
+
+<h2>1.3.1. What it is</h2>
+<p>Just a plain set of divs, like a Container (it may contain items) but with borders, headers,
+dockable footers and buttons.</p>
+
+
+<h2>1.3.2. Specs</h2>
+<h3>CSS Class: <code>.x-panel</code></h3>
+<h3><code>Ext.panel.Panel</code></h3>
+<p>Extends from <code>Ext.container.Container</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Panel Header (<code>.x-panel-header</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>title</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>glyph</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>tools</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Panel Body (<code>.x-panel-body</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+(optional) Docked Toolbar (<code>.x-toolbar</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>buttons</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>height</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>width</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>margin</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>padding</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>bodyPadding</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.panel.Panel">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.panel.Panel</a></p>
+<img src="resources/images/panels.png"  width="100%" >
+
+
+<h2>1.3.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+    title : 'Panel Header',
+    renderTo : Ext.getBody(),
+    height : 200,
+    width : 500,
+    glyph: '119@Pictos',
+    html: 'Panel Body',
+    tools : [{
+        type : 'gear',
+    }],
+    buttons: [{
+        text: 'button'
+    }]
+});</pre>
+<h1>1.4. Images</h1>
+<!-- Chapter: Images -->
+
+
+<h2>1.4.1. What it is</h2>
+<p>An HTML image tag (optionally wrapped in div elements)
+to display images.</p>
+
+
+<h2>1.4.2. Specs</h2>
+<h3>CSS Class: <code>.x-img</code></h3>
+<h3><code>Ext.Img</code></h3>
+<p>Extends from <code>Ext.Component</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>src</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>alt</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>autoEl</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>height</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>width</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>margin</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>padding</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>baseCls</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>imgCls</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.Img">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.Img</a></p>
+<img src="resources/images/images.png"  width="100%" >
+
+
+<h2>1.4.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.Img', {
+    src: 'http://www.sencha.com/img/20110215-feat-html5.png',
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.5. TabPanels</h1>
+<!-- Chapter: TabPanels -->
+
+
+<h2>1.5.1. What it is</h2>
+<p>A stack of Panels with dockable tabs for switching between views.</p>
+
+
+<h2>1.5.2. Specs</h2>
+<h3>CSS Class: <code>.x-panel</code></h3>
+<h3><code>Ext.tab.Panel</code></h3>
+<p>Extends from <code>Ext.panel.Panel</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+TabPanel Header (<code>.x-tab-bar</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Panel Body (<code>.x-panel</code> or <code>.x-tabpanel-child</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Docked Toolbar (<code>.x-toolbar-footer</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>buttons</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>tabPosition</code> (‘top’,‘right’,‘bottom’,‘left’)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>plain</code> (true/false)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>height</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>width</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>margin</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>padding</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>bodyPadding</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.panel.Panel">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.panel.Panel</a></p>
+<img src="resources/images/tabpanels.png"  width="100%" >
+
+
+<h2>1.5.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.tab.Panel', {
+    renderTo : Ext.getBody(),
+    height : 200,
+    width : 500,
+    tabPosition: 'bottom',
+    //plain : true,
+    items : [{
+        title : 'Tab',
+        html : 'Panel Body'
+    }, {
+        title : 'Tab',
+        html : 'Panel Two'
+    },
+    {
+        title : 'Tab',
+        html : 'Panel Two'
+    }]
+});</pre>
+<h1>1.6. Buttons</h1>
+<!-- Chapter: Buttons -->
+
+
+<h2>1.6.1. What it is</h2>
+<p>Listen to user events, click, double click, toggle&#8230;</p>
+
+
+<h2>1.6.2. Specs</h2>
+<h3>CSS Class: <code>.x-btn</code></h3>
+<h3><code>Ext.button.Button</code></h3>
+<p>Extends from <code>Ext.Component</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Button (<code>.x-btn</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Inner button (<code>.x-btn-inner</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>glyph</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>menu</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>scale</code> (‘small’,‘medium’,‘large’)
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.button.Button">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.button.Button</a></p>
+<img src="resources/images/buttons.png"  width="100%" >
+
+
+<h2>1.6.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.button.Button', {
+    handler: function() {
+       alert("BAMM!");
+    },
+    renderTo: Ext.getBody(),
+    text : 'Beatles',
+    menu : {
+       items : [{
+          text : 'John'
+       }, {
+          text : 'Paul'
+       }, {
+          text : '...'
+       }]
+    }
+});</pre>
+<h1>1.7. Split Buttons</h1>
+<!-- Chapter: Split Buttons -->
+
+
+<h2>1.7.1. What it is</h2>
+<p>Like Buttons, but have two functionalities.
+A clickable button and a clickable arrow
+that pops out a menu.</p>
+
+
+<h2>1.7.2. Specs</h2>
+<h3>CSS Class: <code>.x-btn &gt; .x-btn-split</code></h3>
+<h3><code>Ext.button.Split</code></h3>
+<p>Extends from <code>Ext.Component</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Split Button (<code>.x-btn &gt; .x-btn-split</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Inner button (<code>.x-btn-inner</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>glyph</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>menu</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>scale</code> (‘small’,‘medium’,‘large’)
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.button.Split">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.button.Split</a></p>
+<img src="resources/images/buttonssplit.png"  width="100%" >
+
+
+<h2>1.7.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.button.Split', {
+    text: 'Choose an Action',
+    width: 120,
+    handler: function(b) {
+        alert(b.sound);
+    },
+    menu: {
+        defaults: {
+            handler: function(b) {
+                var parent = b.up('splitbutton');
+                parent.setText(b.text);
+                parent.sound = b.sound;
+            }
+        },
+        items: [{
+            text: 'Sing',
+            sound: 'la la la'
+        }, {
+            text: 'Play Guitar',
+            sound: 'strum'
+        }, {
+            text: 'Compose',
+            sound: 'scribble'
+        }]
+    },
+    renderTo: Ext.getBody(),
+});</pre>
+<h1>1.8. Toolbars</h1>
+<!-- Chapter: Toolbars -->
+
+
+<h2>1.8.1. What it is</h2>
+<p>Dockable bars, can contain things,
+buttons (default), form fields, text strings&#8230;</p>
+
+
+<h2>1.8.2. Specs</h2>
+<h3>CSS Class: <code>x-toolbar</code></h3>
+<h3><code>Ext.toolbar.Toolbar</code></h3>
+<p>Extends from <code>Ext.container.Container</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Toolbar item (.x-toolbar-item / .x-toolbar-btn)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>dockedItems</code> &gt; <code>dock</code> (‘top’,‘right’,‘bottom’,‘left’)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.toolbar.Toolbar">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.toolbar.Toolbar</a></p>
+<p>///images:toolbars.png[scale="75"]</p>
+
+
+<h2>1.8.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+    title : 'My Panel',
+
+    dockedItems : [ {
+        xtype : 'toolbar',
+        dock : 'bottom',
+        items : [ {
+            text : 'Toolbar Button'
+        }]
+    }],
+
+    html: 'Panel Body',
+    width : 300,
+    renderTo : Ext.getBody()
+});</pre>
+<h1>1.9. Windows</h1>
+<!-- Chapter: Windows -->
+
+
+<h2>1.9.1. What it is</h2>
+<p>Panels that are floatable, draggable, resizable</p>
+
+
+<h2>1.9.2. Specs</h2>
+<h3>CSS Class: <code>.x-window</code></h3>
+<h3><code>Ext.window.Window</code></h3>
+<p>Extends from <code>Ext.panel.Panel</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Window Header (<code>x-window-header</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>title</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>glyph</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>tools</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Window Body (<code>x-window-body</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>icon</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>height</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>width</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>minWidth</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>maxWidth</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>x</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>y</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
++modal*
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>draggable</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>resizable</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.Window">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.Window</a></p>
+<img src="resources/images/windows.png"  width="100%" >
+
+
+<h2>1.9.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.window.Window', {
+    title: 'Window',
+    autoShow: 'true',
+    height: 300,
+    width: 300,
+    x: 10,
+    y: 10
+});</pre>
+<h1>1.10. Messageboxes</h1>
+<!-- Chapter: Messageboxes -->
+
+
+<h2>1.10.1. What it is</h2>
+<p>Windows, async, that display alert messages,
+prompt and confirmation input fields and buttons
+or progressbar / wait widgets.</p>
+
+
+<h2>1.10.2. Specs</h2>
+<h3>CSS Class: <code>.x-message-box</code></h3>
+<p>Extends from <code>Ext.window.Window</code></p>
+<h3>Ext.window.MessageBox</h3>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>icon</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<img src="resources/images/alert.png"  width="100%" >
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox</a></p>
+
+
+<h2>1.10.3. Example</h2>
+<pre class="runnable preview">Ext.Msg.alert('Widget Updated', 'The widget was updated successfully.');</pre>
+
+
+<h2>1.10.4. Specs</h2>
+<h3>CSS Class: <code>.x-message-box</code></h3>
+<h3>Ext.window.MessageBox.confirm()</h3>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>icon</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<img src="resources/images/confirm.png"  width="100%" >
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox</a></p>
+
+
+<h2>1.10.5. Example</h2>
+<pre class="runnable preview">Ext.Msg.confirm('Are you sure?',
+   'Do you want to delete this widget?', function(btn, text){
+   if(btn === 'yes'){
+      Ext.Msg.alert('Deleted', 'The widget has been deleted');
+   }
+   else{
+      Ext.Msg.alert('Not Deleted', 'The widget was not deleted');
+   }
+});</pre>
+
+
+<h2>1.10.6. Specs</h2>
+<h3>CSS Class: <code>.x-message-box</code></h3>
+<h3>Ext.window.MessageBox.prompt()</h3>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>icons</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<img src="resources/images/prompt.png"  width="100%" >
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox</a></p>
+
+
+<h2>1.10.7. Example</h2>
+<pre class="runnable preview">Ext.Msg.prompt('Name', 'Please enter your name:', function(btn, text){
+    var name = (btn === 'ok' &amp;&amp; text.length) ? text : 'anonymous user';
+    Ext.Msg.alert('Hello', 'Hello, ' + name + '!');
+});</pre>
+
+
+<h2>1.10.8. Specs</h2>
+<h3>CSS Class: <code>.x-message-box</code></h3>
+<h3>Ext.window.MessageBox.progress()</h3>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>icon</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<img src="resources/images/progress.png"  width="100%" >
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox</a></p>
+
+
+<h2>1.10.9. Example</h2>
+<pre class="runnable preview">Ext.Msg.progress('Processing', 'Please wait while we process your application...');
+
+var update = function(percent){
+    Ext.Msg.updateProgress(percent, Ext.util.Format.number((percent*100), '0% complete'));
+}
+Ext.defer(update, 1000, null, [ .25]);
+Ext.defer(update, 2000, null, [ .50]);
+Ext.defer(update, 3000, null, [ .75]);
+Ext.defer(update, 4000, null, [1.00]);</pre>
+
+
+<h2>1.10.10. Specs</h2>
+<h3>CSS Class: <code>.x-message-box</code></h3>
+<h3>Ext.window.MessageBox.wait()</h3>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>icon</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<img src="resources/images/progress.png"  width="100%" >
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.window.MessageBox</a></p>
+
+
+<h2>1.10.11. Example</h2>
+<pre class="runnable preview">var m = Ext.Msg.wait("Please wait while we process your application...", "Processing", {
+   interval: 300, //bar will move fast!
+   duration: 3000,
+   increment: 10,
+   text: 'Updating...',
+
+   fn: function(){
+      m.hide();
+   }
+});</pre>
+<h1>1.11. Grids</h1>
+<!-- Chapter: Grids -->
+
+
+<h2>1.11.1. What it is</h2>
+<p>For displaying a lot of (sortable) data.
+Like Microsoft Excel sheets, but all cells have the width of the column.
+This is because a grid in the DOM is in fact an HTML table.</p>
+
+
+<h2>1.11.2. Specs</h2>
+<h3>CSS Class: <code>.x-grid</code></h3>
+<h3><code>Ext.grid.Panel</code></h3>
+<p>Extends from <code>Ext.panel.Panel</code> &amp; <code>Ext.panel.Table</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Grid Header (<code>.x-grid-header</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Grid Body (<code>.x-grid-body</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>rowLines</code> (true / false)
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Grid Column
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>editor</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>emptyCellText</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>lockable</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>tooltip</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>text</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>tdCls</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Grouping
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Summary
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Paging
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.grid.Panel">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.grid.Panel</a></p>
+<img src="resources/images/grids.png"  width="100%" >
+
+
+<h2>1.11.3. Example</h2>
+<pre class="runnable preview">var store = Ext.create('Ext.data.Store', {
+   fields:[
+     {name: 'framework', type: 'string'},
+     {name: 'rocks', type: 'boolean'}
+   ],
+   data: [
+     { 'framework': "Ext JS 4", 'rocks': true  },
+     { 'framework': "Sencha Touch", 'rocks': true  },
+     { 'framework': "Ext GXT", 'rocks': true  },
+     { 'framework': "Other Guys", 'rocks': false }
+   ]
+});
+
+Ext.create('Ext.grid.Panel', {
+    store: store,
+    columns: [
+        { text: 'Framework',  dataIndex: 'framework', flex: 1 },
+        {
+
+            xtype: 'booleancolumn',
+            trueText: 'Yes',
+            falseText: 'No',
+            text: 'Rocks',
+            dataIndex: 'rocks'
+        }
+    ],
+    title: 'Frameworks',
+    height: 200,
+    width: 400,
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.12. Trees</h1>
+<!-- Chapter: Trees -->
+
+
+<h2>1.12.1. What it is</h2>
+<p>Like MS Windows Explorer or Mac OS X Finder,
+a Panel with a list of nodes and folders that
+can fold and unfold.</p>
+
+
+<h2>1.12.2. Specs</h2>
+<h3>CSS Class: <code>.x-tree-panel</code></h3>
+<h3><code>Ext.tree.Panel</code></h3>
+<p>Extends from <code>Ext.panel.Panel</code> &amp; <code>Ext.panel.Table</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Grid Header (<code>.x-grid-header</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Tree View (<code>.x-tree-view</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Grid Cell (<code>.x-grid.cell</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>lines</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>useArrows</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>animate</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.tree.Panel">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.tree.Panel</a></p>
+<img src="resources/images/trees.png"  width="100%" >
+
+
+<h2>1.12.3. Example</h2>
+<pre class="runnable preview">var store = Ext.create('Ext.data.TreeStore', {
+    root: {
+        expanded: true,
+        children: [
+            { text: "detention", leaf: true },
+            { text: "homework", expanded: true, children: [
+                { text: "book report", leaf: true },
+                { text: "algebra", leaf: true}
+            ] },
+            { text: "buy lottery tickets", leaf: true }
+        ]
+    }
+});
+
+Ext.create('Ext.tree.Panel', {
+    title: 'Simple Tree',
+    width: 200,
+    height: 150,
+    store: store,
+    rootVisible: false,
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.13. FormPanel</h1>
+<!-- Chapter: FormPanel -->
+
+
+<h2>1.13.1. What it is</h2>
+<p>A panel that is required to hold form fields. Under the covers it has
+several mechanisms for sending and validating forms.</p>
+
+
+<h2>1.13.2. Specs</h2>
+<h3>CSS Class: <code>.x-panel</code></h3>
+<h3><code>Ext.form.Panel</code></h3>
+<p>Extends from <code>Ext.panel.Panel</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Panel Header (<code>.x-panel-header</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>title</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>glyph</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>tools</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Panel Body (<code>.x-panel-body</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+(optional) Docked Toolbar (<code>.x-toolbar</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>waitTitle</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>buttons</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>height</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>width</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>margin</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>padding</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>bodyPadding</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.Panel">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.Panel</a></p>
+<img src="resources/images/panels.png"  width="100%" >
+
+
+<h2>1.13.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    title: 'Simple Form',
+    bodyPadding: 5,
+    width: 350,
+
+    // The form will submit an AJAX request to this URL when submitted
+    url: 'save-form.php',
+
+    // Fields will be arranged vertically, stretched to full width
+    layout: 'anchor',
+    defaults: {
+        anchor: '100%'
+    },
+
+    // The fields
+    defaultType: 'textfield',
+    items: [{
+        fieldLabel: 'First Name',
+        name: 'first',
+        allowBlank: false
+    },{
+        fieldLabel: 'Last Name',
+        name: 'last',
+        allowBlank: false
+    }],
+
+    // Reset and Submit buttons
+    buttons: [{
+        text: 'Reset',
+        handler: function() {
+            this.up('form').getForm().reset();
+        }
+    }, {
+        text: 'Submit',
+        formBind: true, //only enabled once the form is valid
+        disabled: true,
+        handler: function() {
+            var form = this.up('form').getForm();
+            if (form.isValid()) {
+                form.submit({
+                    success: function(form, action) {
+                       Ext.Msg.alert('Success', action.result.msg);
+                    },
+                    failure: function(form, action) {
+                        Ext.Msg.alert('Failed', action.result.msg);
+                    }
+                });
+            }
+        }
+    }],
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.14. Textfield</h1>
+<!-- Chapter: Textfield -->
+
+
+<h2>1.14.1. What it is</h2>
+<p>A plain form field for entering text.</p>
+<p>But there is one important difference.
+A (text) field in Ext JS is the input field plus the label all together.</p>
+<p>Under the hood all fields are little html tables.
+Where the label is the left <code>&lt;td&gt;</code>.
+The field is the 2nd <code>&lt;td&gt;</code>.
+Optionally the 3rd <code>&lt;td&gt;</code> contains a trigger button.</p>
+
+
+<h2>1.14.2. Specs</h2>
+<h3>CSS Class: <code>.x-field-default</code> or <code>.x-form-type-text</code></h3>
+<h3><code>Ext.form.field.Text</code></h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-type-text</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+error (<code>.x-form-invalid</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>size</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>grow</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>growMin</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>growMax</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>emptyText</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>minLength</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>maxLength</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Text-cfg-blankText">http://http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Text-cfg-blankText</a></p>
+<img src="resources/images/textfield.png"  width="100%" >
+
+
+<h2>1.14.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    title: 'Contact Info',
+    width: 300,
+    bodyPadding: 10,
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'textfield',
+        name: 'name',
+        emptyText: "please enter name",
+        fieldLabel: 'Name',
+        allowBlank: false  // requires a non-empty value
+    }]
+});</pre>
+<h1>1.15. Textarea</h1>
+<!-- Chapter: Textarea -->
+
+
+<h2>1.15.1. What it is</h2>
+<p>A text field for entering multiple rows of text.
+In addition, it supports automatically growing the height of the textarea to fit its content.</p>
+
+
+<h2>1.15.2. Specs</h2>
+<h3>CSS Class: <code>.x-field-default</code> or <code>.x-form-type-text</code></h3>
+<h3>Ext.form.field.TextArea</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-type-text</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+error (<code>.x-form-invalid</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>rows</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>cols</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>growMin</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>growMax</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.TextArea">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.TextArea</a></p>
+<img src="resources/images/textarea.png"  width="100%" >
+
+
+<h2>1.15.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.FormPanel', {
+    title      : 'Sample TextArea',
+    width      : 400,
+    bodyPadding: 10,
+    renderTo   : Ext.getBody(),
+    items: [{
+        xtype     : 'textareafield',
+        grow      : true,
+        name      : 'message',
+        fieldLabel: 'Message',
+        anchor    : '100%'
+    }]
+});</pre>
+<h1>1.16. Combobox</h1>
+<!-- Chapter: Combobox -->
+
+
+<h2>1.16.1. What it is</h2>
+<p>A ComboBox control (is like a select dropdown) with support for autocomplete, remote loading, and many other features.</p>
+<p>A ComboBox is like a combination of a traditional HTML text &lt;input&gt; field and a &lt;select&gt; field; the user is able to type freely into the field, and/or pick values from a dropdown selection list. The user can input any value by default, even if it does not appear in the selection list.</p>
+
+
+<h2>1.16.2. Specs</h2>
+<h3>CSS Class: <code>.x-form-trigger-input-cell</code> (field), <code>.x-trigger-cell</code> (trigger) and <code>.x-boudlist</code> (list)</h3>
+<h3>Ext.form.field.ComboBox</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-type-text</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+error (<code>.x-form-invalid</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>growToLongestValue</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boundlist (<code>.x-boundlist</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>multiSelect</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>typeAhead</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>typeAheadDelay</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+arrow trigger (<code>.x-form-arrow-trigger</code>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.ComboBox">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.ComboBox</a></p>
+<img src="resources/images/combobox.png"  width="100%" >
+
+
+<h2>1.16.3. Example</h2>
+<pre class="runnable preview">// The data store containing the list of states
+var states = Ext.create('Ext.data.Store', {
+    fields: ['abbr', 'name'],
+    data : [
+        {"abbr":"AL", "name":"Alabama"},
+        {"abbr":"AK", "name":"Alaska"},
+        {"abbr":"AZ", "name":"Arizona"}
+        //...
+    ]
+});
+
+// Create the combo box, attached to the states data store
+Ext.create('Ext.form.ComboBox', {
+    fieldLabel: 'Choose State',
+    store: states,
+    queryMode: 'local',
+    displayField: 'name',
+    valueField: 'abbr',
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.17. Checkbox</h1>
+<!-- Chapter: Checkbox -->
+
+
+<h2>1.17.1. What it is</h2>
+<p>Single checkbox. To check one or more option boxes.</p>
+
+
+<h2>1.17.2. Specs</h2>
+<h3>CSS Class: <code>.x-form-type-checkbox</code></h3>
+<h3>Ext.form.field.Checkbox</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+checkbox (<code>.x-form-type-checkbox</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+checkbox wrapper (<code>.x-form-cb-wrap</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+checkbox (<code>.x-form-cb</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+checked
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+checkedCls
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+fieldCls
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+label (<code>.x-form-cb-label</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+afterBoxLabelTextTpl
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+beforeBoxLabelTextTpl
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boxLabel
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boxLabelAlign
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boxLabelCls
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Checkbox">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Checkbox</a></p>
+<img src="resources/images/checkbox.png"  width="100%" >
+
+
+<h2>1.17.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    items: [
+        {
+            xtype: 'fieldcontainer',
+            fieldLabel: 'Toppings',
+            defaultType: 'checkboxfield',
+            items: [
+                {
+                    boxLabel  : 'Anchovies',
+                    name      : 'topping',
+                    inputValue: '1',
+                    id        : 'checkbox1'
+                }, {
+                    boxLabel  : 'Artichoke Hearts',
+                    name      : 'topping',
+                    inputValue: '2',
+                    checked   : true,
+                    id        : 'checkbox2'
+                }, {
+                    boxLabel  : 'Bacon',
+                    name      : 'topping',
+                    inputValue: '3',
+                    id        : 'checkbox3'
+                }
+            ]
+        }
+    ],
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.18. Radio</h1>
+<!-- Chapter: Radio -->
+
+
+<h2>1.18.1. What it is</h2>
+<p>Single radio field. Similar to checkbox but pick only one option field.</p>
+
+
+<h2>1.18.2. Specs</h2>
+<h3>CSS Class: <code>.x-form-type-radio</code></h3>
+<h3>Ext.form.field.Radio</h3>
+<p>Extends from <code>Ext.form.field.Base</code> and <code>Ext.form.field.CheckBox</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+checkbox (<code>.x-form-type-radio</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+checkbox wrapper (<code>.x-form-cb-wrap</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+checkbox (<code>.x-form-cb</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+checked
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+checkedCls
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+fieldCls
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+label (<code>.x-form-cb-label</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+afterBoxLabelTextTpl
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+beforeBoxLabelTextTpl
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boxLabel
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boxLabelAlign
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boxLabelCls
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Radio">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Radio</a></p>
+<img src="resources/images/radio.png"  width="100%" >
+
+
+<h2>1.18.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    title      : 'Order Form',
+    width      : 300,
+    bodyPadding: 10,
+    renderTo   : Ext.getBody(),
+    items: [
+        {
+            xtype      : 'fieldcontainer',
+            fieldLabel : 'Size',
+            defaultType: 'radiofield',
+            defaults: {
+                flex: 1
+            },
+            layout: 'hbox',
+            items: [
+                {
+                    boxLabel  : 'M',
+                    name      : 'size',
+                    inputValue: 'm',
+                    id        : 'radio1'
+                }, {
+                    boxLabel  : 'L',
+                    name      : 'size',
+                    inputValue: 'l',
+                    id        : 'radio2'
+                }, {
+                    boxLabel  : 'XL',
+                    name      : 'size',
+                    inputValue: 'xl',
+                    id        : 'radio3'
+                }
+            ]
+        }
+
+    ]
+});</pre>
+<h1>1.19. Datefield</h1>
+<!-- Chapter: Datefield -->
+
+
+<h2>1.19.1. What it is</h2>
+<p>Provides a date input field with a date picker dropdown and automatic date validation.</p>
+
+
+<h2>1.19.2. Specs</h2>
+<h3>CSS Class: <code>.x-form-trigger-input-cell</code> (field), <code>.x-trigger-cell</code> (trigger) and <code>.x-datepicker</code> (calendar)</h3>
+<h3>Ext.form.field.Date</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-type-text</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+date trigger (<code>.x-form-date-trigger</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+calendar (<code>.x-datapicker</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>showToday</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>startDay</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>matchFieldWidth</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>altFormats</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>disabledDates</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>disabledDays</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>format</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Date">http://http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Date</a></p>
+<img src="resources/images/date.png"  width="100%" >
+
+
+<h2>1.19.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    width: 300,
+    bodyPadding: 10,
+    title: 'Dates',
+    items: [{
+        xtype: 'datefield',
+        anchor: '100%',
+        fieldLabel: 'To',
+        name: 'to_date',
+        value: new Date()  // defaults to today
+    }]
+});</pre>
+<h1>1.20. Displayfield</h1>
+<!-- Chapter: Displayfield -->
+
+
+<h2>1.20.1. What it is</h2>
+<p>A display-only text field which is not validated and not submitted. This is useful for when you want to display a value from a form&#8217;s loaded data but do not want to allow the user to edit or submit that value.</p>
+
+
+<h2>1.20.2. Specs</h2>
+<h3>CSS Class: <code>.x-field-default</code> or <code>.x-form-readonly</code></h3>
+<h3>Ext.form.field.Display</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-readonly</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>htmlEncode</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>fieldCls</code>+
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Display">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Display</a></p>
+<img src="resources/images/display.png"  width="100%" >
+
+
+<h2>1.20.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'displayfield',
+        fieldLabel: 'Home',
+        name: 'home_score',
+        value: '10'
+    }]
+});</pre>
+<h1>1.21. Fileupload</h1>
+<!-- Chapter: Fileupload -->
+
+
+<h2>1.21.1. What it is</h2>
+<p>A file upload field which has custom styling and allows control over the button text and other features of text fields like empty text. It uses a hidden file input element behind the scenes to allow user selection of a file and to perform the actual upload during form submit.</p>
+
+
+<h2>1.21.2. Specs</h2>
+<h3>CSS Class: <code>.x-field-default</code> or <code>.x-form-readonly</code></h3>
+<h3>Ext.form.field.File</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-readonly</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+trigger button (<code>.x-form-trigger-input-cell</code>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.File">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.File</a></p>
+<img src="resources/images/file.png"  width="100%" >
+
+
+<h2>1.21.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'filefield',
+        name: 'photo',
+        fieldLabel: 'Photo',
+        labelWidth: 50,
+        msgTarget: 'side',
+        allowBlank: false,
+        anchor: '100%',
+        buttonText: 'Select Photo...'
+    }]
+});</pre>
+<h1>1.22. Numberfield</h1>
+<!-- Chapter: Numberfield -->
+
+
+<h2>1.22.1. What it is</h2>
+<p>A numeric text field that provides automatic keystroke filtering to disallow non-numeric characters, and numeric validation to limit the value to a range of valid numbers. The range of acceptable number values can be controlled by setting the minValue and maxValue configs, and fractional decimals can be disallowed by setting allowDecimals to false.</p>
+
+
+<h2>1.22.2. Specs</h2>
+<h3>CSS Class: <code>.x-field-default</code> or <code>.x-form-type-text</code></h3>
+<h3>Ext.form.field.Number</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-readonly</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>minValue</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>maxValue</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+trigger button (<code>.x-form-trigger</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>hideTrigger</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>keyNavEnabled</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>mouseWheelEnabled</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Number">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Number</a></p>
+<img src="resources/images/number.png"  width="100%" >
+
+
+<h2>1.22.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'numberfield',
+        anchor: '100%',
+        name: 'bottles',
+        fieldLabel: 'Bottles of Beer',
+        value: 99,
+        maxValue: 99,
+        minValue: 0
+    }]
+});</pre>
+<h1>1.23. Spinnerfield</h1>
+<!-- Chapter: Spinnerfield -->
+
+
+<h2>1.23.1. What it is</h2>
+<p>A field with a pair of up/down spinner buttons. This class is not normally instantiated directly, instead it is subclassed and the onSpinUp and onSpinDown methods are implemented to handle when the buttons are clicked. A good example of this is the Ext.form.field.Number field which uses the spinner to increment and decrement the field&#8217;s value by its step config value.</p>
+
+
+<h2>1.23.2. Specs</h2>
+<h3>CSS Class: <code>.x-field-default</code> or <code>.x-form-type-text</code></h3>
+<h3>Ext.form.field.Spinner</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-readonly</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>spinDownEnabled</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>spinUpEnabled</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+trigger button (<code>.x-form-trigger</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>hideTrigger</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>keyNavEnabled</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>mouseWheelEnabled</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Spinner">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Spinner</a></p>
+<img src="resources/images/spinner.png"  width="100%" >
+
+
+<h2>1.23.3. Example</h2>
+<pre class="runnable preview">Ext.define('Ext.ux.CustomSpinner', {
+    extend: 'Ext.form.field.Spinner',
+    alias: 'widget.customspinner',
+
+    // override onSpinUp (using step isn't neccessary)
+    onSpinUp: function() {
+        var me = this;
+        if (!me.readOnly) {
+            var val = parseInt(me.getValue().split(' '), 10)||0; // gets rid of " Pack", defaults to zero on parse failure
+            me.setValue((val + me.step) + ' Pack');
+        }
+    },
+
+    // override onSpinDown
+    onSpinDown: function() {
+        var me = this;
+        if (!me.readOnly) {
+           var val = parseInt(me.getValue().split(' '), 10)||0; // gets rid of " Pack", defaults to zero on parse failure
+           if (val &lt;= me.step) {
+               me.setValue('Dry!');
+           } else {
+               me.setValue((val - me.step) + ' Pack');
+           }
+        }
+    }
+});
+
+Ext.create('Ext.form.FormPanel', {
+    renderTo: Ext.getBody(),
+    items:[{
+        xtype: 'customspinner',
+        fieldLabel: 'How Much Beer?',
+        step: 6
+    }]
+});</pre>
+<h1>1.24. Timefield</h1>
+<!-- Chapter: Timefield -->
+
+
+<h2>1.24.1. What it is</h2>
+<p>Provides a time input field with a time dropdown and automatic time validation.</p>
+
+
+<h2>1.24.2. Specs</h2>
+<h3>CSS Class: <code>.x-form-trigger-input-cell</code> (field), <code>.x-trigger-cell</code> (trigger) and <code>.x-boudlist</code> (list)</h3>
+<h3>Ext.form.field.Time</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+formfield (<code>.x-field-default</code> or <code>.x-form-type-text</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+boundlist (<code>.x-boundlist</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>increment</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>format</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>pickerMaxHeight</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+arrow trigger (<code>.x-form-arrow-trigger</code>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Time">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.Time</a></p>
+<img src="resources/images/combobox.png"  width="100%" >
+
+
+<h2>1.24.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'timefield',
+        name: 'in',
+        fieldLabel: 'Time In',
+        minValue: '6:00 AM',
+        maxValue: '8:00 PM',
+        increment: 30,
+        anchor: '100%'
+    }]
+});</pre>
+<h1>1.25. Slider</h1>
+<!-- Chapter: Slider -->
+
+
+<h2>1.25.1. What it is</h2>
+<p>Slider which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.</p>
+
+
+<h2>1.25.2. Specs</h2>
+<h3>CSS Class: <code>.x-slider</code></h3>
+<h3>Ext.slider.Single</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+slider (<code>.x-slider</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+slider thumb (<code>.x-slider-thumb</code>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.slider.Single">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.slider.Single</a></p>
+<img src="resources/images/slider.png"  width="100%" >
+
+
+<h2>1.25.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.slider.Single', {
+    width: 200,
+    value: 50,
+    increment: 10,
+    minValue: 0,
+    maxValue: 100,
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.26. Multi Slider</h1>
+<!-- Chapter: Multi Slider -->
+
+
+<h2>1.26.1. What it is</h2>
+<p>Slider with multiple thumbs which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.</p>
+
+
+<h2>1.26.2. Specs</h2>
+<h3>CSS Class: Ext.slider.Multi</h3>
+<h3>Ext.slider.Multi</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+slider (<code>.x-slider</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+slider thumb (<code>.x-slider-thumb</code>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.slider.Multi">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.slider.Multi</a></p>
+<img src="resources/images/multi.png"  width="100%" >
+
+
+<h2>1.26.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.slider.Multi', {
+    width: 200,
+    values: [25, 50, 75],
+    increment: 5,
+    minValue: 0,
+    maxValue: 100,
+
+    // this defaults to true, setting to false allows the thumbs to pass each other
+    constrainThumbs: false,
+    renderTo: Ext.getBody()
+});</pre>
+<h1>1.27. HTML Editor</h1>
+<!-- Chapter: HTML Editor -->
+
+
+<h2>1.27.1. What it is</h2>
+<p>Provides a lightweight HTML Editor component. Some toolbar features are not supported by Safari and will be automatically hidden when needed. These are noted in the config options where appropriate.</p>
+
+
+<h2>1.27.2. Specs</h2>
+<h3>CSS Class: <code>.x-html-editor-container</code></h3>
+<h3>Ext.form.field.HtmlEditor</h3>
+<p>Extends from <code>Ext.form.field.Base</code></p>
+<ul>
+<!----><li>
+<!--    --><p>
+editor (<code>x-html-editor-container</code>)
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+enableAlignments
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+enableColors
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+enableFont
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+enableFontSize
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+enableFormat
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+enableLinks
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+enableLists
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+enableSourceEdit
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+fontFamilies
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.HtmlEditor">http://docs.sencha.com/extjs/4.2.2/#!/api/Ext.form.field.HtmlEditor</a></p>
+
+
+<h2>1.27.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.HtmlEditor', {
+    width: 580,
+    height: 250,
+    renderTo: Ext.getBody()
+});</pre>
+<h1>Overview layout system</h1>
+<h1>2.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Get familiar with the Ext layout system
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Review important layout specs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Preview Ext layouts
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>2.2. Hbox</h1>
+<!-- Chapter: Hbox -->
+
+
+<h2>2.2.1. What&#8217;s it?</h2>
+<p>A light weight horizontal box layout.
+This layout optionally divides available horizontal space between child items containing a numeric flex configuration.</p>
+
+
+<h2>2.2.2. Specs</h2>
+<p>Class: <code>Ext.layout.container.HBox</code> (<code>layout:hbox</code>)</p>
+<img src="resources/images/hbox.png"  width="100%" >
+<p>See also
+<a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.HBox">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.HBox</a></p>
+
+
+<h2>2.2.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+
+    layout : {
+        type: 'hbox',
+        align: 'middle',
+        pack : 'end'
+    },
+
+    defaults: {
+        style: 'background: red',
+        margin: 5,
+        xtype: 'container',
+        width: 50,
+        height: 50
+    },
+    items : [ {
+        html : 'Panel One'
+    }, {
+        html : 'Panel Two'
+    }, {
+        html : 'Panel Three'
+    } ],
+
+    height : 300,
+    width : 500,
+    renderTo : Ext.getBody()
+});</pre>
+
+
+<h2>2.2.4. Height and Width</h2>
+<p>It&#8217;s actually not so common to set height and widths on panels.
+Because of different screensizes, you rather have your layouts flexible.</p>
+
+
+<h2>2.2.5. Flex</h2>
+<p>To create dynamic (flexible) widths.</p>
+<p>Let’s say, if you have a container.  And the left panel takes up 25% height. And the right panel takes up 75%. (that’s together 100%).
+In this case, we could say 25% is one 1/4 And 75% is 3/4.
+So 1 + 3 = 4.</p>
+<p>In that case the left panel would have <code>flex: 1</code>.
+The right panel would have <code>flex: 3</code>.</p>
+
+
+<h2>2.2.6. Example</h2>
+<p>This example first deducts 100px from the total 100%.
+Then it calculates the flexes.</p>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+
+    layout : {
+        type: 'hbox',
+        align: 'middle',
+        pack : 'end'
+    },
+
+    defaults: {
+        style: 'background: red',
+        margin: 5,
+        xtype: 'container',
+    },
+    items : [ {
+        html : 'Panel Left',
+        flex: 1
+    }, {
+        html : 'Panel Two'
+        width: 100
+    }, {
+        html : 'Panel Three',
+        flex: 3
+    } ],
+
+    height : 300,
+    width : 500,
+    renderTo : Ext.getBody()
+});</pre>
+<h3>Align</h3>
+<span class="title">Vertical alignment</span><ul>
+<!----><li>
+<!--    --><p>
+<code>align</code> (defaults to <em>top</em>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><code>top</code> : child items are aligned vertically at the top of the container.<br>
+<code>middle</code> : child items are aligned vertically in the middle of the container.<br>
+<code>bottom</code> : child items are aligned vertically at the bottom of the container.<br>
+<code>stretch</code> : child items are stretched vertically to fill the height of the container.<br>
+<code>stretchmax</code> : child items are stretched vertically to the height of the largest item.</p>
+<h3>Pack</h3>
+<span class="title">Horizontal alignment</span><ul>
+<!----><li>
+<!--    --><p>
+<code>align</code> (defaults to <em>start</em>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><code>start</code> : child items are packed together at the left side of container.<br>
+<code>center</code> : child items are packed together at mid-width of container.<br>
+<code>end</code> : child items are packed together at right side of container.</p>
+<h1>2.3. Vbox</h1>
+<!-- Chapter: Vbox -->
+
+
+<h2>2.3.1. What&#8217;s it?</h2>
+<p>A light weight vertical box layout.
+This layout optionally divides available vertical space between child items containing a numeric flex configuration.</p>
+
+
+<h2>2.3.2. Specs</h2>
+<p>Class: <code>Ext.layout.container.VBox</code> (<code>layout:vbox</code>)</p>
+<img src="resources/images/vbox.png"  width="100%" >
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.VBox">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.VBox</a></p>
+
+
+<h2>2.3.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+
+    layout : {
+        type: 'vbox',
+        align: 'center',
+        pack : 'end'
+    },
+
+    defaults: {
+        style: 'background: red',
+        margin: 5,
+        xtype: 'container',
+        width: 200,
+        height: 50
+    },
+    items : [ {
+        html : 'Panel One'
+    }, {
+        html : 'Panel Two'
+    }, {
+        html : 'Panel Three'
+    } ],
+
+    height : 300,
+    width : 500,
+    renderTo : Ext.getBody()
+});</pre>
+<pre class="runnable preview">Ext.create('Ext.Panel', {
+    width: 500,
+    height: 300,
+    layout: {
+        type: 'vbox',
+        align: 'stretch'
+    },
+    renderTo: document.body,
+    defaults: {
+        style: 'background: red',
+        margin: 5
+    },
+    items: [{
+        xtype: 'container',
+        flex: 2
+    },{
+        xtype: 'container',
+        flex: 1
+    },{
+        xtype: 'container',
+        flex: 1
+    }]
+});</pre>
+<h3>Align</h3>
+<span class="title">Horizontal alignment.</span><ul>
+<!----><li>
+<!--    --><p>
+<code>align</code> (defaults to <em>left</em>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><code>left</code> : child items are aligned horizontally at the left of the container.<br>
+<code>center</code> : child items are aligned horizontally at the mid-width of the container.<br>
+<code>right</code> : child items are aligned horizontally at the right of the container.<br>
+<code>stretch</code> : child items are stretched horizontally to fill the width of the container.<br>
+<code>stretchmax</code> : child items are stretched horizontally to the width of the largest item.</p>
+<h3>Pack</h3>
+<span class="title">Vertical alignment.</span><ul>
+<!----><li>
+<!--    --><p>
+<code>pack</code> (defaults to <em>start</em>)
+<!--    --></p>
+<!----></li>
+</ul>
+<p><code>start</code> : child items are packed together at the top of container.<br>
+<code>center</code> : child items are packed together at mid-height of container.<br>
+<code>end</code> : child items are packed together at bottom of container.</p>
+<h1>2.4. Border</h1>
+<!-- Chapter: Border -->
+
+
+<h2>2.4.1. What&#8217;s it?</h2>
+<p>This is a multi-pane, application-oriented UI layout style that supports multiple nested panels, automatic bars between regions and built-in expanding and collapsing of regions.</p>
+
+
+<h2>2.4.2. Specs</h2>
+<p>Class: <code>Ext.layout.container.Border</code> (<code>layout:border</code>)</p>
+<img src="resources/images/border.png"  width="100%" >
+<p>See also
+<a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Border">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Border</a></p>
+
+
+<h2>2.4.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+    layout : 'border',
+    items : [ {
+        title : 'West',
+        region : 'west',
+        width : 60
+    }, {
+        title : 'East',
+        region : 'east',
+        width : 60
+    }, {
+        title : 'South',
+        region : 'south',
+        height : 60
+    }, {
+        title : 'North',
+        region : 'north',
+        height : 60
+    }, {
+        title : 'Center',
+        region : 'center'
+    } ],
+
+    title : 'Border Layout Panel',
+    defaults : {margin : 4},
+    bodyPadding : 8,
+    height : 300, width : 600,
+    renderTo : Ext.getBody()
+});</pre>
+<h3>How it works</h3>
+<p>Border layouts are designed to layout child panels. There is a primary center child, and other children relative to the center.</p>
+<p>Children may be at the <code>west</code>, <code>north</code>, <code>east</code> or <code>south</code>, specified via <code>region</code> on each child. A center child is required; the other positions are optional.</p>
+<h3>Resizing Children</h3>
+<p>Child panels may be resized by tagging them with <code>split : true</code>.</p>
+<p>When using the split option, the layout will automatically insert a <code>Ext.resizer.Splitter</code> into the appropriate place. This will modify the underlying items collection in the container.</p>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+
+    layout : 'border',
+
+    items : [ {
+        title : 'West (resizable)',
+        region : 'west',
+        split : true,
+        width : 100
+    }, {
+        title : 'East',
+        region : 'east',
+        width : 60
+    }, {
+        title : 'South (resizable)',
+        region : 'south',
+        split : true,
+        height : 60
+    }, {
+        title : 'North',
+        region : 'north',
+        height : 60
+    }, {
+        title : 'Center',
+        region : 'center'
+    } ],
+
+    title : 'Border Layout Panel',
+    bodyPadding : 8,
+    height : 340, width : 600,
+    renderTo : Ext.getBody()
+});</pre>
+<h3>Collapsible childeren</h3>
+<p>Adjacent panels resize properly when child panels are collapsed. Furthermore, you can specify <code>collapseMode : <em>mini</em></code> to have the panel fully collapse and hide its header.</p>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+
+    layout : 'border',
+
+    items : [ {
+        title : 'North',
+        region : 'north',
+
+        collapsible : true,
+
+        height : 80
+    }, {
+        title : 'South (collapseMode : \'mini\')',
+        region : 'south',
+
+        collapsible : true,
+        collapseMode : 'mini',
+
+        height : 80
+    }, {
+        title : 'Center',
+        region : 'center'
+    } ],
+
+    title : 'Border Layout Panel',
+    bodyPadding : 8,
+    height : 340, width : 400,
+    renderTo : Ext.getBody()
+});</pre>
+<h3>Weights</h3>
+<p>The region weight determine the priority / weight of each column.
+(You can compare this with HTML tables, where you could set rowspan and colspan, to stretch out columns or rows (although these layouts are of course no tables.)</p>
+<p>It works a bit like in CSS where you have Z-index.  An element with a greater stack order is always in front of element with a lower stack order. Who is the boss of the spot.
+There is just one spot. – And you stack on top of each other.</p>
+<p>Now with a border layout, you have to check who is the boss over one of the 4 spots.
+The four spots are the corners.</p>
+<table class="tableblock frame-all grid-all"
+style="
+width:100%;
+">
+<col style="width:33%;">
+<col style="width:33%;">
+<col style="width:33%;">
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" >WN</th>
+<th class="tableblock halign-left valign-top" >N</th>
+<th class="tableblock halign-left valign-top" >NE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">W</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">E</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">WS</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">S</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">SE</p></td>
+</tr>
+</tbody>
+</table>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+    layout : 'border',
+    items : [ {
+        title : 'West',
+        region : 'west',
+        width : 60
+    }, {
+        title : 'East',
+        region : 'east',
+        width : 60,
+        weight: 20
+    }, {
+        title : 'South',
+        region : 'south',
+        height : 60,
+        weight: 10
+    }, {
+        title : 'North',
+        region : 'north',
+        height : 60,
+        weight: 30
+    }, {
+        title : 'Center',
+        region : 'center',
+    } ],
+
+    title : 'Weight Test',
+    defaults : {margin : 4},
+    bodyPadding : 8,
+    height : 300, width : 600,
+    renderTo : Ext.getBody()
+});</pre>
+<h1>2.5. Fit</h1>
+<!-- Chapter: Fit -->
+
+
+<h2>2.5.1. What&#8217;s it?</h2>
+<p>A layout that can only be used for containers that contain one single item.
+It will automatically expand to fill the full layout container.</p>
+
+
+<h2>2.5.2. Specs</h2>
+<p>Class: <code>http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Fit</code> (<code>layout: fit</code>)</p>
+<img src="resources/images/fit.png"  width="100%" >
+<p>See also
+<a href="http://docs.sencha.com/extjs/4.2.1/#!/api/TODO">http://docs.sencha.com/extjs/4.2.1/#!/api/TODO</a></p>
+
+
+<h2>2.5.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+    height: 300,
+    width: 300,
+    bodyPadding: 10,
+
+    layout : 'fit',
+    items : [{
+        xtype : 'component',
+        style : {'background-color' : 'red'}
+    }],
+    renderTo: Ext.getBody()
+});</pre>
+<h1>2.6. Card</h1>
+<!-- Chapter: Card -->
+
+
+<h2>2.6.1. What&#8217;s it?</h2>
+<p>This layout manages multiple child Components, each fitted to the Container, where only a single child Component can be visible at any given time. This layout style is most commonly used for wizards, tab implementations, etc.</p>
+
+
+<h2>2.6.2. Specs</h2>
+<p>Class: <code>Ext.layout.container.Card</code> (<code>layout:card</code>)</p>
+<img src="resources/images/card.png"  width="100%" >
+<p>See also
+<a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Card">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Card</a></p>
+
+
+<h2>2.6.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+
+    layout : 'card',
+
+    items : [ {
+        style: 'background: red'
+    }, {
+        style: 'background: green'
+    }, {
+        style: 'background: blue'
+    } ],
+    buttons : [ {
+        text : '&lt;',
+        handler : function(b) {
+            b.up('panel').getLayout().prev();
+        }
+    }, {
+        text : '&gt;',
+        handler : function(b) {
+            b.up('panel').getLayout().next();
+        }
+    } ],
+
+    bodyPadding : 5,
+    defaults : {
+        xtype: 'component'
+    },
+    height : 200,
+    width : 200,
+    renderTo : Ext.getBody()
+
+});</pre>
+
+
+<h2>2.6.4. How it works</h2>
+<p>Since only one panel is displayed at a time, the only way to move from one Component to the next is by calling <code>setActiveItem()</code> on the layout of the Container, passing the next panel to display (or its id or index). The layout itself does not provide a user interface for handling this navigation, so that functionality must be provided by the developer.</p>
+<h1>2.7. Anchor</h1>
+<!-- Chapter: Anchor -->
+
+
+<h2>2.7.1. What&#8217;s it?</h2>
+<p>A layout mostly used in forms. With the anchor layout
+you can specify the width and heights per field
+in percentages relative to the container&#8217;s dimensions.</p>
+
+
+<h2>2.7.2. Specs</h2>
+<p>Class: <code>Ext.layout.container.Anchor</code> (<code>layout:anchor</code>)</p>
+<img src="resources/images/anchor.png"  width="100%" >
+<p>See also:
+<a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Anchor">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Anchor</a></p>
+
+
+<h2>2.7.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    title: 'Form Panel with anchor layout',
+    bodyPadding: 5,
+    width: 350,
+
+    layout: 'anchor',
+    defaults: {
+        anchor: '100%'
+    },
+
+    defaultType: 'textfield',
+    items: [{
+        fieldLabel: 'First Name',
+        name: 'first',
+        allowBlank: false,
+        anchor: '70%'
+    },{
+        fieldLabel: 'Last Name',
+        name: 'last',
+        allowBlank: false
+    },
+    {
+        fieldLabel: 'Age',
+        name: 'age',
+        allowBlank: false,
+        anchor: '40%'
+    }],
+    renderTo: Ext.getBody()
+});</pre>
+<h3>How it works</h3>
+<p>Specify one String where the first percentage points to the width
+(relative to the container&#8217;s dimensions) and the second percentage to
+the height.</p>
+<p>It is possible to enter pixels. A negative pixel value will deduct the
+amount of pixels from the 100% container height or width.
+A positive pixel value will add it on top of the 100% (which usually don&#8217;t make sense).</p>
+<h1>2.8. Column</h1>
+<!-- Chapter: Column -->
+
+
+<h2>2.8.1. What&#8217;s it?</h2>
+<p>Another layout that&#8217;s mostly used in forms to create columns.
+It&#8217;s possible to define a <code>columnWidth</code> per container item.</p>
+
+
+<h2>2.8.2. Specs</h2>
+<p>Class: <code>Ext.layout.container.Column</code> (<code>layout:column</code>)</p>
+<img src="resources/images/column.png"  width="100%" >
+<p>See also
+<a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Column">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Column</a></p>
+
+
+<h2>2.8.3. Example</h2>
+<pre class="runnable preview">Ext.create('Ext.form.Panel', {
+    title: 'Column Layout',
+    bodyPadding: 8,
+    labelWidth: 80,
+    width: 550,
+    layout:'column',
+    defaults:{
+        xtype: 'textfield',
+        padding: 3,
+        columnWidth: 0.33,   //change this to 0.33
+    },
+    items: [{
+        fieldLabel: 'First Name',
+    },{
+        fieldLabel: 'Middle Name',
+    },{
+        fieldLabel: 'Last Name',
+    },{
+        fieldLabel: 'Nick Name',
+    }, {
+        fieldLabel: 'Age'
+    },
+    {
+        fieldLabel: 'Phone'
+    }],
+    renderTo: Ext.getBody()
+});</pre>
+<h3>How it works</h3>
+<p>ColumnWidth values map percentages but needs to be specified as values between 0 to 1.
+Ext will automatically calculate columns, from left to right.
+Keep in mind, that paddings are included within each width.</p>
+<h1>Overview of all out of the box themes</h1>
+<h1>3.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Learn theming inheritance
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Overview out of the box themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+How to switch themes
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>3.2. Themes are packages</h1>
+<!-- Chapter: Themes are packages -->
+<p>In Ext JS 4.2, themes, plugins and locales are packages.</p>
+<p>Since themes are packages, you can share the themes with other applications.</p>
+<h1>3.3. Theme Inheritance</h1>
+<!-- Chapter: Theme Inheritance -->
+<p>A theme always extends from the base theme. The base theme defines basic things like the layout.</p>
+<img src="resources/images/overviewthemes_inheritance1.png"  width="100%" >
+<h1>3.4. Overview Themes</h1>
+<!-- Chapter: Overview Themes -->
+
+
+<h2>3.4.1. Base Theme</h2>
+<p>When creating your own theme, you typically wouldn&#8217;t extend
+from Base, although it is possible.</p>
+<p>When you extend from Base, you have to style every Ext JS
+component yourself. It will cost you more time but the
+result is that you have a fully custom theme.</p>
+<p>It contains the bare minimum set of CSS rules that are absolutely required for Ext JS Components and Layouts to work correctly.</p>
+<p>The <strong>Base</strong> Theme is subclassed by all other themes.</p>
+
+
+<h2>3.4.2. Neutral Theme</h2>
+<p>Contains all the Sencha variables and style rules
+used by the custom themes.</p>
+<p>The Neutral theme extends from the <strong>Base</strong> theme.</p>
+
+
+<h2>3.4.3. Neptune Theme</h2>
+<p>Modern borderless theme.</p>
+<p>The Neptune theme extends form the <strong>Neutral</strong> theme.</p>
+<img src="resources/images/overviewthemes_neptune.png"  width="100%" >
+
+
+<h2>3.4.4. Neptune RTL Theme Example</h2>
+<p>Text from right to left, support.</p>
+<img src="resources/images/overviewthemes_neptune_rtl.png"  width="100%" >
+
+
+<h2>3.4.5. Classic Theme</h2>
+<p>Classic theme, replica of the old Ext 3 theme.</p>
+<p>The Classic theme also extends form the <strong>Neutral</strong> theme.</p>
+<img src="resources/images/overviewthemes_classic.png"  width="100%" >
+
+
+<h2>3.4.6. Classic Themes</h2>
+<p>Two other themes, gray and accessibility, extend from the classic theme.</p>
+<img src="resources/images/overviewthemes_inheritance2.png"  width="100%" >
+
+
+<h2>3.4.7. Gray Theme</h2>
+<p>Classic theme with a gray base color.</p>
+<p>The Gray theme extends from the <strong>Classic</strong> theme.</p>
+<img src="resources/images/overviewthemes_gray.png"  width="100%" >
+
+
+<h2>3.4.8. Accessibility Theme</h2>
+<p>Classic theme optimized for accessibility.</p>
+<p>The Accessibility theme extends from the <strong>Classic</strong> theme.</p>
+<img src="resources/images/overviewthemes_access.png"  width="100%" >
+
+
+<h2>3.4.9. FUTURE: Neptune Touch Theme</h2>
+<p>Comming soon.</p>
+<p>Touch support.
+(for example, icons are bigger)</p>
+<img src="resources/images/overviewthemes_neptune_touch.png"  width="100%" >
+
+
+<h2>3.4.10. FUTURE: Crisp Touch Theme</h2>
+<p>Comming soon.</p>
+<p>Touch support.
+(for example, icons are bigger)</p>
+<img src="resources/images/overviewthemes_crisp.png"  width="100%" >
+<h1>3.5. Switching themes</h1>
+<!-- Chapter: Switching themes -->
+<p>When you generate an application with Sencha Cmd,
+by default the <strong>Classic</strong> theme is used.</p>
+<p>How can you switch themes?</p>
+
+
+<h2>3.5.1. Don&#8217;t touch the &lt;style&gt; tag</h2>
+<p>What&#8217;s common in lots of web applications, is not so common in Ext JS.
+When you want to switch your theme, you <strong>do not change
+the <code>&lt;style&gt;</code></strong> in the <em>index.html</em> file.</p>
+<img src="resources/images/overviewthemes_switch1.png"  width="100%" >
+
+
+<h2>3.5.2. How to switch?</h2>
+<p>Since Ext 4.2.2. and Sencha Cmd 4,
+the easiest way to switch a theme in your application, is by adding the
+<code>"theme"</code> property to <em>myapp/app.json</em>.</p>
+<pre class="runnable preview">{
+    "name": "ExtReader",
+
+    "requires": [],
+
+    "theme" : "Goggles",
+}</pre>
+<span class="title">Optional values are</span><ul>
+<!----><li>
+<!--    --><p>
+ext-theme-classic
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+ext-theme-gray
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+ext-theme-access
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+ext-theme-neptune
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+[your own custom theme?]
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>3.5.3. How to switch?</h2>
+<p>Before Ext 4.2.2. &amp; Sencha Cmd 4; you had to switch an Ext 4.x theme by opening
+a hidden sencha config file.</p>
+<p>To configure your app to use a different theme,
+change the following line in <em>[myapp]/.sencha/app/sencha.cfg</em></p>
+<pre class="runnable preview">app.theme=ext-theme-classic</pre>
+
+
+<h2>3.5.4. Example</h2>
+<img src="resources/images/overviewthemes_switch2.png"  width="100%" >
+
+
+<h2>3.5.5. Enable hidden files</h2>
+<p>Can&#8217;t find the <em>.sencha</em> hidden folder?
+Try to enable hidden files in your OS.</p>
+<span class="title">Mac OSX</span><ul>
+<!----><li>
+<!--    --><p>
+Type the following command in your terminal:<br>
+<code>defaults write com.apple.finder AppleShowAllFiles TRUE</code><br>
+<code>killall Finder</code><br>
+(running these commands with <code>FALSE</code> will hide the files again)
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Windows 7</span><ul>
+<!----><li>
+<!--    --><p>
+Go to: <strong>Control Panel</strong> &gt; <strong>Appearance and Personalization</strong> &gt;
+<strong>Folders Options</strong> &gt; <em>Link: Show hidden files and folders</em><br>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Select the radio button labeled <strong>Show hidden files, folders, and drives.</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Remove the checkmark from the checkbox labeled <strong>Hide extensions for known file types.</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Remove the checkmark from the checkbox labeled <strong>Hide protected operating system files (Recommended).</strong>
+<!--    --></p>
+<!----></li>
+</ul>
+<img src="resources/images/appendix_win_showhidden.jpg"  width="100%" >
+
+
+<h2>3.5.6. Build Theme</h2>
+<p>When you have already run a build of the app using the classic theme, you should clean the build directory.</p>
+<pre class="runnable preview">sencha ant clean</pre>
+<p>Then build the app:</p>
+<pre class="runnable preview">sencha app build</pre>
+<h1>3.6. Lab: Switch from Classic to Neptune theme</h1>
+<!-- Chapter: Lab: Switch from Classic to Neptune theme -->
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Verify Sencha Cmd version number
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Switch themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build application
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Confirm Sencha Cmd version. It should have version 4.0.x</strong>
+<!--    --></p>
+<p><code>sencha which</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Confirm your app looks like <a href="#lab1_classic">[lab1_classic]</a>. It has the Classic theme by default and no specific app styling.</strong>
+<!--    --></p>
+<img src="resources/images/extreader-classic.png"  width="100%" >
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your editor the following file /extreader/.sencha/app/sencha.cfg</strong>
+<!--    --></p>
+<p>Please note, the <em>.sencha</em> folder is a hidden folder.
+You need to change the visibility of hidden folders for your OS.</p>
+<pre class="runnable preview">*Mac users*:
++
+Make hidden files visible.
+To achieve this, type the following command in your terminal: +
+`defaults write com.apple.finder AppleShowAllFiles TRUE` +
+`killall Finder` +
+(running these commands with FALSE will disable showing hidden files again)
+
+*Windows users*:
++
+TODO</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Switch the app.theme to the out of the box Neptune theme:</strong>
+<!--    --></p>
+<p><code># The name of the package containing the theme scss for the app</code></p>
+<p><code>app.theme=ext-theme-classic</code></p>
+<p>to</p>
+<p><code>app.theme=ext-theme-neptune</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the app, to see the changes:</strong>
+<!--    --></p>
+<p>Run the following command on the CLI, from the <em>extreader</em> folder:</p>
+<p><code>sencha app build</code></p>
+<p>Your ExtReader application should look like <a href="#lab1_neptune">[lab1_neptune]</a>:</p>
+<img src="resources/images/extreader-neptune.png"  width="100%" >
+<!----></li>
+</ol>
+<h1>Generating custom themes</h1>
+<h1>4.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Learn how to generate themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Understand the package folder structure
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to extend from Sencha themes
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>4.2. Generating themes</h1>
+<!-- Chapter: Generating themes -->
+<p>When you want to create a new custom theme, you can
+generate a starting point with Sencha Cmd.</p>
+
+
+<h2>4.2.1. About the Command Line</h2>
+<p>Sencha Cmd is a tool on the command line (CLI).
+You will use your Windows Console or Mac Terminal for this.</p>
+<span class="title">Windows</span><ul>
+<!----><li>
+<!--    --><p>
+<strong>Start</strong> &gt; <strong>Run</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Type: <code>cmd</code> and press <em>ok</em>
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Mac OSX</span><ul>
+<!----><li>
+<!--    --><p>
+<strong>Applications</strong> &gt; <strong>Utils</strong> &gt; <strong>Terminal</strong>
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>4.2.2. About Sencha Cmd</h2>
+<span class="title">Sencha Cmd is a command-line tool that makes it quick and easy to do several application-development tasks.</span><ul>
+<!----><li>
+<!--    --><p>
+Generate commands
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Generate workspaces
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Generate apps
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Generate themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+and more&#8230;
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build-in webserver
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build tools
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>4.2.3. Generate a theme</h2>
+<pre class="runnable preview">sencha generate theme MyTheme</pre>
+<p>This will generate a theme for the package folder structure.</p>
+
+
+<h2>4.2.4. Package folder structure</h2>
+<p>The folder structure of a theme looks like this:</p>
+<span class="title">[workspace/root folder]/packages/mytheme/</span><ul>
+<!----><li>
+<!--    --><p>
+package.json
+This is the package properties file. It tells Sencha Cmd certain things about the package like its name, version, and dependencies (other packages that it requires).
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+build
+The build of the theme
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+overrides
+This directory contains any JavaScript overrides to Ext JS Component classes that may be required for theming those Components.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+resources
+This directory contains images and other static resources that your theme requires.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+sass
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+etc<br>
+        contains additional utility functions or mixins
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+src<br>
+        contains Sass rules and UI mixins
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+var<br>
+        contains Sass variables
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<h1>4.3. Extending themes</h1>
+<!-- Chapter: Extending themes -->
+<p>A new generated theme always extends from the <strong>Classic</strong> theme.</p>
+<p>When you want to inherit from the <strong>Neptune</strong> theme instead
+you will need to change the <code>extend</code>.</p>
+<img src="resources/images/overviewthemes_inheritance3.png"  width="100%" >
+
+
+<h2>4.3.1. Change the extend</h2>
+<p>To change the inheritance of the custom theme. Open
+<em>/packages/MyTheme/package.json</em></p>
+<pre class="runnable preview">{
+    "name": "MyTheme",
+    "type": "theme",
+    "creator": "Lee Boonstra",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "local": true,
+    "requires": [],
+    "extend": "ext-theme-neptune" //ext-theme-classic
+}</pre>
+
+
+<h2>4.3.2. Refresh the app</h2>
+<p>You now need to refresh your application.</p>
+<p>This ensures that the correct theme JavaScript files are included in the application&#8217;s "bootstrap.js" file so that the application can be run in development mode.</p>
+<p>Run from the app directory the following command:</p>
+<pre class="runnable preview">sencha app refresh</pre>
+<h1>Lab: Generate custom theme</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Generate a custom theme
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build a theme
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Understand the theme folder structure
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Generate a theme</strong>
+<!--    --></p>
+<p>Run the following command on the CLI, from the <em>extreader</em> folder.</p>
+<p><code>sencha generate theme Goggles</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the theme, to get an overview of all the components</strong>
+<!--    --></p>
+<p>Run the following command on the CLI, from the <em>extreader</em> folder:</p>
+<p><code>sencha theme build Goggles</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Review your theme folder structure</strong>
+<!--    --></p>
+<p>Browse to <em>advancedtheming/packages/Goggles/build</em> folder and review all the generated files.</p>
+<p>This will generate a custom theme, but it still has the looks of the Classic theme.</p>
+<!----></li>
+</ol>
+<img src="resources/images/extreader-classic.png"  width="100%" >
+<h1>Lab: Extend from the Neptune theme</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Extend from the Neptune theme
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Extend from the Neptune theme:</strong>
+<!--    --></p>
+<p>Open <em>packages/Goggles/package.json</em> and change the <code>extend</code> to <code>ext-theme-neptune</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Change the creator name to your name</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your editor the sencha config file <em>/extreader/.sencha/app/sencha.cfg</em></strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Switch the app.theme to the out of the new Goggles theme</strong>
+<!--    --></p>
+<p>(See Lab 1)</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the app, to see the changes</strong>
+<!--    --></p>
+<p>Run the following command on the CLI, from the <strong>extreader</strong> folder:</p>
+<p><code>sencha app build</code></p>
+<!----></li>
+</ol>
+<img src="resources/images/extreader-neptune.png"  width="100%" >
+<h1>About Sass &amp; Compass</h1>
+<h1>7.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Working with Sass
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Comments
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+File structure
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Nesting
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Interpolation
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Math &amp; Colors
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Mixins
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Directives
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Extends
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<h1>Sencha CSS Variables</h1>
+<h1>8.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Understanding Sencha Global variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Understanding Sencha Component variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing Sencha CSS variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Working with the <code>app watch</code> command
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>8.2. Introduction</h1>
+<!-- Chapter: Introduction -->
+<p>As we learned from the lecture, Sass variables are very powerful.</p>
+<pre class="runnable preview">$component-bg: blue;
+.panel {
+        background: $component-bg;
+}</pre>
+<pre class="runnable preview">.panel { background: blue; }</pre>
+<h1>8.3. Sencha CSS variables</h1>
+<!-- Chapter: Sencha CSS variables -->
+<p>Sencha has their own Sass variables set in the <strong>Neutral</strong> theme.
+Therefore we can use these CSS variables to customize our own
+designs.</p>
+<img src="resources/images/overviewthemes_inheritance1.png"  width="100%" >
+<h1>8.4. 2 types of variables</h1>
+<!-- Chapter: 2 types of variables -->
+<p>+
+* Global CSS variables</p>
+<p>+
+Apply to the overall Stylesheet
+* Component CSS variables</p>
+<p>+
+Apply to an Ext component</p>
+<h1>8.5. Global Vars</h1>
+<!-- Chapter: Global Vars -->
+
+
+<h2>8.5.1. API Docs</h2>
+<p>Global CSS vars can be found in the API Docs to get
+an exact overview.</p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS</a></p>
+<img src="resources/images/vars_apidocs_global.png"  width="100%" >
+
+
+<h2>8.5.2. Where to implement</h2>
+<p>here:</p>
+<pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
+<p>We have seen that this file grows and it&#8217;s getting
+harder to maintain. When you want to structure your Stylesheets,
+a better a location to save global vars would be:</p>
+<pre class="runnable preview">packages/&lt;theme-name&gt;/sass/var/Component.scss</pre>
+
+
+<h2>8.5.3. Example: Base-color</h2>
+<p>The base background color to be used throughout the theme (like backgrounds, panel headers etc&#8230;).</p>
+<p><strong>packages/MyTheme/sass/etc/all.scss</strong></p>
+<pre class="runnable preview">$base-color: green;</pre>
+<img src="resources/images/vars_globalcss.png"  width="100%" >
+
+
+<h2>8.5.4. Example: Neutral-color</h2>
+<p>The neutral background color to be used throughout the theme. (like buttons, headers etc&#8230;),
+as an alternative to the <code>$base-color</code>.
+Defaults to: <code>#dcdcdc</code></p>
+<p><strong>packages/MyTheme/sass/etc/all.scss</strong></p>
+<pre class="runnable preview">$neutral-color: #ccc</pre>
+<img src="resources/images/vars_globalcss.png"  width="100%" >
+
+
+<h2>8.5.5. Overview vars</h2>
+<p>There are much more global vars available.</p>
+<ul>
+<!----><li>
+<!--    --><p>
+<em>$base-color</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$base-gradient
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$body-background-color
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$color
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$css-shadow-border-radius
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$font-family
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$font-size
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$image-search-path
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-content-box
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-default-uis
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-not-found-images
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-rtl
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<em>$neutral-color</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$prefix
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$relative-image-path-for-uis
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$slicer-image-extension
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$theme-resource-path
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>8.5.6. Vars to exclude browsers</h2>
+<p>By default Ext JS includes all browsers,
+these variables are set to <code>true</code>. However if you don&#8217;t support
+a particular browser you can disable these so the file size
+of your Stylesheet will become smaller.</p>
+<ul>
+<!----><li>
+<!--    --><p>
+$include-chrome
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-ff
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-ie
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-opera
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-safari
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$include-webkit
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>8.6. Component variables</h1>
+<!-- Chapter: Component variables -->
+
+
+<h2>8.6.1. API Docs</h2>
+<p>Component CSS vars can be found in the API Docs to get
+an exact overview.</p>
+<p>For example the CSS vars for buttons:
+<a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button</a></p>
+<img src="resources/images/vars_apidocs_components.png"  width="100%" >
+
+
+<h2>8.6.2. Where to implement</h2>
+<p>here:</p>
+<pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
+<p>We have seen that this CSS file grows and it&#8217;s getting
+harder to maintain. When you want to structurize your Stylesheets,
+a better a location to save component vars in a structure,
+<strong>the same structure</strong> of used by the framework.</p>
+<pre class="runnable preview">packages/&lt;theme-name&gt;/sass/var/button/Button.scss</pre>
+<p>(Since <code>Ext.button.Button</code> maps to <em>/src/button/Button.js</em>)</p>
+
+
+<h2>8.6.3. Example: Button</h2>
+<ul>
+<!----><li>
+<!--    --><p>
+<code>$button-default-base-color</code>: the background color of a button.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>$button-default-border-color</code>: the border color of a button.
+<!--    --></p>
+<!----></li>
+</ul>
+<p><strong>packages/MyTheme/sass/var/button/Button.scss</strong></p>
+<pre class="runnable preview">$button-default-base-color: green;
+$button-default-border-color: blue;</pre>
+<img src="resources/images/vars_buttonexample.png"  width="100%" >
+
+
+<h2>8.6.4. Overview Components with vars</h2>
+<p>Note that components that inherit from
+other components; will also inherit the styles
+set by variables.</p>
+<ul>
+<!----><li>
+<!--    --><p>
+Ext.button.Button
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.container.ButtonGroup
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.menu.Menu
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.panel.Panel
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.panel.Table
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.panel.Tool
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.picker.Color
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.picker.Date
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.resizer.Splitter
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.slider.Multi
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.tab.Bar
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.tab.Tab
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.tip.Tip
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.toolbar.Paging
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.toolbar.Toolbar
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.tree.Panel
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.view.BoundList
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.window.MessageBox
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.window.Window
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.LoadMask
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.ProgressBar
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>8.6.5. Form components with vars</h2>
+<ul>
+<!----><li>
+<!--    --><p>
+Ext.form.field.Base
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.Checkbox
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.Display
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.HtmlEditor
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.Radio
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.Spinner
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.TextArea
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.Trigger
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.CheckboxGroup
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.FieldSet
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.form.field.Spinner
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>8.6.6. Grid components with vars</h2>
+<ul>
+<!----><li>
+<!--    --><p>
+Ext.grid.column.Action
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.grid.column.CheckColumn
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.grid.column.Column
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.grid.column.RowNumberer
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ext.grid.header.Container
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>8.7. App Watch</h1>
+<!-- Chapter: App Watch -->
+<p>As an alternative to <code>compass watch</code>, Sencha Cmd has <code>sencha app watch</code>.
+Run this command on the CLI and it starts polling for changes.
+On every change made in the JavaScript or CSS, the system will auto build
+the app for you.</p>
+<pre class="runnable preview">sencha app watch</pre>
+<h1>Lab: Create the Goggles Theme</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Create a custom Sass stylesheet
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Use Sencha variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile Sass to CSS
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Open with your editor the following file:</strong>
+<!--    --></p>
+<p><em>/packages/Goggles/sass/etc/all.scss</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>On the top of your file, define the following set of variables</strong>
+<!--    --></p>
+<pre class="runnable preview">/* my variables */
+$red: #d14836;
+$gray: #f5f5f5;
+$yellow: #ffff00;
+$white: #fff;
+$blue: #15c;</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Below your set of variables set the <code>base-color</code>, to <code>$gray</code></strong>:
+<!--    --></p>
+<pre class="runnable preview">/* default styles */
+$base-color: $gray;</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Compile your stylesheet</strong>
+<!--    --></p>
+<p>On the CLI enter the following command from the <em>extreader</em> folder:</p>
+<p><code>sencha ant sass</code></p>
+<p>You can use this command everytime you want to test your stylesheet.
+Just press the up key on the CLI to go back to your previous command.</p>
+<p>With the new Sencha Cmd 4 version it&#8217;s possible
+to watch your stylesheet for changes. Changes
+in the Sass file will be automatically compiled to CSS files:
+<code>sencha app watch</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+*Verify your app looks like the image <a href="#lab4_goggles">[lab4_goggles]</a>
+<!--    --></p>
+<img src="resources/images/extreader-goggles1.png"  width="100%" >
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open the API Docs</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS</a></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following Global_CSS variables</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+The <code>neutral-color</code> should be set to <code>$gray</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The default text color should be set to a 60% darker variant of gray. (<code>darken($gray,60%)</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The font should be set to <code>Arial, sans-serif</code>, with a fontsize of 13px.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Toolbars</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.toolbar.Toolbar</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all toolbar components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Start with the comment: <code>/* toolbars */</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the background color for the toolbar, to variable <code>$gray</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Test your stylesheet; you should notice a gray top toolbar.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Buttons</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.button.Button</code></p>
+<p>Click on the <em>CSS vars button</em> and review the set of styles which are available for all button components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Start with the comment: <code>/* buttons */</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+All buttons in the toolbar should have a background color <code>$gray</code> and a border color that is 10% darker then the normal <code>$gray</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Both buttons, default and toolbar buttons should have the background-gradient set to the string: <code><em>none</em></code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set a padding to all small buttons to 8px.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+All default buttons, should have a $red background color. over, pressed and focus buttons can have a 10% darker red background color.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+All default buttons with a disabled state should have a 10% lighter color.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, you should notice gray buttons in your toolbar. When you click on the subscribe button, you should see a form with a reddish button.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Panels</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.panel.Panel</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all panel components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Start with the comment: <code>/* panels */</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the border width of the frame to 0.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the body border width to 0.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Panel Headers</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.panel.Header</code></p>
+<p>Click on the <em>CSS vars</em> button; and review the set of styles which are available for all panel header components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Set the padding for the header to: 10px 5px
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the header background-color to an 8% darker red.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, you should see a tree panel with a red header.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Windows</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.window.Window</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all window components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+The <code>window-header</code> padding should be set to 10px 5px;
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>window-header-background-color</code> should be set to an 8% darker red.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, when you click on the subscribe button, you should see a nice popup window with a reddish header.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Grid Panels</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.grid.Panel</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all grid components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+The grid header will get a border color of <code>$white</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The grid header will also get a padding of 12px 8px and a color that is 10% darker then the default gray.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Next step is to set the <code>row-cell</code> background color and the <code>row-cell-alt</code> background color both to a 3% darker gray.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>row-cell</code> over color will be a 5% darker gray.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>row-cell</code> border color will be a 10% darker gray
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>row-cell</code> selected background-color, should be a 40% lighter yellow color.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>grid-cell-inner</code> padding should be set to 8px.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, you should see a nice gray styled grid.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>The last step is to create some custom styles for the tree panel</strong>
+<!--    --></p>
+<p>As you can see, the tree is already styled. This is because the treepanel extends from <code>Ext.panel.Table</code> and <code>Ext.panel.Table</code>, therefore it reuses a lot of the same styles as the grid does. Let’s write our own custom styles</p>
+<p>Take over the below CSS code and use Sass nesting
+<a href="http://sass-lang.com/docs/yardoc/#nesting">http://sass-lang.com/docs/yardoc/#nesting</a> for readability:</p>
+<pre class="runnable preview">.x-tree-panel .x-tree-icon,
+.x-tree-panel .x-tree-elbow-img {
+    display: none;
+}
+.x-tree-panel .x-grid-cell {
+    background: $white;
+}
+
+.x-tree-panel .x-grid-row-selected .x-grid-td {
+    background: white;
+}
+.x-tree-panel .x-grid-row-selected .x-tree-node-text {
+    font-weight: bold;
+}
+.x-tree-panel .x-grid-row-selected {
+    color: red;
+}</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Compile and preview your stylessheet</strong>
+<!--    --></p>
+<p>By now you should see your own custom tree panel, with white background cells. If you want to take a peek into the solution files, check the following file: <em>/packages/Lab4Solution/sass/etc/all.scss</em>
+When you want to test this solution theme, just switch themes in your <em>extreader/.sencha/app/sencha.cfg</em>, set <code>app.theme</code> to <code>Lab4Solution</code> (<code>app.theme=Lab4Solution</code>) and run a <code>sencha app build</code>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/extreader-goggles2.png"  width="100%" >
+<h1>Sencha Mixins</h1>
+<h1>10.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Implementing Panel UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing Toolbar UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing Window UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing Button UIs
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>10.2. Introduction</h1>
+<!-- Chapter: Introduction -->
+<p>As we learned from the lecture, Sass mixins can be very handy:</p>
+<pre class="runnable preview">@mixin custom-button-ui($color) {
+        background-color: $color;
+        &amp;:hover {
+                background-color: lighten($color, 20%);
+        }
+}
+
+.x-btn.custom {
+        @include custom-button-ui(red)
+}</pre>
+<pre class="runnable preview">.x-btn.custom { background-color: red; }
+.x-btn.custom:hover{ background-color: #ff6666; }</pre>
+<h1>10.3. Sencha UIs</h1>
+<!-- Chapter: Sencha UIs -->
+<p>Sencha has their own Sass mixins set in the <strong>Neutral</strong> theme.
+Therefore we can use these mixins (sencha uis) to customize our own
+skins.</p>
+<p>For example, Sencha UIs can be handy for when you have a <strong>blue</strong> Neptune theme
+and only some toolbars needs to be <strong>green</strong> instead of blue.</p>
+<img src="resources/images/mixins_kitchensink.png"  width="100%" >
+<h1>10.4. Mixin vs CSS overwrite</h1>
+<!-- Chapter: Mixin vs CSS overwrite -->
+<pre class="runnable preview">extjs-toolbar-ui(
+        'greentoolbar',
+         $background-color: 'green'
+         //more configs
+);</pre>
+<pre class="runnable preview">{
+        xtype: 'toolbar',
+        ui: 'greentoolbar',
+        //more configs
+}</pre>
+<pre class="runnable preview">.green {
+        background: 'green';
+}</pre>
+<pre class="runnable preview">{
+        xtype: 'toolbar',
+        cls: 'green',
+        //more configs
+}</pre>
+
+
+<h2>10.4.1. Sencha UI</h2>
+<span class="title">Advantages</span><ul>
+<!----><li>
+<!--    --><p>
+Creates a new skin
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set every CSS rule for this specific component
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Automatically cross browser compatible
+.Disadvantages
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Can increase the file size of your CSS
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Can be difficult to implement
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>10.4.2. CSS overwrite on class name</h2>
+<span class="title">Advantages</span><ul>
+<!----><li>
+<!--    --><p>
+Easy solution
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Won&#8217;t increase the CSS much
+.Disadvantages
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Overwrites are visible in the compiled CSS
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Hard to maintain
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+You will need to understand the Ext JS DOM
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>10.4.3. Conclusion</h2>
+<p><strong>Sencha UI</strong> mixins are great when these are repetitive used in your theme.
+<em>For example: a blue theme, that has blue and red buttons.</em>
+<strong>CSS overwrites</strong> are handy to make a certain component unique.
+<em>For example: on the start screen, the <strong>new</strong> button is bigger and has a different color.</em></p>
+<h1>10.5. Mixins</h1>
+<!-- Chapter: Mixins -->
+<span class="title">Like variables, there are two types of mixins.</span><ul>
+<!----><li>
+<!--    --><p>
+Global Mixins
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Component Mixins
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>10.6. Global Mixins</h1>
+<!-- Chapter: Global Mixins -->
+<p>But there is just one global mixin&#8230;</p>
+<img src="resources/images/mixin_globalcss.png"  width="100%" >
+<p><a href="http://localhost/extjs4.2.2/docs/#!/api/Global_CSS">http://localhost/extjs4.2.2/docs/#!/api/Global_CSS</a></p>
+
+
+<h2>10.6.1. Where to implement</h2>
+<pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
+
+
+<h2>10.6.2. Mixin: Background-gradient</h2>
+<ul>
+<!----><li>
+<!--    --><p>
+bg-color: HEX color code
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+gradient: Choose gradient type from list (see docs)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+direction: (optional) left or top.
+<!--    --></p>
+<!----></li>
+</ul>
+<pre class="runnable preview">.app {
+     @include background-gradient(#808080, matte, left);
+}</pre>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_mixin-background-gradient">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_mixin-background-gradient</a></p>
+<h1>10.7. Component mixins</h1>
+<!-- Chapter: Component mixins -->
+<span class="title">The following Ext components have their own mixins:</span><ul>
+<!----><li>
+<!--    --><p>
+<code>Ext.button.Button</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.container.ButtonGroup</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.panel.Panel</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.tab.Panel</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.tab.Bar</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.tab.Tab</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.tip.Tip</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.toolbar.Toolbar</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.window.Window</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>Ext.ProgressBar</code>
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>10.7.1. Where to implement</h2>
+<pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
+<p>We have seen that this file grows and it&#8217;s getting
+harder to maintain. When you want to structure your Stylesheets,
+a better a location to save global vars would be:</p>
+<pre class="runnable preview">packages/&lt;theme-name&gt;/sass/src/Component.scss</pre>
+
+
+<h2>10.7.2. API Docs</h2>
+<p>You can figure out how to configure the mixins by checking the API Docs.</p>
+<img src="resources/images/mixin_component_apidocs.png"  width="100%" >
+
+
+<h2>10.7.3. Mixin: Panel UI</h2>
+<p>packages/&lt;theme-name&gt;/sass/src/panel/Panel.scss</p>
+<pre class="runnable preview">@mixin extjs-panel-ui(
+   $ui-label,
+   $ui-border-color: $panel-border-color,
+      $ui-border-radius: $panel-border-radius,
+      $ui-border-width: $panel-border-width,
+   $ui-padding: 0,
+   $ui-header-color: $panel-header-color,
+      $ui-header-font-family: $panel-header-font-family,
+      $ui-header-font-size: $panel-header-font-size,
+      $ui-header-font-weight: $panel-header-font-weight,
+      $ui-header-line-height: $panel-header-line-height,
+      $ui-header-border-color: $panel-header-border-color,
+      $ui-header-border-width: $panel-header-border-width,
+      $ui-header-border-style: $panel-header-border-style,
+      $ui-header-background-color: $panel-header-background-color,
+      $ui-header-background-gradient: $panel-header-background-gradient,
+      $ui-header-inner-border-color: $panel-header-inner-border-color,
+      $ui-header-inner-border-width: $panel-header-inner-border-width,
+      $ui-header-text-padding: $panel-header-text-padding,
+      $ui-header-text-transform: $panel-header-text-transform,
+      $ui-header-padding: $panel-header-padding,
+      $ui-header-icon-width: $panel-header-icon-width,
+      $ui-header-icon-height: $panel-header-icon-height,
+      $ui-header-icon-spacing: $panel-header-icon-spacing,
+      $ui-header-icon-background-position: $panel-header-icon-background-position,
+      $ui-header-glyph-color: $panel-header-glyph-color,
+      $ui-header-glyph-opacity: $panel-header-glyph-opacity,
+   $ui-tool-spacing: $panel-tool-spacing,
+     $ui-tool-background-image: $panel-tool-background-image,
+   $ui-body-color: $panel-body-color,
+     $ui-body-border-color: $panel-body-border-color,
+     $ui-body-border-width: $panel-body-border-width,
+     $ui-body-border-style: $panel-body-border-style,
+      $ui-body-background-color: $panel-body-background-color,
+      $ui-body-font-size: $panel-body-font-size,
+      $ui-body-font-weight: $panel-body-font-weight,
+   $ui-background-stretch-top: $panel-background-stretch-top,
+      $ui-background-stretch-bottom: $panel-background-stretch-bottom,
+      $ui-background-stretch-right: $panel-background-stretch-right,
+      $ui-background-stretch-left: $panel-background-stretch-left,
+   $ui-include-border-management-rules: $panel-include-border-management-rules,
+   $ui-wrap-border-color: $panel-wrap-border-color,
+   $ui-wrap-border-width: $panel-wrap-border-width
+);</pre>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel-css_mixin-extjs-panel-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel-css_mixin-extjs-panel-ui</a></p>
+
+
+<h2>10.7.4. Mixin: Window UI</h2>
+<p>packages/&lt;theme-name&gt;/sass/src/window/Window.scss</p>
+<pre class="runnable preview">@mixin extjs-window-ui(
+   $ui-label,
+   $ui-padding: $window-padding,
+   $ui-border-radius: $window-border-radius,
+      $ui-border-color: $window-border-color,
+      $ui-border-width: $window-border-width,
+      $ui-inner-border-color: $window-inner-border-color,
+      $ui-inner-border-width: $window-inner-border-width,
+   $ui-header-color: $window-header-color,
+      $ui-header-background-color: $window-header-background-color,
+      $ui-header-padding: $window-header-padding,
+      $ui-header-font-family: $window-header-font-family,
+      $ui-header-font-size: $window-header-font-size,
+      $ui-header-font-weight: $window-header-font-weight,
+      $ui-header-line-height: $window-header-line-height,
+      $ui-header-text-padding: $window-header-text-padding,
+      $ui-header-text-transform: $window-header-text-transform,
+      $ui-header-border-color: $ui-border-color,
+      $ui-header-border-width: $window-header-border-width,
+      $ui-header-inner-border-color: $window-header-inner-border-color,
+      $ui-header-inner-border-width: $window-header-inner-border-width,
+   $ui-header-icon-width: $window-header-icon-width,
+      $ui-header-icon-height: $window-header-icon-height,
+      $ui-header-icon-spacing: $window-header-icon-spacing,
+      $ui-header-icon-background-position: $window-header-icon-background-position,
+      $ui-header-glyph-color: $window-header-glyph-color,
+      $ui-header-glyph-opacity: $window-header-glyph-opacity,
+   $ui-tool-spacing: $window-tool-spacing,
+      $ui-tool-background-image: $window-tool-background-image,
+   $ui-body-border-color: $window-body-border-color,
+      $ui-body-background-color: $window-body-background-color,
+      $ui-body-border-width: $window-body-border-width,
+      $ui-body-border-style: $window-body-border-style,
+      $ui-body-color: $window-body-color,
+   $ui-background-color: $window-background-color,
+   $ui-force-header-border: $window-force-header-border,
+   $ui-include-border-management-rules: $window-include-border-management-rules,
+   $ui-wrap-border-color: $window-wrap-border-color,
+   $ui-wrap-border-width: $window-wrap-border-width
+);</pre>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui</a></p>
+
+
+<h2>10.7.5. Mixin: Toolbar UI</h2>
+<p>packages/&lt;theme-name&gt;/sass/src/toolbar/Toolbar.scss</p>
+<pre class="runnable preview">@mixin extjs-toolbar-ui
+   $ui,
+   $background-color: $toolbar-background-color,
+      $background-gradient: $toolbar-background-gradient,
+   $border-color: $toolbar-border-color,
+      $border-width: $toolbar-border-width,
+   $scroller-cursor: $toolbar-scroller-cursor,
+      $scroller-cursor-disabled: $toolbar-scroller-cursor-disabled,
+      $scroller-opacity-disabled: $toolbar-scroller-opacity-disabled,
+   $tool-background-image: $toolbar-tool-background-image
+);</pre>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar-css_mixin-extjs-toolbar-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar-css_mixin-extjs-toolbar-ui</a></p>
+
+
+<h2>10.7.6. Button UIs</h2>
+<span class="title">Different types of Button UIs</span><ul>
+<!----><li>
+<!--    --><p>
+$extjs-button-large-ui
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$extjs-button-medium-ui
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$extjs-button-small-ui
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$extjs-button-toolbar-large-ui
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$extjs-button-toolbar-medium-ui
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+$extjs-button-toolbar-small-ui
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>10.7.7. extjs-button-ui</h2>
+<span class="title">Default Button UI</span><ul>
+<!----><li>
+<!--    --><p>
+<code>$extjs-button-ui</code>
+Note: this mixin is not scale aware and therefore less common.
+By default the <code>scale</code> config in an <code>Ext.button.Button</code> defaults to <code>small</code>.
+Which will use the <code>$extjs-button-small-ui</code>.
+Also the <code>$extjs-button-ui</code> mixin has more more required arguments.
+<!--    --></p>
+<!----></li>
+</ul>
+<p>packages/&lt;theme-name&gt;/sass/src/button/Button.scss</p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button-css_mixin-extjs-button-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button-css_mixin-extjs-button-ui</a></p>
+<h1>Lab: Creating Custom UIs</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Implement Button UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement Panel UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement Toolbar UIs
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement Window UIs
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>11.1. Button UI&#8217;s</h1>
+<!-- Chapter: Button UI&#8217;s -->
+<p>See API Docs: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create a new file Component.scss</strong>
+<!--    --></p>
+<p>Create this file in <em>packages/Goggles/sass/src</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the button mixin extjs-button-small-ui</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Give this mixin the name: <em>blue</em> (<code>$ui</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Give this mixin the following background <code>$background-color: lighten($blue, 20%)</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Give this mixin a background over color, a 10% darker <code>$blue</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Give this mixin the background disabled color, a 40% lighter <code>$blue</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>border-radius</code> to 4px
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>color</code> to white
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>glyph-color</code> to white
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the <code>padding</code> to 4px
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy and paste the previous mixin and change the mixin to ext-button-medium-ui</strong>
+<!--    --></p>
+<p>The difference is the <code>border-radius</code>, which should be set to 5px and the <code>padding</code> which should be set to 6px.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy and paste the previous mixin and change the mixin to ext-button-toolbar-medium-ui</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy and paste the previous mixin and change the mixin to ext-button-large-ui</strong>
+The difference is the <code>border-radius</code>, which should be set to 6px and the <code>padding</code> which should be set to 8px.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>blue</code> button mixin to the previous and next buttons</strong>
+<!--    --></p>
+<p>Open <em>app/view/Viewport</em>, on the place indicated by the comment (the previous and next buttons), add the <code>ui: <em>blue</em></code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>blue</code> button mixin to the OK button</strong>
+Open <em>app/view/Header.js</em>, on the place indicated by the comment (the OK button of the messagebox), add the <code>ui: <em>blue</em></code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Navigate on the CLI to the project folder</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the application</strong>
+<!--    --></p>
+<p>Make sure your app is automatically compiling to CSS by running the following command on the CLI <code>sencha app watch</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Preview your application</strong>
+<!--    --></p>
+<p>You should see blue previous and next buttons in the bottom toolbar. You should also see a blue <em>OK</em> button, when pressing the <em>Help &gt; About</em> button.</p>
+<!----></li>
+</ol>
+<h1>11.2. Panel UIs</h1>
+<!-- Chapter: Panel UIs -->
+<p>See API DOCS: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create the following mixin for Panels, see <a href="#code6_panelui">[code6_panelui]</a></strong>
+<!--    --></p>
+<pre class="runnable preview">@include extjs-panel-ui(
+    'light',
+    $ui-header-color: lighten(#15c, 20%),
+    $ui-header-background-color: #fff,
+    $ui-header-line-height: 14px,
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff,
+    $ui-body-font-size: 14px,
+
+    $ui-padding: 10px
+);</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>light</code> panel mixin to the feed panel</strong>
+<!--    --></p>
+<p>Open <em>app/view/Viewport.js</em>, on the place indicated by the comment (the feed panel), add the <code>ui: <em>light</em></code>.</p>
+<!----></li>
+</ol>
+<h1>11.3. Toolbar UIs</h1>
+<!-- Chapter: Toolbar UIs -->
+<p>See API DOCS: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create the following mixin for Toolbars, see <a href="#code6_toolbarui">[code6_toolbarui]</a></strong>
+<!--    --></p>
+<pre class="runnable preview">@include extjs-toolbar-ui(
+    'gray',
+    $background-color: lighten($gray, 10%),
+    $border-width: 0
+);</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>gray</code> toolbar mixin to the toolbar</strong>
+<!--    --></p>
+<p>Open <em>app/view/Viewport.js</em>, on the place indicated by the comment (the toolbar), add the <code>ui: <em>gray</em></code>.</p>
+<!----></li>
+</ol>
+<h1>11.4. Window UIs</h1>
+<!-- Chapter: Window UIs -->
+<p>See API DOCS: <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui</a></p>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create the following mixin for Windows, see <a href="#code6_windowui">[code6_windowui]</a></strong>
+<!--    --></p>
+<pre class="runnable preview">@include extjs-window-ui(
+    'blue',
+
+    $ui-header-font-size: 12px,
+    $ui-header-font-weight: bold,
+    $ui-header-color: #fff,
+    $ui-header-background-color: lighten(#15c, 20%),
+
+    $ui-border-color: #fff,
+    $ui-border-radius: 4px,
+    $ui-body-background-color: #fff
+);</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Assign the <code>blue</code> window mixin to the messagebox</strong>
+<!--    --></p>
+<p>Open <em>app/view/Header.js</em>, on the place indicated by the comment (the messagebox), add the <code>ui: <em>blue</em></code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Preview the application</strong>
+Your ExtReader app should have the looks of <a href="#lab6_uis">[lab6_uis]</a>.
+<!--    --></p>
+<img src="resources/images/extreader-uis.png"  width="100%" >
+<!----></li>
+</ol>
+<h1>Implementing assets</h1>
+<h1>12.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Learn how to implement images
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Lean about paths to resources
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to implement custom fonts
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to implement custom icons
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>12.2. Implementing Images</h1>
+<!-- Chapter: Implementing Images -->
+<span class="title">There are a couple of ways of implementing images in Ext JS</span><ul>
+<!----><li>
+<!--    --><p>
+Implementing an image by using the <code>html</code> tag.
+Easy but dirty.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing an image by using <code>Ext.Img</code> class.
+Very powerful.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implementing a background image in the CSS
+Structured.
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>12.2.1. Folder structure</h2>
+<p>Where to save the images?</p>
+<p>When app specific:
+<em>[workspace]/resources/</em> folder.</p>
+<p>When global theme:
+<em>[workspace]/packages/[theme]/resources/</em> folder.</p>
+
+
+<h2>12.2.2. Image HTML tag</h2>
+<pre class="runnable preview">items: [{
+    xtype: 'container',
+    html: '&lt;img src="resources/logo.png" height="25" alt="ExtReader"/&gt;'
+}]</pre>
+
+
+<h2>12.2.3. Image Ext.Img class</h2>
+<pre class="runnable preview">items:[{
+        xtype: 'image',
+    src: 'resources/logo.png',
+    alt: 'ExtReader',
+    height: 25
+}]</pre>
+
+
+<h2>12.2.4. Background image in CSS</h2>
+<pre class="runnable preview">items: [{
+    xtype: 'container',
+    cls: 'mybackground'
+}]</pre>
+<pre class="runnable preview">.mybackground {
+        background: #fff url('background.png') repeat-x;
+}</pre>
+
+
+<h2>12.2.5. Paths to resources</h2>
+<p>You don&#8217;t need to worry about paths to images in Ext JS since it&#8217;s part of the application build process.</p>
+<p>When building the app, the global theme images and the app specific images will be automatically copied over to the resources build folder. <em>(build/[appname]/resources)</em></p>
+<p>Note: subfolders will be copied too!</p>
+
+
+<h2>12.2.6. Paths global</h2>
+<pre class="runnable preview">/* red image: resources/backgrounds/red.png */
+.bgred {
+        background: url('backgrounds/red.png') repeat-x;
+}</pre>
+<pre class="runnable preview">/* yellow image: resources/yellow.png */
+.footer {
+        background: url('yellow.png');
+}</pre>
+<img src="resources/images/assets_appresources.png"  width="100%" >
+
+
+<h2>12.2.7. Paths app specific</h2>
+<pre class="runnable preview">/* blue image: packages/[mytheme]/resources/backgrounds/blue.png */
+.bgblue {
+        background: url('backgrounds/blue.png') repeat-x;
+}</pre>
+<img src="resources/images/assets_globalresources.png"  width="100%" >
+
+
+<h2>12.2.8. Paths in build</h2>
+<p>Images saved in <em>packages/[mytheme]/resources</em>
+and images saved in <em>[myapp]/resources/</em>.
+will be copied to the <em>build/[appname]/resources</em> folder.</p>
+<img src="resources/images/assets_buildfolder.png"  width="100%" >
+
+
+<h2>12.2.9. Paths to resources</h2>
+<p>Under the roots, this happens also with paths in <code>Ext.Img</code> classes and image tags and other resources such as fonts.</p>
+<p>However, while developing you would point images to the <em>/resources/</em> folder, since you don&#8217;t want to build every time while developing.
+Once you build, Sencha Cmd will take care.</p>
+
+
+<h2>12.2.10. Base64 encode instead</h2>
+<p>Images can be saved to Base64 strings. (Binary to ASCII Text).
+It&#8217;s a technique what&#8217;s been used for years for sending email
+image attachments. When you are not familiair with Base64 strings, they look like these:</p>
+<pre class="runnable preview">data:image/png;base64,&lt;LONG BASE64 STRING WITH ENCODED DATA&gt;"</pre>
+<p>An advantage of a string like this, is that you can cache it,
+maybe you want to save it in a database.
+Instead of an URL to a path you pass in the Base-64 string.</p>
+
+
+<h2>12.2.11. Overriding images</h2>
+<p>When you are extending from other themes, some components contain images that are
+inherited from a parent theme.</p>
+<p>In some cases you may need to override an image. This can be easily done by placing the desired image in <em>packages/[mytheme]/resources/images/</em> and giving it the <strong>same name</strong> as the image it is intended to override.</p>
+<p>For example, let&#8217;s change the info icon of the MessageBox component. Save the following image as <em>packages/[mytheme]/resources/images/shared/icon-info.png</em>
+=== Implementing custom fonts
+.The following steps are required to implement a custom font.</p>
+<ol>
+<!----><li>
+<!--    --><p>
+Download a font-face kit
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create <em>fonts</em> folder in resources folder.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement font in Sass
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Assign font
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build
+<!--    --></p>
+<!----></li>
+</ol>
+
+
+<h2>12.2.12. About @font-face</h2>
+<p><code>@font-face</code> is a CSS technique used nowadays to implement custom
+web fonts. Where with system fonts it picks the font if available in your OS, <code>@font-face</code> downloads the font from the Internet.</p>
+<p>Unfortunately the major browsers can&#8217;t come up with one web font solution. Therefore you have to embed multiple web font extensions
+into your Stylesheet. See <a href="#styles_fontfaceoverview">[styles_fontfaceoverview]</a>.</p>
+
+
+<h2>12.2.13. Compatibility</h2>
+<table class="tableblock frame-all grid-all" id="styles_fontfaceoverview"
+style="
+width:100%;
+">
+<caption class="title">Table 1. Cross-browser compatibility overview of font-face</caption>
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;">
+<col style="width:20%;">
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" >Browser             </th>
+<th class="tableblock halign-left valign-top" >TTF</th>
+<th class="tableblock halign-left valign-top" >EOT</th>
+<th class="tableblock halign-left valign-top" >WOFF</th>
+<th class="tableblock halign-left valign-top" >SVG</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Firefox</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Google Chrome</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Safari</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Mobile Safari</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">IE10</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Android Browser</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">BlackBerry Browser</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">_</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">X</p></td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>12.2.14. Where to get fonts from?</h2>
+<span class="title">Download an <code>@font-face</code> kit</span><ul>
+<!----><li>
+<!--    --><p>
+<a href="http://www.fontsquirrel.com/">http://www.fontsquirrel.com/</a>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<a href="http://www.fontex.org/">http://www.fontex.org/</a>
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">A font service:</span><ul>
+<!----><li>
+<!--    --><p>
+<a href="http://www.google.com/fonts">http://www.google.com/fonts</a>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<a href="https://typekit.com/">https://typekit.com/</a>
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>12.2.15. Implement font in Sass</h2>
+<pre class="runnable preview">@font-face {
+    font-family: 'DroidSansBold';
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot');
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}</pre>
+
+
+<h2>12.2.16. Base64 for fonts!</h2>
+<p>Yes it&#8217;s possible to Base64 encode fonts!</p>
+<p>To get a Base64 font, upload and encode every font extension
+to an encoder:</p>
+<p><a href="http://www.opinionatedgeek.com/dotnet/tools/base64encode/">http://www.opinionatedgeek.com/dotnet/tools/base64encode/</a></p>
+<p>It will present you the Base64 for each font file.
+These Base64 strings you can implement in your Sass.</p>
+
+
+<h2>12.2.17. Base64 font example</h2>
+<pre class="runnable preview">@font-face{
+ font-family: "DroidSansBold";
+ src: url(data:font/tff;base64,&lt;here&gt;) format('TrueType'),
+        url(data:font/svg;base64,&lt;here&gt;) format('svg'),
+        url(data:font/eot;base64,&lt;here&gt;) format('eot'),
+        url(data:font/woff;base64,&lt;here&gt;) format('woff');
+}</pre>
+
+
+<h2>12.2.18. Assign font</h2>
+<p>Set a CSS class on a component, to target it from the CSS.</p>
+<pre class="runnable preview">.mycomponent {
+    font-family: 'DroidSansRegular';
+    line-height: 1.6em;
+}</pre>
+
+
+<h2>12.2.19. Px or Em ?</h2>
+<p><strong>Pixels</strong>
+Pixels (px) are fixed-size units that are used in screen media. One pixel is equal to one dot on the computer screen (the smallest division of your screen’s resolution). Many web designers use pixel units in web documents in order to produce a pixel-perfect representation of their site as it is rendered in the browser.</p>
+<p><strong>Ems</strong>
+"Ems" (em): The <em>em</em> is a scalable unit that is used in web document media. An em is equal to the current font-size, for instance, if the font-size of the document is 16px, 1em is equal to 16px. Ems are scalable in nature, so 2em would equal 32px, .5em would equal 8px, etc.</p>
+<p>In theory, using em instead of px will allow the layout to re-size more easily based on user preferences. But nowadays, modern browsers can resize px layouts as well as em layouts so it might not be as relevant as it was some years ago.</p>
+
+
+<h2>12.2.20. Px / Ems converters</h2>
+<p>When you think the calculation of ems is annoying&#8230;
+Let&#8217;s Sass calculate it for you!</p>
+<pre class="runnable preview">@function em($target, $context: $base-font-size-em) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
+@function px($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0px;
+}
+$base-font-size: 15px;</pre>
+
+
+<h2>12.2.21. Build</h2>
+<p>A <code>build</code> process is required in order to see the newly implemented fonts. This will copy and link the fonts to the build folder.</p>
+<p><code>sencha app build</code>
+=== Implementing Glyps and Icons
+.The following steps are required to implement a custom icon font.</p>
+<ol>
+<!----><li>
+<!--    --><p>
+Choose an icon font
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create a font pack
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Download the icon font.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement icon font in Sass
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Assign icon font
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Build
+<!--    --></p>
+<!----></li>
+</ol>
+
+
+<h2>12.2.22. About icon fonts</h2>
+<p>Icons delivered as a font file and mapped to (HEX) character codes.
+Icon font can be embedded with CSS like any other custom font.</p>
+
+
+<h2>12.2.23. Icon fonts why?</h2>
+<span class="title">Why icon fonts?</span><ul>
+<!----><li>
+<!--    --><p>
+Icon Fonts are vectors.
+Icons can easily change size and they are always best quality.
+Perfect on Retina displays.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+No need for Photoshop
+Icon Fonts can change colors, shades, contrasts and have no background.
+Customizable with CSS
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Screen reader compatible
+Font icons won&#8217;t spam your screen reader.
+No additional markup is required.
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>12.2.24. Where to get icon fonts from?</h2>
+<p><a href="http://icomoon.io/app">http://icomoon.io/app</a>
+<a href="http://www.pictos.cc">http://www.pictos.cc</a>
+<a href="http://fontello.com/">http://fontello.com/</a>
+<a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></p>
+<p>Convert text to unicodes:
+<a href="http://www.branah.com/unicode-converter">http://www.branah.com/unicode-converter</a></p>
+
+
+<h2>12.2.25. Create a font</h2>
+<span class="title">Create your own font by selecting icons.</span><ul>
+<!----><li>
+<!--    --><p>
+Set character and unicode to the every icon.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set default font metrics (for example 16px)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Give the font a name
+<!--    --></p>
+<!----></li>
+</ul>
+
+
+<h2>12.2.26. Example: IcoMoon</h2>
+<img src="resources/images/assets_createfontpack.png"  width="100%" >
+<img src="resources/images/assets_createfontpack2.png"  width="100%" >
+
+
+<h2>12.2.27. Example: Fontello</h2>
+<img src="resources/images/assets_createfontpack3.png"  width="100%" >
+
+
+<h2>12.2.28. Implement icon font in Sass</h2>
+<p>This works exact the same as implementing any other font.</p>
+<p>Sometimes the CSS file is included with the font kit download.</p>
+<pre class="runnable preview">@font-face {
+  font-family: 'MyFont';
+  src: url('font/myfont.eot?22334');
+  src: url('font/myfont.eot?22334#iefix') format('embedded-opentype'),
+       url('font/myfont.woff?22334') format('woff'),
+       url('font/myfont.ttf?22334') format('truetype'),
+       url('font/myfont.svg?22334#myfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}</pre>
+<p>Again don&#8217;t worry about the paths, since it will be part of the build process.</p>
+
+
+<h2>12.2.29. About Glyphs</h2>
+<span class="title">To assign custom icons to Ext JS components you can use the <code>glyph</code> config.</span><ul>
+<!----><li>
+<!--    --><p>
+Specify the decimal code that maps to the unicode character
+you choose while you&#8217;ve created the font pack.
+You can convert the character to a decimal with converters:
+<a href="http://www.branah.com/unicode-converter">http://www.branah.com/unicode-converter</a>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Specify the name of the font.
+<!--    --></p>
+<!----></li>
+</ul>
+<pre class="runnable preview">glyph: '115@MyFont',</pre>
+
+
+<h2>12.2.30. More about Glyphs</h2>
+<p>When no font is specified, the Pictos icon font will be used.</p>
+<pre class="runnable preview">glyph: '71',</pre>
+<p>Use <code>Ext.setGlyphFontFamily();</code> to set the icon font programmetically.</p>
+
+
+<h2>12.2.31. Out of the box glyhs</h2>
+<pre class="runnable preview">var buttons = [];
+
+for (var i = 33; i &lt; 127; i++) {
+    buttons.push({
+        xtype: 'button',
+        text: i,
+        scale: 'medium', // Try 'small' and 'large'
+        glyph: i + '@Pictos'  // alternate config if Ext.setGlyphFontFamily() was not set
+    });
+}
+
+Ext.create('Ext.panel.Panel', {
+    renderTo: Ext.getBody(),
+    title: 'Sample',
+    height: 500,
+    width: 620,
+    defaults: {
+        xtype: 'button',
+        margin: 2
+    },
+    autoScroll: true,
+    items: buttons
+});</pre>
+
+
+<h2>12.2.32. Icon CSS Classes</h2>
+<p>Some components have no <code>glyph</code> property.
+It&#8217;s still possible to create custom icons.</p>
+<p>This trick can be done with the CSS pseudo selectors:
+<code>:before</code> and <code>:after</code> that implement content
+before or after the component in the DOM.</p>
+<pre class="runnable preview">.myclass:before {
+    content: "C"; //character mapped to an icon
+    font-family: 'MyIconFont'; //icon font
+
+    color: red; //set additional colors or dimensions...
+    margin-right: 10px;
+}</pre>
+
+
+<h2>12.2.33. Image icons</h2>
+<span class="title">It&#8217;s also possible to use images as icons.</span><ul>
+<!----><li>
+<!--    --><p>
+<code>icon</code> - path to an image
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>iconCls</code> - a CSS class specifying a background image
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>iconAlign</code> - align icon to <code><em>top</em></code>, <code><em>right</em></code>, <code><em>bottom</em></code> and <code><em>left</em></code>
+<!--    --></p>
+<!----></li>
+</ul>
+<pre class="runnable preview">Ext.create('Ext.panel.Panel', {
+    title : 'Panel',
+    renderTo : Ext.getBody(),
+    height : 200,
+    bodyPadding : 16,
+    defaults : {
+        margin: 8
+    },
+    layout : 'vbox',
+    items : [{
+        xtype : 'button',
+        text : 'Sunny',
+        icon : 'resources/images/weather_sun.png'
+    }, {
+        xtype : 'button',
+        text : 'Rainy',
+        icon : 'resources/images/weather_rain.png',
+        iconAlign : 'right'
+    }]
+});</pre>
+
+
+<h2>12.2.34. Build</h2>
+<p>A <code>build</code> process is required in order to see the newly implemented fonts. This will copy and link the fonts to the build folder.</p>
+<p><code>sencha app build</code></p>
+<h1>Lab: Implementing assets</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Imlpement images
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement fonts
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Implement custom icons &amp; glyphs
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>13.1. Implement images</h1>
+<!-- Chapter: Implement images -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Open with your editor the following file:</strong>
+<!--    --></p>
+<p><em>extreader/app/view/Header.js</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Where indicated by the comment add an image tag that points to the following image</strong>
+<!--    --></p>
+<p><code>&lt;img src="resources/logo.png" height="25" alt="ExtReader"/&gt;</code></p>
+<!----></li>
+</ol>
+<h1>13.2. Implement custom fonts</h1>
+<!-- Chapter: Implement custom fonts -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Download a nice free font</strong>
+<!--    --></p>
+<p>For example: Droid Sans. Make sure you download the full webfont-kit
+<a href="http://www.fontsquirrel.com/fonts/Droid-Sans">http://www.fontsquirrel.com/fonts/Droid-Sans</a></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Unzip the package somewhere on your harddrive</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a new fonts folder</strong>
+<!--    --></p>
+<p>Create this folder in: <em>packages/resources</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy all the fonts into the new folder</strong>
+<!--    --></p>
+<p>The <em>packages/resources/fonts</em> folder.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open packages/Goggles/sass/etc/all.scss</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Setup fontface for DroidSansRegular and DroidSansBold</strong>
+<!--    --></p>
+<pre class="runnable preview">/* fonts */
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('../resources/fonts/DroidSans-webfont.eot');
+    src: url('../resources/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot');
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Now we will make sure that these fonts only apply for the main center panel</strong>
+<!--    --></p>
+<pre class="runnable preview">/* main feeds */
+.main {
+    font-family: 'DroidSansRegular';
+    line-height: 1.6em;
+
+    h1 {
+        color: $blue;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    a {
+        color: $blue;
+    }
+
+    bold {
+        font-family: 'DroidSansBold';
+    }
+}</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the app</strong>
+<!--    --></p>
+<p>So the theme knows the font locations and test your application. Your app should contain the new font, in the <em>main</em> center panel.</p>
+<!----></li>
+</ol>
+<h1>13.3. Implement custom icons</h1>
+<!-- Chapter: Implement custom icons -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Go to <a href="http://icomoon.io/app">http://icomoon.io/app</a></strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the icons below, and download a package</strong>.
+<!--    --></p>
+<span class="title">You will need the following icons:</span><ul>
+<!----><li>
+<!--    --><p>
+an icon for RSS feeds - you will map this icon to the <em>r</em> character
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+an icon for the help button -  you will map this icon to the <em>h</em> character
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+an icon for the subscribe button - you will map this icon to the <em>s</em> character
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+an icon for the form popup - you will map this icon to the <em>e</em> character
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Setup the font pack</strong>
+<!--    --></p>
+<p>In the <em>preferences</em> screen select <em>preferences</em>, and give your font the name: <em>ExtReader</em>. Also check <em>base64</em> encoding.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Unzip the icon font pack somewhere on your harddrive</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Copy the font folder over</strong>
+<!--    --></p>
+<p>Copy it to the fonts folder: <em>extreader/resources/fonts</em>
+. <strong>Copy the CSS rules of style.css</strong></p>
+<p>Copy it to: <em>packages/sass/etc/</em> and rename it to <em>all.scss</em>. Start with a comment: //font icons</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open packages/sass/etc/all.scss and fix the path to resources/fonts/ExtReader.eot</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the app</strong>
+<!--    --></p>
+<p>From now on the theme and the application know the icon font location.</p>
+<!----></li>
+</ol>
+
+
+<h2>13.3.1. Glyphs</h2>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Open extreader/app/view/Header.js</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Indicated by the comment, create a glyph attribute</strong>
+<!--    --></p>
+<span class="title">Point it to some decimal unicode and the Icon font:</span><ul>
+<!----><li>
+<!--    --><p>
+The glyph for the subscribe button will map to the <em>s</em> character. Therefore you will need the decimal unicode that maps to the <em>s</em> character.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Use a converter to generate this: <a href="http://www.branah.com/unicode-converter">http://www.branah.com/unicode-converter</a>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <em>s</em> character will become an icon, when you use the correct font. Therefore also set the name font that should be used:
+<!--    --></p>
+<pre class="runnable preview">glyph: ‘115@ExtReader’,</pre>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a glyph for the help button</strong>
+<!--    --></p>
+<p>Indicated by the comment; the help icon should map to the <em>h</em> character.
+ou may uncomment the line with: <code>text: ‘Help’</code>, in that case you will have a button with only an icon and no text.</p>
+<!----></li>
+</ol>
+<p>+
+Open <em>extreader/controller/Main.js</em>, where indicated by the comment, add a glyph that points to the <em>e</em> character of the iconfont.</p>
+
+
+<h2>13.3.2. Icon Classes</h2>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>On the bottom of the extreader/sass/etc/all.scss stylesheet add the styles of &lt;&lt;code5_iconclasses&gt;</strong>
+<!--    --></p>
+<pre class="runnable preview">.x-tree-node-text:before {
+    content: "r";
+    margin-right: 5px;
+    font-family: 'ExtReader';
+}</pre>
+<p>This will make sure that every tree node (with class <code>x-tree-node-text</code>), has a little icon before the text. We set the content to the <em>r</em> character to map to the rss feed icon.
+We do have to set a font that points to our icon font name, and we set a margin-right to align the icon nicely.</p>
+<!----></li>
+</ol>
+<h1>Sharing Themes</h1>
+<h1>14.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Learn about global themes
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn about app specific themes
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>14.2. Introduction</h1>
+<!-- Chapter: Introduction -->
+<p>Multiple apps can share the same theme,
+since themes are located in the <strong>packages</strong> folder.</p>
+<p>image::resources/images/sharediagram1.png</p>
+<h1>14.3. App specific</h1>
+<!-- Chapter: App specific -->
+<p>Now in the previous example, it wouldn&#8217;t make much sense that
+the Audio app has a Stylesheet that contains styles for the video
+player.</p>
+<p>So there must be a way to also save CSS styles on app level.
+That&#8217;s why each generated app has an own sass folder:
+<strong>app/sass/</strong>.</p>
+<p>image::resources/images/sharediagram2.png</p>
+<h1>14.4. Global vs App specific</h1>
+<!-- Chapter: Global vs App specific -->
+<p>Styling that is not shared between applications belongs in the application itself, not in the theme. Sencha Cmd provides an easy way to add application-level styling by following the same pattern as theme styling. The application acts as the final level in the theme hierarchy. Applications can change theme variables, and they can add their own custom variables and rules for styling the application&#8217;s views.</p>
+<p><strong>Global themes</strong> are saved in the <em>packages/sass</em> folder.<br>
+<strong>App specific styles</strong> are saved in the <em>myapp/sass/</em> folder.</p>
+<h1>14.5. Order of Loading.</h1>
+<!-- Chapter: Order of Loading. -->
+<ol>
+<!----><li>
+<!--    --><p>
+First the <strong>Global Theme</strong> is loaded.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Then the <strong>app specific styles</strong>.
+<!--    --></p>
+<!----></li>
+</ol>
+<h1>14.6. Global theme folderstructure</h1>
+<!-- Chapter: Global theme folderstructure -->
+<p>As we have seen in lecture; a Global theme has the following folderstructure.</p>
+<ul>
+<!----><li>
+<!--    --><p>
+sass
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+etc<br>
+        contains additional utility functions or mixins<br>
+        <em>all.scss</em><br>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+src<br>
+        contains Sass rules and UI mixins<br>
+        <em>button/Button.scss</em><br>
+        <em>panel/Panel.scss</em><br>
+        <em>&#8230;</em><br>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+var<br>
+        contains Sass variables<br>
+        <em>button/Button.scss</em><br>
+        <em>panel/Panel.scss</em><br>
+        <em>&#8230;</em><br>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p>The files in the <em>src</em> and <em>var</em> folders are organized according the folderstructure of the framework.
+For example to style a  <code>Ext.grid.Panel</code> you should create a folder and Sass file: <em>grid/Panel.scss</em>.</p>
+<h1>14.7. Is this structure for styles on app level the same?</h1>
+<!-- Chapter: Is this structure for styles on app level the same? -->
+<p>No. It is different.
+Although you could change it; in the (hidden) sencha config file:
+<em>myapp/.sencha/sencha.cfg</em></p>
+<h1>14.8. sencha.cfg</h1>
+<!-- Chapter: sencha.cfg -->
+<p>By default when you generate an application with Sencha Cmd,
+it is configured that app specific styles map to the filestructure of your application.</p>
+<p>myapp/.sencha/sencha.cfg</p>
+<pre class="runnable preview"># The root namespace to use when mapping scss resources to js classes
+# in the sass/src and sass/var directories
+app.sass.namespace=ExtReader</pre>
+<h1>14.9. App specific folderstructure</h1>
+<!-- Chapter: App specific folderstructure -->
+<p>To organize app specific Sass files, you should map your app file structure.
+For example:</p>
+<ul>
+<!----><li>
+<!--    --><p>
+sass
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+etc<br>
+        contains additional utility functions or mixins<br>
+        <em>all.scss</em><br>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+src<br>
+        contains Sass rules and UI mixins<br>
+        <em>view/Viewport.scss</em><br>
+        <em>view/Header.scss</em><br>
+        <em>view/Grid.scss</em><br>
+        <em>&#8230;</em><br>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+var<br>
+        contains Sass variables<br>
+        <em>view/Viewport.scss</em><br>
+        <em>view/Header.scss</em><br>
+        <em>view/Grid.scss</em><br>
+        <em>&#8230;</em><br>
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ul>
+<p><em>src/view/Viewport.scss</em>  because of <code>MyApp.view.Viewport</code><br>
+<em>src/view/Header.scss</em> because of <code>MyApp.view.Header</code><br>
+<em>src/view/Grid.scss</em> because of <code>MyApp.view.Grid.scss</code></p>
+<h1>14.10. Who is winning?</h1>
+<!-- Chapter: Who is winning? -->
+<p>Ok, you&#8217;ve created a global theme and some app specific styles.
+Let&#8217;s say you set a <code>$base-color</code> on both.
+A blue $base-color in the global theme and a red $base-color in the app specific styles.</p>
+<p>Who is winning?</p>
+<h1>14.11. Answer</h1>
+<!-- Chapter: Answer -->
+<p>You would think the app specific variable would win&#8230;
+But this is not the case. The global theme will always win, unless you
+allow variables to be overruled.</p>
+<h1>14.12. !default</h1>
+<!-- Chapter: !default -->
+<p>The <code>!default</code> setting, can set a default value for a variable.</p>
+<p>The <code>!default</code> setting can allow a variable in your <strong>global theme</strong> to be overruled by a variable
+in an app specific theme.</p>
+<p><em>It&#8217;s not the same as <code>!important</code>; that&#8217;s the opposite (but on CSS rules, not on Sass variables);
+When you set this, you can <strong>not</strong> override the CSS rule. Therefore <code>!important</code> is a bad practice.</em></p>
+<h1>14.13. Example</h1>
+<!-- Chapter: Example -->
+<p>See the next slides for an example of this works.</p>
+
+
+<h2>14.13.1. Create app specific styles</h2>
+<p>This app has a <code>MyApp.view.Viewport</code> class;
+so we will apply the <code>$base-color</code> to this component on app level.</p>
+<pre class="runnable preview">$base-color: red;</pre>
+<p>image::resources/images/share_red.png</p>
+
+
+<h2>14.13.2. Create a new theme</h2>
+<p>Assign a new theme to your app.
+Every Ext view component extends from <code>Ext.Component</code>,
+so we will apply the <code>$base-color</code> globally to this component.</p>
+<pre class="runnable preview">$base-color: blue;</pre>
+<p>image::resources/images/share_blue.png</p>
+
+
+<h2>14.13.3. Overwrite global vars</h2>
+<p>Change the global theme to allow variable overwrites.</p>
+<pre class="runnable preview">$base-color: blue !default;</pre>
+<p>image::resources/images/share_red.png</p>
+<h1>Lab: Organizing theme</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Organize global variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Organize global styles
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>15.1. Organizing global variables</h1>
+<!-- Chapter: Organizing global variables -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+Start with watching the application, so the application will build automatically every time you hit save.
+<!--    --></p>
+<pre class="runnable preview">sencha app watch</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create var/Component.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Open <em>packages/Goggles/etc/all.scss</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create a new file <em>Component.scss</em> in <em>packages/Goggles/var/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste:
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+my custom variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+all default styles (<code>base-color</code>, <code>neutral-color</code>, <code>color</code>, <code>font-family</code> and <code>font-size</code>)
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Add suffix <code>!default</code> on the end of the variable of <code>$base-color</code>
+to specify; this variable can be changed by a theme on app level.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create var/toolbar/Toolbar.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>toolbar/Toolbar.scss</em> in <em>packages/Goggles/var/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the toolbar variables
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create var/button/Button.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>button/Button.scss</em> in <em>packages/Goggles/var/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the button variables
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+* Create var/panel/Panel.scss*
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>panel/Panel.scss</em> in <em>packages/Goggles/var/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the panel variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Add suffix <code>!default</code> on the end of the variable of <code>$panel-header-background-color</code>
+to specify; this variable can be changed by a theme on app level.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create var/window/Window.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>window/Window.scss</em> in <em>packages/Goggles/var/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the window variables
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create var/grid/Panel.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>grid/Panel.scss</em> in <em>packages/Goggles/var/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the grid variables
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ol>
+<h1>15.2. Organizing global styles &amp; mixins</h1>
+<!-- Chapter: Organizing global styles &amp; mixins -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Create src/Component.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create the file <em>Component.scss</em> in <em>packages/Goggles/src</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste all the default styles &amp; font-face lines
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create src/tree/Panel.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>tree/Panel.scss</em> in <em>packages/Goggles/src/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the styles for trees.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the panel ui mixin (from <em>packages/Goggles/src/Component.scss</em>) over to this file.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a new file &amp; folder button/Button.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create this folder and file in <em>packages/Goggles/sass/src</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste all the button ui mixins (from <em>packages/Goggles/src/Component.scss</em>) over to this file.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a new file &amp; folder toolbar/Toolbar.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create this folder and file in <em>packages/Goggles/sass/src</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the toolbar ui mixin (from <em>packages/Goggles/src/Component.scss</em>) over to this file.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a new file &amp; folder window/Window.scss</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create this folder and file in <em>packages/Goggles/sass/src</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the window ui mixin (from <em>packages/Goggles/src/Component.scss</em>) over to this file.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+</ol>
+<h1>15.3. Organizing app specific variables</h1>
+<!-- Chapter: Organizing app specific variables -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Create vars/view/Viewport.scss in your app.</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>view/Viewport.scss</em> in <em>extreader/sass/var/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Overwrite the global theme CSS rules.
+<!--    --></p>
+<p>The panel header background, will become blue.
+The base-color will be a lighter gray.</p>
+<pre class="runnable preview">$base-color: #f2f2f2;
+$panel-header-background-color: #528cf1;</pre>
+<!----></li>
+</ul>
+<!----></li>
+</ol>
+<h1>15.4. Organizing app specific styles</h1>
+<!-- Chapter: Organizing app specific styles -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Create src/view/Viewport.scss in your app.</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Create a new file/folder <em>view/Viewport.scss</em> in <em>extreader/sass/src/</em>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Copy and paste the icon font and the icon CSS classes over to the <em>src/view/Viewport.scss</em> file on app level.
+<!--    --></p>
+<p>Now these icons are only available for the Ext Reader app.</p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Build the application</strong>
+<!--    --></p>
+<p>Preview and test the template.</p>
+<img src="resources/images/extreader-organize.png"  width="100%" >
+<!----></li>
+</ol>
+<h1>Performance</h1>
+<h1>16.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Learn how to optimize the Stylesheet
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>16.2. Introduction</h1>
+<!-- Chapter: Introduction -->
+<p>There are some tricks to improve performance of your web application that are related to your CSS styling.
+The smaller your CSS Stylesheet, the better performance.</p>
+<p>We will talk about the following topics:</p>
+<ul>
+<!----><li>
+<!--    --><p>
+Change CSS output for used components
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Remove CSS output for supported browsers
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compress CSS Stylesheet
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>16.3. Sencha app build</h1>
+<!-- Chapter: Sencha app build -->
+<p>While building your application with Sencha Cmd, two important tricks
+to improve CSS performance are <strong>automically</strong> included in the build process:</p>
+<ul>
+<!----><li>
+<!--    --><p>
+Remove unused CSS rules
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compress CSS Stylesheet
+<!--    --></p>
+<!----></li>
+</ul>
+<pre class="runnable preview">sencha app build
+//or
+sencha app watch</pre>
+<h1>16.4. Changes CSS output</h1>
+<!-- Chapter: Changes CSS output -->
+<p>When you build your application with Sencha Cmd, your CSS file will contain
+only the CSS needed for the components you are actually using.
+This also works for views you define, so your application can organize its Sass as a mirror
+image of its JavaScript — a huge help as your application grows over time.</p>
+<h1>16.5. What happends under the hood</h1>
+<!-- Chapter: What happends under the hood -->
+<p>Your CSS output specific for the application will be automatically maintained by Sencha Cmd.
+You can find exactly an overview of all the styles that are included and excluded in
+the following file:</p>
+<p><em>/build/ExtReader/production/Goggles.scss</em></p>
+<h1>16.6. Compress CSS</h1>
+<!-- Chapter: Compress CSS -->
+<p>When using Sencha Cmd, it will automatically compress your generated CSS file. Under the hood, this has been done by Compass which runs in Sencha Cmd based on the output_style setting in <strong>config.rb</strong></p>
+<table class="tableblock frame-all grid-all" id="compression"
+style="
+width:100%;
+">
+<caption class="title">Table 2. Compression levels</caption>
+<col style="width:50%;">
+<col style="width:50%;">
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" >Setting</th>
+<th class="tableblock halign-left valign-top" >Description</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><code>:compressed</code></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Compressed style takes up the minimum amount of space possible, having no whitespace except that necessary to separate selectors and a newline at the end of the file. It also includes some other minor compressions, such as choosing the smallest representation for colors. It’s not meant to be human-readable. (This setting is used when you create a production build.)</p></td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><code>:nested</code></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Nested style is the default Sass style, because it reflects the structure of the CSS styles and the HTML document they’re styling. Each property has its own line, but the indentation isn’t constant. Each rule is indented based on how deeply it’s nested.
+(This setting is used when you create a test build.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><code>:expanded</code></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Expanded is a more typical human-made CSS style, with each property and rule taking up one line. Properties are indented within the rules, but the rules aren’t indented in any special way.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><code>:compact:</code></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Compact style takes up less space than Nested or Expanded. It also draws the focus more to the selectors than to their properties. Each CSS rule takes up only one line, with every property defined on that line. Nested rules are placed next to each other with no newline, while separate groups of rules have newlines between them.</p></td>
+</tr>
+</tbody>
+</table>
+<h1>16.7. Performance Variables</h1>
+<!-- Chapter: Performance Variables -->
+<p>In general frameworks are made to support as much usecases and browsers.
+Sencha Touch has some Sass variables that are related to performance;
+(it increases your Stylesheet), by default they are enabled (set to <code>true</code>)
+to support all these usecases and browsers.</p>
+<p>The next slides explain, which settings you can turn off if you don&#8217;t support
+that particular usecase or browser.</p>
+
+
+<h2>16.7.1. Disable browsers</h2>
+<p>By default Ext JS includes all browsers,
+these variables are set to <code>true</code>. However if you don&#8217;t support
+a particular browser you can disable these so the file size
+of your Stylesheet will become smaller.</p>
+<span class="title">Set these variables on app level</span><ul>
+<!----><li>
+<!--    --><p>
+<code>$include-chrome</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>$include-ff</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>$include-ie</code> (Old IE (&lt; IE10))
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>$include-opera</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>$include-safari</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<code>$include-webkit</code>
+<!--    --></p>
+<!----></li>
+</ul>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS</a></p>
+
+
+<h2>16.7.2. More information</h2>
+<p>The "good" browsers (chrome/ff/safari/opera) require very few browser-specific hacks and thus you will see little or no difference in CSS file size when turning these rules off.</p>
+<p>The big one is $include-ie.
+$include-ie will turn off all IE-specific rules for IE9 and below.
+IE10 is considered a modern browser - the rules that work in the other modern browsers also work in IE10, so there are no IE10-specific hacks required.</p>
+
+
+<h2>16.7.3. Disable not found images</h2>
+<p>Enable the inclusion of files which are not found when compiling your Sass.
+This setting is enabled by default.</p>
+<p><code>$include-not-found-images</code></p>
+<p>You&#8217;ll only see a decrease in file size if your stylesheet references images that do not exist on disc - most themes should not reference non-existent images.</p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_var-S-include-not-found-images">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_var-S-include-not-found-images</a></p>
+
+
+<h2>16.7.4. Disable default uis</h2>
+<p>True to include the default UI for each component.</p>
+<p><code>$include-default-uis</code></p>
+<p>This controls the generation of the "default" ui for components.  If set to false, you wouldn&#8217;t get the default styling for panels, buttons, etc.  So this should greatly reduce the stylesheet size, but you probably wouldn&#8217;t want to do this, since it disables default styling.</p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_var-S-include-default-uis">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_var-S-include-default-uis</a></p>
+<h1>Theming with Sencha Architect</h1>
+<h1>17.1. Objectives</h1>
+<!-- Chapter: Objectives -->
+<ul>
+<!----><li>
+<!--    --><p>
+Learn about app templates
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to create a theme with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to use variables in Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to use skins (mixins) in Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to implement images in Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to implement custom CSS
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Learn how to export a theme in Sencha Architect
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>17.2. Introduction</h1>
+<!-- Chapter: Introduction -->
+
+
+<h2>17.2.1. Open a Sencha Architect project</h2>
+
+
+<h2>17.2.2. Create a theme</h2>
+
+
+<h2>17.2.3. Theming</h2>
+<h3>Vars</h3>
+<h3>Skins</h3>
+<h3>Images</h3>
+
+
+<h2>17.2.4. How to create custom CSS</h2>
+
+
+<h2>17.2.5. Exporting</h2>
+<h1>Lab:  Theming with Sencha Architect</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Create a custom theme with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Extend from a Sencha theme with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create a color palette
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Theme with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create styles for templates with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create a custom UI with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Save themes in the toolbox
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>18.1. Starting Sencha Architect</h1>
+<!-- Chapter: Starting Sencha Architect -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Start Sencha Architect</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Press: <em>Create New</em></strong>
+<!--    --></p>
+<p>See <a href="#lab8_start">[lab8_start]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_start.png"  width="100%" >
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Choose: <em>starter apps &gt; Task List</em></strong>
+<!--    --></p>
+<p>Sencha Architect will start with a default working app: <em>The Task List</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Press the <em>Save</em> button</strong>
+<!--    --></p>
+<p>Save the project under: <em>htdocs/advancedtheming/</em>. Give it the project name: <em>tasklist</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Press the <em>Settings</em> button</strong>
+<!--    --></p>
+<p>Set the url prefix to: <em>http://localhost/advancedtheming/tasklist</em></p>
+<p>See <a href="#lab8_setup">[lab8_setup]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_setup.png"  width="100%" >
+<h1>18.2. Creating and extending from a Sencha theme</h1>
+<!-- Chapter: Creating and extending from a Sencha theme -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>In the toolbox, filter on <em>Themes</em></strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the <em>Neptune based theme</em> and drag this into the <em>Project Inspector &gt; Resources</em></strong>
+<!--    --></p>
+<p>When it worked correct, Sencha Architect will ask you if you want to apply this theme. Click <em>Yes</em>. In your <em>Project Inspector &gt; Resources</em> you will see <em>MyNeptuneTheme(applied)</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Rename the theme</strong>
+<!--    --></p>
+<p>Select the <em>MyNeptuneTheme</em> and in the config panel change the name to:
+<em>DarkTheme</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the Globals tab</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a color palette</strong>
+<!--    --></p>
+<p>Filter for <code>base-color</code>. Click the color, and in the color picker, select the colors below and add these to the palette:</p>
+<ul>
+<!----><li>
+<!--    --><p>
+#474747
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#373737
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#313131
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#232323
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#dddddd
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#94fd8a
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#60a500
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the base-color</strong>
+<!--    --></p>
+<p>Still in the color palette, ivoked from the <code>base-color</code> property, select the color <code>#313131</code> in the palette and press <em>ok</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the toolbar background color</strong>
+<!--    --></p>
+<p>Filter for: <code>toolbar background</code> and change the white color to the color <code>#474747</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the panel body background</strong>
+<!--    --></p>
+<p>Filter for: <code>panel body background</code> and change the white color to the color <code>#474747</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the panel body color</strong>
+<!--    --></p>
+<p>Filter for: <code>panel body color</code> and change the black color to the color <code>#dddddd</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the row bg color</strong>
+<!--    --></p>
+<p>Filter for: <code>row bg color</code> and change the white color to the color <code>#373737</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+*Create the row border color
+<!--    --></p>
+<p>Filter for: <code>row border color</code> and change the gray color to the color <code>#232323</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid column header color</strong>
+Filter for: <code>grid column header color</code> and change the <code>grid column header color</code> to <code>#232323</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid column header font</strong>
+<!--    --></p>
+<p>Filter for: <code>grid columm header font</code> and change it to <code>bold 11px Helvetica</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid header background color</strong>
+<!--    --></p>
+<p>Filter for: <code>grid header background color</code> and change the <code>grid column header color</code> to #dddddd.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid row cell over background color</strong>
+<!--    --></p>
+<p>Filter for: <code>grid row cell over background color</code> and change the color to <code>#232323</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid cell selected background color</strong>
+<!--    --></p>
+<p>Filter for <code>grid cell selected background color</code> and change the color to <code>#232323</code></p>
+<!----></li>
+</ol>
+<pre class="runnable preview">Can't find the properties you are filtering for?
+Make sure you select the Resources &gt; DarkTheme
+and click the Globals tab.</pre>
+<h1>18.3. Creating styles for templates (tpls)</h1>
+<!-- Chapter: Creating styles for templates (tpls) -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>In the project inspector, select Views &gt; priority &gt; tpl</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Change the image height</strong>
+<!--    --></p>
+<p>In the <em>code</em> view, give the image an attribute +height="10".</p>
+<p></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the tpl styles</strong>
+<!--    --></p>
+<p>In the <em>Project Inspector</em> select <em>Views &gt; mainView &gt; detailsView &gt; tpl2</em>.</p>
+<p>In the <em>config</em> panel, click on the plus button (<em>+</em>) next to the <em>scss</em> property. After that, press the icon with the <em>arrow to the right</em>.</p>
+<p>See <a href="#lab8_tpl1">[lab8_tpl1]</a> and <a href="#lab8_tpl2">[lab8_tpl2]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_tpl1.png"  width="100%" >
+<img src="resources/images/architect_tpl2.png"  width="100%" >
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Open the tpl code</strong>
+<!--    --></p>
+<p>Under <code>tpl2_ there should be a +scss</code> file, double click to open it in the <em>code editor</em> view.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Add the custom styles</strong>
+<!--    --></p>
+<p>Enter the following styles (See <a href="#code8_tpl">[code8_tpl]</a>) and wait till Architect finished compiling.</p>
+<pre class="runnable preview">h1 {
+    margin: 30px 10px 0;
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}
+
+p {
+    margin: 10px;
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}</pre>
+<p>See <a href="#lab8_tpl3">[lab8_tpl3]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_tpl3.png"  width="100%" >
+<p>+</p>
+<pre class="runnable preview">Note: save your Architect project after Architect
+is done with compiling...</pre>
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Preview the TaskList app in your browser</strong>
+<!--    --></p>
+<!----></li>
+</ol>
+<h1>18.4. Create a new button UI</h1>
+<!-- Chapter: Create a new button UI -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>In design mode, select the <em>add task</em> button</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the <em>Skins</em> tab</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Click on the <em>+</em> button to create a new UI for the button</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Click on the <em>R</em> button to rename the new UI</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the background color</strong>
+<!--    --></p>
+<p>Filter for: <code>background color</code> and change the color+ to #60a500.</p>
+<pre class="runnable preview">Note currently there is a bug that does not apply
+background colors to buttons in toolbars.</pre>
+<!----></li>
+</ol>
+<h1>18.5. Reusing themes</h1>
+<!-- Chapter: Reusing themes -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Save the theme to toolbox</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Select the <em>DarkTheme</em> theme_.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<em>Right click &gt; save to toolbox</em>
+<!--    --></p>
+<img src="resources/images/architect_endresult.png"  width="100%" >
+<!----></li>
+</ul>
+<!----></li>
+</ol>
+<p>//////BONUS extending from Base theme
+////include::../extjs/_lab9.asciidoc[]</p>
+<div class="sect1">
+<h2 id="_setup_guide">Appendix A: Setup Guide</h2>
+<div class="sectionbody">
+<span class="title">Lab materials</span><ul>
+<!----><li>
+<!--    --><p>
+Course Goodies: TODO
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Required software</span><ul>
+<!----><li>
+<!--    --><p>
+Java 7 JDK
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Sencha Cmd 4.0.x
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Sencha Architect 3.0 (preview)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+IDE or Editor of choice
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Modern browser
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Ruby 1.x
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Sass
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compass
+<!--    --></p>
+<!----></li>
+</ul>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">Some steps require that you work on the command line:<br>
+<strong>Windows users can open the Command Prompt:</strong><br>
+<span class="monospaced">Start &gt; Run</span>. Type: <span class="monospaced">cmd</span> and press <em>ok</em> <br>
+<strong>Mac users can open the Terminal:</strong><br>
+ +<span class="monospaced">Applications &gt; Utils &gt; Terminal</span></td>
+</tr></table>
+</div>
+<h1>Java Run-time environment</h1>
+<!-- Chapter: Java Run-time environment -->
+<p>Download Java 7 JDK and run the installer
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html</a></p>
+<h1>Sencha Cmd</h1>
+<!-- Chapter: Sencha Cmd -->
+<p>With Sencha Cmd you can start scaffolding a new project, minifying and deploying your application to production. In case you have the old Sencha SDK tools installed please remove it.</p>
+<p>Download Sencha Cmd and run the installer:<br>
+<a href="http://www.sencha.com/products/sencha-cmd/download">http://www.sencha.com/products/sencha-cmd/download</a></p>
+<p>Remember where you installed the Sencha Cmd directory and the version number you
+are using. By default, the installation path is:<br>
+Windows: <span class="monospaced">C:\Users\Me\bin\Sencha\Cmd\{cmd-vers}</span><br>
+Mac OS X: <span class="monospaced">~/bin/Sencha/Cmd/{cmd-vers}</span><br>
+Linux: <span class="monospaced">~/bin/Sencha/Cmd/{cmd-vers}</span><br></p>
+<p>Enter the following command in your console or terminal: <span class="monospaced">sencha</span>.
+It should prompt all the Sencha commands and options.
+In case you don&#8217;t see anything you can close your terminal and you will need to add Sencha Cmd to your class path:</p>
+<p><strong>Windows users</strong>:<br>
+<span class="monospaced">Start &gt; Control Panel &gt; Performance and Maintenance &gt; System</span><br>
+In your system properties click on the <span class="monospaced">Advanced</span> tab.<br>
+Click the <span class="monospaced">Environment Variables</span> button.
+Edit the <span class="monospaced">classpath</span> variable or create a new variable called: <span class="monospaced">classpath</span>
+Add the following value and save:<br>
+<span class="monospaced">C:\Users\Me\bin\Sencha\Cmd\{cmd-vers}</span><br>
+Make sure you are entering the correct path and version number.</p>
+<p><strong>Mac users</strong>:<br>
+Make hidden files visible.
+To achieve this, type the following command in your terminal:<br>
+<span class="monospaced">defaults write com.apple.finder AppleShowAllFiles TRUE</span><br>
+<span class="monospaced">killall Finder</span><br>
+(running these commands with <code>FALSE</code> will hide the files again)
+Now open <em>~.bash_profile</em>.<br>
+Add the following commands and save the file:<br>
+<span class="monospaced">export PATH=/Users/username/bin/Sencha/Cmd/{cmd-vers}:$PATH</span> <br>
+Make sure you are entering the correct path and version number.</p>
+<h1>Sencha Architect 3.0</h1>
+<!-- Chapter: Sencha Architect 3.0 -->
+<p>Download the installer for the preview version from:
+<a href="http://sc13-live.sencha.com/">http://sc13-live.sencha.com/</a></p>
+<p>Run the installer, and login by using the (or creating) Sencha forum ID.</p>
+<h1>IDE or Editor</h1>
+<!-- Chapter: IDE or Editor -->
+<p>You can use any IDE or Editor you like.
+I&#8217;m using: Sublime Text (for it\' simplicity) - <a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></p>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">I recommend that your editor includes JavaScript syntax checking similar to JSLint.</td>
+</tr></table>
+</div>
+<h1>Modern browser</h1>
+<!-- Chapter: Modern browser -->
+<p>Sencha Touch requires you use a modern browser, like Google Chrome, Safari, IE10 or Firefox 24+
+I prefer Safari or Google Chrome.
+To install Google Chrome just download and run the installer:
+<a href="https://www.google.com/intl/en/chrome/browser/">https://www.google.com/intl/en/chrome/browser/</a></p>
+<h1>Ruby, Sass and Compass</h1>
+<!-- Chapter: Ruby, Sass and Compass -->
+<p>Check if Ruby, Sass or Compass is installed with the following commands for the
+command line:<br>
+<code>ruby -v</code><br>
+<code>compass -v</code><br>
+<code>sass -v</code><br>
+It should prompt you with a version number.
+If it does not output a version number you will need to install it.</p>
+<p>To install Sass and Compass to your development environment, you will need to have Ruby installed. This is automatically installed for Mac OS X users. Windows users can download and run the installer from:  <a href="http://rubyinstaller.org">http://rubyinstaller.org</a>
+(Do not download the Ruby 2.x version.)</p>
+<p>Enter the following commands in the command line:
+<code>gem install compass</code><br>
+Wait until the process is completed. It will take a few minutes before the
+command completes and the command prompt returns.<br>
+<code>gem install sass -v 3.1.1</code>
+Wait until the process is completed</p>
+<p>Enter the following commands in the command line:
+<code>sudo gem install compass</code><br>
+Wait until the process is completed. It will take a few minutes before the
+command completes and the command prompt returns.<br>
+<code>sudo gem install sass -v 3.1.1</code>
+Wait until the process is completed</p>
+</div>
+</div>
+
+<!-- END -->
+</body>
+</html>

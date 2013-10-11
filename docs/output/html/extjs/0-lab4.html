@@ -1,0 +1,353 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Lab: Create the Goggles Theme</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Create a custom Sass stylesheet
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Use Sencha variables
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile Sass to CSS
+<!--    --></p>
+<!----></li>
+</ul>
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Open with your editor the following file:</strong>
+<!--    --></p>
+<p><em>/packages/Goggles/sass/etc/all.scss</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>On the top of your file, define the following set of variables</strong>
+<!--    --></p>
+<pre class="runnable preview">/* my variables */
+$red: #d14836;
+$gray: #f5f5f5;
+$yellow: #ffff00;
+$white: #fff;
+$blue: #15c;</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Below your set of variables set the <code>base-color</code>, to <code>$gray</code></strong>:
+<!--    --></p>
+<pre class="runnable preview">/* default styles */
+$base-color: $gray;</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Compile your stylesheet</strong>
+<!--    --></p>
+<p>On the CLI enter the following command from the <em>extreader</em> folder:</p>
+<p><code>sencha ant sass</code></p>
+<p>You can use this command everytime you want to test your stylesheet.
+Just press the up key on the CLI to go back to your previous command.</p>
+<p>With the new Sencha Cmd 4 version it&#8217;s possible
+to watch your stylesheet for changes. Changes
+in the Sass file will be automatically compiled to CSS files:
+<code>sencha app watch</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+*Verify your app looks like the image <a href="#lab4_goggles">[lab4_goggles]</a>
+<!--    --></p>
+<img src="resources/images/extreader-goggles1.png"  width="100%" >
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open the API Docs</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS</a></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following Global_CSS variables</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+The <code>neutral-color</code> should be set to <code>$gray</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The default text color should be set to a 60% darker variant of gray. (<code>darken($gray,60%)</code>)
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The font should be set to <code>Arial, sans-serif</code>, with a fontsize of 13px.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Toolbars</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.toolbar.Toolbar</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all toolbar components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Start with the comment: <code>/* toolbars */</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the background color for the toolbar, to variable <code>$gray</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Test your stylesheet; you should notice a gray top toolbar.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Buttons</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.button.Button</code></p>
+<p>Click on the <em>CSS vars button</em> and review the set of styles which are available for all button components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Start with the comment: <code>/* buttons */</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+All buttons in the toolbar should have a background color <code>$gray</code> and a border color that is 10% darker then the normal <code>$gray</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Both buttons, default and toolbar buttons should have the background-gradient set to the string: <code><em>none</em></code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set a padding to all small buttons to 8px.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+All default buttons, should have a $red background color. over, pressed and focus buttons can have a 10% darker red background color.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+All default buttons with a disabled state should have a 10% lighter color.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, you should notice gray buttons in your toolbar. When you click on the subscribe button, you should see a form with a reddish button.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Panels</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.panel.Panel</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all panel components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Start with the comment: <code>/* panels */</code>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the border width of the frame to 0.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the body border width to 0.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Panel Headers</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.panel.Header</code></p>
+<p>Click on the <em>CSS vars</em> button; and review the set of styles which are available for all panel header components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Set the padding for the header to: 10px 5px
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Set the header background-color to an 8% darker red.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, you should see a tree panel with a red header.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Windows</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.window.Window</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all window components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+The <code>window-header</code> padding should be set to 10px 5px;
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>window-header-background-color</code> should be set to an 8% darker red.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, when you click on the subscribe button, you should see a nice popup window with a reddish header.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Open with your browser the API Docs for Grid Panels</strong>
+<!--    --></p>
+<p><a href="http://docs.sencha.com/extjs/4.2.1/">http://docs.sencha.com/extjs/4.2.1/</a> and search for <code>Ext.grid.Panel</code></p>
+<p>Click on the <em>CSS vars</em> button and review the set of styles which are available for all grid components.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the following vars</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+The grid header will get a border color of <code>$white</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The grid header will also get a padding of 12px 8px and a color that is 10% darker then the default gray.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Next step is to set the <code>row-cell</code> background color and the <code>row-cell-alt</code> background color both to a 3% darker gray.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>row-cell</code> over color will be a 5% darker gray.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>row-cell</code> border color will be a 10% darker gray
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>row-cell</code> selected background-color, should be a 40% lighter yellow color.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+The <code>grid-cell-inner</code> padding should be set to 8px.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Compile and test your stylesheet, you should see a nice gray styled grid.
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>The last step is to create some custom styles for the tree panel</strong>
+<!--    --></p>
+<p>As you can see, the tree is already styled. This is because the treepanel extends from <code>Ext.panel.Table</code> and <code>Ext.panel.Table</code>, therefore it reuses a lot of the same styles as the grid does. Let’s write our own custom styles</p>
+<p>Take over the below CSS code and use Sass nesting
+<a href="http://sass-lang.com/docs/yardoc/#nesting">http://sass-lang.com/docs/yardoc/#nesting</a> for readability:</p>
+<pre class="runnable preview">.x-tree-panel .x-tree-icon,
+.x-tree-panel .x-tree-elbow-img {
+    display: none;
+}
+.x-tree-panel .x-grid-cell {
+    background: $white;
+}
+
+.x-tree-panel .x-grid-row-selected .x-grid-td {
+    background: white;
+}
+.x-tree-panel .x-grid-row-selected .x-tree-node-text {
+    font-weight: bold;
+}
+.x-tree-panel .x-grid-row-selected {
+    color: red;
+}</pre>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Compile and preview your stylessheet</strong>
+<!--    --></p>
+<p>By now you should see your own custom tree panel, with white background cells. If you want to take a peek into the solution files, check the following file: <em>/packages/Lab4Solution/sass/etc/all.scss</em>
+When you want to test this solution theme, just switch themes in your <em>extreader/.sencha/app/sencha.cfg</em>, set <code>app.theme</code> to <code>Lab4Solution</code> (<code>app.theme=Lab4Solution</code>) and run a <code>sencha app build</code>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/extreader-goggles2.png"  width="100%" >
+
+<!-- END -->
+</body>
+</html>

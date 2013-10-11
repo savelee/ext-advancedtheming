@@ -1,0 +1,128 @@
+=== Implementing custom fonts
+.The following steps are required to implement a custom font.
+
+1. Download a font-face kit
+2. Create _fonts_ folder in resources folder.
+3. Implement font in Sass
+4. Assign font
+5. Build
+
+==== About @font-face
+
++@font-face+ is a CSS technique used nowadays to implement custom
+web fonts. Where with system fonts it picks the font if available in your OS, +@font-face+ downloads the font from the Internet.
+
+Unfortunately the major browsers can't come up with one web font solution. Therefore you have to embed multiple web font extensions
+into your Stylesheet. See <<styles_fontfaceoverview>>.
+
+==== Compatibility
+
+.Cross-browser compatibility overview of font-face
+[[styles_fontfaceoverview]]
+[options="header,footer"]
+|======================================
+|Browser             |TTF|EOT|WOFF|SVG
+|Google Chrome       |X|_|X|X
+|Safari              |X|_|X|X
+|Mobile Safari       |X|_|X|X 
+|IE10                |_|X|X|_
+|Android Browser     |X|_|_|X
+|BlackBerry Browser  |X|_|X|X
+|Firefox             |X|_|X|_ 
+|====================================== 
+
+==== Where to get fonts from?
+.Download an +@font-face+ kit
+* http://www.fontsquirrel.com/
+* http://www.fontex.org/
+
+.A font service:
+* http://www.google.com/fonts
+* https://typekit.com/
+
+==== Implement font in Sass
+
+[source, javascript]
+----
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot');
+    src: url('../resources/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../resources/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../resources/fonts/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+----
+
+==== Base64 for fonts!
+Yes it's possible to Base64 encode fonts!
+
+To get a Base64 font, upload and encode every font extension
+to an encoder:
+
+http://www.opinionatedgeek.com/dotnet/tools/base64encode/
+
+It will present you the Base64 for each font file.
+These Base64 strings you can implement in your Sass.
+
+==== Base64 font example
+
+[source, javascript]
+----
+@font-face{
+ font-family: "DroidSansBold";
+ src: url(data:font/tff;base64,<here>) format('TrueType'),
+        url(data:font/svg;base64,<here>) format('svg'),
+        url(data:font/eot;base64,<here>) format('eot'),
+        url(data:font/woff;base64,<here>) format('woff');
+}
+----
+
+==== Assign font
+
+Set a CSS class on a component, to target it from the CSS.
+
+[source, javascript]
+----
+.mycomponent {
+    font-family: 'DroidSansRegular';
+    line-height: 1.6em;
+}
+----
+
+==== Px or Em ?
+
+*Pixels*
+Pixels (px) are fixed-size units that are used in screen media. One pixel is equal to one dot on the computer screen (the smallest division of your screen’s resolution). Many web designers use pixel units in web documents in order to produce a pixel-perfect representation of their site as it is rendered in the browser.
+
+*Ems*
+"Ems" (em): The _em_ is a scalable unit that is used in web document media. An em is equal to the current font-size, for instance, if the font-size of the document is 16px, 1em is equal to 16px. Ems are scalable in nature, so 2em would equal 32px, .5em would equal 8px, etc. 
+
+In theory, using em instead of px will allow the layout to re-size more easily based on user preferences. But nowadays, modern browsers can resize px layouts as well as em layouts so it might not be as relevant as it was some years ago.
+
+==== Px / Ems converters
+
+When you think the calculation of ems is annoying...
+Let's Sass calculate it for you!
+
+.Example em mixin and px mixin
+[source, javascript]
+----
+@function em($target, $context: $base-font-size-em) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
+@function px($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0px;
+}
+$base-font-size: 15px;
+----
+
+==== Build
+A +build+ process is required in order to see the newly implemented fonts. This will copy and link the fonts to the build folder.
+
++sencha app build+

@@ -1,0 +1,340 @@
+<html class="x-strict x-viewport">
+<head>
+    <title>Sencha Training</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<h1>Lab:  Theming with Sencha Architect</h1>
+<span class="title">Objectives</span><ul>
+<!----><li>
+<!--    --><p>
+Create a custom theme with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Extend from a Sencha theme with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create a color palette
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Theme with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create styles for templates with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Create a custom UI with Sencha Architect
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+Save themes in the toolbox
+<!--    --></p>
+<!----></li>
+</ul>
+<h1>Starting Sencha Architect</h1>
+<!-- Chapter: Starting Sencha Architect -->
+<span class="title">Steps</span><ol>
+<!----><li>
+<!--    --><p>
+<strong>Start Sencha Architect</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Press: <em>Create New</em></strong>
+<!--    --></p>
+<p>See <a href="#lab8_start">[lab8_start]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_start.png"  width="100%" >
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Choose: <em>starter apps &gt; Task List</em></strong>
+<!--    --></p>
+<p>Sencha Architect will start with a default working app: <em>The Task List</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Press the <em>Save</em> button</strong>
+<!--    --></p>
+<p>Save the project under: <em>htdocs/advancedtheming/</em>. Give it the project name: <em>tasklist</em></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Press the <em>Settings</em> button</strong>
+<!--    --></p>
+<p>Set the url prefix to: <em>http://localhost/advancedtheming/tasklist</em></p>
+<p>See <a href="#lab8_setup">[lab8_setup]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_setup.png"  width="100%" >
+<h1>Creating and extending from a Sencha theme</h1>
+<!-- Chapter: Creating and extending from a Sencha theme -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>In the toolbox, filter on <em>Themes</em></strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the <em>Neptune based theme</em> and drag this into the <em>Project Inspector &gt; Resources</em></strong>
+<!--    --></p>
+<p>When it worked correct, Sencha Architect will ask you if you want to apply this theme. Click <em>Yes</em>. In your <em>Project Inspector &gt; Resources</em> you will see <em>MyNeptuneTheme(applied)</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Rename the theme</strong>
+<!--    --></p>
+<p>Select the <em>MyNeptuneTheme</em> and in the config panel change the name to:
+<em>DarkTheme</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the Globals tab</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create a color palette</strong>
+<!--    --></p>
+<p>Filter for <code>base-color</code>. Click the color, and in the color picker, select the colors below and add these to the palette:</p>
+<ul>
+<!----><li>
+<!--    --><p>
+#474747
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#373737
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#313131
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#232323
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#dddddd
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#94fd8a
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+#60a500
+<!--    --></p>
+<!----></li>
+</ul>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the base-color</strong>
+<!--    --></p>
+<p>Still in the color palette, ivoked from the <code>base-color</code> property, select the color <code>#313131</code> in the palette and press <em>ok</em>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the toolbar background color</strong>
+<!--    --></p>
+<p>Filter for: <code>toolbar background</code> and change the white color to the color <code>#474747</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the panel body background</strong>
+<!--    --></p>
+<p>Filter for: <code>panel body background</code> and change the white color to the color <code>#474747</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the panel body color</strong>
+<!--    --></p>
+<p>Filter for: <code>panel body color</code> and change the black color to the color <code>#dddddd</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the row bg color</strong>
+<!--    --></p>
+<p>Filter for: <code>row bg color</code> and change the white color to the color <code>#373737</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+*Create the row border color
+<!--    --></p>
+<p>Filter for: <code>row border color</code> and change the gray color to the color <code>#232323</code>.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid column header color</strong>
+Filter for: <code>grid column header color</code> and change the <code>grid column header color</code> to <code>#232323</code>.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid column header font</strong>
+<!--    --></p>
+<p>Filter for: <code>grid columm header font</code> and change it to <code>bold 11px Helvetica</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid header background color</strong>
+<!--    --></p>
+<p>Filter for: <code>grid header background color</code> and change the <code>grid column header color</code> to #dddddd.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid row cell over background color</strong>
+<!--    --></p>
+<p>Filter for: <code>grid row cell over background color</code> and change the color to <code>#232323</code></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the grid cell selected background color</strong>
+<!--    --></p>
+<p>Filter for <code>grid cell selected background color</code> and change the color to <code>#232323</code></p>
+<!----></li>
+</ol>
+<pre class="runnable preview">Can't find the properties you are filtering for?
+Make sure you select the Resources &gt; DarkTheme
+and click the Globals tab.</pre>
+<h1>Creating styles for templates (tpls)</h1>
+<!-- Chapter: Creating styles for templates (tpls) -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>In the project inspector, select Views &gt; priority &gt; tpl</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Change the image height</strong>
+<!--    --></p>
+<p>In the <em>code</em> view, give the image an attribute +height="10".</p>
+<p></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the tpl styles</strong>
+<!--    --></p>
+<p>In the <em>Project Inspector</em> select <em>Views &gt; mainView &gt; detailsView &gt; tpl2</em>.</p>
+<p>In the <em>config</em> panel, click on the plus button (<em>+</em>) next to the <em>scss</em> property. After that, press the icon with the <em>arrow to the right</em>.</p>
+<p>See <a href="#lab8_tpl1">[lab8_tpl1]</a> and <a href="#lab8_tpl2">[lab8_tpl2]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_tpl1.png"  width="100%" >
+<img src="resources/images/architect_tpl2.png"  width="100%" >
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Open the tpl code</strong>
+<!--    --></p>
+<p>Under <code>tpl2_ there should be a +scss</code> file, double click to open it in the <em>code editor</em> view.</p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Add the custom styles</strong>
+<!--    --></p>
+<p>Enter the following styles (See <a href="#code8_tpl">[code8_tpl]</a>) and wait till Architect finished compiling.</p>
+<pre class="runnable preview">h1 {
+    margin: 30px 10px 0;
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}
+
+p {
+    margin: 10px;
+    text-shadow: #000 0.1em 0.1em 0.3em;
+}</pre>
+<p>See <a href="#lab8_tpl3">[lab8_tpl3]</a>.</p>
+<!----></li>
+</ol>
+<img src="resources/images/architect_tpl3.png"  width="100%" >
+<p>+</p>
+<pre class="runnable preview">Note: save your Architect project after Architect
+is done with compiling...</pre>
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Preview the TaskList app in your browser</strong>
+<!--    --></p>
+<!----></li>
+</ol>
+<h1>Create a new button UI</h1>
+<!-- Chapter: Create a new button UI -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>In design mode, select the <em>add task</em> button</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Select the <em>Skins</em> tab</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Click on the <em>+</em> button to create a new UI for the button</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Click on the <em>R</em> button to rename the new UI</strong>
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<strong>Create the background color</strong>
+<!--    --></p>
+<p>Filter for: <code>background color</code> and change the color+ to #60a500.</p>
+<pre class="runnable preview">Note currently there is a bug that does not apply
+background colors to buttons in toolbars.</pre>
+<!----></li>
+</ol>
+<h1>Reusing themes</h1>
+<!-- Chapter: Reusing themes -->
+<ol>
+<!----><li>
+<!--    --><p>
+<strong>Save the theme to toolbox</strong>
+<!--    --></p>
+<ul>
+<!----><li>
+<!--    --><p>
+Select the <em>DarkTheme</em> theme_.
+<!--    --></p>
+<!----></li>
+<!----><li>
+<!--    --><p>
+<em>Right click &gt; save to toolbox</em>
+<!--    --></p>
+<img src="resources/images/architect_endresult.png"  width="100%" >
+<!----></li>
+</ul>
+<!----></li>
+</ol>
+
+<!-- END -->
+</body>
+</html>
