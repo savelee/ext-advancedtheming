@@ -1,23 +1,23 @@
 
-=== Color Hailpixel
+==== Color Hailpixel
 Create custom color palette's:
 http://color.hailpixel.com/
 
-=== Kuler
+==== Kuler
 Create color pallette's
 TODO
 
-=== HEX to RGB Converter
+==== HEX to RGB Converter
 Convert HEX to RGB and the otherway around:
 http://hex.colorrrs.com/
 
-=== Chrome Extensions:
+==== Chrome Extensions:
 
-==== Sencha App Inspector
+===== Sencha App Inspector
 TODO
 https://chrome.google.com/webstore/detail/app-inspector-for-sencha/pbeapidedgdpniokbedbfbaacglkceae
 
-==== Web Developer Toolbar
+===== Web Developer Toolbar
 Handy set of webdev tools:
 * Disable
 ** JavaScripts, Popups
@@ -42,7 +42,7 @@ Handy set of webdev tools:
 
 https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm
 
-==== Corporate Lorum Ipsum
+===== Corporate Lorum Ipsum
 Generate corporate dummy text
 https://chrome.google.com/webstore/detail/corporate-ipsum/lfmadckmfehehmdnmhaebniooenedcbb
 

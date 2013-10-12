@@ -5,8 +5,11 @@
 </head>
 <body>
 <h1>Sencha Mixins</h1>
-<h1>Objectives</h1>
-<!-- Chapter: Objectives -->
+<h1>Sencha Mixins</h1>
+<!-- Chapter: Sencha Mixins -->
+
+
+<h2>Objectives</h2>
 <ul>
 <!----><li>
 <!--    --><p>
@@ -29,8 +32,9 @@ Implementing Button UIs
 <!--    --></p>
 <!----></li>
 </ul>
-<h1>Introduction</h1>
-<!-- Chapter: Introduction -->
+
+
+<h2>Introduction</h2>
 <p>As we learned from the lecture, Sass mixins can be very handy:</p>
 <pre class="runnable preview">@mixin custom-button-ui($color) {
         background-color: $color;
@@ -44,16 +48,18 @@ Implementing Button UIs
 }</pre>
 <pre class="runnable preview">.x-btn.custom { background-color: red; }
 .x-btn.custom:hover{ background-color: #ff6666; }</pre>
-<h1>Sencha UIs</h1>
-<!-- Chapter: Sencha UIs -->
+
+
+<h2>Sencha UIs</h2>
 <p>Sencha has their own Sass mixins set in the <strong>Neutral</strong> theme.
 Therefore we can use these mixins (sencha uis) to customize our own
 skins.</p>
 <p>For example, Sencha UIs can be handy for when you have a <strong>blue</strong> Neptune theme
 and only some toolbars needs to be <strong>green</strong> instead of blue.</p>
 <img src="resources/images/mixins_kitchensink.png"  width="100%" >
-<h1>Mixin vs CSS overwrite</h1>
-<!-- Chapter: Mixin vs CSS overwrite -->
+
+
+<h2>Mixin vs CSS overwrite</h2>
 <pre class="runnable preview">extjs-toolbar-ui(
         'greentoolbar',
          $background-color: 'green'
@@ -141,8 +147,9 @@ You will need to understand the Ext JS DOM
 <em>For example: a blue theme, that has blue and red buttons.</em>
 <strong>CSS overwrites</strong> are handy to make a certain component unique.
 <em>For example: on the start screen, the <strong>new</strong> button is bigger and has a different color.</em></p>
-<h1>Mixins</h1>
-<!-- Chapter: Mixins -->
+
+
+<h2>Mixins</h2>
 <span class="title">Like variables, there are two types of mixins.</span><ul>
 <!----><li>
 <!--    --><p>
@@ -155,18 +162,13 @@ Component Mixins
 <!--    --></p>
 <!----></li>
 </ul>
-<h1>Global Mixins</h1>
-<!-- Chapter: Global Mixins -->
+<h3>Global Mixins</h3>
 <p>But there is just one global mixin&#8230;</p>
 <img src="resources/images/mixin_globalcss.png"  width="100%" >
 <p><a href="http://localhost/extjs4.2.2/docs/#!/api/Global_CSS">http://localhost/extjs4.2.2/docs/#!/api/Global_CSS</a></p>
-
-
-<h2>Where to implement</h2>
+<h3>Where to implement</h3>
 <pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
-
-
-<h2>Mixin: Background-gradient</h2>
+<h3>Mixin: Background-gradient</h3>
 <ul>
 <!----><li>
 <!--    --><p>
@@ -188,8 +190,9 @@ direction: (optional) left or top.
      @include background-gradient(#808080, matte, left);
 }</pre>
 <p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_mixin-background-gradient">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS-css_mixin-background-gradient</a></p>
-<h1>Component mixins</h1>
-<!-- Chapter: Component mixins -->
+
+
+<h2>Component mixins</h2>
 <span class="title">The following Ext components have their own mixins:</span><ul>
 <!----><li>
 <!--    --><p>
@@ -242,22 +245,16 @@ direction: (optional) left or top.
 <!--    --></p>
 <!----></li>
 </ul>
-
-
-<h2>Where to implement</h2>
+<h3>Where to implement</h3>
 <pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
 <p>We have seen that this file grows and it&#8217;s getting
 harder to maintain. When you want to structure your Stylesheets,
 a better a location to save global vars would be:</p>
 <pre class="runnable preview">packages/&lt;theme-name&gt;/sass/src/Component.scss</pre>
-
-
-<h2>API Docs</h2>
+<h3>API Docs</h3>
 <p>You can figure out how to configure the mixins by checking the API Docs.</p>
 <img src="resources/images/mixin_component_apidocs.png"  width="100%" >
-
-
-<h2>Mixin: Panel UI</h2>
+<h3>Mixin: Panel UI</h3>
 <p>packages/&lt;theme-name&gt;/sass/src/panel/Panel.scss</p>
 <pre class="runnable preview">@mixin extjs-panel-ui(
    $ui-label,
@@ -304,9 +301,7 @@ a better a location to save global vars would be:</p>
    $ui-wrap-border-width: $panel-wrap-border-width
 );</pre>
 <p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel-css_mixin-extjs-panel-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.panel.Panel-css_mixin-extjs-panel-ui</a></p>
-
-
-<h2>Mixin: Window UI</h2>
+<h3>Mixin: Window UI</h3>
 <p>packages/&lt;theme-name&gt;/sass/src/window/Window.scss</p>
 <pre class="runnable preview">@mixin extjs-window-ui(
    $ui-label,
@@ -349,9 +344,7 @@ a better a location to save global vars would be:</p>
    $ui-wrap-border-width: $window-wrap-border-width
 );</pre>
 <p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.window.Window-css_mixin-extjs-window-ui</a></p>
-
-
-<h2>Mixin: Toolbar UI</h2>
+<h3>Mixin: Toolbar UI</h3>
 <p>packages/&lt;theme-name&gt;/sass/src/toolbar/Toolbar.scss</p>
 <pre class="runnable preview">@mixin extjs-toolbar-ui
    $ui,
@@ -365,9 +358,7 @@ a better a location to save global vars would be:</p>
    $tool-background-image: $toolbar-tool-background-image
 );</pre>
 <p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar-css_mixin-extjs-toolbar-ui">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.toolbar.Toolbar-css_mixin-extjs-toolbar-ui</a></p>
-
-
-<h2>Button UIs</h2>
+<h3>Button UIs</h3>
 <span class="title">Different types of Button UIs</span><ul>
 <!----><li>
 <!--    --><p>
@@ -400,9 +391,7 @@ $extjs-button-toolbar-small-ui
 <!--    --></p>
 <!----></li>
 </ul>
-
-
-<h2>extjs-button-ui</h2>
+<h3>extjs-button-ui</h3>
 <span class="title">Default Button UI</span><ul>
 <!----><li>
 <!--    --><p>

@@ -1,9 +1,12 @@
 === Trees
 
-==== What it is
+==== What is it?
 Like MS Windows Explorer or Mac OS X Finder,
 a Panel with a list of nodes and folders that
 can fold and unfold.
+
+.Ext.tree.Panel
+image::resources/images/trees.png[scale="75"]
 
 ==== Specs
 
@@ -21,14 +24,7 @@ Extends from +Ext.panel.Panel+ & +Ext.panel.Table+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.tree.Panel
 
-[[components_treepanels]]
-.Ext.tree.Panel
-image::resources/images/trees.png[scale="75"]
-
 ==== Example
-[]
-.Example
-====
 [source, javascript]
 ----
 var store = Ext.create('Ext.data.TreeStore', {
@@ -54,4 +50,3 @@ Ext.create('Ext.tree.Panel', {
     renderTo: Ext.getBody()
 });
 ----
-====

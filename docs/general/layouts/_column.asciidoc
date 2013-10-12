@@ -1,13 +1,12 @@
 === Column
 
-==== What's it?
+==== What is it?
 Another layout that's mostly used in forms to create columns. 
 It's possible to define a +columnWidth+ per container item. 
 
 ==== Specs
 Class: +Ext.layout.container.Column+ (+layout:column+)
 
-[[layouts_column]]
 .Anchor column
 image::resources/images/column.png[scale="75"]
 

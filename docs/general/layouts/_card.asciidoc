@@ -1,13 +1,12 @@
 === Card
 
-==== What's it?
+==== What is it?
 This layout manages multiple child Components, each fitted to the Container, where only a single child Component can be visible at any given time. This layout style is most commonly used for wizards, tab implementations, etc.
 
 ==== Specs
 
 Class: +Ext.layout.container.Card+ (+layout:card+)
 
-[[layouts_card]]
 .Card layout
 image::resources/images/card.png[scale="75"]
 

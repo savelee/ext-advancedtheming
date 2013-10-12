@@ -1,4 +1,4 @@
-=== Implementing Glyps and Icons
+==== Implementing Glyps and Icons
 .The following steps are required to implement a custom icon font.
 
 1. Choose an icon font

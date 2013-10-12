@@ -1,9 +1,12 @@
 === Split Buttons
 
-==== What it is
+==== What is it?
 Like Buttons, but have two functionalities.
 A clickable button and a clickable arrow
 that pops out a menu.
+
+.Ext.button.Split
+image::resources/images/buttonssplit.png[scale="75"]
 
 ==== Specs
 
@@ -20,15 +23,8 @@ Extends from +Ext.Component+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.button.Split
 
-[[components_splitbuttons]]
-.Ext.button.Split
-image::resources/images/buttonssplit.png[scale="75"]
-
 ==== Example
 
-[[splitbuttons]]
-====
-.Example
 [source, javascript]
 ----
 Ext.create('Ext.button.Split', {
@@ -59,4 +55,3 @@ Ext.create('Ext.button.Split', {
     renderTo: Ext.getBody(),
 });
 ----
-====

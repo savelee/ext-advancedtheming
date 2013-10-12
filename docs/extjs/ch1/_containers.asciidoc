@@ -1,7 +1,10 @@
 === Containers
 
-==== What it is
+==== What is it?
 Containers are just a plain set of divs, they can contain items.
+
+.Ext.container.Container
+image::resources/images/containers.png[scale="75"]
 
 ==== Specs
 
@@ -20,15 +23,8 @@ Extends from +Ext.Component+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.container.Container
 
-[[components_containers]]
-.Ext.container.Container
-image::resources/images/containers.png[scale="75"]
-
 ==== Example
 
-[[container]]
-====
-.Example
 [source, javascript]
 ----
 Ext.create('Ext.container.Container', {
@@ -37,4 +33,3 @@ Ext.create('Ext.container.Container', {
     renderTo: Ext.getBody(),
 });
 ----
-====

@@ -1,13 +1,12 @@
 === Fit
 
-==== What's it?
+==== What is it?
 A layout that can only be used for containers that contain one single item.
 It will automatically expand to fill the full layout container.
 
 ==== Specs
 Class: +http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Fit+ (+layout: fit+)
 
-[[layouts_fit]]
 .Fit layout
 image::resources/images/fit.png[scale="75"]
 

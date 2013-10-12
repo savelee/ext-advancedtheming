@@ -1,7 +1,10 @@
 === Windows
 
-==== What it is
+==== What is it?
 Panels that are floatable, draggable, resizable
+
+.Ext.window.Window
+image::resources/images/windows.png[scale="75"]
 
 ==== Specs
 
@@ -28,14 +31,8 @@ Extends from +Ext.panel.Panel+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.Window
 
-[[components_windows]]
-.Ext.window.Window
-image::resources/images/windows.png[scale="75"]
-
 ==== Example
-[[windows]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.window.Window', {
@@ -47,4 +44,3 @@ Ext.create('Ext.window.Window', {
     y: 10
 });
 ----
-====

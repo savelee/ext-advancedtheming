@@ -1,9 +1,12 @@
 === Messageboxes
 
-==== What it is
+==== What is it?
 Windows, async, that display alert messages,
 prompt and confirmation input fields and buttons
 or progressbar / wait widgets. 
+
+.Ext.window.MessageBox.alert()
+image::resources/images/alert.png[scale="75"]
 
 ==== Specs
 
@@ -13,20 +16,14 @@ Extends from +Ext.window.Window+
 ===== Ext.window.MessageBox
 * +icon+
 
-[[components_alert]]
-.Ext.window.MessageBox.alert()
-image::resources/images/alert.png[scale="75"]
-
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox
 
 ==== Example
-.Example
-====
+
 [source, javascript]
 ----
 Ext.Msg.alert('Widget Updated', 'The widget was updated successfully.');
 ----
-====
 
 
 ==== Specs

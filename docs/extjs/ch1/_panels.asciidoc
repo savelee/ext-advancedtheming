@@ -1,8 +1,11 @@
 === Panels
 
-==== What it is
+==== What is it?
 Just a plain set of divs, like a Container (it may contain items) but with borders, headers,
 dockable footers and buttons.
+
+.Ext.panel.Panel
+image::resources/images/panels.png[scale="75"]
 
 ==== Specs
 
@@ -26,13 +29,8 @@ Extends from +Ext.container.Container+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.panel.Panel
 
-[[components_panels]]
-.Ext.panel.Panel
-image::resources/images/panels.png[scale="75"]
-
 ==== Example
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.panel.Panel', {
@@ -50,4 +48,3 @@ Ext.create('Ext.panel.Panel', {
     }]
 });
 ----
-====

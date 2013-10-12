@@ -1,7 +1,10 @@
 === Buttons
 
-==== What it is
+==== What is it?
 Listen to user events, click, double click, toggle...
+
+.Ext.button.Button
+image::resources/images/buttons.png[scale="75"]
 
 ==== Specs
 
@@ -18,15 +21,8 @@ Extends from +Ext.Component+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.button.Button
 
-[[components_buttons]]
-.Ext.button.Button
-image::resources/images/buttons.png[scale="75"]
-
 ==== Example
 
-[[buttons]]
-====
-.Example
 [source, javascript]
 ----
 Ext.create('Ext.button.Button', {
@@ -46,4 +42,3 @@ Ext.create('Ext.button.Button', {
     }
 });
 ----
-====

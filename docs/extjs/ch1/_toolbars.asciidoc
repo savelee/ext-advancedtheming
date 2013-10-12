@@ -1,8 +1,11 @@
 === Toolbars
 
-==== What it is
+==== What is it?
 Dockable bars, can contain things,
 buttons (default), form fields, text strings...
+
+.Ext.toolbar.Toolbar
+image::resources/images/toolbars.png[scale="75"]
 
 ==== Specs
 
@@ -16,14 +19,8 @@ Extends from +Ext.container.Container+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.toolbar.Toolbar
 
-[[components_toolbars]]
-.Ext.toolbar.Toolbar
-image::resources/images/toolbars.png[scale="75"]
-
 ==== Example
-[[toolbars]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.panel.Panel', {
@@ -42,4 +39,3 @@ Ext.create('Ext.panel.Panel', {
     renderTo : Ext.getBody()
 });
 ----
-====

@@ -1,13 +1,12 @@
 === Hbox
 
-==== What's it?
+==== What is it?
 A light weight horizontal box layout.
 This layout optionally divides available horizontal space between child items containing a numeric flex configuration.
 
 ==== Specs
 Class: +Ext.layout.container.HBox+ (+layout:hbox+)
 
-[[layouts_hbox]]
 .Horizontal Box layout
 image::resources/images/hbox.png[scale="75"]
 

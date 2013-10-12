@@ -1,4 +1,4 @@
-=== Implementing custom fonts
+==== Implementing custom fonts
 .The following steps are required to implement a custom font.
 
 1. Download a font-face kit

@@ -1,8 +1,11 @@
 === FormPanel
 
-==== What it is
+==== What is it?
 A panel that is required to hold form fields. Under the covers it has
 several mechanisms for sending and validating forms.
+
+.Ext.form.Panel
+image::resources/images/panels.png[scale="75"]
 
 ==== Specs
 
@@ -27,13 +30,9 @@ Extends from +Ext.panel.Panel+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel
 
-[[components_formpanels]]
-.Ext.form.Panel
-image::resources/images/panels.png[scale="75"]
-
 ==== Example
 
-.Example
+
 ====
 [source, javascript]
 ----
@@ -95,7 +94,7 @@ Ext.create('Ext.form.Panel', {
 
 === Textfield
 
-==== What it is
+==== What is it?
 A plain form field for entering text.
 
 But there is one important difference.
@@ -105,6 +104,9 @@ Under the hood all fields are little html tables.
 Where the label is the left +<td>+.
 The field is the 2nd +<td>+.
 Optionally the 3rd +<td>+ contains a trigger button.
+
+.Ext.form.field.Text
+image::resources/images/textfield.png[scale="75"]
 
 ==== Specs
 
@@ -125,13 +127,9 @@ Extends from +Ext.form.field.Base+
 
 http://http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Text-cfg-blankText
 
-[[components_textfield]]
-.Ext.form.field.Text
-image::resources/images/textfield.png[scale="75"]
-
 ==== Example
 [[textfield]]
-.Example
+
 ====
 [source, javascript]
 ----
@@ -153,9 +151,12 @@ Ext.create('Ext.form.Panel', {
 
 === Textarea
 
-==== What it is
+==== What is it?
 A text field for entering multiple rows of text.
 In addition, it supports automatically growing the height of the textarea to fit its content.
+
+.Ext.form.field.TextArea
+image::resources/images/textarea.png[scale="75"]
 
 ==== Specs
 
@@ -173,14 +174,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.TextArea
 
-[[components_textarea]]
-.Ext.form.field.TextArea
-image::resources/images/textarea.png[scale="75"]
-
 ==== Example
 
-.Example
-====
 [source, javascript]
 ----
 Ext.create('Ext.form.FormPanel', {
@@ -197,14 +192,16 @@ Ext.create('Ext.form.FormPanel', {
     }]
 });
 ----
-====
 
 === Combobox
 
-==== What it is
+==== What is it?
 A ComboBox control (is like a select dropdown) with support for autocomplete, remote loading, and many other features.
 
 A ComboBox is like a combination of a traditional HTML text <input> field and a <select> field; the user is able to type freely into the field, and/or pick values from a dropdown selection list. The user can input any value by default, even if it does not appear in the selection list.
+
+.Ext.form.field.ComboBox
+image::resources/images/combobox.png[scale="75"]
 
 ==== Specs
 
@@ -224,14 +221,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.ComboBox
 
-[[components_combobox]]
-.Ext.form.field.ComboBox
-image::resources/images/combobox.png[scale="75"]
-
 ==== Example
-[[combo]]
-.Example
-====
+
 [source, javascript]
 ----
 // The data store containing the list of states
@@ -255,12 +246,14 @@ Ext.create('Ext.form.ComboBox', {
     renderTo: Ext.getBody()
 });
 ----
-====
 
 === Checkbox
 
-==== What it is
+==== What is it?
 Single checkbox. To check one or more option boxes.
+
+.Ext.form.field.Checkbox
+image::resources/images/checkbox.png[scale="75"]
 
 ==== Specs
 
@@ -284,14 +277,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Checkbox
 
-[[components_checkbox]]
-.Ext.form.field.Checkbox
-image::resources/images/checkbox.png[scale="75"]
-
 ==== Example
-[[checkbox]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.form.Panel', {
@@ -324,12 +311,14 @@ Ext.create('Ext.form.Panel', {
     renderTo: Ext.getBody()
 });
 ----
-====
 
 === Radio
 
-==== What it is
+==== What is it?
 Single radio field. Similar to checkbox but pick only one option field.
+
+.Ext.form.field.Radio
+image::resources/images/radio.png[scale="75"]
 
 ==== Specs
 
@@ -353,14 +342,8 @@ Extends from +Ext.form.field.Base+ and +Ext.form.field.CheckBox+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Radio
 
-[[components_radio]]
-.Ext.form.field.Radio
-image::resources/images/radio.png[scale="75"]
-
 ==== Example
-[[radio]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.form.Panel', {
@@ -400,12 +383,14 @@ Ext.create('Ext.form.Panel', {
     ]
 });
 ----
-====
 
 === Datefield
 
-==== What it is
+==== What is it?
 Provides a date input field with a date picker dropdown and automatic date validation.
+
+.Ext.form.field.Date
+image::resources/images/date.png[scale="75"]
 
 ==== Specs
 
@@ -427,14 +412,8 @@ Extends from +Ext.form.field.Base+
 
 http://http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Date
 
-[[components_date]]
-.Ext.form.field.Date
-image::resources/images/date.png[scale="75"]
-
 ==== Example
-[[datefield]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.form.Panel', {
@@ -451,12 +430,14 @@ Ext.create('Ext.form.Panel', {
     }]
 });
 ----
-====
 
 === Displayfield
 
-==== What it is
+==== What is it?
 A display-only text field which is not validated and not submitted. This is useful for when you want to display a value from a form's loaded data but do not want to allow the user to edit or submit that value. 
+
+.Ext.form.field.Display
+image::resources/images/display.png[scale="75"]
 
 ==== Specs
 
@@ -471,14 +452,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Display
 
-[[components_display]]
-.Ext.form.field.Display
-image::resources/images/display.png[scale="75"]
-
 ==== Example
-[[displayfield]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.form.Panel', {
@@ -491,12 +466,14 @@ Ext.create('Ext.form.Panel', {
     }]
 });
 ----
-====
 
 === Fileupload
 
-==== What it is
+==== What is it?
 A file upload field which has custom styling and allows control over the button text and other features of text fields like empty text. It uses a hidden file input element behind the scenes to allow user selection of a file and to perform the actual upload during form submit.
+
+.Ext.form.field.File
+image::resources/images/file.png[scale="75"]
 
 ==== Specs
 
@@ -510,14 +487,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.File
 
-[[components_file]]
-.Ext.form.field.File
-image::resources/images/file.png[scale="75"]
-
 ==== Example
-[[fileupload]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.form.Panel', {
@@ -534,12 +505,13 @@ Ext.create('Ext.form.Panel', {
     }]
 });
 ----
-====
-
 === Numberfield
 
-==== What it is
+==== What is it?
 A numeric text field that provides automatic keystroke filtering to disallow non-numeric characters, and numeric validation to limit the value to a range of valid numbers. The range of acceptable number values can be controlled by setting the minValue and maxValue configs, and fractional decimals can be disallowed by setting allowDecimals to false.
+
+.Ext.form.field.Number
+image::resources/images/number.png[scale="75"]
 
 ==== Specs
 
@@ -558,14 +530,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Number
 
-[[components_number]]
-.Ext.form.field.Number
-image::resources/images/number.png[scale="75"]
-
 ==== Example
 
-.Example
-====
 [source, javascript]
 ----
 Ext.create('Ext.form.Panel', {
@@ -581,12 +547,14 @@ Ext.create('Ext.form.Panel', {
     }]
 });
 ----
-====
 
 === Spinnerfield
 
-==== What it is
+==== What is it?
 A field with a pair of up/down spinner buttons. This class is not normally instantiated directly, instead it is subclassed and the onSpinUp and onSpinDown methods are implemented to handle when the buttons are clicked. A good example of this is the Ext.form.field.Number field which uses the spinner to increment and decrement the field's value by its step config value.
+
+.Ext.form.field.Spinner
+image::resources/images/spinner.png[scale="75"]
 
 ==== Specs
 
@@ -605,14 +573,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Spinner
 
-[[components_spinner]]
-.Ext.form.field.Spinner
-image::resources/images/spinner.png[scale="75"]
-
 ==== Example
-[[spinner]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.define('Ext.ux.CustomSpinner', {
@@ -651,12 +613,14 @@ Ext.create('Ext.form.FormPanel', {
     }]
 });
 ----
-====
 
 === Timefield
 
-==== What it is
+==== What is it?
 Provides a time input field with a time dropdown and automatic time validation.
+
+.Ext.form.field.ComboBox
+image::resources/images/combobox.png[scale="75"]
 
 ==== Specs
 
@@ -674,13 +638,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Time
 
-.Ext.form.field.ComboBox
-image::resources/images/combobox.png[scale="75"]
-
 ==== Example
 
-.Example
-====
 [source, javascript]
 ----
 Ext.create('Ext.form.Panel', {
@@ -696,12 +655,14 @@ Ext.create('Ext.form.Panel', {
     }]
 });
 ----
-====
 
 === Slider
 
-==== What it is
+==== What is it?
 Slider which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.
+
+.Ext.slider.Slider
+image::resources/images/slider.png[scale="75"]
 
 ==== Specs
 
@@ -715,14 +676,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.slider.Single
 
-[[components_sl]]
-.Ext.slider.Slider
-image::resources/images/slider.png[scale="75"]
-
 ==== Example
-[[slider]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.slider.Single', {
@@ -734,12 +689,14 @@ Ext.create('Ext.slider.Single', {
     renderTo: Ext.getBody()
 });
 ----
-====
 
 === Multi Slider
 
-==== What it is
+==== What is it?
 Slider with multiple thumbs which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.
+
+.Ext.slider.Multi
+image::resources/images/multi.png[scale="75"]
 
 ==== Specs
 
@@ -753,14 +710,8 @@ Extends from +Ext.form.field.Base+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.slider.Multi
 
-[[components_multi]]
-.Ext.slider.Multi
-image::resources/images/multi.png[scale="75"]
-
 ==== Example
-[[multislider]]
-.Example
-====
+
 [source, javascript]
 ----
 Ext.create('Ext.slider.Multi', {
@@ -775,11 +726,10 @@ Ext.create('Ext.slider.Multi', {
     renderTo: Ext.getBody()
 });
 ----
-====
 
 === HTML Editor
 
-==== What it is
+==== What is it?
 Provides a lightweight HTML Editor component. Some toolbar features are not supported by Safari and will be automatically hidden when needed. These are noted in the config options where appropriate.
 
 ==== Specs
@@ -804,8 +754,6 @@ http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.HtmlEditor
 
 ==== Example
 
-.Example
-====
 [source, javascript]
 ----
 Ext.create('Ext.form.HtmlEditor', {
@@ -814,4 +762,3 @@ Ext.create('Ext.form.HtmlEditor', {
     renderTo: Ext.getBody()
 });
 ----
-====

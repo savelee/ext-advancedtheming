@@ -1,7 +1,10 @@
 === TabPanels
 
-==== What it is
+==== What is it?
 A stack of Panels with dockable tabs for switching between views.
+
+.Ext.tab.Panel
+image::resources/images/tabpanels.png[scale="75"]
 
 ==== Specs
 
@@ -24,15 +27,8 @@ Extends from +Ext.panel.Panel+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.panel.Panel
 
-[[components_tabpanels]]
-.Ext.tab.Panel
-image::resources/images/tabpanels.png[scale="75"]
-
 ==== Example
 
-[[tabpanels]]
-.Example
-====
 [source, javascript]
 ----
 Ext.create('Ext.tab.Panel', {
@@ -54,4 +50,3 @@ Ext.create('Ext.tab.Panel', {
     }]
 });
 ----
-====

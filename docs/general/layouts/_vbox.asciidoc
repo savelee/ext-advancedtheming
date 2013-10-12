@@ -1,6 +1,6 @@
 === Vbox
 
-==== What's it?
+==== What is it?
 A light weight vertical box layout.
 This layout optionally divides available vertical space between child items containing a numeric flex configuration.
 
@@ -8,7 +8,6 @@ This layout optionally divides available vertical space between child items cont
 
 Class: +Ext.layout.container.VBox+ (+layout:vbox+)
 
-[[layouts_vbox]]
 .Vertical Box layout
 image::resources/images/vbox.png[scale="75"]
 

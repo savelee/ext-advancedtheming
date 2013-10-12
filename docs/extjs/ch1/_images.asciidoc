@@ -1,8 +1,11 @@
 === Images
 
-==== What it is
+==== What is it?
 An HTML image tag (optionally wrapped in div elements)
 to display images.
+
+.Ext.Img
+image::resources/images/images.png[scale="75"]
 
 ==== Specs
 
@@ -23,13 +26,8 @@ Extends from +Ext.Component+
 
 http://docs.sencha.com/extjs/{vers}/#!/api/Ext.Img
 
-[[components_images]]
-.Ext.Img
-image::resources/images/images.png[scale="75"]
-
 ==== Example
 [[images]]
-.Example
 ====
 [source, javascript]
 ----

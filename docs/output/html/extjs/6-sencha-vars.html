@@ -5,8 +5,11 @@
 </head>
 <body>
 <h1>Sencha CSS Variables</h1>
-<h1>Objectives</h1>
-<!-- Chapter: Objectives -->
+<h1>Sencha CSS Variables</h1>
+<!-- Chapter: Sencha CSS Variables -->
+
+
+<h2>Objectives</h2>
 <ul>
 <!----><li>
 <!--    --><p>
@@ -29,22 +32,25 @@ Working with the <code>app watch</code> command
 <!--    --></p>
 <!----></li>
 </ul>
-<h1>Introduction</h1>
-<!-- Chapter: Introduction -->
+
+
+<h2>Introduction</h2>
 <p>As we learned from the lecture, Sass variables are very powerful.</p>
 <pre class="runnable preview">$component-bg: blue;
 .panel {
         background: $component-bg;
 }</pre>
 <pre class="runnable preview">.panel { background: blue; }</pre>
-<h1>Sencha CSS variables</h1>
-<!-- Chapter: Sencha CSS variables -->
+
+
+<h2>Sencha CSS variables</h2>
 <p>Sencha has their own Sass variables set in the <strong>Neutral</strong> theme.
 Therefore we can use these CSS variables to customize our own
 designs.</p>
 <img src="resources/images/overviewthemes_inheritance1.png"  width="100%" >
-<h1>2 types of variables</h1>
-<!-- Chapter: 2 types of variables -->
+
+
+<h2>2 types of variables</h2>
 <p>+
 * Global CSS variables</p>
 <p>+
@@ -52,43 +58,34 @@ Apply to the overall Stylesheet
 * Component CSS variables</p>
 <p>+
 Apply to an Ext component</p>
-<h1>Global Vars</h1>
-<!-- Chapter: Global Vars -->
 
 
-<h2>API Docs</h2>
+<h2>Global Vars</h2>
+<h3>API Docs</h3>
 <p>Global CSS vars can be found in the API Docs to get
 an exact overview.</p>
 <p><a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS">http://docs.sencha.com/extjs/4.2.1/#!/api/Global_CSS</a></p>
 <img src="resources/images/vars_apidocs_global.png"  width="100%" >
-
-
-<h2>Where to implement</h2>
+<h3>Where to implement</h3>
 <p>here:</p>
 <pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
 <p>We have seen that this file grows and it&#8217;s getting
 harder to maintain. When you want to structure your Stylesheets,
 a better a location to save global vars would be:</p>
 <pre class="runnable preview">packages/&lt;theme-name&gt;/sass/var/Component.scss</pre>
-
-
-<h2>Example: Base-color</h2>
+<h3>Example: Base-color</h3>
 <p>The base background color to be used throughout the theme (like backgrounds, panel headers etc&#8230;).</p>
 <p><strong>packages/MyTheme/sass/etc/all.scss</strong></p>
 <pre class="runnable preview">$base-color: green;</pre>
 <img src="resources/images/vars_globalcss.png"  width="100%" >
-
-
-<h2>Example: Neutral-color</h2>
+<h3>Example: Neutral-color</h3>
 <p>The neutral background color to be used throughout the theme. (like buttons, headers etc&#8230;),
 as an alternative to the <code>$base-color</code>.
 Defaults to: <code>#dcdcdc</code></p>
 <p><strong>packages/MyTheme/sass/etc/all.scss</strong></p>
 <pre class="runnable preview">$neutral-color: #ccc</pre>
 <img src="resources/images/vars_globalcss.png"  width="100%" >
-
-
-<h2>Overview vars</h2>
+<h3>Overview vars</h3>
 <p>There are much more global vars available.</p>
 <ul>
 <!----><li>
@@ -177,9 +174,7 @@ $theme-resource-path
 <!--    --></p>
 <!----></li>
 </ul>
-
-
-<h2>Vars to exclude browsers</h2>
+<h3>Vars to exclude browsers</h3>
 <p>By default Ext JS includes all browsers,
 these variables are set to <code>true</code>. However if you don&#8217;t support
 a particular browser you can disable these so the file size
@@ -216,19 +211,16 @@ $include-webkit
 <!--    --></p>
 <!----></li>
 </ul>
-<h1>Component variables</h1>
-<!-- Chapter: Component variables -->
 
 
-<h2>API Docs</h2>
+<h2>Component variables</h2>
+<h3>API Docs</h3>
 <p>Component CSS vars can be found in the API Docs to get
 an exact overview.</p>
 <p>For example the CSS vars for buttons:
 <a href="http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button">http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.button.Button</a></p>
 <img src="resources/images/vars_apidocs_components.png"  width="100%" >
-
-
-<h2>Where to implement</h2>
+<h3>Where to implement</h3>
 <p>here:</p>
 <pre class="runnable preview">packages/&lt;theme-name&gt;/sass/etc/all.scss</pre>
 <p>We have seen that this CSS file grows and it&#8217;s getting
@@ -237,9 +229,7 @@ a better a location to save component vars in a structure,
 <strong>the same structure</strong> of used by the framework.</p>
 <pre class="runnable preview">packages/&lt;theme-name&gt;/sass/var/button/Button.scss</pre>
 <p>(Since <code>Ext.button.Button</code> maps to <em>/src/button/Button.js</em>)</p>
-
-
-<h2>Example: Button</h2>
+<h3>Example: Button</h3>
 <ul>
 <!----><li>
 <!--    --><p>
@@ -256,9 +246,7 @@ a better a location to save component vars in a structure,
 <pre class="runnable preview">$button-default-base-color: green;
 $button-default-border-color: blue;</pre>
 <img src="resources/images/vars_buttonexample.png"  width="100%" >
-
-
-<h2>Overview Components with vars</h2>
+<h3>Overview Components with vars</h3>
 <p>Note that components that inherit from
 other components; will also inherit the styles
 set by variables.</p>
@@ -369,9 +357,7 @@ Ext.ProgressBar
 <!--    --></p>
 <!----></li>
 </ul>
-
-
-<h2>Form components with vars</h2>
+<h3>Form components with vars</h3>
 <ul>
 <!----><li>
 <!--    --><p>
@@ -429,9 +415,7 @@ Ext.form.field.Spinner
 <!--    --></p>
 <!----></li>
 </ul>
-
-
-<h2>Grid components with vars</h2>
+<h3>Grid components with vars</h3>
 <ul>
 <!----><li>
 <!--    --><p>
@@ -459,8 +443,9 @@ Ext.grid.header.Container
 <!--    --></p>
 <!----></li>
 </ul>
-<h1>App Watch</h1>
-<!-- Chapter: App Watch -->
+
+
+<h2>App Watch</h2>
 <p>As an alternative to <code>compass watch</code>, Sencha Cmd has <code>sencha app watch</code>.
 Run this command on the CLI and it starts polling for changes.
 On every change made in the JavaScript or CSS, the system will auto build
