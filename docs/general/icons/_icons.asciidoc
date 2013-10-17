@@ -1,4 +1,4 @@
-==== Implementing Glyps and Icons
+==== Implementing Glyphs and Icons
 .The following steps are required to implement a custom icon font.
 
 1. Choose an icon font
@@ -63,6 +63,7 @@ This works exact the same as implementing any other font.
 
 Sometimes the CSS file is included with the font kit download.
 
+.sass/src/Component.scss
 [source, javascript]
 ----
 @font-face {
@@ -82,6 +83,7 @@ Again don't worry about the paths, since it will be part of the build process.
 ==== About Glyphs
 
 .To assign custom icons to Ext JS components you can use the +glyph+ config.
+* Implement the icon font.
 * Specify the decimal code that maps to the unicode character
 you choose while you've created the font pack.
 You can convert the character to a decimal with converters:

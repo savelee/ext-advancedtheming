@@ -1,0 +1,21 @@
+==== Specs
+
+===== CSS Class: +.x-form-type-radio+
+
+===== Ext.form.field.Radio
+Extends from +Ext.form.field.Base+ and +Ext.form.field.CheckBox+
+
+* checkbox (+.x-form-type-radio+)
+* checkbox wrapper (+.x-form-cb-wrap+)
+* checkbox (+.x-form-cb+)
+** checked
+** checkedCls
+** fieldCls
+* label (+.x-form-cb-label+)
+** afterBoxLabelTextTpl
+** beforeBoxLabelTextTpl
+** boxLabel
+** boxLabelAlign
+** boxLabelCls
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Radio

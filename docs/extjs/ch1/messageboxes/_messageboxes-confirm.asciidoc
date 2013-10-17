@@ -1,0 +1,12 @@
+==== Specs
+
+===== CSS Class: +.x-message-box+
+
+===== Ext.window.MessageBox.confirm()
+* +icon+
+
+[[components_confirm]]
+.Ext.window.MessageBox.confirm()
+image::resources/images/confirm.png[scale="75"]
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox

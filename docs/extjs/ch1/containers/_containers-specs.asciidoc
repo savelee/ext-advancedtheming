@@ -1,0 +1,16 @@
+==== Specs
+
+===== CSS Class: +.x-container+
+
+===== +Ext.container.Container+
+Extends from +Ext.Component+
+
+* +height+
+* +width+
+* +margin+
+* +padding+
+* +border+
+* +style+
+* +hidden+ (true / false)
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.container.Container

@@ -1,0 +1,4 @@
+===== How it works
+Border layouts are designed to layout child panels. There is a primary center child, and other children relative to the center.
+
+Children may be at the +west+, +north+, +east+ or +south+, specified via +region+ on each child. A center child is required; the other positions are optional.

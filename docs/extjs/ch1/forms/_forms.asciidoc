@@ -1,0 +1,8 @@
+=== FormPanel
+
+==== What is it?
+A panel that is required to hold form fields. Under the covers it has
+several mechanisms for sending and validating forms.
+
+.Ext.form.Panel
+image::resources/images/panels.png[scale="75"]

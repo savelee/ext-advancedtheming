@@ -1,0 +1,24 @@
+==== Specs
+
+===== CSS Class: +.x-window+
+
+===== +Ext.window.Window+
+Extends from +Ext.panel.Panel+
+
+* Window Header (+x-window-header+)
+** +title+
+** +glyph+
+** +tools+
+* Window Body (+x-window-body+)
+** +icon+
+** +height+
+** +width+
+** +minWidth+
+** +maxWidth+
+** +x+
+** +y+
+** +modal*
+** +draggable+
+** +resizable+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.Window

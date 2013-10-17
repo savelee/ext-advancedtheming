@@ -1,0 +1,14 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.form.Panel', {
+    renderTo: Ext.getBody(),
+    items: [{
+        xtype: 'displayfield',
+        fieldLabel: 'Home',
+        name: 'home_score',
+        value: '10'
+    }]
+});
+----

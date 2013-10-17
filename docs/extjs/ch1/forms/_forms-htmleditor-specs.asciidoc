@@ -1,0 +1,19 @@
+==== Specs
+
+===== CSS Class: +.x-html-editor-container+
+
+===== Ext.form.field.HtmlEditor
+Extends from +Ext.form.field.Base+
+
+* editor (+x-html-editor-container+)
+** enableAlignments
+** enableColors
+** enableFont
+** enableFontSize
+** enableFormat
+** enableLinks
+** enableLists
+** enableSourceEdit
+** fontFamilies
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.HtmlEditor

@@ -1,0 +1,21 @@
+==== Specs
+
+===== CSS Class: +.x-form-type-checkbox+
+
+===== Ext.form.field.Checkbox
+Extends from +Ext.form.field.Base+
+
+* checkbox (+.x-form-type-checkbox+)
+* checkbox wrapper (+.x-form-cb-wrap+)
+* checkbox (+.x-form-cb+)
+** checked
+** checkedCls
+** fieldCls
+* label (+.x-form-cb-label+)
+** afterBoxLabelTextTpl
+** beforeBoxLabelTextTpl
+** boxLabel
+** boxLabelAlign
+** boxLabelCls
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Checkbox

@@ -1,0 +1,8 @@
+==== Specs
+
+Class: +Ext.layout.container.VBox+ (+layout:vbox+)
+
+.Vertical Box layout
+image::resources/images/vbox.png[scale="75"]
+
+http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.VBox

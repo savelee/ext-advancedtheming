@@ -1,0 +1,9 @@
+=== Combobox
+
+==== What is it?
+A ComboBox control (is like a select dropdown) with support for autocomplete, remote loading, and many other features.
+
+A ComboBox is like a combination of a traditional HTML text <input> field and a <select> field; the user is able to type freely into the field, and/or pick values from a dropdown selection list. The user can input any value by default, even if it does not appear in the selection list.
+
+.Ext.form.field.ComboBox
+image::resources/images/combobox.png[scale="75"]

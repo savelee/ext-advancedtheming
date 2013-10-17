@@ -1,0 +1,37 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+
+    layout : 'card',
+
+    items : [ {
+        style: 'background: red'
+    }, {
+        style: 'background: green'
+    }, {
+        style: 'background: blue'
+    } ],
+    buttons : [ {
+        text : '<',
+        handler : function(b) {
+            b.up('panel').getLayout().prev();
+        }
+    }, {
+        text : '>',
+        handler : function(b) {
+            b.up('panel').getLayout().next();
+        }
+    } ],
+
+    bodyPadding : 5,
+    defaults : {
+        xtype: 'component'
+    },
+    height : 200,
+    width : 200,
+    renderTo : Ext.getBody()
+
+});
+----

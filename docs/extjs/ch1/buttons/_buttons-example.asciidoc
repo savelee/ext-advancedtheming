@@ -1,0 +1,21 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.button.Button', {
+    handler: function() {
+       alert("BAMM!");   
+    },
+    renderTo: Ext.getBody(),
+    text : 'Beatles',
+    menu : {
+       items : [{
+          text : 'John'
+       }, {
+          text : 'Paul'
+       }, {
+          text : '...'
+       }]
+    }
+});
+----

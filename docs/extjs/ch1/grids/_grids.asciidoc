@@ -1,0 +1,11 @@
+=== Grids
+
+==== What is it?
+For displaying a lot of (sortable) data.
+Like Microsoft Excel sheets, but all cells have the width of the column.
+This is because a grid in the DOM is in fact an HTML table.
+
+.Ext.grid.Panel
+image::resources/images/grids.png[scale="75"]
+
+

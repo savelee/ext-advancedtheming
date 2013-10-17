@@ -1,0 +1,19 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+    title : 'Panel Header',
+    renderTo : Ext.getBody(),
+    height : 200,
+    width : 500,
+    glyph: '119@Pictos',
+    html: 'Panel Body',
+    tools : [{
+        type : 'gear',
+    }],
+    buttons: [{
+        text: 'button'
+    }]
+});
+----

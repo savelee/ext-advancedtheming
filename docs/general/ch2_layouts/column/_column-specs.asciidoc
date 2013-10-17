@@ -1,0 +1,8 @@
+==== Specs
+Class: +Ext.layout.container.Column+ (+layout:column+)
+
+.Anchor column
+image::resources/images/column.png[scale="75"]
+
+See also
+http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Column

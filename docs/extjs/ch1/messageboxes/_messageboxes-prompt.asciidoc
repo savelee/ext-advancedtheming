@@ -1,0 +1,12 @@
+==== Specs
+
+===== CSS Class: +.x-message-box+
+
+===== Ext.window.MessageBox.prompt()
+* +icons+
+
+[[components_prompt]]
+.Ext.window.MessageBox.prompt()
+image::resources/images/prompt.png[scale="75"]
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox

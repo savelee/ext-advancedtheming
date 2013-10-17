@@ -1,0 +1,9 @@
+=== Panels
+
+==== What is it?
+Just a plain set of divs, like a Container (it may contain items) but with borders, headers,
+dockable footers and buttons.
+
+.Ext.panel.Panel
+image::resources/images/panels.png[scale="75"]
+

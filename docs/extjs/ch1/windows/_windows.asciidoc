@@ -1,0 +1,8 @@
+=== Windows
+
+==== What is it?
+Panels that are floatable, draggable, resizable
+
+.Ext.window.Window
+image::resources/images/windows.png[scale="75"]
+

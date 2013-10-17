@@ -1,0 +1,9 @@
+=== Textarea
+
+==== What it is
+
+A text field for entering multiple rows of text.
+In addition, it supports automatically growing the height of the textarea to fit its content.
+
+.Ext.form.TextArea
+image::resources/images/textarea.png[scale="75"]

@@ -1,0 +1,23 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.tab.Panel', {
+    renderTo : Ext.getBody(),
+    height : 200,
+    width : 500,
+    tabPosition: 'bottom',
+    //plain : true,
+    items : [{
+        title : 'Tab',
+        html : 'Panel Body'
+    }, {
+        title : 'Tab',
+        html : 'Panel Two'
+    },
+    {
+        title : 'Tab',
+        html : 'Panel Two'
+    }]
+});
+----

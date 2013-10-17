@@ -1,0 +1,8 @@
+=== Images
+
+==== What is it?
+An HTML image tag (optionally wrapped in div elements)
+to display images.
+
+.Ext.Img
+image::resources/images/images.png[scale="75"]

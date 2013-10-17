@@ -1,0 +1,9 @@
+=== Containers
+
+==== What is it?
+Containers are just a plain set of divs, they can contain items.
+
+.Ext.container.Container
+image::resources/images/containers.png[scale="75"]
+
+

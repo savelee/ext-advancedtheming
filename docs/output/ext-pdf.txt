@@ -11,10 +11,22 @@ include::../general/_preface.txt[]
 
 [content]
 
+Overview 
+----------
+
+=== Course introduction
+==== Objectives
+
+* About this course
+* Getting started
+* Learn handy tools
+
 include::../extjs/ch0/_introduction.asciidoc[]
 
+include::../extjs/ch1/intro/_introduction.asciidoc[]
 include::../extjs/ch1/_overview-components.asciidoc[]
 
+include::../extjs/ch2/intro/_introduction.asciidoc[]
 include::../extjs/ch2/_overview-layoutsystem.asciidoc[]
 
 include::../extjs/ch3/_overview-themes.asciidoc[]

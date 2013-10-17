@@ -1,0 +1,10 @@
+=== Split Buttons
+
+==== What is it?
+Like Buttons, but have two functionalities.
+A clickable button and a clickable arrow
+that pops out a menu.
+
+.Ext.button.Split
+image::resources/images/buttonssplit.png[scale="75"]
+

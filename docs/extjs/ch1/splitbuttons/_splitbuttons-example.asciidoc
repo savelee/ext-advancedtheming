@@ -1,0 +1,32 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.button.Split', {
+    text: 'Choose an Action',
+    width: 120,
+    handler: function(b) {
+        alert(b.sound);
+    },
+    menu: {
+        defaults: {
+            handler: function(b) {
+                var parent = b.up('splitbutton');
+                parent.setText(b.text);
+                parent.sound = b.sound;
+            }
+        },
+        items: [{
+            text: 'Sing',
+            sound: 'la la la'
+        }, {
+            text: 'Play Guitar',
+            sound: 'strum'
+        }, {
+            text: 'Compose',
+            sound: 'scribble'
+        }]
+    },
+    renderTo: Ext.getBody(),
+});
+----

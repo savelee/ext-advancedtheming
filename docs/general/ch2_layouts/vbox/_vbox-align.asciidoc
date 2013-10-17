@@ -1,0 +1,9 @@
+===== Align
+.Horizontal alignment.
+* +align+ (defaults to _left_)
+
++left+ : child items are aligned horizontally at the left of the container. +
++center+ : child items are aligned horizontally at the mid-width of the container. +
++right+ : child items are aligned horizontally at the right of the container. +
++stretch+ : child items are stretched horizontally to fill the width of the container. +
++stretchmax+ : child items are stretched horizontally to the width of the largest item.

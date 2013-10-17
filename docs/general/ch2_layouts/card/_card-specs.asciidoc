@@ -1,0 +1,9 @@
+==== Specs
+
+Class: +Ext.layout.container.Card+ (+layout:card+)
+
+.Card layout
+image::resources/images/card.png[scale="75"]
+
+See also
+http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Card

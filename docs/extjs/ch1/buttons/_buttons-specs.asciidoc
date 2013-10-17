@@ -1,0 +1,14 @@
+==== Specs
+
+===== CSS Class: +.x-btn+
+
+===== +Ext.button.Button+
+Extends from +Ext.Component+
+
+* Button (+.x-btn+)
+* Inner button (+.x-btn-inner+)
+** +glyph+
+** +menu+
+** +scale+ (‘small’,‘medium’,‘large’)
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.button.Button

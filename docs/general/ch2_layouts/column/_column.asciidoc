@@ -1,0 +1,6 @@
+=== Column
+
+==== What is it?
+Another layout that's mostly used in forms to create columns. 
+It's possible to define a +columnWidth+ per container item. 
+

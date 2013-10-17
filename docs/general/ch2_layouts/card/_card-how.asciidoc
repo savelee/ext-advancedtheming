@@ -1,0 +1,3 @@
+==== How it works
+
+Since only one panel is displayed at a time, the only way to move from one Component to the next is by calling +setActiveItem()+ on the layout of the Container, passing the next panel to display (or its id or index). The layout itself does not provide a user interface for handling this navigation, so that functionality must be provided by the developer.

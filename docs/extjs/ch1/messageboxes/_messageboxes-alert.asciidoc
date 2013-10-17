@@ -1,0 +1,9 @@
+==== Specs
+
+===== CSS Class: +.x-message-box+
+Extends from +Ext.window.Window+
+
+===== Ext.window.MessageBox
+* +icon+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox

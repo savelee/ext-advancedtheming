@@ -1,17 +1,43 @@
-Overview layout system
------------------------
+include::../../general/ch2_layouts/hbox/_hbox.asciidoc[]
+include::../../general/ch2_layouts/hbox/_hbox-specs.asciidoc[]
+include::../../general/ch2_layouts/hbox/_hbox-example.asciidoc[]
+include::../../general/ch2_layouts/hbox/_hbox-height.asciidoc[]
+include::../../general/ch2_layouts/hbox/_hbox-flex.asciidoc[]
+include::../../general/ch2_layouts/hbox/_hbox-flex-example.asciidoc[]
+include::../../general/ch2_layouts/hbox/_hbox-align.asciidoc[]
+include::../../general/ch2_layouts/hbox/_hbox-pack.asciidoc[]
 
-=== Overview layout system
-==== Objectives
+include::../../general/ch2_layouts/vbox/_vbox.asciidoc[]
+include::../../general/ch2_layouts/vbox/_vbox-specs.asciidoc[]
+include::../../general/ch2_layouts/vbox/_vbox-example.asciidoc[]
+include::../../general/ch2_layouts/vbox/_vbox-flex-example.asciidoc[]
+include::../../general/ch2_layouts/vbox/_vbox-align.asciidoc[]
+include::../../general/ch2_layouts/vbox/_vbox-pack.asciidoc[]
 
-* Get familiar with the Ext layout system
-* Review important layout specs
-* Preview Ext layouts
+include::../../general/ch2_layouts/fit/_fit.asciidoc[]
+include::../../general/ch2_layouts/fit/_fit-specs.asciidoc[]
+include::../../general/ch2_layouts/fit/_fit-example.asciidoc[]
 
-include::../../general/layouts/_hbox.asciidoc[]
-include::../../general/layouts/_vbox.asciidoc[]
-include::../../general/layouts/_border.asciidoc[]
-include::../../general/layouts/_fit.asciidoc[]
-include::../../general/layouts/_card.asciidoc[]
-include::../../general/layouts/_anchor.asciidoc[]
-include::../../general/layouts/_column.asciidoc[]
+include::../../general/ch2_layouts/card/_card.asciidoc[]
+include::../../general/ch2_layouts/card/_card-specs.asciidoc[]
+include::../../general/ch2_layouts/card/_card-example.asciidoc[]
+include::../../general/ch2_layouts/card/_card-how.asciidoc[]
+
+include::../../general/ch2_layouts/border/_border.asciidoc[]
+include::../../general/ch2_layouts/border/_border-specs.asciidoc[]
+include::../../general/ch2_layouts/border/_border-example.asciidoc[]
+include::../../general/ch2_layouts/border/_border-how.asciidoc[]
+include::../../general/ch2_layouts/border/_border-resize.asciidoc[]
+include::../../general/ch2_layouts/border/_border-collapse.asciidoc[]
+include::../../general/ch2_layouts/border/_border-weights.asciidoc[]
+include::../../general/ch2_layouts/border/_border-weights-example.asciidoc[]
+
+include::../../general/ch2_layouts/anchor/_anchor.asciidoc[]
+include::../../general/ch2_layouts/anchor/_anchor-specs.asciidoc[]
+include::../../general/ch2_layouts/anchor/_anchor-example.asciidoc[]
+include::../../general/ch2_layouts/anchor/_anchor-how.asciidoc[]
+
+include::../../general/ch2_layouts/column/_column.asciidoc[]
+include::../../general/ch2_layouts/column/_column-specs.asciidoc[]
+include::../../general/ch2_layouts/column/_column-example.asciidoc[]
+include::../../general/ch2_layouts/column/_column-how.asciidoc[]

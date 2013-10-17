@@ -1,0 +1,20 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+    title : 'My Panel',
+
+    dockedItems : [ {
+        xtype : 'toolbar',
+        dock : 'bottom',
+        items : [ {
+            text : 'Toolbar Button'
+        }]
+    }],
+
+    html: 'Panel Body',
+    width : 300,
+    renderTo : Ext.getBody()
+});
+----

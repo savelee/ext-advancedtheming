@@ -1,0 +1,7 @@
+=== Multi Slider
+
+==== What is it?
+Slider with multiple thumbs which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.
+
+.Ext.slider.Multi
+image::resources/images/multi.png[scale="75"]

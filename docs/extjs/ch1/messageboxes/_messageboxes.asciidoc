@@ -1,0 +1,9 @@
+=== Messageboxes
+
+==== What is it?
+Windows, async, that display alert messages,
+prompt and confirmation input fields and buttons
+or progressbar / wait widgets. 
+
+.Ext.window.MessageBox.alert()
+image::resources/images/alert.png[scale="75"]

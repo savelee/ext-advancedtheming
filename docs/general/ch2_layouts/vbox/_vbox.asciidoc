@@ -1,0 +1,5 @@
+=== VBox
+
+==== What is it?
+A light weight vertical box layout.
+This layout optionally divides available vertical space between child items containing a numeric flex configuration.

@@ -1,0 +1,8 @@
+=== Toolbars
+
+==== What is it?
+Dockable bars, can contain things,
+buttons (default), form fields, text strings...
+
+.Ext.toolbar.Toolbar
+image::resources/images/toolbars.png[scale="75"]

@@ -1,0 +1,31 @@
+==== Example
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+
+    layout : {
+        type: 'vbox',
+        align: 'center',
+        pack : 'end'
+    },
+
+    defaults: {
+        style: 'background: blue',
+        margin: 5,
+        xtype: 'container',
+        width: 200,
+        height: 50
+    },
+    items : [ {
+        html : 'Panel One'
+    }, {
+        html : 'Panel Two'
+    }, {
+        html : 'Panel Three'
+    } ],
+
+    height : 300,
+    flex: 1,
+    renderTo : Ext.getBody()
+});
+----

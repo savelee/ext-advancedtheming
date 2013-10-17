@@ -1,0 +1,16 @@
+==== Specs
+
+===== CSS Class: +.x-field-default+ or +.x-form-type-text+
+
+===== Ext.form.field.Spinner
+Extends from +Ext.form.field.Base+
+
+* formfield (+.x-field-default+ or +.x-form-readonly+)
+** +spinDownEnabled+
+** +spinUpEnabled+
+* trigger button (+.x-form-trigger+)
+** +hideTrigger+
+** +keyNavEnabled+
+** +mouseWheelEnabled+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Spinner

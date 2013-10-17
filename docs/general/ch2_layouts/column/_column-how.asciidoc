@@ -1,0 +1,5 @@
+==== How it works
+
+ColumnWidth values map percentages but needs to be specified as values between 0 to 1.
+Ext will automatically calculate columns, from left to right.
+Keep in mind, that paddings are included within each width.

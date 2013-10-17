@@ -1,0 +1,11 @@
+==== Specs
+
+===== CSS Class: +x-toolbar+
+
+===== +Ext.toolbar.Toolbar+
+Extends from +Ext.container.Container+
+
+* Toolbar item (.x-toolbar-item / .x-toolbar-btn)
+* +dockedItems+ > +dock+ (‘top’,‘right’,‘bottom’,‘left’)
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.toolbar.Toolbar

@@ -1,0 +1,7 @@
+=== Radio
+
+==== What is it?
+Single radio field. Similar to checkbox but pick only one option field.
+
+.Ext.form.field.Radio
+image::resources/images/radio.png[scale="75"]

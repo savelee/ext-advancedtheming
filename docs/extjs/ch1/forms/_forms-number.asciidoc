@@ -1,0 +1,7 @@
+=== Numberfield
+
+==== What is it?
+A numeric text field that provides automatic keystroke filtering to disallow non-numeric characters, and numeric validation to limit the value to a range of valid numbers. The range of acceptable number values can be controlled by setting the minValue and maxValue configs, and fractional decimals can be disallowed by setting allowDecimals to false.
+
+.Ext.form.field.Number
+image::resources/images/number.png[scale="75"]

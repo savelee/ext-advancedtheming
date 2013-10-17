@@ -1,0 +1,9 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.Img', {
+    src: 'http://www.sencha.com/img/20110215-feat-html5.png',
+    renderTo: Ext.getBody()
+});
+----

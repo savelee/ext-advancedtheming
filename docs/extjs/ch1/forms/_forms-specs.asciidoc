@@ -1,0 +1,22 @@
+==== Specs
+
+===== CSS Class: +.x-panel+
+
+===== +Ext.form.Panel+
+Extends from +Ext.panel.Panel+
+
+* Panel Header (+.x-panel-header+)
+** +title+
+** +glyph+
+** +tools+
+* Panel Body (+.x-panel-body+)
+* (optional) Docked Toolbar (+.x-toolbar+)
+** +waitTitle+
+** +buttons+
+** +height+
+** +width+
+** +margin+
+** +padding+
+** +bodyPadding+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.Panel

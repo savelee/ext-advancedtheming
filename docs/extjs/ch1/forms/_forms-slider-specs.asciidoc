@@ -1,0 +1,11 @@
+==== Specs
+
+===== CSS Class: +.x-slider+
+
+===== Ext.slider.Single
+Extends from +Ext.form.field.Base+
+
+* slider (+.x-slider+)
+* slider thumb (+.x-slider-thumb+)
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.slider.Single

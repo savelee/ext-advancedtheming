@@ -1,0 +1,8 @@
+=== TabPanels
+
+==== What is it?
+A stack of Panels with dockable tabs for switching between views.
+
+.Ext.tab.Panel
+image::resources/images/tabpanels.png[scale="75"]
+

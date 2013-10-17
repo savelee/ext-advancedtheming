@@ -1,0 +1,7 @@
+=== Displayfield
+
+==== What is it?
+A display-only text field which is not validated and not submitted. This is useful for when you want to display a value from a form's loaded data but do not want to allow the user to edit or submit that value. 
+
+.Ext.form.field.Display
+image::resources/images/display.png[scale="75"]

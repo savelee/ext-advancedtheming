@@ -1,0 +1,37 @@
+==== Example
+
+This example first deducts 100px from the total 100%.
+Then it calculates the flexes.
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+
+    layout : {
+        type: 'hbox',
+        align: 'middle',
+        pack : 'end'
+    },
+
+    defaults: {
+        style: 'background: blue',
+        margin: 5,
+        xtype: 'container',
+        height: 100
+    },
+    items : [ {
+        html : 'Panel Left',
+        flex: 1
+    }, {
+        html : 'Panel Two',
+        width: 100
+    }, {
+        html : 'Panel Three',
+        flex: 3
+    } ],
+
+    height : 300,
+    flex: 1,
+    renderTo : Ext.getBody()
+});
+----

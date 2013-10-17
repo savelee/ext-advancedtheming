@@ -1,0 +1,6 @@
+=== Anchor
+
+==== What is it?
+A layout mostly used in forms. With the anchor layout
+you can specify the width and heights per field
+in percentages relative to the container's dimensions. 

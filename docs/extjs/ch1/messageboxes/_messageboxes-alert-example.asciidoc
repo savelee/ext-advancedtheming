@@ -1,0 +1,6 @@
+==== Example
+
+[source, javascript]
+----
+Ext.Msg.alert('Widget Updated', 'The widget was updated successfully.');
+----

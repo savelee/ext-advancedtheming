@@ -1,0 +1,12 @@
+==== Specs
+
+===== CSS Class: +.x-message-box+
+
+===== Ext.window.MessageBox.wait()
+* +icon+
+
+[[components_progess]]
+.Ext.window.MessageBox.progress()
+image::resources/images/progress.png[scale="75"]
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.window.MessageBox

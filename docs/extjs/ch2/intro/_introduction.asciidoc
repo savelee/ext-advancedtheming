@@ -1,0 +1,6 @@
+=== Overview layout system
+==== Objectives
+
+* Get familiar with the Ext layout system
+* Review important layout specs
+* Preview Ext layouts

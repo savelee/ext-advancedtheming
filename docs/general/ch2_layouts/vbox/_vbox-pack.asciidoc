@@ -1,0 +1,7 @@
+===== Pack
+.Vertical alignment.
+* +pack+ (defaults to _start_)
+
++start+ : child items are packed together at the top of container. +
++center+ : child items are packed together at mid-height of container. +
++end+ : child items are packed together at bottom of container.

@@ -1,0 +1,12 @@
+==== Specs
+
+===== CSS Class: +.x-field-default+ or +.x-form-readonly+
+
+===== Ext.form.field.Display
+Extends from +Ext.form.field.Base+
+
+* formfield (+.x-field-default+ or +.x-form-readonly+)
+** +htmlEncode+
+** +fieldCls++
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.form.field.Display

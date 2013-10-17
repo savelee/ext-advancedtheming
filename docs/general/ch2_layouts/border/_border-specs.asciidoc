@@ -1,0 +1,8 @@
+==== Specs
+Class: +Ext.layout.container.Border+ (+layout:border+)
+
+.Border layout
+image::resources/images/border.png[scale="75"]
+
+See also
+http://docs.sencha.com/extjs/4.2.1/#!/api/Ext.layout.container.Border

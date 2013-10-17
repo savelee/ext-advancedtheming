@@ -1,0 +1,3 @@
+==== Height and Width
+It's actually not so common to set height and widths on panels.
+Because of different screensizes, you rather have your layouts flexible.

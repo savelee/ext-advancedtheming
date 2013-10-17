@@ -1,0 +1,10 @@
+==== Example
+
+[source, javascript]
+----
+Ext.create('Ext.container.Container', {
+    html: 'Hello World',
+    width: 400,
+    renderTo: Ext.getBody(),
+});
+----

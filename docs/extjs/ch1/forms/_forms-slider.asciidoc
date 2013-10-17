@@ -1,0 +1,7 @@
+=== Slider
+
+==== What is it?
+Slider which supports vertical or horizontal orientation, keyboard adjustments, configurable snapping, axis clicking and animation. Can be added as an item to any container.
+
+.Ext.slider.Slider
+image::resources/images/slider.png[scale="75"]

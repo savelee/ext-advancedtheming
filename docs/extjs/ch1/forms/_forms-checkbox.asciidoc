@@ -1,0 +1,7 @@
+=== Checkbox
+
+==== What is it?
+Single checkbox. To check one or more option boxes.
+
+.Ext.form.field.Checkbox
+image::resources/images/checkbox.png[scale="75"]

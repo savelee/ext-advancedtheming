@@ -1,0 +1,7 @@
+=== Fileupload
+
+==== What is it?
+A file upload field which has custom styling and allows control over the button text and other features of text fields like empty text. It uses a hidden file input element behind the scenes to allow user selection of a file and to perform the actual upload during form submit.
+
+.Ext.form.field.File
+image::resources/images/file.png[scale="75"]

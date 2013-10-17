@@ -1,0 +1,15 @@
+=== Textfield
+
+==== What is it?
+A plain form field for entering text.
+
+But there is one important difference.
+A (text) field in Ext JS is the input field plus the label all together.
+
+Under the hood all fields are little html tables.
+Where the label is the left +<td>+.
+The field is the 2nd +<td>+.
+Optionally the 3rd +<td>+ contains a trigger button.
+
+.Ext.form.field.Text
+image::resources/images/textfield.png[scale="75"]

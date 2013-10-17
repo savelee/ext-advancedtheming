@@ -1,11 +1,1 @@
-Course introduction
----------------------
-
-=== Course introduction
-==== Objectives
-
-* About this course
-* Getting started
-* Learn handy tools
-
 include::../general/_tools.asciidoc[]

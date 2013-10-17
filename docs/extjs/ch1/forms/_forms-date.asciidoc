@@ -1,0 +1,7 @@
+=== Datefield
+
+==== What is it?
+Provides a date input field with a date picker dropdown and automatic date validation.
+
+.Ext.form.field.Date
+image::resources/images/date.png[scale="75"]

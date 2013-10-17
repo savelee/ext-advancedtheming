@@ -1,0 +1,7 @@
+===== Pack
+.Horizontal alignment
+* +align+ (defaults to _start_)
+
++start+ : child items are packed together at the left side of container. +
++center+ : child items are packed together at mid-width of container. +
++end+ : child items are packed together at right side of container.

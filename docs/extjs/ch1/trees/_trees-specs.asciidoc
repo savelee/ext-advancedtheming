@@ -1,0 +1,15 @@
+==== Specs
+
+===== CSS Class: +.x-tree-panel+
+
+===== +Ext.tree.Panel+
+Extends from +Ext.panel.Panel+ & +Ext.panel.Table+
+
+* Grid Header (+.x-grid-header+)
+* Tree View (+.x-tree-view+)
+** Grid Cell (+.x-grid.cell+) 
+** +lines+
+** +useArrows+
+** +animate+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.tree.Panel

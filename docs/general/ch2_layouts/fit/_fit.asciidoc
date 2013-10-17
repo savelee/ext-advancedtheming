@@ -1,0 +1,6 @@
+=== Fit
+
+==== What is it?
+A layout that can only be used for containers that contain one single item.
+It will automatically expand to fill the full layout container.
+

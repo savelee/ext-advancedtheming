@@ -1,0 +1,18 @@
+==== Specs
+
+===== CSS Class: +.x-img+
+
+===== +Ext.Img+
+Extends from +Ext.Component+
+
+* +src+
+* +alt+
+* +autoEl+
+* +height+
+* +width+
+* +margin+
+* +padding+
+* +baseCls+
+* +imgCls+
+
+http://docs.sencha.com/extjs/{vers}/#!/api/Ext.Img

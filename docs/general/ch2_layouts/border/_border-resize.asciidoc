@@ -1,0 +1,41 @@
+===== Resizing Children
+
+Child panels may be resized by tagging them with +split : true+.
+
+When using the split option, the layout will automatically insert a +Ext.resizer.Splitter+ into the appropriate place. This will modify the underlying items collection in the container.
+
+[source, javascript]
+----
+Ext.create('Ext.panel.Panel', {
+
+    layout : 'border',
+
+    items : [ {
+        title : 'West (resizable)',
+        region : 'west',
+        split : true,
+        width : 100
+    }, {
+        title : 'East',
+        region : 'east', 
+        width : 60
+    }, {
+        title : 'South (resizable)',
+        region : 'south',
+        split : true,
+        height : 60
+    }, {
+        title : 'North',
+        region : 'north',
+        height : 60
+    }, {
+        title : 'Center',
+        region : 'center'
+    } ],
+
+    title : 'Border Layout Panel',
+    bodyPadding : 8,
+    height : 340, width : 600,
+    renderTo : Ext.getBody()
+});
+----

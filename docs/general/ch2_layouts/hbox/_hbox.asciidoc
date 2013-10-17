@@ -1,0 +1,5 @@
+=== HBox
+
+==== What is it?
+A light weight horizontal box layout.
+This layout optionally divides available horizontal space between child items containing a numeric flex configuration.

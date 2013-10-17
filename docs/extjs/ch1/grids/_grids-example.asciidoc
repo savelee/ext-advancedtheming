@@ -1,0 +1,36 @@
+==== Example
+
+[source, javascript]
+----
+var store = Ext.create('Ext.data.Store', {
+   fields:[ 
+     {name: 'framework', type: 'string'}, 
+     {name: 'rocks', type: 'boolean'} 
+   ],
+   data: [ 
+     { 'framework': "Ext JS 4", 'rocks': true  }, 
+     { 'framework': "Sencha Touch", 'rocks': true  }, 
+     { 'framework': "Ext GXT", 'rocks': true  }, 
+     { 'framework': "Other Guys", 'rocks': false } 
+   ]
+});
+
+Ext.create('Ext.grid.Panel', {
+    store: store,
+    columns: [
+        { text: 'Framework',  dataIndex: 'framework', flex: 1 },
+        {
+
+            xtype: 'booleancolumn', 
+            trueText: 'Yes',
+            falseText: 'No', 
+            text: 'Rocks',
+            dataIndex: 'rocks'
+        }
+    ],
+    title: 'Frameworks',
+    height: 200,
+    width: 400,
+    renderTo: Ext.getBody()
+});
+----

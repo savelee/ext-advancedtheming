@@ -1,0 +1,9 @@
+===== Align
+.Vertical alignment
+* +align+ (defaults to _top_)
+
++top+ : child items are aligned vertically at the top of the container. +
++middle+ : child items are aligned vertically in the middle of the container. +
++bottom+ : child items are aligned vertically at the bottom of the container. +
++stretch+ : child items are stretched vertically to fill the height of the container. +
++stretchmax+ : child items are stretched vertically to the height of the largest item.
